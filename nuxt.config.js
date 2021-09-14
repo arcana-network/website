@@ -51,4 +51,15 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  googleFonts: {
+    families: {
+      Montserrat: [500, 600, 700],
+      Sora: [300, 400, 600, 700],
+    },
+    display: 'swap',
+    prefetch: true,
+    preconnect: true,
+    preload: true,
+  },
 }
