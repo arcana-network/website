@@ -7,8 +7,8 @@
   --colors-green: #8fff00;
   --colors-yellow: #ffc226;
   --colors-orange: #ff6826;
-  --font-title: "Montserrat", sans-serif;
-  --font-body: "Sora", sans-serif;
+  --font-title: 'Montserrat', sans-serif;
+  --font-body: 'Sora', sans-serif;
   --dark-theme-bg: #181818;
   --breakpoint-mobile: 767px;
   --breakpoint-tablet: 1023px;
@@ -126,11 +126,6 @@ h5 {
 .flex {
   display: flex;
 }
-.container {
-  max-width: var(--max-container-width);
-  width: var(--container-width);
-  margin: 0 auto;
-}
 .flex-start {
   align-items: flex-start;
 }
@@ -152,10 +147,6 @@ h5 {
   }
   .mobile-remove {
     display: none !important;
-  }
-  .container {
-    width: 94% !important;
-    margin-bottom: 4vh;
   }
   .sm-column {
     flex-direction: column;
