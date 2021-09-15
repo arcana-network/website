@@ -1,15 +1,14 @@
 :root {
-  --primary: #13a3fd;
-  --primary-light: #ffffff;
-  --primary-dark: #141414;
-  --text-white: #ffffff;
-  --text-grey: #8d8d8d;
+  --colors-primary: #13a3fd;
+  --theme-light: #ffffff;
+  --theme-dark: #181818;
+  --colors-white: #ffffff;
+  --colors-grey: #8d8d8d;
   --colors-green: #8fff00;
   --colors-yellow: #ffc226;
   --colors-orange: #ff6826;
-  --font-title: 'Montserrat', sans-serif;
-  --font-body: 'Sora', sans-serif;
-  --dark-theme-bg: #181818;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-sora: 'Sora', sans-serif;
   --breakpoint-mobile: 767px;
   --breakpoint-tablet: 1023px;
   --breakpoint-laptop-and-above: 1024px;
@@ -123,24 +122,6 @@ h5 {
 }
 .mx-auto {
   margin: 0 auto;
-}
-.flex {
-  display: flex;
-}
-.flex-start {
-  align-items: flex-start;
-}
-.flex-row,
-.row {
-  flex-direction: row;
-}
-.flex-column,
-.column {
-  flex-direction: column;
-}
-.flex-wrap,
-.wrap {
-  flex-wrap: wrap;
 }
 @media only screen and (max-width: 767px) {
   .mobile-hide {
