@@ -15,6 +15,7 @@
   --breakpoint-laptop-and-above: 1024px;
   --max-container-width: 108em;
   --container-width: 90%;
+  --sm-container-width: 94%;
 }
 *::-webkit-scrollbar {
   width: 0.5em;
