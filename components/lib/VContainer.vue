@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .container {
   max-width: var(--max-container-width);
   width: var(--container-width);
