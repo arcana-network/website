@@ -1,0 +1,32 @@
+@custom-media --viewport-small (width < 768px);
+@custom-media --viewport-medium (width < 1024px);
+@custom-media --viewport-large (width >= 1024px);
+
+@media (--viewport-small) {
+  .mobile-hide {
+    visibility: hidden !important;
+  }
+  .mobile-remove {
+    display: none !important;
+  }
+}
+@media (--viewport-medium) {
+  .tablet-hide {
+    visibility: hidden !important;
+  }
+  .tablet-remove {
+    display: none !important;
+  }
+}
+@media (--viewport-large) {
+  .laptop-hide {
+    visibility: hidden;
+  }
+  .laptop-remove {
+    display: none;
+  }
+  .laptop-show {
+    display: initial;
+    visibility: visible;
+  }
+}

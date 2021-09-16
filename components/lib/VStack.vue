@@ -115,7 +115,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-@import url('./media-variables.css');
+@import url('./media-query-helper.css');
 
 .stack-variables {
   --flex-gap: 0;
