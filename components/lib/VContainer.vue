@@ -11,14 +11,15 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+@import url('./media-variables.css');
 .container {
-  max-width: var(--max-container-width);
-  width: var(--container-width);
+  max-width: 96rem;
+  width: 80%;
   margin: 0 auto;
 }
-@media (max-width: 767px) {
+@media (--viewport-small) {
   .container {
-    width: var(--sm-container-width) !important;
+    width: 90% !important;
   }
 }
 </style>
