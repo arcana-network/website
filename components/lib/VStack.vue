@@ -76,7 +76,7 @@ export default {
       styles: {},
     }
   },
-  mounted() {
+  created() {
     this.classes = {
       flex: true,
     }
