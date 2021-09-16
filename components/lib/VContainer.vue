@@ -12,6 +12,7 @@ export default {
 
 <style lang="postcss" scoped>
 @import url('./media-variables.css');
+
 .container {
   max-width: 96rem;
   width: 80%;
