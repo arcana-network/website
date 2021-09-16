@@ -1,5 +1,7 @@
 <template>
-  <component :is="'h' + level"><slot /></component>
+  <component :is="'h' + level">
+    <slot />
+  </component>
 </template>
 
 <script>
@@ -39,6 +41,10 @@ export default {
       type: String,
       default: null,
     },
+    gradient: {
+      type: String,
+      default: null,
+    },
   },
   data() {
     return {
@@ -61,6 +67,18 @@ export default {
     if (this.letterSpacing) {
       this.styles['letter-spacing'] = this.letterSpacing
     }
+    if (this.gradient) {
+      this.classes.gradient = true
+      this.styles.background = this.gradient
+    }
   },
 }
 </script>
+
+<style lang="postcss" scoped>
+.gradient {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+</style>
