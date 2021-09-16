@@ -48,6 +48,7 @@ export default {
     }
   },
   created() {
+    // Classes referenced from global css assets/css/styles.css
     this.classes['color-' + this.color] = true
     this.classes['font-' + this.font] = true
     this.styles['font-weight'] = this.weight
