@@ -163,7 +163,6 @@ export default {
 }
 .gap {
   margin: calc(-1 * var(--flex-gap)) 0 0 calc(-1 * var(--flex-gap));
-  width: calc(100% + var(--flex-gap));
 }
 .gap > * {
   margin: var(--flex-gap) 0 0 var(--flex-gap);
@@ -214,7 +213,6 @@ export default {
   }
   .sm-gap {
     margin: calc(-1 * var(--flex-gap)) 0 0 calc(-1 * var(--flex-gap));
-    width: calc(100% + var(--flex-gap));
   }
   .sm-gap > * {
     margin: var(--flex-gap) 0 0 var(--flex-gap);
