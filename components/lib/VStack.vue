@@ -115,6 +115,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+@import url('./media-variables.css');
+
 .stack-variables {
   --flex-gap: 0;
   --sm-flex-gap: 0;
@@ -168,7 +170,7 @@ export default {
   margin: var(--flex-gap) 0 0 var(--flex-gap);
 }
 
-@media (max-width: 767px) {
+@media (--viewport-small) {
   .sm-flex {
     display: flex;
   }
