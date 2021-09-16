@@ -16,9 +16,8 @@ export default {
   max-width: 96rem;
   width: 80%;
   margin: 0 auto;
-}
-@media (--viewport-small) {
-  .container {
+
+  @media (--viewport-small) {
     width: 90% !important;
   }
 }
