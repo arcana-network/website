@@ -1,5 +1,5 @@
 <template>
-  <component :is="'h' + level">
+  <component :is="'h' + level" :class="classes" :style="styles">
     <slot />
   </component>
 </template>
@@ -77,9 +77,45 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+@import url('./media-query-helper.css');
+
 .gradient {
   background-clip: text !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4.875rem;
+  font-weight: 700;
+
+  @media (--viewport-medium) {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 600;
+
+  @media (--viewport-medium) {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.412rem;
+  font-weight: 700;
+  letter-spacing: 0.675rem;
+
+  @media (--viewport-medium) {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
 }
 </style>
