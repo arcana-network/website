@@ -55,21 +55,3 @@ export default {
   },
 }
 </script>
-
-<style lang="postcss" scoped>
-.color-primary {
-  color: var(--color-white);
-}
-.color-secondary {
-  color: var(--color-grey);
-}
-.color-link {
-  color: var(--color-blue);
-}
-.font-sans {
-  font-family: var(--font-sans);
-}
-.font-serif {
-  font-family: var(--font-serif);
-}
-</style>
