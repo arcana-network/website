@@ -18,10 +18,10 @@ export default {
       default: '1em',
     },
     weight: {
-      type: String,
-      default: 'regular',
+      type: Number,
+      default: 500,
       validator: (value) =>
-        ['extralight', 'light', 'regular', 'bold', 'extrabold'].includes(value),
+        [200, 300, 400, 500, 600, 700, 800, 900].includes(value),
     },
     font: {
       type: String,
@@ -34,7 +34,7 @@ export default {
     },
     letterSpacing: {
       type: String,
-      default: '1px',
+      default: null,
     },
   },
   data() {
@@ -43,33 +43,28 @@ export default {
       styles: {},
     }
   },
-  mounted() {
-    const fontWeightsMapping = {
-      extralight: 300,
-      light: 400,
-      regular: 500,
-      bold: 600,
-      extrabold: 700,
-    }
+  created() {
     this.classes['color-' + this.color] = true
     this.classes['font-' + this.font] = true
-    this.styles['font-weight'] = fontWeightsMapping[this.weight]
+    this.styles['font-weight'] = this.weight
     this.styles['font-size'] = this.size
     this.styles['line-height'] = this.lineHeight
-    this.styles['letter-spacing'] = this.letterSpacing
+    if (this.letterSpacing) {
+      this.styles['letter-spacing'] = this.letterSpacing
+    }
   },
 }
 </script>
 
 <style lang="postcss" scoped>
 .color-primary {
-  color: var(--colors-white);
+  color: var(--color-white);
 }
 .color-secondary {
-  color: var(--colors-grey);
+  color: var(--color-grey);
 }
 .color-link {
-  color: var(--colors-blue);
+  color: var(--color-blue);
 }
 .font-sans {
   font-family: var(--font-sans);
