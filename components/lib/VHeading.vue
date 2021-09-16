@@ -16,6 +16,51 @@ export default {
       default: 'primary',
       validator: (value) => ['primary', 'secondary', 'link'].includes(value),
     },
+    size: {
+      type: String,
+      default: null,
+    },
+    weight: {
+      type: Number,
+      default: null,
+      validator: (value) =>
+        [200, 300, 400, 500, 600, 700, 800, 900].includes(value),
+    },
+    font: {
+      type: String,
+      default: 'sans',
+      validator: (value) => ['sans', 'serif'].includes(value),
+    },
+    lineHeight: {
+      type: String,
+      default: null,
+    },
+    letterSpacing: {
+      type: String,
+      default: null,
+    },
+  },
+  data() {
+    return {
+      classes: {},
+      styles: {},
+    }
+  },
+  created() {
+    this.classes['color-' + this.color] = true
+    this.classes['font-' + this.font] = true
+    if (this.weight) {
+      this.styles['font-weight'] = this.weight
+    }
+    if (this.size) {
+      this.styles['font-size'] = this.size
+    }
+    if (this.lineHeight) {
+      this.styles['line-height'] = this.lineHeight
+    }
+    if (this.letterSpacing) {
+      this.styles['letter-spacing'] = this.letterSpacing
+    }
   },
 }
 </script>
