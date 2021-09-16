@@ -50,7 +50,22 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    postcss: {
+      order: 'presetEnvAndCssnanoLast',
+      preset: {
+        stage: 0,
+      },
+      plugins: {
+        'postcss-import': true,
+        'postcss-url': true,
+        'postcss-preset-env': {
+          stage: 0,
+        },
+        cssnano: { preset: 'default' },
+      },
+    },
+  },
 
   googleFonts: {
     families: {
