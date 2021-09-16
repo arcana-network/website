@@ -88,13 +88,8 @@ export default {
       this.classes['justify-' + this.justify] = true
     }
     if (this.gap) {
-      if (this.direction === 'column') {
-        this.styles['--flex-column-gap'] = this.gap
-        this.classes['column-gap'] = true
-      } else {
-        this.styles['--flex-row-gap'] = this.gap
-        this.classes['row-gap'] = true
-      }
+      this.styles['--flex-gap'] = this.gap
+      this.classes.gap = true
     }
     if (this.grow) {
       this.styles['flex-grow'] = this.grow
@@ -112,13 +107,8 @@ export default {
       this.classes['sm-justify-' + this.smJustify] = true
     }
     if (this.smGap) {
-      if (this.smDirection === 'column') {
-        this.styles['--sm-flex-column-gap'] = this.smGap
-        this.classes['sm-column-gap'] = true
-      } else {
-        this.styles['--sm-flex-row-gap'] = this.smGap
-        this.classes['sm-row-gap'] = true
-      }
+      this.styles['--sm-flex-gap'] = this.gap
+      this.classes['sm-gap'] = true
     }
   },
 }
@@ -126,10 +116,8 @@ export default {
 
 <style lang="postcss" scoped>
 .stack-variables {
-  --flex-row-gap: 0;
-  --flex-column-gap: 0;
-  --sm-flex-row-gap: 0;
-  --sm-flex-column-gap: 0;
+  --flex-gap: 0;
+  --sm-flex-gap: 0;
 }
 .flex {
   display: flex;
@@ -173,13 +161,12 @@ export default {
 .wrap {
   flex-wrap: wrap;
 }
-.row-gap > * + * {
-  margin-left: var(--flex-row-gap);
-  margin-top: 0;
+.gap {
+  margin: calc(-1 * var(--flex-gap)) 0 0 calc(-1 * var(--flex-gap));
+  width: calc(100% + var(--flex-gap));
 }
-.column-gap > * + * {
-  margin-top: var(--flex-column-gap);
-  margin-left: 0;
+.gap > * {
+  margin: var(--flex-gap) 0 0 var(--flex-gap);
 }
 
 @media (max-width: 767px) {
@@ -225,13 +212,12 @@ export default {
   .sm-wrap {
     flex-wrap: wrap;
   }
-  .sm-row-gap > * + * {
-    margin-left: var(--sm-flex-row-gap);
-    margin-top: 0;
+  .sm-gap {
+    margin: calc(-1 * var(--flex-gap)) 0 0 calc(-1 * var(--flex-gap));
+    width: calc(100% + var(--flex-gap));
   }
-  .sm-column-gap > * + * {
-    margin-top: var(--sm-flex-column-gap);
-    margin-left: 0;
+  .sm-gap > * {
+    margin: var(--flex-gap) 0 0 var(--flex-gap);
   }
 }
 </style>
