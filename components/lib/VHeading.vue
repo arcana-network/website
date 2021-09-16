@@ -53,6 +53,7 @@ export default {
     }
   },
   created() {
+    // Classes are coming from assets/css/styles.css
     this.classes['color-' + this.color] = true
     this.classes['font-' + this.font] = true
     if (this.weight) {
