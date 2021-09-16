@@ -1,20 +1,13 @@
 :root {
-  --colors-blue: #13a3fd;
-  --theme-light: #ffffff;
-  --theme-dark: #181818;
-  --colors-white: #ffffff;
-  --colors-grey: #8d8d8d;
-  --colors-green: #8fff00;
-  --colors-yellow: #ffc226;
-  --colors-orange: #ff6826;
+  --color-blue: #13a3fd;
+  --color-black: #141414;
+  --color-white: #ffffff;
+  --color-grey: #8d8d8d;
+  --color-green: #8fff00;
+  --color-yellow: #ffc226;
+  --color-orange: #ff6826;
   --font-sans: 'Montserrat', sans-serif;
   --font-serif: 'Sora', sans-serif;
-  --breakpoint-mobile: 767px;
-  --breakpoint-tablet: 1023px;
-  --breakpoint-laptop-and-above: 1024px;
-  --max-container-width: 108em;
-  --container-width: 80%;
-  --sm-container-width: 90%;
   --dark-theme-bg: #181818;
 }
 *::-webkit-scrollbar {
