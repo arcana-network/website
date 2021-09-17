@@ -57,3 +57,6 @@ body {
 .font-serif {
   font-family: var(--font-serif);
 }
+.cursor-pointer {
+  cursor: pointer;
+}
