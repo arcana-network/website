@@ -18,7 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/css/styles.css'],
+  css: ['~/assets/css/normalize.css', '~/assets/css/styles.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -50,7 +50,22 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    postcss: {
+      order: 'presetEnvAndCssnanoLast',
+      preset: {
+        stage: 0,
+      },
+      plugins: {
+        'postcss-import': true,
+        'postcss-url': true,
+        'postcss-preset-env': {
+          stage: 0,
+        },
+        cssnano: { preset: 'default' },
+      },
+    },
+  },
 
   googleFonts: {
     families: {
