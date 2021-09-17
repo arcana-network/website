@@ -84,22 +84,18 @@ export default {
   margin: 1rem;
 }
 .accordion-item {
-  padding: 1.2rem 0;
+  padding: 1.5rem 0;
 }
-.accordion-title {
-  margin-bottom: 0.5rem;
-}
+
 dl,
 dd,
 dt {
   margin: 0;
   padding: 0;
 }
-dt {
-  margin-bottom: 0.5rem;
-}
-dl hr {
+hr {
   border-color: var(--color-white);
+  margin: 0;
 }
 
 /* Need to fix transition for expansion and collapse */
@@ -108,8 +104,10 @@ dd {
   will-change: all;
   transition: all;
   overflow: hidden;
+  margin-right: 2rem;
 }
 dd.expanded {
+  margin-top: 0.5rem;
   max-height: 100vh;
 }
 </style>
