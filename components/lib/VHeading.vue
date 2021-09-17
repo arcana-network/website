@@ -45,6 +45,12 @@ export default {
       type: String,
       default: null,
     },
+    transform: {
+      type: String,
+      default: null,
+      validator: (value) =>
+        ['uppercase', 'lowercase', 'capitalize'].includes(value),
+    },
   },
   data() {
     return {
@@ -59,16 +65,19 @@ export default {
     if (this.weight) {
       this.styles['font-weight'] = this.weight
     }
-    if (this.size) {
+    if (this.size.trim()) {
       this.styles['font-size'] = this.size
     }
-    if (this.lineHeight) {
+    if (this.lineHeight.trim()) {
       this.styles['line-height'] = this.lineHeight
     }
-    if (this.letterSpacing) {
+    if (this.letterSpacing.trim()) {
       this.styles['letter-spacing'] = this.letterSpacing
     }
-    if (this.gradient) {
+    if (this.transform.trim()) {
+      this.styles['text-transform'] = this.transform
+    }
+    if (this.gradient.trim()) {
       this.classes.gradient = true
       this.styles.background = this.gradient
     }
