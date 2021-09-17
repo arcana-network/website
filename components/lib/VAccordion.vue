@@ -104,7 +104,7 @@ dd {
   will-change: all;
   transition: all;
   overflow: hidden;
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 dd.expanded {
   margin-top: 0.5rem;
