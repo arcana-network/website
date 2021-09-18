@@ -21,8 +21,7 @@ export default {
 
 <style lang="postcss" scoped>
 label {
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 0.85rem;
   font-weight: 400;
   font-family: var(--font-serif);
 }

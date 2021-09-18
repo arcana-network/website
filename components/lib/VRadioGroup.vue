@@ -84,11 +84,11 @@ input[type='radio']::after {
   background-color: transparent;
   content: '';
   display: block;
-  height: 0.75rem;
-  width: 0.75rem;
-  top: 0.25rem;
-  left: 0.25rem;
-  border-radius: 0.75rem;
+  height: 0.85rem;
+  width: 0.85rem;
+  top: 0.2rem;
+  left: 0.2rem;
+  border-radius: 0.85rem;
   position: relative;
   appearance: none;
 }
