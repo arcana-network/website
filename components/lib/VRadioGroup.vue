@@ -4,7 +4,7 @@
       v-for="(option, index) in options"
       :key="'option-' + index"
       align="center"
-      class="radio-padding cursor-pointer"
+      class="radio-padding"
     >
       <input
         :id="name + index"
@@ -13,7 +13,11 @@
         :name="name"
         @change="onChange"
       />
-      <v-label :for="name + index" :value="option" class="radio-label" />
+      <v-label
+        :for="name + index"
+        :value="option"
+        class="radio-label cursor-pointer"
+      />
     </v-stack>
   </v-stack>
 </template>
