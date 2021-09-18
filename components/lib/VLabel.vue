@@ -1,5 +1,7 @@
 <template>
-  <label v-bind="$attrs" class="font-sans color-primary">{{ value }}</label>
+  <label v-bind="$attrs" class="color-primary" :class="{ strong }">
+    {{ value }}
+  </label>
 </template>
 
 <script>
@@ -10,12 +12,22 @@ export default {
       type: String,
       default: '',
     },
+    strong: {
+      type: Boolean,
+    },
   },
 }
 </script>
 
 <style lang="postcss" scoped>
 label {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
+  font-family: var(--font-serif);
+}
+label.strong {
+  font-family: var(--font-sans);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.125rem;
