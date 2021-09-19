@@ -44,9 +44,8 @@ input {
   color: var(--color-white);
   font-family: var(--font-serif);
   font-size: 0.875rem;
-  line-height: 1.375rem;
-  margin: 1rem;
-  padding: 1rem;
+  line-height: 1.25rem;
+  padding: 1rem 1.25rem;
 }
 
 input[type='number'] {
@@ -66,8 +65,8 @@ input:-ms-input-placeholder,
 input:-moz-placeholder {
   color: var(--color-grey);
   font-family: var(--font-serif);
-  font-size: 1.1em;
-  line-height: 1.5em;
+  font-size: 1.1rem;
+  line-height: 1.25rem;
   margin: 10px 20px;
 }
 
