@@ -52,6 +52,14 @@ export default {
       validator: (value) =>
         ['uppercase', 'lowercase', 'capitalize'].includes(value),
     },
+    labelSize: {
+      type: String,
+      default: null,
+    },
+    labelWeight: {
+      type: Number,
+      default: null,
+    },
   },
   data() {
     return {
@@ -61,6 +69,12 @@ export default {
   created() {
     if (this.labelTransform) {
       this.styles['text-transform'] = this.labelTransform
+    }
+    if (this.labelSize) {
+      this.styles['font-size'] = this.labelSize
+    }
+    if (this.labelWeight) {
+      this.styles['font-weight'] = this.labelWeight
     }
   },
   methods: {
@@ -81,7 +95,6 @@ a {
   font-weight: 600;
   padding: 0.8rem 1rem;
   border: none;
-  line-height: 1.5rem;
   text-align: center;
   min-width: 8rem;
   border-radius: 10px;
