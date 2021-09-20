@@ -16,7 +16,7 @@ export default {
       menuItems: [
         {
           name: 'Technology',
-          link: '/technology',
+          link: '/tech',
         },
         {
           name: 'About',

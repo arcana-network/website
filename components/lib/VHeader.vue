@@ -123,14 +123,15 @@ header {
   .header-menu {
     position: fixed;
     max-height: 0;
-    top: 5rem;
+    top: 4.8rem;
     left: 0;
     right: 0;
     flex-direction: column;
-    background-color: black;
+    background-color: #1f2024;
     text-align: center;
-    transition: max-height 0.4s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    transition: max-height 0.4s, padding 0.6s;
+    padding: 0;
+    box-shadow: 0 10px 27px rgba(31, 32, 36, 0.5);
     z-index: 10000;
     overflow: hidden;
   }
@@ -141,7 +142,8 @@ header {
     text-align: center;
   }
   .header-menu.show {
-    max-height: 100vh;
+    max-height: 100%;
+    padding: 1rem;
   }
   .menu-icon {
     transition: transform 0.4s;
