@@ -91,7 +91,7 @@ export default {
 button,
 a {
   position: relative;
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 0.8rem 1rem;
   border: none;

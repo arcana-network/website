@@ -43,7 +43,7 @@ input {
   outline: none;
   color: var(--color-white);
   font-family: var(--font-serif);
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   line-height: 1.25rem;
   padding: 1rem 1.25rem;
 }
