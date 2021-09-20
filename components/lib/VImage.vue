@@ -5,6 +5,7 @@
     :style="styles"
     :width="dimension[0] ? dimension[0] : ''"
     :height="dimension[1] ? dimension[1] : ''"
+    @click.stop="(ev) => $emit('click', ev)"
   />
 </template>
 

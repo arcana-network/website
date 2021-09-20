@@ -5,45 +5,56 @@
         <NuxtLink to="/">
           <v-image :src="logo" alt="logo" class="cursor-pointer logo" />
         </NuxtLink>
-        <v-header-navigation
-          v-if="menuItems.length"
-          :menu-items="menuItems"
-          class="mobile-remove"
-        />
+        <nav class="header-menu" :class="{ show }">
+          <a
+            v-for="item in menuItems"
+            :key="item.name"
+            :href="item.link"
+            :target="item.external ? '__blank' : ''"
+            class="header-menu-item"
+          >
+            <v-text :weight="600" font="sans" color="primary">
+              {{ item.name }}
+            </v-text>
+          </a>
+        </nav>
         <v-stack gap="1.5rem">
           <v-button
             v-if="cta"
             :label="cta.label"
             :action="cta.action"
             label-transform="uppercase"
+            :show="show"
           />
           <v-image
             :src="menuIcon"
-            class="cursor-pointer laptop-remove tablet-remove mobile-show"
-            @click.stop="() => (show = true)"
+            class="
+              cursor-pointer
+              laptop-remove
+              tablet-remove
+              mobile-show
+              menu-icon
+            "
+            :class="{ show }"
+            @click="showClicked"
           />
         </v-stack>
       </v-stack>
-      <!-- <v-header-navigation
-        v-if="menuItems.length"
-        :menu-items="menuItems"
-        :show="true"
-        class="laptop-remove tablet-remove"
-      /> -->
     </v-container>
   </header>
 </template>
 
 <script>
 import MenuIcon from '../../assets/icons/menu.svg'
+import CloseIcon from '../../assets/icons/close.svg'
 import VButton from './VButton.vue'
 import VContainer from './VContainer.vue'
-import VHeaderNavigation from './VHeaderNavigation.vue'
 import VImage from './VImage.vue'
 import VStack from './VStack.vue'
+import VText from './VText.vue'
 export default {
   name: 'VHeader',
-  components: { VContainer, VStack, VButton, VImage, VHeaderNavigation },
+  components: { VContainer, VStack, VButton, VImage, VText },
   props: {
     logo: {
       type: String,
@@ -66,7 +77,14 @@ export default {
       show: false,
     }
   },
-  methods: {},
+  methods: {
+    showClicked(ev) {
+      this.show = !this.show
+      setTimeout(() => {
+        this.menuIcon = this.show ? CloseIcon : MenuIcon
+      }, 200)
+    },
+  },
 }
 </script>
 
@@ -75,5 +93,62 @@ export default {
 
 header {
   margin: 1.5rem 0;
+}
+
+.header-menu-item {
+  text-decoration: none;
+}
+
+.header-menu-item:hover {
+  opacity: 0.7;
+}
+
+.header-menu-item:active {
+  opacity: 0.8;
+}
+
+@media (--viewport-large) {
+  .header-menu > * + * {
+    margin-left: 4vw;
+  }
+}
+
+@media (--viewport-medium) {
+  .header-menu > * + * {
+    margin-left: 3vw;
+  }
+}
+
+@media (--viewport-small) {
+  .header-menu {
+    position: fixed;
+    max-height: 0;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: black;
+    text-align: center;
+    transition: max-height 0.4s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 10000;
+    overflow: hidden;
+  }
+  .header-menu > * {
+    display: block;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  .header-menu.show {
+    max-height: 100vh;
+  }
+  .menu-icon {
+    transition: transform 0.4s;
+    width: 1.5rem;
+  }
+  .menu-icon.show {
+    transform: rotate(-180deg);
+  }
 }
 </style>
