@@ -9,13 +9,21 @@
   .mobile-remove {
     display: none !important;
   }
+  .mobile-show {
+    display: initial !important;
+    visibility: visible !important;
+  }
 }
 @media (--viewport-medium) {
   .tablet-hide {
-    visibility: hidden !important;
+    visibility: hidden;
   }
   .tablet-remove {
-    display: none !important;
+    display: none;
+  }
+  .tablet-show {
+    display: initial;
+    visibility: visible;
   }
 }
 @media (--viewport-large) {

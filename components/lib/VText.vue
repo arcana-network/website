@@ -60,13 +60,13 @@ export default {
     this.styles['font-weight'] = this.weight
     this.styles['font-size'] = this.size
     this.styles['line-height'] = this.lineHeight
-    if (this.letterSpacing.trim()) {
+    if (this.letterSpacing?.trim()) {
       this.styles['letter-spacing'] = this.letterSpacing
     }
-    if (this.transform.trim()) {
+    if (this.transform?.trim()) {
       this.styles['text-transform'] = this.transform
     }
-    if (this.gradient.trim()) {
+    if (this.gradient?.trim()) {
       this.classes.gradient = true
       this.styles.background = this.gradient
     }
