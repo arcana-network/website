@@ -15,7 +15,7 @@ export default {
     },
     size: {
       type: String,
-      default: '1em',
+      default: '1rem',
     },
     weight: {
       type: Number,
@@ -30,7 +30,7 @@ export default {
     },
     lineHeight: {
       type: String,
-      default: '1.125em',
+      default: '1.125rem',
     },
     letterSpacing: {
       type: String,
