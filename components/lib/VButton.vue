@@ -13,7 +13,6 @@
   </button>
   <a
     v-else
-    :class="classes"
     class="font-serif cursor-pointer"
     :disabled="disabled"
     :aria-label="label"
@@ -99,6 +98,7 @@ a {
   min-width: 8rem;
   border-radius: 10px;
   background: none;
+  white-space: nowrap;
 }
 
 /* Primary Button Styles */
@@ -126,7 +126,7 @@ a:not([disabled='true']):hover {
   color: #00519c;
 }
 a:not([disabled='true']):active {
-  transform: scale(90%);
+  transform: scale(99%);
 }
 a[disabled='true'] {
   cursor: not-allowed;
