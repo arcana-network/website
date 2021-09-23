@@ -7,7 +7,6 @@
     </transition-group>
     <v-stack
       class="icons position-absolute"
-      style="top: 90%; width: 100%"
       gap="1.5rem"
       md-justify="space-around"
       sm-justify="space-evenly"
@@ -84,6 +83,11 @@ export default {
 .slide {
   width: 100%;
   top: 0;
+}
+
+.icons {
+  top: 90%;
+  width: 100%;
 }
 
 .icons > * {
