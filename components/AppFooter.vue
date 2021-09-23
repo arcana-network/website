@@ -21,6 +21,7 @@
               <v-image
                 src="/images/twitter-white.svg"
                 class="footer-social-link"
+                alt="Arcana twitter page"
               />
             </a>
             <a
@@ -31,6 +32,7 @@
               <v-image
                 src="/images/telegram-white.svg"
                 class="footer-social-link"
+                alt="Arcana telegram channel"
               />
             </a>
           </v-stack>
