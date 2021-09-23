@@ -18,7 +18,7 @@
             </v-text>
           </a>
         </nav>
-        <v-stack gap="1.5rem">
+        <v-stack gap="3vw">
           <v-button
             v-if="cta"
             :label="cta.label"
@@ -104,7 +104,7 @@ header {
 }
 
 .header-menu-item:active {
-  opacity: 0.8;
+  transform: scale(98%);
 }
 
 @media (--viewport-large) {
