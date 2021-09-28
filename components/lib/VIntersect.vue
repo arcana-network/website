@@ -25,6 +25,7 @@ export default {
         !this.$slots.default ||
         (this.$slots.default && this.$slots.default.length > 1)
       ) {
+        // eslint-disable-next-line no-console
         console.warn('VIntersect must have exactly one child component.')
       }
       this.observer.observe(this.$slots.default[0].elm)
