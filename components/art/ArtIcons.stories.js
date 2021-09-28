@@ -18,10 +18,10 @@ export const animateOnHover = () => ({
           width: '272px',
         }"
       >
-        <ArtIconEncryption />
-        <ArtIconEncryption />
-        <ArtIconEncryption />
-        <ArtIconEncryption />
+        <ArtIconEncryption animate-on-hover />
+        <ArtIconEncryption animate-on-hover />
+        <ArtIconEncryption animate-on-hover />
+        <ArtIconEncryption animate-on-hover />
       </div>
     </VStack>
   `,
