@@ -308,4 +308,9 @@ export default {
   transform-origin: center;
   transform-box: fill-box;
 }
+
+.orb,
+.shield {
+  pointer-events: none;
+}
 </style>
