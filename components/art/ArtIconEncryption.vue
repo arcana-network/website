@@ -1,5 +1,9 @@
 <template>
-  <v-intersect :threshold="0.75" @enter="onEnter">
+  <v-intersect
+    root-margin="0px 0px -150px 0px"
+    :threshold="0.5"
+    @enter="onEnter"
+  >
     <svg
       ref="iconEncryption"
       :height="size"
