@@ -1,5 +1,5 @@
 <template>
-  <v-intersect @enter="onEnter">
+  <v-intersect :threshold="0.75" @enter="onEnter">
     <svg
       ref="iconEncryption"
       :height="size"
