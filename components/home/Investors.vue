@@ -27,68 +27,37 @@
     >
       <div style="max-height: 540px; height: 50vh" />
       <v-image
-        src="/images/investors/balaji.png"
-        title="Balaji Srinivasan"
-        alt="Balaji Srinivasan"
-        class="position-absolute"
-        style="bottom: 10%; left: 5%"
+        v-for="investor in investors"
+        :key="investor.key"
+        :src="investor.image"
+        :title="investor.name"
+        :alt="investor.name"
+        :class="['position-absolute', investor.cssClass]"
+        @click.stop="showDesc(investor.key)"
       />
-      <v-image
-        src="/images/investors/tamar.png"
-        title="Tamar Menteshashvili"
-        alt="Tamar Menteshashvili"
-        class="position-absolute"
-        style="top: 0%; right: 25%"
-      />
-      <v-image
-        src="/images/investors/kendrick.png"
-        class="position-absolute"
-        title="Kendrick Nguyen"
-        alt="Kendrick Nguyen"
-        style="top: 10%; left: 20%"
-      />
-      <v-image
-        src="/images/investors/au21.png"
-        class="position-absolute"
-        title="AU21 Capital"
-        alt="AU21 Capital"
-        style="bottom: 0%; left: 25%"
-      />
-      <v-image
-        src="/images/investors/kenetic.png"
-        class="position-absolute"
-        title="Kenetic Capital"
-        alt="Kenetic Capital"
-        style="bottom: 0%; right: 15%"
-      />
-      <v-image
-        src="/images/investors/siddharth.png"
-        class="position-absolute"
-        title="Siddharth Menon"
-        alt="Siddharth Menon"
-        style="top: 50%; right: 30%"
-      />
-      <v-image
-        src="/images/investors/santiago.png"
-        class="position-absolute"
-        title="Santiago Santos"
-        alt="Santiago Santos"
-        style="top: 15%; left: 50%"
-      />
-      <v-image
-        src="/images/investors/aniket.png"
-        class="position-absolute"
-        title="Aniket Jindal"
-        alt="Aniket Jindal"
-        style="top: 45%; right: 5%"
-      />
-      <v-image
-        src="/images/investors/john.png"
-        class="position-absolute"
-        title="John Lilic"
-        alt="John Lilic"
-        style="top: 40%; left: 35%"
-      />
+      <div v-if="investorDescription" class="investor-description-container">
+        <v-stack direction="column" align="center">
+          <v-image
+            src="/images/investor-close-btn.svg"
+            class="investor-description-close-btn"
+            @click.stop="hideDesc()"
+          />
+          <div class="investor-description">
+            <v-stack align="center">
+              <v-image
+                src="/images/investor-placeholder.png"
+                class="mobile-remove"
+              />
+              <v-stack direction="column" style="padding: 2rem">
+                <v-heading level="2" class="investor-name">
+                  {{ selectedInvestor.name }}
+                </v-heading>
+                <v-text>{{ selectedInvestor.desc }}</v-text>
+              </v-stack>
+            </v-stack>
+          </div>
+        </v-stack>
+      </div>
     </div>
   </section>
 </template>
@@ -97,10 +66,108 @@
 import AppSectionDescriptor from '../AppSectionDescriptor.vue'
 import VButton from '../lib/VButton.vue'
 import VContainer from '../lib/VContainer.vue'
+import VHeading from '../lib/VHeading.vue'
 import VImage from '../lib/VImage.vue'
 import VStack from '../lib/VStack.vue'
+import VText from '../lib/VText.vue'
+
 export default {
-  components: { VContainer, AppSectionDescriptor, VStack, VButton, VImage },
+  components: {
+    VContainer,
+    AppSectionDescriptor,
+    VStack,
+    VButton,
+    VImage,
+    VText,
+    VHeading,
+  },
+  data() {
+    return {
+      investorDescription: false,
+      selectedInvestor: {},
+      investors: [
+        {
+          key: 'balaji',
+          name: 'Balaji Srinivasan',
+          image: 'images/investors/balaji.png',
+          desc: 'Investor, Arcana',
+          cssClass: 'investor-balaji',
+        },
+        {
+          key: 'tamar',
+          name: 'Tamar Menteshashvili',
+          image: 'images/investors/tamar.png',
+          desc: 'Investor, Arcana',
+          cssClass: 'investor-tamar',
+        },
+        {
+          key: 'kendrick',
+          name: 'Kendrick Nguyen',
+          image: 'images/investors/kendrick.png',
+          desc: 'Investor, Arcana',
+          cssClass: 'investor-kendrick',
+        },
+        {
+          key: 'santiago',
+          name: 'Santiago Santos',
+          image: 'images/investors/santiago.png',
+          desc: 'Investor, Arcana',
+          cssClass: 'investor-santiago',
+        },
+        {
+          key: 'au21',
+          name: 'AU21 Capital',
+          image: 'images/investors/au21.png',
+          desc: 'Investor, Arcana',
+          cssClass: 'investor-au21',
+        },
+        {
+          key: 'kenetic',
+          name: 'Kenetic Capital',
+          image: 'images/investors/kenetic.png',
+          desc: 'Investor, Arcana',
+          cssClass: 'investor-kenetic',
+        },
+        {
+          key: 'john',
+          name: 'John Lilic',
+          image: 'images/investors/john.png',
+          desc: 'Investor, Arcana',
+          cssClass: 'investor-john',
+        },
+        {
+          key: 'aniket',
+          name: 'Aniket Jindal',
+          image: 'images/investors/aniket.png',
+          desc: 'Investor, Arcana',
+          cssClass: 'investor-aniket',
+        },
+        {
+          key: 'siddharth',
+          name: 'Siddharth Menon',
+          image: 'images/investors/siddharth.png',
+          desc: 'Investor, Arcana',
+          cssClass: 'investor-siddharth',
+        },
+      ],
+    }
+  },
+  methods: {
+    showDesc(value) {
+      // Hide previously opened description modal
+      this.investorDescription = false
+      this.selectedInvestor = this.investors.find(
+        (investor) => investor.key === value
+      )
+      setTimeout(() => {
+        this.investorDescription = true
+      }, 150)
+    },
+    hideDesc() {
+      this.investorDescription = false
+      this.selectedInvestor = {}
+    },
+  },
 }
 </script>
 
@@ -108,8 +175,129 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 .investors img {
+  cursor: pointer;
+
   @media (--viewport-medium) {
-    transform: scale(0.75);
+    transform: scale(0.7);
+  }
+}
+
+.investor-description-container {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.investor-description-close-btn {
+  cursor: pointer;
+}
+
+.investor-description {
+  margin-top: 0.5rem;
+  background: #262626
+    radial-gradient(
+      134.5% 939.99% at -23.59% -12.9%,
+      #262626 0%,
+      rgba(26, 26, 26, 0.86293) 31.41%,
+      rgba(32, 32, 32, 0.49) 100%
+    );
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.investor-name {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+/* Investor positioning */
+.investor-balaji {
+  bottom: 10%;
+  left: 0%;
+
+  @media (--viewport-medium) {
+    bottom: 2%;
+  }
+}
+
+.investor-tamar {
+  top: 0%;
+  right: 25%;
+
+  @media (--viewport-medium) {
+    right: 0%;
+  }
+}
+
+.investor-kendrick {
+  top: 10%;
+  left: 20%;
+
+  @media (--viewport-medium) {
+    top: 5%;
+    left: 0%;
+  }
+}
+
+.investor-au21 {
+  bottom: 0%;
+  left: 25%;
+
+  @media (--viewport-medium) {
+    bottom: -5%;
+    left: 30%;
+  }
+}
+
+.investor-kenetic {
+  bottom: 0%;
+  right: 15%;
+
+  @media (--viewport-medium) {
+    bottom: -20%;
+    right: 10%;
+  }
+}
+
+.investor-santiago {
+  top: 15%;
+  left: 50%;
+
+  @media (--viewport-medium) {
+    top: 5%;
+    left: 35%;
+  }
+}
+
+.investor-siddharth {
+  top: 50%;
+  right: 30%;
+
+  @media (--viewport-medium) {
+    top: 35%;
+    right: 10%;
+  }
+}
+
+.investor-aniket {
+  top: 45%;
+  right: 5%;
+
+  @media (--viewport-medium) {
+    top: 70%;
+    right: 0%;
+  }
+}
+
+.investor-john {
+  top: 40%;
+  left: 35%;
+
+  @media (--viewport-medium) {
+    left: 25%;
   }
 }
 </style>
