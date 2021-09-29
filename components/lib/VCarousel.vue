@@ -1,18 +1,13 @@
 <template>
-  <div class="position-relative slider">
+  <div class="slider">
     <transition-group :name="'slide-' + transitionName" tag="div">
-      <div :key="currentSlide" class="slide position-absolute">
+      <div :key="currentSlide" ref="carousel" class="slide">
         <slot />
       </div>
     </transition-group>
-    <v-stack
-      class="icons position-absolute"
-      gap="1.5rem"
-      md-justify="space-around"
-      sm-justify="space-evenly"
-    >
-      <v-image :src="arrowLeft" @click.stop="(ev) => $emit('prev', ev)" />
-      <v-image :src="arrowRight" @click.stop="(ev) => $emit('next', ev)" />
+    <v-stack class="icons" gap="2rem" justify="center">
+      <v-image :src="arrowLeft" @click.stop="changeSlide(-1)" />
+      <v-image :src="arrowRight" @click.stop="changeSlide(1)" />
     </v-stack>
   </div>
 </template>
@@ -25,27 +20,92 @@ import ArrowRightIcon from '~/assets/icons/arrow-right.svg'
 export default {
   name: 'VCarousel',
   components: { VStack, VImage },
-  props: {
-    currentSlide: {
-      type: [String, Number],
-      required: true,
-    },
-    transitionName: {
-      type: String,
-      required: true,
-      validator: (value) => ['next', 'prev'].includes(value),
-    },
-  },
+  props: {},
   data() {
     return {
       arrowLeft: ArrowLeftIcon,
       arrowRight: ArrowRightIcon,
+      transitionName: '',
+      currentSlide: 0,
     }
+  },
+  computed: {
+    totalSlides() {
+      return this.$refs.carousel.children.length
+    },
+  },
+  mounted() {
+    this.updateSlides()
+  },
+  methods: {
+    enterPreviousSlide() {
+      this.transitionName = 'prev'
+      if (this.currentSlide - 1 >= 0) {
+        this.currentSlide--
+      } else {
+        this.currentSlide = this.totalSlides - 1
+      }
+    },
+    enterNextSlide() {
+      this.transitionName = 'next'
+      if (this.currentSlide + 1 < this.totalSlides) {
+        this.currentSlide++
+      } else {
+        this.currentSlide = 0
+      }
+    },
+    changeSlide(position) {
+      if (position === 1) {
+        this.enterNextSlide()
+      } else {
+        this.enterPreviousSlide()
+      }
+      // Using setTimeout to update classes after transition event is fired
+      // Updating carousel classes before transition event does nothing
+      setTimeout(() => {
+        this.updateSlides()
+      }, 10)
+    },
+    updateSlides() {
+      this.$refs.carousel.children.forEach((child) => {
+        child.classList = 'carousel-item'
+      })
+      this.$refs.carousel.children[this.currentSlide].classList =
+        'carousel-item active-item'
+    },
   },
 }
 </script>
 
 <style lang="postcss" scoped>
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider * {
+  width: max-content;
+  height: max-content;
+}
+
+.slide {
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+
+.icons {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+}
+
+.icons > * {
+  object-fit: cover;
+  cursor: pointer;
+}
+
 /* GO TO NEXT SLIDE */
 .slide-next-enter-active,
 .slide-next-leave-active {
@@ -69,29 +129,17 @@ export default {
 .slide-prev-leave-to {
   transform: translate(100%);
 }
+</style>
 
-.slider {
-  width: 100%;
-  overflow: hidden;
-}
-
-.slider * {
-  width: max-content;
-  height: max-content;
-}
-
-.slide {
-  width: 100%;
+<style lang="postcss">
+.carousel-item {
+  position: absolute;
   top: 0;
+  color: white;
+  display: none;
 }
 
-.icons {
-  top: 90%;
-  width: 100%;
-}
-
-.icons > * {
-  object-fit: cover;
-  cursor: pointer;
+.carousel-item.active-item {
+  display: initial;
 }
 </style>
