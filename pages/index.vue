@@ -56,13 +56,16 @@ export default {
 <style lang="postcss" scoped>
 @import url('../components/lib/media-query-helper.css');
 
-main > * + *:not(:last-child) {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+main {
+  overflow-x: hidden;
+}
 
-  @media (--viewport-medium) {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+main > * + *:not(:last-child) {
+  padding: 6rem 0;
+  margin: 6rem 0;
+
+  @media (--viewport-small) {
+    padding: 3rem 0;
   }
 }
 </style>
