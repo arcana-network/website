@@ -3,6 +3,10 @@ export default {
   name: 'VIntersect',
   abstract: true,
   props: {
+    rootMargin: {
+      type: String,
+      default: '0px 0px 0px 0px',
+    },
     threshold: {
       type: [Number, Array],
       default: 0,
@@ -16,6 +20,8 @@ export default {
         this.$emit(firstEntry.isIntersecting ? 'enter' : 'leave', [firstEntry])
       },
       {
+        root: null,
+        rootMargin: this.rootMargin,
         threshold: this.threshold,
       }
     )
