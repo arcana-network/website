@@ -1,43 +1,38 @@
 <template>
   <section>
     <v-container>
-      <v-stack
-        md-direction="column"
-        justify="space-between"
-        align="center"
-        md-align="start"
+      <v-carousel
+        :current-slide="currentSlide"
+        :transition-name="transitionName"
+        class="carousel-container"
       >
-        <v-image src="/images/moon.svg" class="testimonial-illustration" />
-        <v-carousel
-          :current-slide="currentSlide"
-          :transition-name="transitionName"
-          class="carousel-container"
-          @prev="slide(-1)"
-          @next="slide(1)"
+        <div
+          v-for="(slide, index) in slides"
+          :key="'testimonial-carousel-' + index"
         >
-          <v-stack direction="column">
-            <v-heading :level="4" class="testimonial-quote">
-              “{{ slides[currentSlide].quote }}”
-            </v-heading>
-            <v-stack
-              md-direction="column"
-              style="margin-top: 1.5rem"
-              align="baseline"
-            >
-              <v-text class="testimonial-quoted-by">
-                {{ slides[currentSlide].quotedBy }},
-              </v-text>
-              <v-text color="secondary" class="designation">
-                {{ slides[currentSlide].designation }}
-              </v-text>
+          <v-stack md-direction="column" align="center" md-align="start">
+            <v-image src="/images/moon.svg" class="testimonial-illustration" />
+            <v-stack direction="column">
+              <v-heading :level="4" class="testimonial-quote">
+                “{{ slide.quote }}”
+              </v-heading>
+              <v-stack
+                md-direction="column"
+                style="margin-top: 1.5rem"
+                align="baseline"
+              >
+                <v-text class="testimonial-quoted-by">
+                  {{ slide.quotedBy }},
+                </v-text>
+                <v-text color="secondary" class="designation">
+                  {{ slide.designation }}
+                </v-text>
+              </v-stack>
+              <v-image :src="slide.companyLogo" class="company-logo" />
             </v-stack>
-            <v-image
-              :src="slides[currentSlide].companyLogo"
-              class="company-logo"
-            />
           </v-stack>
-        </v-carousel>
-      </v-stack>
+        </div>
+      </v-carousel>
     </v-container>
   </section>
 </template>
@@ -50,7 +45,14 @@ import VImage from '../lib/VImage.vue'
 import VStack from '../lib/VStack.vue'
 import VText from '../lib/VText.vue'
 export default {
-  components: { VContainer, VStack, VImage, VCarousel, VHeading, VText },
+  components: {
+    VContainer,
+    VStack,
+    VImage,
+    VCarousel,
+    VHeading,
+    VText,
+  },
   data() {
     return {
       currentSlide: 0,
@@ -65,27 +67,20 @@ export default {
         },
         {
           quote:
-            'We’ve always been intensely focused on enabling our partners and customers to improve business outcomes. The addition of Arcana’s Security and Privacy will complement our mission of decentralizing our network',
-          quotedBy: 'Ram Sharma',
+            'We are very excited to start working with Arcana Network to improve the developer experience of the crowd building the DIA ecosystem by offering a number of privacy and security features to our tech stack.',
+          quotedBy: 'Dia',
           designation: 'CEO and Co-Founder',
           companyLogo: '/images/testimonials/unmarshal.svg',
         },
         {
           quote:
-            'We’ve always been intensely focused on enabling our partners and customers to improve business outcomes. The addition of Arcana’s Security and Privacy will complement our mission of decentralizing our network',
-          quotedBy: 'Ram Sharma',
+            'Partnerships are all about pushing the boundaries on innovating for the customer through our products. Our partnership with Arcana will help us deliver exactly that while we explore new and innovative ways to deploy and bring robust scalability and privacy to our technology stack and eventually the RageFan users and community.',
+          quotedBy: 'Rage.fan',
           designation: 'CEO and Co-Founder',
           companyLogo: '/images/testimonials/unmarshal.svg',
         },
       ],
     }
-  },
-  methods: {
-    slide(i) {
-      this.transitionName = i === -1 ? 'prev' : 'next'
-      const len = this.slides.length
-      this.currentSlide = (this.currentSlide + (i % len) + len) % len
-    },
   },
 }
 </script>
@@ -93,16 +88,28 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 section {
-  background: url('/images/section-bg.svg');
-  background-repeat: no-repeat;
+  background: #000 url('/images/testimonials-bg.svg') no-repeat;
   background-size: cover;
+  box-shadow: 0 1rem 2rem 0.5rem black, 0 -1rem 2rem 0.5rem black;
+
+  @media (--viewport-small) {
+    background: #000 url('/images/testimonials-bg-mobile.svg') no-repeat;
+  }
 }
 
+/* Need to add height because Carousel component has relative position */
 .carousel-container {
   width: 100%;
-  max-width: 40rem;
-  height: 50vh;
-  max-height: 50rem;
+  height: 100vh;
+  max-height: 36rem;
+
+  @media (--viewport-medium) {
+    max-height: 60rem;
+  }
+
+  @media (--viewport-small) {
+    max-height: 80rem;
+  }
 }
 
 .company-logo {
@@ -118,6 +125,11 @@ section {
   @media (--viewport-medium) {
     font-size: 1.25rem;
     line-height: 1.5rem;
+  }
+
+  @media (--viewport-small) {
+    font-size: 1rem;
+    line-height: 1.2rem;
   }
 }
 
@@ -143,11 +155,17 @@ section {
   }
 }
 
-@media (--viewport-medium) {
-  .testimonial-illustration {
-    margin: 0 auto 4rem;
-    width: 100%;
-    max-width: 30rem;
+.testimonial-illustration {
+  margin-right: 10vw;
+  max-width: 30vw;
+
+  @media (--viewport-medium) {
+    margin: 6rem auto;
+  }
+
+  @media (--viewport-small) {
+    margin: 1rem auto;
+    max-width: 50vw;
   }
 }
 </style>
