@@ -1,5 +1,6 @@
 import ArtIconEncryption from '~/components/art/ArtIconEncryption'
 import VStack from '~/components/lib/VStack'
+import VText from '~/components/lib/VText'
 
 export const animateOnHover = () => ({
   components: { ArtIconEncryption, VStack },
@@ -23,6 +24,25 @@ export const animateOnHover = () => ({
         <ArtIconEncryption animate-on-hover />
         <ArtIconEncryption animate-on-hover />
       </div>
+    </VStack>
+  `,
+})
+
+export const animateOnEnter = () => ({
+  components: { ArtIconEncryption, VStack, VText },
+  template: `
+    <VStack
+      align="center"
+      direction="column"
+      gap="50vh"
+      justify="center"
+      :style="{ marginTop: '1vh', marginBottom: '50vh' }"
+    >
+      <VText color="secondary" font="0.75rem">Scroll down &darr;</VText>
+      <ArtIconEncryption animate-on-enter />
+      <ArtIconEncryption animate-on-enter />
+      <ArtIconEncryption animate-on-enter />
+      <ArtIconEncryption animate-on-enter />
     </VStack>
   `,
 })
