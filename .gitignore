@@ -122,3 +122,8 @@ sw.\*
 
 .github
 content
+
+# Storybook
+
+.nuxt-storybook/
+storybook-static/
