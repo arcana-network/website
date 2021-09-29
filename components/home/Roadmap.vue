@@ -17,16 +17,9 @@
         style="width: 100%; max-width: 1920px"
       />
       <div class="laptop-remove position-relative" style="text-align: center">
-        <v-image src="/images/roadmap-mobile-bg.svg" />
         <v-image
-          src="/images/roadmap-mobile-fg.svg"
-          class="position-absolute"
-          style="left: 50%; transform: translateX(-50%)"
-        />
-        <v-image
-          src="/images/roadmap-mobile-fg-blur.svg"
-          class="position-absolute"
-          style="left: 50%; transform: translateX(-50%); margin-top: -1rem"
+          src="/images/roadmap-mobile.svg"
+          style="width: 100%; max-width: 375px"
         />
       </div>
     </div>
@@ -44,5 +37,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+/* Imported this for getting helper classes laptop-remove and mobile-remove */
 @import url('../lib/media-query-helper.css');
 </style>
