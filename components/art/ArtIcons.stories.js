@@ -38,6 +38,14 @@ export const animateOnEnter = () => ({
       justify="center"
       :style="{ marginTop: '1vh', marginBottom: '50vh' }"
     >
+      <div
+        :style="{
+          borderTop: '1px solid lightblue',
+          bottom: '150px',
+          position: 'fixed',
+          width: '100%',
+        }"
+      ></div>
       <VText color="secondary" size="0.75rem">Scroll down &darr;</VText>
       <ArtIconEncryption animate-on-enter />
       <ArtIconEncryption animate-on-enter />
