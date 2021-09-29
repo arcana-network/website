@@ -47,6 +47,34 @@ export const animateOnEnter = () => ({
   `,
 })
 
+export const sizes = () => ({
+  components: { ArtIconEncryption, VStack },
+  template: `
+    <VStack direction="column" justify="center" :style="{ height: '100vh' }">
+      <VStack align="center" gap="3rem" justify="center">
+        <ArtIconEncryption :size="100" />
+        <ArtIconEncryption :size="120" />
+        <ArtIconEncryption :size="140" />
+      </VStack>
+      <VStack align="center" gap="3rem" justify="center">
+        <ArtIconEncryption :size="100" />
+        <ArtIconEncryption :size="120" />
+        <ArtIconEncryption :size="140" />
+      </VStack>
+      <VStack align="center" gap="3rem" justify="center">
+        <ArtIconEncryption :size="100" />
+        <ArtIconEncryption :size="120" />
+        <ArtIconEncryption :size="140" />
+      </VStack>
+      <VStack align="center" gap="3rem" justify="center">
+        <ArtIconEncryption :size="100" />
+        <ArtIconEncryption :size="120" />
+        <ArtIconEncryption :size="140" />
+      </VStack>
+    </VStack>
+  `,
+})
+
 export default {
   title: 'art/icons',
 }
