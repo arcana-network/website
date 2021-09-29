@@ -13,10 +13,10 @@ export const animateOnHover = () => ({
       <div
         :style="{
           display: 'grid',
-          gap: '2rem',
+          gap: '4rem',
           gridTemplateColumns: '1fr 1fr',
-          height: '272px',
-          width: '272px',
+          height: 'calc(240px + 4rem)',
+          width: 'calc(240px + 4rem)',
         }"
       >
         <ArtIconEncryption animate-on-hover />
