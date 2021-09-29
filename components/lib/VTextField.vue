@@ -46,7 +46,6 @@ input {
   font-size: 1.1rem;
   line-height: 1.25rem;
   padding: 1rem 1.25rem;
-  min-width: 8rem;
 }
 
 input[type='number'] {
