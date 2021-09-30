@@ -27,7 +27,7 @@
             :show="show"
           />
           <v-image
-            :path="icon"
+            :path="`icons/${icon}.svg`"
             class="
               cursor-pointer
               laptop-remove
@@ -71,7 +71,7 @@ export default {
   },
   data() {
     return {
-      icon: 'icons/menu.svg',
+      icon: 'menu',
       show: false,
     }
   },
@@ -79,7 +79,7 @@ export default {
     showClicked(ev) {
       this.show = !this.show
       setTimeout(() => {
-        this.icon = this.show ? 'icons/close.svg' : 'icons/menu.svg'
+        this.icon = this.show ? 'close' : 'menu'
       }, 200)
     },
   },
