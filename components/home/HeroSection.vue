@@ -32,7 +32,7 @@
           </v-stack>
         </v-stack>
         <div class="position-relative section-orbs">
-          <v-image src="/images/hero-section-orbs.svg" />
+          <v-image path="images/hero-section-orbs.svg" />
         </div>
       </v-stack>
     </v-container>

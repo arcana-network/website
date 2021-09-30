@@ -1,6 +1,6 @@
 <template>
   <v-stack direction="column" align="center" style="text-align: center">
-    <v-image v-if="image" :src="image" :alt="alt" />
+    <v-image v-if="image" path="image" :alt="alt" />
     <v-heading v-if="title" :level="4" :weight="600" class="blurb-title">
       {{ title }}
     </v-heading>

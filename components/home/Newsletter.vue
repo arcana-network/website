@@ -3,7 +3,7 @@
     <v-container>
       <v-stack justify="space-between" align="center" md-direction="column">
         <v-image
-          src="/images/newsletter-illustration.svg"
+          path="images/newsletter-illustration.svg"
           style="padding: 15rem 0"
         />
         <v-stack direction="column">
@@ -61,7 +61,7 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 section {
-  background: url('/images/section-bg.svg');
+  background: url('~assets/images/section-bg.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
