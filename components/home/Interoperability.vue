@@ -8,7 +8,7 @@
         md-align="start"
       >
         <v-image
-          src="/images/interoperability-illustration.svg"
+          path="images/interoperability-illustration.svg"
           class="interoperability-illustration"
         />
         <v-stack direction="column" style="max-width: 40rem; flex-grow: 1">
@@ -47,7 +47,7 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 section {
-  background: url('/images/section-bg.svg');
+  background: url('~assets/images/section-bg.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }

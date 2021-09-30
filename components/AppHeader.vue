@@ -1,9 +1,12 @@
 <template>
-  <v-header :logo="arcanaLogo" :cta="headerCta" :menu-items="menuItems" />
+  <v-header
+    logo="images/arcana-logo-vertical.svg"
+    :cta="headerCta"
+    :menu-items="menuItems"
+  />
 </template>
 
 <script>
-import ArcanaLogo from '../assets/images/arcana-logo-vertical.svg'
 import VHeader from './lib/VHeader.vue'
 
 export default {
@@ -11,7 +14,6 @@ export default {
   components: { VHeader },
   data() {
     return {
-      arcanaLogo: ArcanaLogo,
       headerCta: {},
       menuItems: [
         {
