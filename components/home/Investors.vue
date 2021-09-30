@@ -26,15 +26,24 @@
       style="margin: 3rem auto 0; max-width: 1920px"
     >
       <div style="max-height: 540px; height: 50vh" />
-      <v-image
+      <div
         v-for="investor in investors"
         :key="investor.key"
-        :src="investor.image"
-        :title="investor.name"
-        :alt="investor.name"
         :class="['position-absolute', investor.cssClass]"
-        @click.stop="showDesc(investor.key)"
-      />
+      >
+        <v-image
+          :src="investor.image"
+          :title="investor.name"
+          :alt="investor.name"
+          @click.stop="showDesc(investor.key)"
+        />
+        <v-image
+          v-if="investor.orb"
+          :src="`/images/orb-${investor.orb.color}.svg`"
+          class="position-absolute"
+          :style="investor.orb.style"
+        />
+      </div>
       <div v-if="investorDescription" class="investor-description-container">
         <v-stack direction="column" align="center">
           <v-image
@@ -92,6 +101,10 @@ export default {
           image: 'images/investors/balaji.png',
           desc: 'Investor, Arcana',
           cssClass: 'investor-balaji',
+          orb: {
+            color: 'red',
+            style: 'right: 4%; top: 4%; width: 2rem',
+          },
         },
         {
           key: 'tamar',
@@ -99,6 +112,10 @@ export default {
           image: 'images/investors/tamar.png',
           desc: 'Investor, Arcana',
           cssClass: 'investor-tamar',
+          orb: {
+            color: 'red',
+            style: 'right: 10%; bottom: 15%; width: 1.2rem',
+          },
         },
         {
           key: 'kendrick',
@@ -106,6 +123,10 @@ export default {
           image: 'images/investors/kendrick.png',
           desc: 'Investor, Arcana',
           cssClass: 'investor-kendrick',
+          orb: {
+            color: 'yellow',
+            style: 'right: -25%; bottom: -25%; width: 3rem',
+          },
         },
         {
           key: 'santiago',
@@ -113,6 +134,10 @@ export default {
           image: 'images/investors/santiago.png',
           desc: 'Investor, Arcana',
           cssClass: 'investor-santiago',
+          orb: {
+            color: 'yellow',
+            style: 'right: 3%; top: 3%; width: 2rem',
+          },
         },
         {
           key: 'au21',
@@ -120,6 +145,10 @@ export default {
           image: 'images/investors/au21.png',
           desc: 'Investor, Arcana',
           cssClass: 'investor-au21',
+          orb: {
+            color: 'blue',
+            style: 'left: -75%; bottom: -50%; width: 2rem',
+          },
         },
         {
           key: 'kenetic',
@@ -127,6 +156,10 @@ export default {
           image: 'images/investors/kenetic.png',
           desc: 'Investor, Arcana',
           cssClass: 'investor-kenetic',
+          orb: {
+            color: 'blue',
+            style: 'right: -75%; top: -5%; width: 0.8rem',
+          },
         },
         {
           key: 'john',
@@ -141,6 +174,10 @@ export default {
           image: 'images/investors/aniket.png',
           desc: 'Investor, Arcana',
           cssClass: 'investor-aniket',
+          orb: {
+            color: 'yellow',
+            style: 'right: -50%; top: -75%; width: 4rem',
+          },
         },
         {
           key: 'siddharth',
@@ -216,9 +253,10 @@ export default {
 /* Investor positioning */
 .investor-balaji {
   bottom: 10%;
-  left: 0%;
+  left: 5%;
 
   @media (--viewport-medium) {
+    left: 0%;
     bottom: 2%;
   }
 }
