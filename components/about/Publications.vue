@@ -1,7 +1,7 @@
 <template>
   <section>
     <v-container class="publication-container">
-      <v-stack justify="space-between" align="center">
+      <v-stack md-direction="column" justify="space-between" align="center">
         <v-image
           path="images/publications-illustration.svg"
           class="publication-illustration"
@@ -60,6 +60,11 @@ section {
 }
 
 .publication-description-container {
+  width: 100%;
+  max-width: 40rem;
+}
+
+.publication-illustration {
   width: 100%;
   max-width: 40rem;
 }
