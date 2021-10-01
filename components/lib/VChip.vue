@@ -19,7 +19,6 @@ export default {
     rgba(26, 26, 26, 0.86293) 31.41%,
     rgba(32, 32, 32, 0.49) 100%
   );
-  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 1rem;
   max-width: 16rem;
