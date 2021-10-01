@@ -12,7 +12,7 @@ export default {
   components: { AppHeader, Technology },
   head() {
     return {
-      title: 'About us - Arcana Network',
+      title: 'Technology - Arcana Network',
     }
   },
 }
