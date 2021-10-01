@@ -24,6 +24,23 @@
             description="Storage nodes store only a piece of an encrypted file, ensuring data security at rest. No snooping by anyone! "
             class="tech-stack-description"
           />
+          <v-stack wrap gap="1rem" style="margin-top: 1rem">
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+          </v-stack>
         </v-stack>
       </v-stack>
 
@@ -34,6 +51,23 @@
             description="Storage nodes store only a piece of an encrypted file, ensuring data security at rest. No snooping by anyone!"
             class="tech-stack-description"
           />
+          <v-stack wrap gap="1rem" style="margin-top: 1rem">
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+          </v-stack>
         </v-stack>
         <v-image path="images/e2e-encryption.svg" />
       </v-stack>
@@ -46,6 +80,23 @@
             description="Storage nodes store only a piece of an encrypted file, ensuring data security at rest. No snooping by anyone!"
             class="tech-stack-description"
           />
+          <v-stack wrap gap="1rem" style="margin-top: 1rem">
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+          </v-stack>
         </v-stack>
       </v-stack>
 
@@ -56,6 +107,23 @@
             description="Storage nodes store only a piece of an encrypted file, ensuring data security at rest. No snooping by anyone!"
             class="tech-stack-description"
           />
+          <v-stack wrap gap="1rem" style="margin-top: 1rem">
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+            <v-chip>
+              <v-text color="secondary">
+                Proxy re-encryption (PRE) to seamlessly share / re share files.
+              </v-text>
+            </v-chip>
+          </v-stack>
         </v-stack>
         <v-image path="images/decentralised-iam.svg" />
       </v-stack>
@@ -65,14 +133,24 @@
 
 <script>
 import AppSectionDescriptor from '../AppSectionDescriptor.vue'
+import VChip from '../lib/VChip.vue'
 import VContainer from '../lib/VContainer.vue'
 import VHeading from '../lib/VHeading.vue'
 import VImage from '../lib/VImage.vue'
 import VStack from '../lib/VStack.vue'
+import VText from '../lib/VText.vue'
 
 export default {
   name: 'Technology',
-  components: { VContainer, VStack, AppSectionDescriptor, VHeading, VImage },
+  components: {
+    VContainer,
+    VStack,
+    AppSectionDescriptor,
+    VHeading,
+    VImage,
+    VChip,
+    VText,
+  },
 }
 </script>
 
