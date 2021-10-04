@@ -22,18 +22,6 @@
   </section>
 </template>
 
-<script>
-import VContainer from '~/components/lib/VContainer.vue'
-import VImage from '~/components/lib/VImage.vue'
-import VStack from '~/components/lib/VStack.vue'
-
-import AppSectionDescriptor from '~/components/AppSectionDescriptor.vue'
-
-export default {
-  components: { VContainer, AppSectionDescriptor, VStack, VImage },
-}
-</script>
-
 <style lang="postcss" scoped>
 /* Imported this for getting helper classes laptop-remove and mobile-remove */
 @import url('../lib/media-query-helper.css');
