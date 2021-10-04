@@ -28,7 +28,7 @@
                   {{ slide.designation }}
                 </v-text>
               </v-stack>
-              <v-image :src="slide.companyLogo" class="company-logo" />
+              <v-image :path="slide.companyLogo" class="company-logo" />
             </v-stack>
           </v-stack>
         </div>
