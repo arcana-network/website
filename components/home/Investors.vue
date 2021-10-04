@@ -72,27 +72,8 @@
 </template>
 
 <script>
-// Base Component imports
-import VButton from '~/components/lib/VButton.vue'
-import VContainer from '~/components/lib/VContainer.vue'
-import VHeading from '~/components/lib/VHeading.vue'
-import VImage from '~/components/lib/VImage.vue'
-import VStack from '~/components/lib/VStack.vue'
-import VText from '~/components/lib/VText.vue'
-
-// Group component imports
-import AppSectionDescriptor from '~/components/AppSectionDescriptor.vue'
-
 export default {
-  components: {
-    AppSectionDescriptor,
-    VButton,
-    VContainer,
-    VHeading,
-    VImage,
-    VStack,
-    VText,
-  },
+  name: 'Investors',
   data() {
     return {
       investorDescription: false,
