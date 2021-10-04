@@ -45,14 +45,8 @@
 </template>
 
 <script>
-import VButton from './VButton.vue'
-import VContainer from './VContainer.vue'
-import VImage from './VImage.vue'
-import VStack from './VStack.vue'
-import VText from './VText.vue'
 export default {
   name: 'VHeader',
-  components: { VContainer, VStack, VButton, VImage, VText },
   props: {
     logo: {
       type: String,
