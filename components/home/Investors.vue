@@ -32,14 +32,14 @@
         :class="['position-absolute', investor.cssClass]"
       >
         <v-image
-          :src="investor.image"
+          :path="investor.image"
           :title="investor.name"
           :alt="investor.name"
           @click.stop="showDesc(investor.key)"
         />
         <v-image
           v-if="investor.orb"
-          :src="`/images/orb-${investor.orb.color}.svg`"
+          :path="`images/orb-${investor.orb.color}.svg`"
           class="position-absolute"
           :style="investor.orb.style"
         />
@@ -47,14 +47,14 @@
       <div v-if="investorDescription" class="investor-description-container">
         <v-stack direction="column" align="center">
           <v-image
-            src="/images/investor-close-btn.svg"
+            path="images/investor-close-btn.svg"
             class="investor-description-close-btn"
             @click.stop="hideDesc()"
           />
           <div class="investor-description">
             <v-stack align="center">
               <v-image
-                src="/images/investor-placeholder.png"
+                path="images/investor-placeholder.png"
                 class="mobile-remove"
               />
               <v-stack direction="column" style="padding: 2rem">
@@ -72,23 +72,26 @@
 </template>
 
 <script>
-import AppSectionDescriptor from '../AppSectionDescriptor.vue'
-import VButton from '../lib/VButton.vue'
-import VContainer from '../lib/VContainer.vue'
-import VHeading from '../lib/VHeading.vue'
-import VImage from '../lib/VImage.vue'
-import VStack from '../lib/VStack.vue'
-import VText from '../lib/VText.vue'
+// Base Component imports
+import VButton from '~/components/lib/VButton.vue'
+import VContainer from '~/components/lib/VContainer.vue'
+import VHeading from '~/components/lib/VHeading.vue'
+import VImage from '~/components/lib/VImage.vue'
+import VStack from '~/components/lib/VStack.vue'
+import VText from '~/components/lib/VText.vue'
+
+// Group component imports
+import AppSectionDescriptor from '~/components/AppSectionDescriptor.vue'
 
 export default {
   components: {
-    VContainer,
     AppSectionDescriptor,
-    VStack,
     VButton,
-    VImage,
-    VText,
+    VContainer,
     VHeading,
+    VImage,
+    VStack,
+    VText,
   },
   data() {
     return {
