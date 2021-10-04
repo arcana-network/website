@@ -21,7 +21,7 @@
         md-align="start"
         style="margin-top: 4rem"
       >
-        <v-image src="/images/build-illustration.svg" class="illustration" />
+        <v-image path="images/build-illustration.svg" class="illustration" />
         <v-stack direction="column" align="start" style="max-width: 34rem">
           <app-section-descriptor
             heading="Build"
@@ -96,36 +96,15 @@
             style="margin-top: 3rem; width: 12rem"
           />
         </v-stack>
-        <v-image src="/images/provide-illustration.svg" class="illustration" />
+        <v-image path="images/provide-illustration.svg" class="illustration" />
       </v-stack>
     </v-container>
   </section>
 </template>
 
 <script>
-import AppSectionDescriptor from '../AppSectionDescriptor.vue'
-import VButton from '../lib/VButton.vue'
-import VContainer from '../lib/VContainer.vue'
-import VDropdown from '../lib/VDropdown.vue'
-import VImage from '../lib/VImage.vue'
-import VInputGroup from '../lib/VInputGroup.vue'
-import VLabel from '../lib/VLabel.vue'
-import VRadioGroup from '../lib/VRadioGroup.vue'
-import VStack from '../lib/VStack.vue'
-import VTextField from '../lib/VTextField.vue'
 export default {
-  components: {
-    VContainer,
-    AppSectionDescriptor,
-    VStack,
-    VImage,
-    VButton,
-    VLabel,
-    VRadioGroup,
-    VInputGroup,
-    VTextField,
-    VDropdown,
-  },
+  name: 'Community',
   data() {
     return {
       providerType: 'Storage Provider',

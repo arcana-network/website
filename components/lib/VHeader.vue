@@ -3,7 +3,7 @@
     <v-container>
       <v-stack justify="space-between" align="center">
         <NuxtLink to="/">
-          <v-image :src="logo" alt="logo" class="cursor-pointer logo" />
+          <v-image :path="logo" alt="logo" class="cursor-pointer logo" />
         </NuxtLink>
         <nav class="header-menu" :class="{ show }">
           <a
@@ -18,7 +18,7 @@
             </v-text>
           </a>
         </nav>
-        <v-stack gap="1.5rem">
+        <v-stack gap="3vw">
           <v-button
             v-if="cta"
             :label="cta.label"
@@ -27,7 +27,7 @@
             :show="show"
           />
           <v-image
-            :src="menuIcon"
+            :path="`icons/${icon}.svg`"
             class="
               cursor-pointer
               laptop-remove
@@ -45,16 +45,8 @@
 </template>
 
 <script>
-import MenuIcon from '../../assets/icons/menu.svg'
-import CloseIcon from '../../assets/icons/close.svg'
-import VButton from './VButton.vue'
-import VContainer from './VContainer.vue'
-import VImage from './VImage.vue'
-import VStack from './VStack.vue'
-import VText from './VText.vue'
 export default {
   name: 'VHeader',
-  components: { VContainer, VStack, VButton, VImage, VText },
   props: {
     logo: {
       type: String,
@@ -73,7 +65,7 @@ export default {
   },
   data() {
     return {
-      menuIcon: MenuIcon,
+      icon: 'menu',
       show: false,
     }
   },
@@ -81,7 +73,7 @@ export default {
     showClicked(ev) {
       this.show = !this.show
       setTimeout(() => {
-        this.menuIcon = this.show ? CloseIcon : MenuIcon
+        this.icon = this.show ? 'close' : 'menu'
       }, 200)
     },
   },
@@ -104,7 +96,7 @@ header {
 }
 
 .header-menu-item:active {
-  opacity: 0.8;
+  transform: scale(0.98);
 }
 
 @media (--viewport-large) {

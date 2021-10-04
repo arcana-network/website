@@ -32,7 +32,7 @@
           </v-stack>
         </v-stack>
         <div class="position-relative section-orbs">
-          <v-image src="/images/hero-section-orbs.svg" />
+          <v-image path="images/hero-section-orbs.svg" />
         </div>
       </v-stack>
     </v-container>
@@ -40,24 +40,8 @@
 </template>
 
 <script>
-import AppSectionDescriptor from '../AppSectionDescriptor.vue'
-import VButton from '../lib/VButton.vue'
-import VContainer from '../lib/VContainer.vue'
-import VHeading from '../lib/VHeading.vue'
-import VImage from '../lib/VImage.vue'
-import VStack from '../lib/VStack.vue'
-import VText from '../lib/VText.vue'
 export default {
   name: 'HeroSection',
-  components: {
-    VContainer,
-    VStack,
-    VImage,
-    VHeading,
-    VButton,
-    VText,
-    AppSectionDescriptor,
-  },
 }
 </script>
 

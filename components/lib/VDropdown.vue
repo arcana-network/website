@@ -10,7 +10,7 @@
       <span v-if="value">{{ value }}</span>
       <span v-else class="placeholder">{{ placeholder }}</span>
       <div class="arrow">
-        <v-image :src="arrowDownIcon" />
+        <v-image path="icons/arrow-down.svg" />
       </div>
     </div>
     <div
@@ -35,11 +35,8 @@
 </template>
 
 <script>
-import ArrowDownIcon from '../../assets/icons/arrow-down.svg'
-import VImage from './VImage.vue'
 export default {
   name: 'VDropdown',
-  components: { VImage },
   props: {
     options: {
       type: Array,
@@ -59,7 +56,6 @@ export default {
   data() {
     return {
       isOpen: false,
-      arrowDownIcon: ArrowDownIcon,
     }
   },
   methods: {

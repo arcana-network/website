@@ -20,6 +20,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+@import url('./media-query-helper.css');
+
 label {
   font-size: 0.85rem;
   font-weight: 400;
@@ -32,5 +34,9 @@ label.strong {
   font-size: 1.125rem;
   line-height: 1.375rem;
   margin-bottom: 0.625rem;
+
+  @media (--viewport-small) {
+    font-size: 0.9rem;
+  }
 }
 </style>
