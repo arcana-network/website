@@ -55,7 +55,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'Introduction',
+}
 </script>
 
 <style lang="postcss" scoped>

@@ -33,7 +33,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'Interoperability',
+}
 </script>
 
 <style lang="postcss" scoped>

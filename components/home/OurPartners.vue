@@ -57,7 +57,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'OurPartners',
+}
 </script>
 
 <style lang="postcss" scoped>

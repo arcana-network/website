@@ -33,6 +33,7 @@
 
 <script>
 export default {
+  name: 'Newsletter',
   data() {
     return {
       newsletterEmail: '',

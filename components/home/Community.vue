@@ -104,6 +104,7 @@
 
 <script>
 export default {
+  name: 'Community',
   data() {
     return {
       providerType: 'Storage Provider',
