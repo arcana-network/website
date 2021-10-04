@@ -13,12 +13,8 @@
 </template>
 
 <script>
-import VImage from './VImage.vue'
-import VStack from './VStack.vue'
-
 export default {
   name: 'VCarousel',
-  components: { VImage, VStack },
   props: {},
   data() {
     return {
