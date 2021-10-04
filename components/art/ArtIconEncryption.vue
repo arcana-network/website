@@ -323,7 +323,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .orbs {
   transform-origin: center;
 }
