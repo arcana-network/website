@@ -1,10 +1,11 @@
 <template>
   <img
     :class="{ responsive }"
-    v-bind="$attrs"
+    :height="dimension[1] ? dimension[1] : ''"
+    :src="resolvedPath"
     :style="styles"
     :width="dimension[0] ? dimension[0] : ''"
-    :height="dimension[1] ? dimension[1] : ''"
+    v-bind="$attrs"
     @click.stop="(ev) => $emit('click', ev)"
   />
 </template>
@@ -13,6 +14,10 @@
 export default {
   name: 'VImage',
   props: {
+    path: {
+      type: String,
+      required: true,
+    },
     responsive: {
       type: Boolean,
     },
@@ -43,6 +48,11 @@ export default {
     return {
       styles: {},
     }
+  },
+  computed: {
+    resolvedPath() {
+      return require(`~/assets/${this.path}`)
+    },
   },
   created() {
     this.styles.height = this.height
