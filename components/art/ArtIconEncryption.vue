@@ -280,11 +280,8 @@
 <script>
 import anime from 'animejs'
 
-import VIntersect from '~/components/lib/VIntersect'
-
 export default {
   name: 'ArtIconEncryption',
-  components: { VIntersect },
   props: {
     animateOnEnter: {
       type: Boolean,
