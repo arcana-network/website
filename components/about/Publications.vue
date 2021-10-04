@@ -30,14 +30,8 @@
 </template>
 
 <script>
-import AppSectionDescriptor from '../AppSectionDescriptor.vue'
-import VButton from '../lib/VButton.vue'
-import VContainer from '../lib/VContainer.vue'
-import VImage from '../lib/VImage.vue'
-import VStack from '../lib/VStack.vue'
 export default {
   name: 'Publications',
-  components: { VContainer, VStack, VImage, AppSectionDescriptor, VButton },
 }
 </script>
 
