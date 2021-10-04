@@ -126,7 +126,7 @@ a:not([disabled='true']):hover {
   color: #00519c;
 }
 a:not([disabled='true']):active {
-  transform: scale(99%);
+  transform: scale(0.99);
 }
 a[disabled='true'] {
   cursor: not-allowed;
