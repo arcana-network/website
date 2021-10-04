@@ -9,8 +9,8 @@
     <div class="custom-select__trigger font-serif color-primary cursor-pointer">
       <span v-if="value">{{ value }}</span>
       <span v-else class="placeholder">{{ placeholder }}</span>
-      <div class="arrow">
-        <v-image path="icons/arrow-down.svg" />
+      <div class="arrow" @click.stop="toggle">
+        <v-image path="icons/arrow-down.svg" @click.stop="toggle" />
       </div>
     </div>
     <div
@@ -57,6 +57,11 @@ export default {
     return {
       isOpen: false,
     }
+  },
+  mounted() {
+    document.addEventListener('click', () => {
+      this.isOpen = false
+    })
   },
   methods: {
     toggle() {
