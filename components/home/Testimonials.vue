@@ -11,7 +11,7 @@
           :key="'testimonial-carousel-' + index"
         >
           <v-stack md-direction="column" align="center" md-align="start">
-            <v-image src="/images/moon.svg" class="testimonial-illustration" />
+            <v-image path="images/moon.svg" class="testimonial-illustration" />
             <v-stack direction="column">
               <v-heading :level="4" class="testimonial-quote">
                 “{{ slide.quote }}”
@@ -38,19 +38,20 @@
 </template>
 
 <script>
-import VCarousel from '../lib/VCarousel.vue'
-import VContainer from '../lib/VContainer.vue'
-import VHeading from '../lib/VHeading.vue'
-import VImage from '../lib/VImage.vue'
-import VStack from '../lib/VStack.vue'
-import VText from '../lib/VText.vue'
+import VCarousel from '~/components/lib/VCarousel.vue'
+import VContainer from '~/components/lib/VContainer.vue'
+import VHeading from '~/components/lib/VHeading.vue'
+import VImage from '~/components/lib/VImage.vue'
+import VStack from '~/components/lib/VStack.vue'
+import VText from '~/components/lib/VText.vue'
+
 export default {
   components: {
-    VContainer,
-    VStack,
-    VImage,
     VCarousel,
+    VContainer,
     VHeading,
+    VImage,
+    VStack,
     VText,
   },
   data() {
@@ -87,13 +88,14 @@ export default {
 
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
+
 section {
-  background: #000 url('/images/testimonials-bg.svg') no-repeat;
+  background: #000 url('~assets/images/testimonials-bg.svg') no-repeat;
   background-size: cover;
   box-shadow: 0 1rem 2rem 0.5rem black, 0 -1rem 2rem 0.5rem black;
 
   @media (--viewport-small) {
-    background: #000 url('/images/testimonials-bg-mobile.svg') no-repeat;
+    background: #000 url('~assets/images/testimonials-bg-mobile.svg') no-repeat;
   }
 }
 
