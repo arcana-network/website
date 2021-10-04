@@ -19,7 +19,7 @@ export default {
 
   plugins: [],
 
-  components: true,
+  components: ['~/components', '~/components/home', '~/components/lib'],
 
   buildModules: [
     '@nuxtjs/eslint-module',

@@ -17,13 +17,8 @@
 </template>
 
 <script>
-import VHeading from './VHeading.vue'
-import VImage from './VImage.vue'
-import VStack from './VStack.vue'
-import VText from './VText.vue'
 export default {
   name: 'VBlurb',
-  components: { VStack, VImage, VHeading, VText },
   props: {
     image: {
       type: String,
