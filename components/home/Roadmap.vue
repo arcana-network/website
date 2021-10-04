@@ -22,6 +22,12 @@
   </section>
 </template>
 
+<script>
+export default {
+  name: 'Roadmap',
+}
+</script>
+
 <style lang="postcss" scoped>
 /* Imported this for getting helper classes laptop-remove and mobile-remove */
 @import url('../lib/media-query-helper.css');
