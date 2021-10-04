@@ -55,20 +55,8 @@
 </template>
 
 <script>
-import AppSectionDescriptor from '../AppSectionDescriptor.vue'
-import VContainer from '../lib/VContainer.vue'
-import VVideoThumbnail from '../lib/VVideoThumbnail.vue'
-import VImage from '../lib/VImage.vue'
-import VStack from '../lib/VStack.vue'
-
 export default {
-  components: {
-    VContainer,
-    AppSectionDescriptor,
-    VVideoThumbnail,
-    VImage,
-    VStack,
-  },
+  name: 'Introduction',
 }
 </script>
 

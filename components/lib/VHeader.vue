@@ -18,7 +18,7 @@
             </v-text>
           </a>
         </nav>
-        <v-stack gap="1.5rem">
+        <v-stack gap="3vw">
           <v-button
             v-if="cta"
             :label="cta.label"
@@ -45,14 +45,8 @@
 </template>
 
 <script>
-import VButton from './VButton.vue'
-import VContainer from './VContainer.vue'
-import VImage from './VImage.vue'
-import VStack from './VStack.vue'
-import VText from './VText.vue'
 export default {
   name: 'VHeader',
-  components: { VContainer, VStack, VButton, VImage, VText },
   props: {
     logo: {
       type: String,
@@ -102,7 +96,7 @@ header {
 }
 
 .header-menu-item:active {
-  opacity: 0.8;
+  transform: scale(0.98);
 }
 
 @media (--viewport-large) {
