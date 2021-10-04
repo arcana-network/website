@@ -11,6 +11,7 @@
         type="radio"
         :value="option"
         :name="name"
+        :checked="option === value"
         @change="onChange"
       />
       <v-label
@@ -23,11 +24,8 @@
 </template>
 
 <script>
-import VStack from './VStack.vue'
-import VLabel from './VLabel.vue'
 export default {
   name: 'VRadioGroup',
-  components: { VStack, VLabel },
   props: {
     layout: {
       type: String,
@@ -58,7 +56,7 @@ export default {
 }
 </script>
 
-<style  scoped>
+<style scoped>
 .radio-padding {
   padding: 1rem;
 }
