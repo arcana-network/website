@@ -1,0 +1,38 @@
+<svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i)">
+<circle cx="17.3939" cy="18.1364" r="17.2284" transform="rotate(-0.243798 17.3939 18.1364)" fill="url(#paint0_linear)"/>
+<circle cx="17.3939" cy="18.1364" r="17.2284" transform="rotate(-0.243798 17.3939 18.1364)" fill="url(#paint1_radial)" fill-opacity="0.8"/>
+<circle cx="17.3939" cy="18.1364" r="17.2284" transform="rotate(-0.243798 17.3939 18.1364)" fill="url(#paint2_radial)" fill-opacity="0.6"/>
+<circle cx="17.3939" cy="18.1364" r="17.2284" transform="rotate(-0.243798 17.3939 18.1364)" fill="url(#paint3_linear)" fill-opacity="0.6"/>
+</g>
+<defs>
+<filter id="filter0_i" x="-8.90771" y="-6.16504" width="43.6031" height="41.6031" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-9" dy="-7"/>
+<feGaussianBlur stdDeviation="33"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.55 0 0 0 0 0.00687498 0 0 0 0 0.00687498 0 0 0 0.37 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+</filter>
+<linearGradient id="paint0_linear" x1="31.8435" y1="39.4403" x2="1.27695" y2="-6.87259" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF31C5"/>
+<stop offset="1" stop-color="#FF04B0"/>
+</linearGradient>
+<radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(22.2383 9.51084) rotate(121.734) scale(26.6276)">
+<stop stop-color="#FFB340"/>
+<stop offset="0.0001" stop-color="#FFB340"/>
+<stop offset="0.838542" stop-color="#FF2AD0"/>
+</radialGradient>
+<radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(30.5467 36.4763) rotate(-138.906) scale(32.6931)">
+<stop stop-color="#FF2A90"/>
+<stop offset="0.322917" stop-color="#FF2AB7" stop-opacity="0.828125"/>
+<stop offset="1" stop-color="#FF2AB7" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="paint3_linear" x1="4.98198" y1="33.5123" x2="21.0568" y2="12.248" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7C0000"/>
+<stop offset="1" stop-color="#AD2E00" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
