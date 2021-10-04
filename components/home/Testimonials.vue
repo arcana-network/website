@@ -38,22 +38,8 @@
 </template>
 
 <script>
-import VCarousel from '~/components/lib/VCarousel.vue'
-import VContainer from '~/components/lib/VContainer.vue'
-import VHeading from '~/components/lib/VHeading.vue'
-import VImage from '~/components/lib/VImage.vue'
-import VStack from '~/components/lib/VStack.vue'
-import VText from '~/components/lib/VText.vue'
-
 export default {
-  components: {
-    VCarousel,
-    VContainer,
-    VHeading,
-    VImage,
-    VStack,
-    VText,
-  },
+  name: 'Testimonials',
   data() {
     return {
       currentSlide: 0,
