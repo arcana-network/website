@@ -295,7 +295,7 @@ export default {
 
       anime({
         targets: [orbsGroup, orbs],
-        duration: 500,
+        duration: 250,
         rotate: 180,
         easing: 'easeInOutCubic',
         begin: () => {
