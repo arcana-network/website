@@ -14,7 +14,7 @@ export const animateOnHover = () => `
       }"
     >
       <ArtIconEncryption animate-on-hover />
-      <ArtIconEncryption animate-on-hover />
+      <ArtIconStorage animate-on-hover />
       <ArtIconEncryption animate-on-hover />
       <ArtIconEncryption animate-on-hover />
     </div>
@@ -39,7 +39,7 @@ export const animateOnEnter = () => `
     ></div>
     <VText color="secondary" size="0.75rem">Scroll down &darr;</VText>
     <ArtIconEncryption animate-on-enter />
-    <ArtIconEncryption animate-on-enter />
+    <ArtIconStorage animate-on-enter />
     <ArtIconEncryption animate-on-enter />
     <ArtIconEncryption animate-on-enter />
   </VStack>
@@ -53,9 +53,9 @@ export const sizes = () => `
       <ArtIconEncryption :size="140" />
     </VStack>
     <VStack align="center" gap="3rem" justify="center">
-      <ArtIconEncryption :size="100" />
-      <ArtIconEncryption :size="120" />
-      <ArtIconEncryption :size="140" />
+      <ArtIconStorage :size="100" />
+      <ArtIconStorage :size="120" />
+      <ArtIconStorage :size="140" />
     </VStack>
     <VStack align="center" gap="3rem" justify="center">
       <ArtIconEncryption :size="100" />
