@@ -6,27 +6,24 @@
       </div>
     </transition-group>
     <v-stack class="icons" gap="2rem" justify="center">
-      <v-image :src="arrowLeft" @click.stop="changeSlide(-1)" />
-      <v-image :src="arrowRight" @click.stop="changeSlide(1)" />
+      <v-image path="icons/arrow-left.svg" @click.stop="changeSlide(-1)" />
+      <v-image path="icons/arrow-right.svg" @click.stop="changeSlide(1)" />
     </v-stack>
   </div>
 </template>
 
 <script>
-import VStack from './VStack.vue'
 import VImage from './VImage.vue'
-import ArrowLeftIcon from '~/assets/icons/arrow-left.svg'
-import ArrowRightIcon from '~/assets/icons/arrow-right.svg'
+import VStack from './VStack.vue'
+
 export default {
   name: 'VCarousel',
-  components: { VStack, VImage },
+  components: { VImage, VStack },
   props: {},
   data() {
     return {
-      arrowLeft: ArrowLeftIcon,
-      arrowRight: ArrowRightIcon,
-      transitionName: '',
       currentSlide: 0,
+      transitionName: '',
     }
   },
   computed: {
@@ -132,6 +129,7 @@ export default {
 </style>
 
 <style lang="postcss">
+/* Scoped styles don't work for dynamic classes added to DOM */
 .carousel-item {
   position: absolute;
   top: 0;
