@@ -151,25 +151,8 @@
 </template>
 
 <script>
-import AppSectionDescriptor from '../AppSectionDescriptor.vue'
-import VChip from '../lib/VChip.vue'
-import VContainer from '../lib/VContainer.vue'
-import VHeading from '../lib/VHeading.vue'
-import VImage from '../lib/VImage.vue'
-import VStack from '../lib/VStack.vue'
-import VText from '../lib/VText.vue'
-
 export default {
   name: 'Technology',
-  components: {
-    VContainer,
-    VStack,
-    AppSectionDescriptor,
-    VHeading,
-    VImage,
-    VChip,
-    VText,
-  },
 }
 </script>
 
