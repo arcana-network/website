@@ -31,11 +31,8 @@
 </template>
 
 <script>
-import VText from './VText.vue'
-import VStack from './VStack.vue'
 export default {
   name: 'VAccordion',
-  components: { VText, VStack },
   props: {
     items: {
       type: Array,

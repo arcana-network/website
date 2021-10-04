@@ -33,13 +33,8 @@
 </template>
 
 <script>
-import AppSectionDescriptor from '../AppSectionDescriptor.vue'
-import VContainer from '../lib/VContainer.vue'
-import VImage from '../lib/VImage.vue'
-import VStack from '../lib/VStack.vue'
-import VText from '../lib/VText.vue'
 export default {
-  components: { VContainer, AppSectionDescriptor, VStack, VImage, VText },
+  name: 'Interoperability',
 }
 </script>
 

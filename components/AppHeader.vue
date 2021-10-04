@@ -7,11 +7,8 @@
 </template>
 
 <script>
-import VHeader from './lib/VHeader.vue'
-
 export default {
   name: 'AppHeader',
-  components: { VHeader },
   data() {
     return {
       headerCta: {},

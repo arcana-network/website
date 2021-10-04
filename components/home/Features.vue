@@ -66,21 +66,8 @@
 </template>
 
 <script>
-import AppSectionDescriptor from '../AppSectionDescriptor.vue'
-import VBlurb from '../lib/VBlurb.vue'
-import VButton from '../lib/VButton.vue'
-import VContainer from '../lib/VContainer.vue'
-import VImage from '../lib/VImage.vue'
-import VStack from '../lib/VStack.vue'
 export default {
-  components: {
-    VContainer,
-    AppSectionDescriptor,
-    VStack,
-    VButton,
-    VImage,
-    VBlurb,
-  },
+  name: 'Features',
 }
 </script>
 
