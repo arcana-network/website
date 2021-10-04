@@ -28,29 +28,14 @@
       </g>
       <g class="orbs">
         <g class="orb">
-          <circle cx="9.5" cy="60.5" r="7.5" fill="url(#icon-encryption-e)" />
-          <circle cx="9.5" cy="60.5" r="7.5" fill="url(#icon-encryption-f)" />
-          <circle cx="9.5" cy="60.5" r="7.5" fill="url(#icon-encryption-g)" />
+          <circle cx="10" cy="60" r="7.5" fill="url(#icon-encryption-e)" />
+          <circle cx="10" cy="60" r="7.5" fill="url(#icon-encryption-f)" />
+          <circle cx="10" cy="60" r="7.5" fill="url(#icon-encryption-g)" />
         </g>
         <g class="orb">
-          <circle
-            cx="110.63"
-            cy="60.5"
-            r="7.5"
-            fill="url(#icon-encryption-h)"
-          />
-          <circle
-            cx="110.63"
-            cy="60.5"
-            r="7.5"
-            fill="url(#icon-encryption-i)"
-          />
-          <circle
-            cx="110.63"
-            cy="60.5"
-            r="7.5"
-            fill="url(#icon-encryption-j)"
-          />
+          <circle cx="110" cy="60" r="7.5" fill="url(#icon-encryption-h)" />
+          <circle cx="110" cy="60" r="7.5" fill="url(#icon-encryption-i)" />
+          <circle cx="110" cy="60" r="7.5" fill="url(#icon-encryption-j)" />
         </g>
       </g>
       <g class="shield">
