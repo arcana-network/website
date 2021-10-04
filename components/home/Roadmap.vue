@@ -12,25 +12,23 @@
     </v-container>
     <div style="margin-top: 2rem; text-align: center">
       <v-image
-        src="/images/roadmap-desktop.svg"
-        class="tablet-remove mobile-remove"
-        style="width: 100%; max-width: 1920px"
+        path="images/roadmap-desktop.svg"
+        class="tablet-remove mobile-remove roadmap-desktop"
       />
       <div class="laptop-remove position-relative" style="text-align: center">
-        <v-image
-          src="/images/roadmap-mobile.svg"
-          style="width: 100%; max-width: 375px"
-        />
+        <v-image path="images/roadmap-mobile.svg" class="roadmap-mobile" />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import AppSectionDescriptor from '../AppSectionDescriptor.vue'
-import VContainer from '../lib/VContainer.vue'
-import VImage from '../lib/VImage.vue'
-import VStack from '../lib/VStack.vue'
+import VContainer from '~/components/lib/VContainer.vue'
+import VImage from '~/components/lib/VImage.vue'
+import VStack from '~/components/lib/VStack.vue'
+
+import AppSectionDescriptor from '~/components/AppSectionDescriptor.vue'
+
 export default {
   components: { VContainer, AppSectionDescriptor, VStack, VImage },
 }
@@ -39,4 +37,14 @@ export default {
 <style lang="postcss" scoped>
 /* Imported this for getting helper classes laptop-remove and mobile-remove */
 @import url('../lib/media-query-helper.css');
+
+.roadmap-desktop {
+  width: 100%;
+  max-width: 1920px;
+}
+
+.roadmap-mobile {
+  width: 100%;
+  max-width: 375px;
+}
 </style>
