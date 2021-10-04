@@ -5,9 +5,8 @@
 </template>
 
 <script>
-import VText from './lib/VText.vue'
 export default {
-  components: { VText },
+  name: 'AppCopyright',
 }
 </script>
 

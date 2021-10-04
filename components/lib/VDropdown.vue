@@ -35,10 +35,8 @@
 </template>
 
 <script>
-import VImage from './VImage.vue'
 export default {
   name: 'VDropdown',
-  components: { VImage },
   props: {
     options: {
       type: Array,

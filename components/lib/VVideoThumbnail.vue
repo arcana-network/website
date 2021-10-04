@@ -15,10 +15,8 @@
 </template>
 
 <script>
-import VImage from './VImage.vue'
 export default {
   name: 'VVideoThumbnail',
-  components: { VImage },
   props: {
     src: {
       type: String,
