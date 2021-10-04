@@ -21,7 +21,7 @@
         md-align="start"
         style="margin-top: 4rem"
       >
-        <v-image src="/images/build-illustration.svg" class="illustration" />
+        <v-image path="images/build-illustration.svg" class="illustration" />
         <v-stack direction="column" align="start" style="max-width: 34rem">
           <app-section-descriptor
             heading="Build"
@@ -96,7 +96,7 @@
             style="margin-top: 3rem; width: 12rem"
           />
         </v-stack>
-        <v-image src="/images/provide-illustration.svg" class="illustration" />
+        <v-image path="images/provide-illustration.svg" class="illustration" />
       </v-stack>
     </v-container>
   </section>

@@ -6,7 +6,7 @@
       @click.stop="onPlay"
     >
       <v-image
-        :src="playIcon"
+        path="icons/play.svg"
         :dimension="[64, 64]"
         class="video-play-button absolute-center"
       />
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import PlayIcon from '../../assets/icons/play.svg'
 import VImage from './VImage.vue'
 export default {
   name: 'VVideoThumbnail',
@@ -31,11 +30,6 @@ export default {
         return []
       },
     },
-  },
-  data() {
-    return {
-      playIcon: PlayIcon,
-    }
   },
   methods: {
     onPlay(ev) {

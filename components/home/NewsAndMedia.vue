@@ -15,12 +15,12 @@
         />
       </v-stack>
       <v-stack class="coverage" gap="8rem" wrap style="margin-top: 2rem">
-        <v-image src="/images/news/forbes.svg" />
-        <v-image src="/images/news/businessinsider.svg" />
-        <v-image src="/images/news/cointelegraph.svg" />
-        <v-image src="/images/news/bloomberg.svg" />
-        <v-image src="/images/news/yourstory.svg" />
-        <v-image src="/images/news/enterprenuer.svg" />
+        <v-image path="images/news/forbes.svg" />
+        <v-image path="images/news/businessinsider.svg" />
+        <v-image path="images/news/cointelegraph.svg" />
+        <v-image path="images/news/bloomberg.svg" />
+        <v-image path="images/news/yourstory.svg" />
+        <v-image path="images/news/enterprenuer.svg" />
       </v-stack>
     </v-container>
   </section>

@@ -11,32 +11,32 @@
         <div class="position-relative introduction-video-container">
           <div class="orbit">
             <v-image
-              src="/images/circular-ring.svg"
+              path="images/circular-ring.svg"
               class="introduction-video-orbit"
             />
             <v-image
-              src="/images/orb-blue.svg"
+              path="images/orb-blue.svg"
               class="position-absolute orbit-orb-blue-large"
             />
             <v-image
-              src="/images/orb-blue.svg"
+              path="images/orb-blue.svg"
               class="position-absolute orbit-orb-blue-small"
             />
             <v-image
-              src="/images/orb-red.svg"
+              path="images/orb-red.svg"
               class="position-absolute orb-red"
             />
             <v-image
-              src="/images/orb-yellow.svg"
+              path="images/orb-yellow.svg"
               class="position-absolute orb-yellow-left"
             />
             <v-image
-              src="/images/orb-yellow.svg"
+              path="images/orb-yellow.svg"
               class="position-absolute orb-yellow-right"
             />
           </div>
           <v-video-thumbnail
-            src="/images/placeholder-test-image.png"
+            path="images/placeholder-test-image.png"
             class="introduction-video-thumbnail"
             style="position: absolute"
           />

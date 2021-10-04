@@ -18,33 +18,33 @@
         </v-stack>
         <div class="position-relative partner-logo-container">
           <v-image
-            src="/images/our-partners-orbs.svg"
+            path="images/our-partners-orbs.svg"
             style="margin-right: -2rem"
             class="base-illustration"
           />
           <v-image
-            src="/images/partner-unmarshal.svg"
+            path="images/partner-unmarshal.svg"
             title="Unmarshal"
             alt="Unmarshal"
             class="position-absolute"
             style="bottom: 14%; left: 0; width: 25%"
           />
           <v-image
-            src="/images/partner-dia.svg"
+            path="images/partner-dia.svg"
             title="Dia"
             alt="Dia"
             class="position-absolute"
             style="bottom: 18%; right: 0; width: 24%"
           />
           <v-image
-            src="/images/partner-rage-fan.svg"
+            path="images/partner-rage-fan.svg"
             title="Rage.Fan"
             alt="Rage.Fan"
             class="position-absolute"
             style="top: 12%; right: 20%; width: 20%"
           />
           <v-image
-            src="/images/partner-builders-tribe.svg"
+            path="images/partner-builders-tribe.svg"
             title="Builders Tribe"
             alt="Builders Tribe"
             class="position-absolute"

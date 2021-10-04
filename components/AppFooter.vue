@@ -2,7 +2,7 @@
   <footer>
     <v-container>
       <v-stack align="center" justify="space-around" :grow="1">
-        <v-image src="/images/arcana-footer.svg" />
+        <v-image path="images/arcana-footer.svg" />
       </v-stack>
       <v-stack
         justify="space-between"
@@ -19,7 +19,7 @@
           <v-stack style="margin-top: 3rem" md-justify="space-evenly">
             <a href="https://twitter.com/arcananetwork" target="__blank">
               <v-image
-                src="/images/twitter-white.svg"
+                path="images/twitter-white.svg"
                 class="footer-social-link"
                 alt="Arcana twitter page"
               />
@@ -30,7 +30,7 @@
               target="__blank"
             >
               <v-image
-                src="/images/telegram-white.svg"
+                path="images/telegram-white.svg"
                 class="footer-social-link"
                 alt="Arcana telegram channel"
               />

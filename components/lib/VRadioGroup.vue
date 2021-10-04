@@ -11,6 +11,7 @@
         type="radio"
         :value="option"
         :name="name"
+        :checked="option === value"
         @change="onChange"
       />
       <v-label
