@@ -104,7 +104,7 @@ header {
 }
 
 .header-menu-item:active {
-  transform: scale(98%);
+  transform: scale(0.98);
 }
 
 @media (--viewport-large) {
