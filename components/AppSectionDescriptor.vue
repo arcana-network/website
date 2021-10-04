@@ -34,12 +34,8 @@
 </template>
 
 <script>
-import VHeading from './lib/VHeading.vue'
-import VStack from './lib/VStack.vue'
-import VText from './lib/VText.vue'
 export default {
   name: 'AppSectionDescriptor',
-  components: { VText, VStack, VHeading },
   props: {
     title: {
       type: String,

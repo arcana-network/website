@@ -5,10 +5,7 @@
 </template>
 
 <script>
-import VText from './lib/VText.vue'
-export default {
-  components: { VText },
-}
+export default {}
 </script>
 
 <style lang="postcss" scoped>

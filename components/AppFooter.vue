@@ -60,13 +60,7 @@
 </template>
 
 <script>
-import VContainer from './lib/VContainer.vue'
-import VImage from './lib/VImage.vue'
-import VStack from './lib/VStack.vue'
-import VText from './lib/VText.vue'
-export default {
-  components: { VContainer, VImage, VStack, VText },
-}
+export default {}
 </script>
 
 <style lang="postcss" scoped>

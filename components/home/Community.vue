@@ -103,29 +103,7 @@
 </template>
 
 <script>
-import AppSectionDescriptor from '../AppSectionDescriptor.vue'
-import VButton from '../lib/VButton.vue'
-import VContainer from '../lib/VContainer.vue'
-import VDropdown from '../lib/VDropdown.vue'
-import VImage from '../lib/VImage.vue'
-import VInputGroup from '../lib/VInputGroup.vue'
-import VLabel from '../lib/VLabel.vue'
-import VRadioGroup from '../lib/VRadioGroup.vue'
-import VStack from '../lib/VStack.vue'
-import VTextField from '../lib/VTextField.vue'
 export default {
-  components: {
-    VContainer,
-    AppSectionDescriptor,
-    VStack,
-    VImage,
-    VButton,
-    VLabel,
-    VRadioGroup,
-    VInputGroup,
-    VTextField,
-    VDropdown,
-  },
   data() {
     return {
       providerType: 'Storage Provider',
