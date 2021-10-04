@@ -9,7 +9,7 @@
             </v-text>
           </dt>
           <img
-            :src="item.selected ? CircleMinusIcon : CirclePlusIcon"
+            :src="iconImageSrc(item)"
             class="cursor-pointer"
             @click.stop="handleIconClick(index)"
           />
@@ -31,8 +31,6 @@
 </template>
 
 <script>
-import CirclePlusIcon from '../../assets/icons/plus-circle.svg'
-import CircleMinusIcon from '../../assets/icons/minus-circle.svg'
 import VText from './VText.vue'
 import VStack from './VStack.vue'
 export default {
@@ -51,12 +49,15 @@ export default {
   },
   data() {
     return {
-      CirclePlusIcon,
-      CircleMinusIcon,
       mutableItems: [...this.items],
     }
   },
   methods: {
+    iconImageSrc(item) {
+      return item.selected
+        ? require(`~/assets/icons/minus-circle.svg`)
+        : require(`~/assets/icons/plus-circle.svg`)
+    },
     handleIconClick(i) {
       if (!this.multiple) {
         // Check if any item is expanded and collapse it
