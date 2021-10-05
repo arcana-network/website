@@ -364,7 +364,7 @@ export default {
         targets: [diamond],
         duration: 500,
         rotate: 360,
-        easing: 'easeInOutCubic',
+        easing: 'easeOutCubic',
         begin: () => {
           this.isAnimating = true
         },

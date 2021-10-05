@@ -416,7 +416,7 @@ export default {
         targets: [orbsGroup, orbs],
         duration: 500,
         rotate: 360,
-        easing: 'easeInOutCubic',
+        easing: 'easeOutCubic',
         begin: () => {
           this.isAnimating = true
         },

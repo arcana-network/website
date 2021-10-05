@@ -492,7 +492,7 @@ export default {
       anime
         .timeline({
           duration: 500,
-          easing: 'easeInOutSine',
+          easing: 'easeOutCubic',
         })
         .add({
           targets: [keyStemUp],
