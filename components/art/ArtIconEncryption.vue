@@ -295,8 +295,8 @@ export default {
 
       anime({
         targets: [orbsGroup, orbs],
-        duration: 250,
-        rotate: 180,
+        duration: 500,
+        rotate: 360,
         easing: 'easeInOutCubic',
         begin: () => {
           this.isAnimating = true

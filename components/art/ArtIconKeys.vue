@@ -490,12 +490,13 @@ export default {
       const keyStemDown = this.$refs.iconKeys.querySelectorAll('.key-stem-down')
 
       anime
-        .timeline()
+        .timeline({
+          duration: 500,
+          easing: 'easeInOutSine',
+        })
         .add({
           targets: [keyStemUp],
-          duration: 300,
           opacity: [1, 0, 1],
-          easing: 'easeInOutCubic',
           begin: () => {
             this.isAnimating = true
           },
@@ -503,9 +504,7 @@ export default {
         .add(
           {
             targets: [keyStemDown],
-            duration: 300,
             opacity: [0, 1, 0],
-            easing: 'easeInOutCubic',
             complete: () => {
               this.isAnimating = false
               anime.set([keyStemUp], {
@@ -516,7 +515,7 @@ export default {
               })
             },
           },
-          '-=300'
+          '-=500'
         )
     },
     onEnter() {
