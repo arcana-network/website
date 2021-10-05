@@ -10,7 +10,7 @@
       :height="size"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      viewBox="0 0 117 116"
+      viewBox="0 0 120 120"
     >
       <g class="crater" @mouseenter="onHover">
         <g filter="url(#icon-identity-a)">
