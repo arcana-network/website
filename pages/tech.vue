@@ -1,7 +1,7 @@
 <template>
   <main>
     <AppHeader />
-    <Technology />
+    <AboutTechnology />
   </main>
 </template>
 
