@@ -18,7 +18,7 @@
         <v-stack>
           <v-stack
             direction="column"
-            style="margin: 1.5rem 5rem 0 0"
+            style="margin: 1.5rem 6rem 0 0"
             class="tablet-remove mobile-remove"
           >
             <div v-for="year in years" :key="year">
@@ -28,7 +28,7 @@
               >
                 <v-text :weight="600">{{ year }}</v-text>
               </v-chip>
-              <ul v-if="selectedYear === year" style="padding: 0">
+              <ul v-if="selectedYear === year">
                 <li
                   v-for="quarter in quarters"
                   :key="quarter + year"
@@ -233,6 +233,10 @@ export default {
   max-width: 12rem;
 }
 
+ul {
+  padding: 0;
+}
+
 ul li {
   list-style: none;
 }
@@ -264,7 +268,7 @@ ul li {
     rgba(32, 32, 32, 0.49) 100%
   );
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-  padding: 1rem 5rem;
+  padding: 1.5rem 5rem;
   margin: 1rem 2rem 0.5rem 0;
   cursor: pointer;
 }
