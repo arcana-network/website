@@ -2,6 +2,7 @@
   <main>
     <AppHeader />
     <AboutOurPrinciples />
+    <AboutOurTeam />
   </main>
 </template>
 
