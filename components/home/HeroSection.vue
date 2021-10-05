@@ -23,10 +23,10 @@
             </v-text>
             <v-stack align="center" class="support-icons">
               <a href="https://t.me/ArcanaNetwork" target="__blank">
-                <v-image src="/telegram.svg" />
+                <v-image path="images/telegram.svg" />
               </a>
               <a href="https://discord.gg/BcbrsRsR" target="__blank">
-                <v-image src="/discord.svg" />
+                <v-image path="images/discord.svg" />
               </a>
             </v-stack>
           </v-stack>
