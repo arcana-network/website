@@ -31,19 +31,19 @@
             path="images/decentralised-storage.svg"
             class="laptop-remove"
           />
-          <v-stack wrap gap="1rem" md-justify="center">
+          <v-stack wrap gap="1.5rem" md-justify="center">
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
@@ -59,19 +59,19 @@
             class="tech-stack-description"
           />
           <v-image path="images/e2e-encryption.svg" class="laptop-remove" />
-          <v-stack wrap gap="1rem" md-justify="center">
+          <v-stack wrap gap="1.5rem" md-justify="center">
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
@@ -95,19 +95,19 @@
             class="tech-stack-description"
           />
           <v-image path="images/key-management.svg" class="laptop-remove" />
-          <v-stack wrap gap="1rem" md-justify="center">
+          <v-stack wrap gap="1.5rem" md-justify="center">
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
@@ -123,19 +123,19 @@
             class="tech-stack-description"
           />
           <v-image path="images/decentralised-iam.svg" class="laptop-remove" />
-          <v-stack wrap gap="1rem" md-justify="center">
+          <v-stack wrap gap="1.5rem" md-justify="center">
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
             <v-chip>
-              <v-text color="secondary">
+              <v-text color="secondary" line-height="1.5rem" size="1.125rem">
                 Proxy re-encryption (PRE) to seamlessly share / re share files.
               </v-text>
             </v-chip>
@@ -187,7 +187,7 @@ img {
 
 .tech-stack {
   width: 100%;
-  max-width: 40rem;
+  max-width: 48rem;
 }
 
 .tech-stack > * {
