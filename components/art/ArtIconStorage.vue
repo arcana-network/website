@@ -20,8 +20,8 @@
           <ellipse
             fill="url(#icon-storage-d)"
             fill-opacity=".5"
-            rx="24.36"
-            ry="23.32"
+            rx="20"
+            ry="20"
             transform="matrix(.41565 .90953 -.90749 .42008 65.1 60.03)"
           />
         </g>

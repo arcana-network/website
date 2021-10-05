@@ -20,8 +20,8 @@
           <ellipse
             fill="url(#icon-encryption-d)"
             fill-opacity=".5"
-            rx="22.94"
-            ry="21.93"
+            rx="20"
+            ry="20"
             transform="matrix(.4149 .90986 -.90714 .42083 62.56 58.5)"
           />
         </g>
