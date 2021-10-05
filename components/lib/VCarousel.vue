@@ -15,7 +15,6 @@
 <script>
 export default {
   name: 'VCarousel',
-  props: {},
   data() {
     return {
       currentSlide: 0,
@@ -69,6 +68,7 @@ export default {
     },
     setActiveSlide() {
       this.$refs.carousel.children.forEach((child, index) => {
+        child.classList.add('carousel-item') // Added this because it was getting removed on update. Not sure why
         if (index === this.currentSlide) {
           child.classList.add('active-item')
         } else {
@@ -76,13 +76,6 @@ export default {
         }
       })
     },
-    // updateSlides() {
-    //   this.$refs.carousel.children.forEach((child) => {
-    //     child.classList = 'carousel-item'
-    //   })
-    //   this.$refs.carousel.children[this.currentSlide].classList =
-    //     'carousel-item active-item'
-    // },
   },
 }
 </script>
