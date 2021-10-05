@@ -1,4 +1,4 @@
-export const colors = () => `
+export const carousel = () => `
   <v-container>
     <v-carousel style="height: 10rem">
         <v-stack align="center" justify="center" style="width: 100%">
