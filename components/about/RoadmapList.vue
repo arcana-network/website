@@ -234,14 +234,14 @@ ul li {
     rgba(32, 32, 32, 0.49) 100%
   );
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-  padding: 1rem 4rem;
+  padding: 1rem 5rem;
   margin: 1rem 2rem 0.5rem 0;
   cursor: pointer;
 }
 
 .quarter {
   margin: 0.25rem 2rem 0.25rem 0;
-  padding: 0.5rem 0;
+  padding: 0.65rem 0;
   text-align: center;
   cursor: pointer;
 }
@@ -271,7 +271,7 @@ ul li {
     ),
     linear-gradient(326.58deg, #ffe177 -3.92%, #ff975c 112.32%);
   box-shadow: inset 0 -7px 66px rgba(255, 111, 66, 0.37);
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .selected-quarter * {
