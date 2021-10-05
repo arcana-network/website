@@ -36,7 +36,7 @@
             />
           </div>
           <v-video-thumbnail
-            path="images/placeholder-test-image.png"
+            src="images/placeholder-test-image.png"
             class="introduction-video-thumbnail"
             style="position: absolute"
           />
