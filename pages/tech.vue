@@ -1,6 +1,7 @@
 <template>
   <main>
     <AppHeader />
+    <AboutTechnology />
     <AboutRoadmapList />
   </main>
 </template>

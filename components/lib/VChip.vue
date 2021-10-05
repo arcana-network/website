@@ -21,7 +21,7 @@ export default {
   );
   border-radius: 10px;
   padding: 1rem;
-  max-width: 16rem;
+  max-width: 18rem;
   color: white;
 }
 </style>
