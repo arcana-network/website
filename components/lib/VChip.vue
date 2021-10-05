@@ -1,5 +1,5 @@
 <template>
-  <div class="chip">
+  <div class="chip" @click.stop="(e) => $emit('click', e)">
     <slot />
   </div>
 </template>
