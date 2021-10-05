@@ -18,7 +18,7 @@
         <v-stack>
           <v-stack
             direction="column"
-            style="margin-top: 1.5rem"
+            style="margin: 1.5rem 5rem 0 0"
             class="tablet-remove mobile-remove"
           >
             <div v-for="year in years" :key="year">
@@ -48,10 +48,21 @@
               v-for="item in roadmap[selectedYear][selectedQuarter]"
               :key="item.milestone"
             >
-              <v-heading :level="4" class="milestone-heading">
-                {{ item.month }} {{ selectedYear }}
+              <v-heading
+                :level="4"
+                :weight="600"
+                font="serif"
+                class="milestone-heading"
+              >
+                {{ item.month }}&nbsp;&nbsp;&nbsp;&nbsp;{{ selectedYear }}
               </v-heading>
-              <v-text color="secondary">{{ item.milestone }}</v-text>
+              <v-text
+                color="secondary"
+                :weight="400"
+                class="milestone-description"
+              >
+                {{ item.milestone }}
+              </v-text>
             </li>
           </ul>
         </v-stack>
@@ -228,6 +239,21 @@ ul li {
 
 .milestone-heading {
   margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.375rem;
+
+  @media (--viewport-medium) {
+    font-size: 1.25rem;
+  }
+}
+
+.milestone-description {
+  font-size: 1.375rem;
+  line-height: 2rem;
+
+  @media (--viewport-medium) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .clickable-chip {
@@ -243,11 +269,23 @@ ul li {
   cursor: pointer;
 }
 
+.clickable-chip > * {
+  font-size: 1.375rem;
+
+  @media (--viewport-medium) {
+    font-size: 1.25rem;
+  }
+}
+
 .quarter {
-  margin: 0.25rem 2rem 0.25rem 0;
-  padding: 0.65rem 0;
+  margin: 0.5rem 2rem 0.5rem 0;
   text-align: center;
   cursor: pointer;
+}
+
+.quarter > * {
+  font-size: 1.25rem;
+  line-height: 2.5rem;
 }
 
 .selected-quarter {
@@ -278,7 +316,8 @@ ul li {
   border-radius: 1rem;
 }
 
-.selected-quarter * {
+.selected-quarter > * {
   color: black;
+  font-weight: 600;
 }
 </style>
