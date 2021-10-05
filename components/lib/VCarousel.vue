@@ -28,7 +28,7 @@ export default {
     },
   },
   mounted() {
-    this.updateSlides()
+    this.setupSlides()
   },
   methods: {
     enterPreviousSlide() {
@@ -53,19 +53,36 @@ export default {
       } else {
         this.enterPreviousSlide()
       }
-      // Using setTimeout to update classes after transition event is fired
+      // Using nextTick to update classes after transition event is fired
       // Updating carousel classes before transition event does nothing
-      setTimeout(() => {
-        this.updateSlides()
-      }, 10)
-    },
-    updateSlides() {
-      this.$refs.carousel.children.forEach((child) => {
-        child.classList = 'carousel-item'
+      this.$nextTick(() => {
+        this.setActiveSlide()
       })
-      this.$refs.carousel.children[this.currentSlide].classList =
-        'carousel-item active-item'
     },
+    setupSlides() {
+      this.$refs.carousel.children.forEach((child, index) => {
+        child.classList.add('carousel-item')
+        if (index === 0) {
+          child.classList.add('active-item')
+        }
+      })
+    },
+    setActiveSlide() {
+      this.$refs.carousel.children.forEach((child, index) => {
+        if (index === this.currentSlide) {
+          child.classList.add('active-item')
+        } else {
+          child.classList.remove('active-item')
+        }
+      })
+    },
+    // updateSlides() {
+    //   this.$refs.carousel.children.forEach((child) => {
+    //     child.classList = 'carousel-item'
+    //   })
+    //   this.$refs.carousel.children[this.currentSlide].classList =
+    //     'carousel-item active-item'
+    // },
   },
 }
 </script>
