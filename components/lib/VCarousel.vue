@@ -5,7 +5,7 @@
         <slot />
       </div>
     </transition-group>
-    <v-stack class="icons" gap="2rem" justify="center">
+    <v-stack class="icons" justify="center">
       <v-image path="icons/arrow-left.svg" @click.stop="changeSlide(-1)" />
       <v-image path="icons/arrow-right.svg" @click.stop="changeSlide(1)" />
     </v-stack>
@@ -61,8 +61,8 @@ export default {
     setupSlides() {
       this.$refs.carousel.children.forEach((child, index) => {
         child.classList.add('carousel-item')
-        if (index === 0) {
-          child.classList.add('active-item')
+        if (index !== 0) {
+          child.classList.add('inactive-item')
         }
       })
     },
@@ -70,9 +70,9 @@ export default {
       this.$refs.carousel.children.forEach((child, index) => {
         child.classList.add('carousel-item') // Added this because it was getting removed on update. Not sure why
         if (index === this.currentSlide) {
-          child.classList.add('active-item')
+          child.classList.remove('inactive-item')
         } else {
-          child.classList.remove('active-item')
+          child.classList.add('inactive-item')
         }
       })
     },
@@ -100,13 +100,17 @@ export default {
 
 .icons {
   position: absolute;
-  top: 90%;
+  bottom: 0;
   width: 100%;
 }
 
 .icons > * {
   object-fit: cover;
   cursor: pointer;
+}
+
+.icons > * + * {
+  margin-left: 2rem;
 }
 
 /* GO TO NEXT SLIDE */
@@ -140,10 +144,9 @@ export default {
   position: absolute;
   top: 0;
   color: white;
-  display: none;
 }
 
-.carousel-item.active-item {
-  display: initial;
+.carousel-item.inactive-item {
+  display: none;
 }
 </style>
