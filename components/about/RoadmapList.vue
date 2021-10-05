@@ -3,7 +3,7 @@
     <v-container>
       <v-stack direction="column">
         <app-section-descriptor title="Roadmap" heading="Eyes on the Road" />
-        <v-stack gap="1rem">
+        <v-stack gap="1rem" class="laptop-remove">
           <v-dropdown
             v-model="selectedYear"
             :options="years"
@@ -16,7 +16,11 @@
           />
         </v-stack>
         <v-stack>
-          <v-stack direction="column" style="margin-top: 1.5rem">
+          <v-stack
+            direction="column"
+            style="margin-top: 1.5rem"
+            class="tablet-remove mobile-remove"
+          >
             <div v-for="year in years" :key="year">
               <v-chip
                 class="clickable-chip"
