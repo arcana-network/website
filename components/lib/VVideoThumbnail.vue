@@ -1,6 +1,6 @@
 <template>
   <div class="video-thumbnail-container">
-    <v-image :src="src" :dimension="dimension" class="video-thumbnail" />
+    <v-image :path="src" :dimension="dimension" class="video-thumbnail" />
     <div
       class="video-controls absolute-center cursor-pointer"
       @click.stop="onPlay"
