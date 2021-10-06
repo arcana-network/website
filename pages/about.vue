@@ -10,7 +10,7 @@
 export default {
   head() {
     return {
-      title: 'About us - Arcana Network',
+      title: 'About Us - Arcana Network',
     }
   },
 }

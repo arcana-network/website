@@ -8,7 +8,11 @@
         />
         <!-- <v-button type="link" label="View all" label-transform="uppercase" /> -->
       </v-stack>
-      <v-stack justify="space-between">
+      <v-stack
+        justify="space-between"
+        md-direction="column"
+        class="member-container"
+      >
         <v-stack
           v-for="member in members"
           :key="member.name + member.designation"
@@ -19,7 +23,7 @@
             <div class="position-relative member-image">
               <v-image :path="`images/${member.image}.png`" />
             </div>
-            <div class="position-relative" style="bottom: 10%">
+            <div class="position-relative" style="margin-top: -15%">
               <v-image path="images/team-member-ellipse.svg" />
             </div>
             <v-stack direction="column" gap="1rem" class="social-links">
@@ -94,6 +98,12 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+@import url('../lib/media-query-helper.css');
+
+.member-image-container {
+  margin-bottom: 1rem;
+}
+
 .member-image {
   text-align: center;
   z-index: 10;
@@ -108,10 +118,21 @@ export default {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.4s;
+
+  @media (--viewport-medium) {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .member-image-container:hover .social-links {
   visibility: visible;
   opacity: 1;
+}
+
+@media (--viewport-medium) {
+  .member-container > * + * {
+    margin-top: 3rem;
+  }
 }
 </style>
