@@ -2,7 +2,7 @@
   <main>
     <AppHeader />
     <HeroSection />
-    <Introduction />
+    <!-- <Introduction /> -->
     <Features />
     <Testimonials />
     <Investors />

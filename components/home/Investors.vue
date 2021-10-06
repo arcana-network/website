@@ -1,7 +1,7 @@
 <template>
   <section>
     <v-container>
-      <v-stack justify="space-between" md-direction="column" align="start">
+      <v-stack justify="space-between" direction="column" align="start">
         <v-stack direction="column">
           <app-section-descriptor
             title="our investors"
@@ -9,13 +9,13 @@
             style="max-width: 40rem; margin-bottom: 1.25rem"
           />
           <app-section-descriptor
-            description="Everyone of these great investors are well known and well respected in their own right. Through us, they’re helping shape the world like the way they envision it should be. "
+            description="Everyone of these investors are well known and well respected in their own right. Through us, they’re helping shape the world towards a more privacy preserving future"
             style="max-width: 60rem"
           />
         </v-stack>
         <v-button
           type="link"
-          label="View all"
+          label="View all investors"
           label-transform="uppercase"
           style="margin-top: 2rem"
         />

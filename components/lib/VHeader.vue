@@ -18,7 +18,7 @@
             </v-text>
           </a>
         </nav>
-        <v-stack gap="3vw">
+        <v-stack gap="3vw" style="visibility: hidden">
           <v-button
             v-if="cta"
             :label="cta.label"

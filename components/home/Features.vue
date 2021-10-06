@@ -3,9 +3,9 @@
     <v-container>
       <v-stack justify="space-between" md-direction="column" md-align="start">
         <app-section-descriptor
-          title="Features"
-          heading="Four Features To Secure Your Apps. Four Less Reasons Not To"
-          description="Privacy and security have become reasons for choosing apps, set your app apart with world-class security without the effort typically involved with this."
+          title="Arcana’s Privacy Stack"
+          heading="Four Decentralized Services To Secure Your Apps. Four Less Reasons Not To Worry"
+          description="Users care about Privacy and Security, set your app apart with the most developer friendly data storage and privacy platform. Takes minutes to integrate"
           style="max-width: 48rem"
         />
         <v-button
@@ -42,15 +42,15 @@
             <v-blurb
               image="images/iam.svg"
               alt="Identity and Access Management"
-              title="Identity and Access Management"
-              description="Decentralised Identity and Access Controls are verifiable in a trust-less way and adhere to the W3C DID spec. You can rest easy knowing that your app will only allow verified users to access assets stored on the system"
+              title="Social Auth with Identity and Access Management"
+              description="Remove friction and allow users to signup/login with social auth and generate keys. Decentralised Identity and Access Controls are verifiable in a trust-less way and adhere to the W3C DID spec. You can rest easy knowing that your app will only allow verified users to access assets stored on the system"
               class="blurb"
             />
             <v-blurb
               image="images/dkg.svg"
-              alt="Simple Keys Management"
-              title="Simple Keys Management"
-              description="A big hurdle to cryptographic encryption has to do with public+private keys management. We’ve made it simple by generating keys using authentications like email/password and popular Single Sign On’s (SSO’s)"
+              alt="Non-custodial Key Management"
+              title="Non-custodial Key Management"
+              description="A big hurdle to cryptographic encryption has to do with public+private keys management. Our DKG and KMS simplifies it. The network handles keys that belong to the users and their data so you don’t have to."
               class="blurb"
               style="margin-left: 2rem"
             />
