@@ -17,7 +17,7 @@
             gap="1.5rem"
             style="margin-top: 2rem"
           >
-            <v-button label="Get started" label-transform="uppercase" />
+            <v-button label="Sign up now" label-transform="uppercase" />
             <v-text color="secondary" size="1.125rem">
               Testnet Launching Soon!
             </v-text>
