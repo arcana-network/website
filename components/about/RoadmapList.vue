@@ -54,7 +54,7 @@
                 font="serif"
                 class="milestone-heading"
               >
-                {{ item.month }}&nbsp;&nbsp;&nbsp;&nbsp;{{ selectedYear }}
+                {{ item.month }} {{ selectedYear }}
               </v-heading>
               <v-text
                 color="secondary"
@@ -77,11 +77,18 @@ export default {
   name: 'RoadmapList',
   components: { VDropdown },
   data() {
+    const years = ['2019', '2020', '2021', '2022']
+    const quarters = ['Q1', 'Q2', 'Q3', 'Q4']
+    const selectedYear = new Date().getFullYear().toString()
+    const currentMonth = new Date().getMonth() + 1
+    const currentQuarterIndex = parseInt(currentMonth / 4)
+    const selectedQuarter = quarters[currentQuarterIndex]
+
     return {
-      years: ['2019', '2020', '2021', '2022'],
-      quarters: ['Q1', 'Q2', 'Q3', 'Q4'],
-      selectedYear: '2019',
-      selectedQuarter: 'Q1',
+      years,
+      quarters,
+      selectedYear,
+      selectedQuarter,
       roadmap: {
         2019: {
           Q1: [],
@@ -215,12 +222,6 @@ export default {
         },
       },
     }
-  },
-  mounted() {
-    this.selectedYear = new Date().getFullYear().toString()
-    const currentMonth = new Date().getMonth() + 1
-    const currentQuarterIndex = parseInt(currentMonth / 4)
-    this.selectedQuarter = this.quarters[currentQuarterIndex]
   },
 }
 </script>
