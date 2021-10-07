@@ -168,10 +168,6 @@ img {
   }
 }
 
-.technology-container > * {
-  margin-top: 10rem;
-}
-
 .technology-hero-section {
   max-width: 48rem;
 }
@@ -192,6 +188,10 @@ img {
 
 .tech-stack > * {
   margin-top: 1rem;
+}
+
+.technology-container > *:not(:first-child) {
+  padding-top: 10rem;
 }
 
 .tech-stack-description {
