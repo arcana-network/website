@@ -1,5 +1,9 @@
 <template>
   <section>
+    <v-image
+      path="images/roadmap-spheres.svg"
+      style="width: 100%; z-index: -1; margin-bottom: -12.5%"
+    />
     <v-container>
       <v-stack direction="column">
         <app-section-descriptor title="Roadmap" heading="Eyes on the Road" />
@@ -15,7 +19,7 @@
             class="roadmap-dropdown"
           />
         </v-stack>
-        <v-stack>
+        <v-stack style="margin-top: 4rem">
           <v-stack
             direction="column"
             style="margin: 1.5rem 6rem 0 0"
@@ -78,8 +82,8 @@ export default {
     const years = ['2019', '2020', '2021', '2022']
     const quarters = ['Q1', 'Q2', 'Q3', 'Q4']
     const selectedYear = new Date().getFullYear().toString()
-    const currentMonth = new Date().getMonth() + 1
-    const currentQuarterIndex = parseInt(currentMonth / 4)
+    const currentMonth = new Date().getMonth()
+    const currentQuarterIndex = parseInt(currentMonth / 3)
     const selectedQuarter = quarters[currentQuarterIndex]
 
     return {
