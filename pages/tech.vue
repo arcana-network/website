@@ -1,8 +1,13 @@
 <template>
   <main>
     <AppHeader />
-    <AboutTechnology />
-    <AboutRoadmapList />
+    <TechTechnology />
+    <TechRoadmapList />
+    <TechPublications />
+    <HomeCommunity />
+    <TechJoinUs />
+    <AppFooter />
+    <AppCopyright />
   </main>
 </template>
 
