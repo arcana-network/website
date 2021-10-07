@@ -9,8 +9,8 @@
     <div class="custom-select__trigger font-serif color-primary cursor-pointer">
       <span v-if="value">{{ value }}</span>
       <span v-else class="placeholder">{{ placeholder }}</span>
-      <div class="arrow">
-        <v-image path="icons/arrow-down.svg" />
+      <div class="arrow" @click.stop="toggle">
+        <v-image path="icons/arrow-down.svg" @click.stop="toggle" />
       </div>
     </div>
     <div
@@ -58,6 +58,12 @@ export default {
       isOpen: false,
     }
   },
+  mounted() {
+    document.addEventListener('click', this.closeOnOutsideClick)
+  },
+  beforeDestroy() {
+    document.removeEventListener('click', this.closeOnOutsideClick)
+  },
   methods: {
     toggle() {
       this.isOpen = !this.isOpen
@@ -66,6 +72,9 @@ export default {
       this.$emit('input', option)
       this.$emit('change', { ...ev, value: option })
       this.toggle()
+    },
+    closeOnOutsideClick() {
+      this.isOpen = false
     },
   },
 }

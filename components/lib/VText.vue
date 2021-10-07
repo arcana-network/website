@@ -15,11 +15,11 @@ export default {
     },
     size: {
       type: String,
-      default: '1rem',
+      default: null,
     },
     weight: {
       type: Number,
-      default: 500,
+      default: null,
       validator: (value) =>
         [200, 300, 400, 500, 600, 700, 800, 900].includes(value),
     },
@@ -30,7 +30,7 @@ export default {
     },
     lineHeight: {
       type: String,
-      default: '1.125rem',
+      default: null,
     },
     letterSpacing: {
       type: String,
@@ -57,9 +57,15 @@ export default {
     // Classes referenced from global css assets/css/styles.css
     this.classes['color-' + this.color] = true
     this.classes['font-' + this.font] = true
-    this.styles['font-weight'] = this.weight
-    this.styles['font-size'] = this.size
-    this.styles['line-height'] = this.lineHeight
+    if (this.weight > 0) {
+      this.styles['font-weight'] = this.weight
+    }
+    if (this.size?.trim()) {
+      this.styles['font-size'] = this.size
+    }
+    if (this.lineHeight?.trim()) {
+      this.styles['line-height'] = this.lineHeight
+    }
     if (this.letterSpacing?.trim()) {
       this.styles['letter-spacing'] = this.letterSpacing
     }
@@ -75,6 +81,12 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+/* Defaults */
+span {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.125rem;
+}
 .gradient {
   background-clip: text !important;
   -webkit-background-clip: text !important;
