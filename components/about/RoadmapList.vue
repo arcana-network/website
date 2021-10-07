@@ -72,10 +72,8 @@
 </template>
 
 <script>
-import VDropdown from '../lib/VDropdown.vue'
 export default {
   name: 'RoadmapList',
-  components: { VDropdown },
   data() {
     const years = ['2019', '2020', '2021', '2022']
     const quarters = ['Q1', 'Q2', 'Q3', 'Q4']
