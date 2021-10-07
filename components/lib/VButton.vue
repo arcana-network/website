@@ -95,7 +95,6 @@ a {
   padding: 1.125rem 2rem;
   border: none;
   text-align: center;
-  min-width: 8rem;
   border-radius: 10px;
   background: none;
   white-space: nowrap;
