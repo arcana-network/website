@@ -13,6 +13,7 @@
             label="Join us"
             label-transform="uppercase"
             class="joinus-btn"
+            :action="openCareers"
           />
         </v-stack>
         <v-image
@@ -27,6 +28,11 @@
 <script>
 export default {
   name: 'JoinUs',
+  methods: {
+    openCareers() {
+      window.open('https://angel.co/company/arcana-network/jobs', '_blank')
+    },
+  },
 }
 </script>
 
@@ -34,7 +40,7 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 section {
-  margin-top: 10rem;
+  padding-bottom: 6rem;
 }
 
 .joinus-description {

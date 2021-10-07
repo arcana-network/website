@@ -76,12 +76,15 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 section {
-  background: #000 url('~assets/images/testimonials-bg.svg') no-repeat;
+  background: #000 url('~assets/images/testimonial_bg.svg') no-repeat;
   background-size: cover;
   box-shadow: 0 1rem 2rem 0.5rem black, 0 -1rem 2rem 0.5rem black;
+  padding: 6rem 0;
 
   @media (--viewport-small) {
-    background: #000 url('~assets/images/testimonials-bg-mobile.svg') no-repeat;
+    background: #000 url('~assets/images/testimonial_bg_mobile.svg') no-repeat;
+    background-size: cover;
+    padding: 2rem 0;
   }
 }
 
@@ -92,11 +95,11 @@ section {
   max-height: 36rem;
 
   @media (--viewport-medium) {
-    max-height: 60rem;
+    max-height: 48rem;
   }
 
   @media (--viewport-small) {
-    max-height: 80rem;
+    max-height: 40rem;
   }
 }
 

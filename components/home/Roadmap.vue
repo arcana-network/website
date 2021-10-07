@@ -32,6 +32,14 @@ export default {
 /* Imported this for getting helper classes laptop-remove and mobile-remove */
 @import url('../lib/media-query-helper.css');
 
+section {
+  padding: 6rem 0;
+
+  @media (--viewport-small) {
+    padding: 3rem 0;
+  }
+}
+
 .roadmap-desktop {
   width: 100%;
   max-width: 1920px;

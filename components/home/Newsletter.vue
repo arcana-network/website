@@ -4,7 +4,7 @@
       <v-stack justify="space-between" align="center" md-direction="column">
         <v-image
           path="images/newsletter-illustration.svg"
-          style="padding: 15rem 0"
+          class="newsletter-illustration"
         />
         <v-stack direction="column">
           <app-section-descriptor
@@ -17,7 +17,7 @@
             <v-text-field
               v-model="newsletterEmail"
               placeholder="Enter email"
-              style="max-width: 20rem; flex-grow: 1"
+              class="email-input"
             />
             <v-button
               label="Sign up"
@@ -46,15 +46,31 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 section {
-  background: url('~assets/images/section-bg.svg');
-  background-repeat: no-repeat;
+  background: black url('~assets/images/newsletter_bg.svg') no-repeat;
   background-size: cover;
+  box-shadow: 0 1rem 2rem 0.5rem black, 0 -1rem 2rem 0.5rem black;
+  padding: 8rem 0;
+
+  @media (--viewport-small) {
+    background: black url('~assets/images/newsletter_bg_mobile.svg') no-repeat;
+    background-size: 100%;
+    padding: 1rem 0;
+  }
 }
 
-.sign-up-btn {
-  @media (--viewport-large) {
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
+.newsletter-illustration {
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
+  margin-left: -10%;
+}
+
+.email-input {
+  flex-grow: 1;
+  max-width: 20rem;
+
+  @media (--viewport-small) {
+    max-width: 10rem;
   }
 }
 </style>

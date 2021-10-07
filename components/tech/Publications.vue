@@ -22,6 +22,7 @@
             label="Technical Paper"
             label-transform="uppercase"
             class="technical-paper-btn"
+            :action="openTechnicalPaper"
           />
         </v-stack>
       </v-stack>
@@ -32,6 +33,14 @@
 <script>
 export default {
   name: 'Publications',
+  methods: {
+    openTechnicalPaper() {
+      window.open(
+        'https://www.notion.so/Arcana-Technical-Docs-a1d7fd0d2970452586c693e4fee14d08',
+        '_blank'
+      )
+    },
+  },
 }
 </script>
 
@@ -43,14 +52,14 @@ section {
   background: #080808
     linear-gradient(
       180deg,
-      rgba(18, 18, 18, 0.2) 15.02%,
-      rgba(255, 255, 255, 0.2) 47.35%,
+      rgba(116, 75, 75, 0.07) 15.02%,
+      rgba(255, 255, 255, 0.07) 47.35%,
       rgba(32, 32, 32, 0) 100%
     );
 }
 
 .publication-container {
-  background: #0b0a0a;
+  background: #080808;
 }
 
 .publication-description-container {
