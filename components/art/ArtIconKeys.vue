@@ -1,6 +1,6 @@
 <template>
   <v-intersect
-    root-margin="0px 0px -150px 0px"
+    :root-margin="`0px 0px -${bottomScrollTrigger}px 0px`"
     :threshold="0.5"
     @enter="onEnter"
   >
@@ -32,7 +32,11 @@
           <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-f)" />
           <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-g)" />
         </g>
-        <g class="key-bow-down" transform="scale(1, -1) translate(0, -127)" opacity="0">
+        <g
+          class="key-bow-down"
+          transform="scale(1, -1) translate(0, -127)"
+          opacity="0"
+        >
           <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-e)" />
           <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-f)" />
           <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-g)" />
@@ -476,6 +480,10 @@ export default {
     animateOnHover: {
       type: Boolean,
       default: false,
+    },
+    bottomScrollTrigger: {
+      type: Number,
+      default: 250,
     },
     size: {
       type: Number,

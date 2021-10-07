@@ -32,7 +32,7 @@ export const animateOnEnter = () => `
     <div
       :style="{
         borderTop: '1px solid lightblue',
-        bottom: '150px',
+        bottom: '250px',
         position: 'fixed',
         width: '100%',
       }"

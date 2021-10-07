@@ -1,6 +1,6 @@
 <template>
   <v-intersect
-    root-margin="0px 0px -150px 0px"
+    :root-margin="`0px 0px -${bottomScrollTrigger}px 0px`"
     :threshold="0.5"
     @enter="onEnter"
   >
@@ -343,6 +343,10 @@ export default {
     animateOnHover: {
       type: Boolean,
       default: false,
+    },
+    bottomScrollTrigger: {
+      type: Number,
+      default: 250,
     },
     size: {
       type: Number,
