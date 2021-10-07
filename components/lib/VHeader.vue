@@ -18,13 +18,14 @@
             </v-text>
           </a>
         </nav>
-        <v-stack gap="3vw" style="visibility: hidden">
+        <v-stack gap="3vw">
           <v-button
             v-if="cta"
             :label="cta.label"
             :action="cta.action"
             label-transform="uppercase"
             :show="show"
+            style="visibility: hidden"
           />
           <v-image
             :path="`icons/${icon}.svg`"
