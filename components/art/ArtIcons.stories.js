@@ -22,13 +22,7 @@ export const animateOnHover = () => `
 `
 
 export const animateOnEnter = () => `
-  <VStack
-    align="center"
-    direction="column"
-    gap="50vh"
-    justify="center"
-    :style="{ marginTop: '1vh', marginBottom: '50vh' }"
-  >
+  <div>
     <div
       :style="{
         borderTop: '1px solid lightblue',
@@ -37,12 +31,20 @@ export const animateOnEnter = () => `
         width: '100%',
       }"
     ></div>
-    <VText color="secondary" size="0.75rem">Scroll down &darr;</VText>
-    <ArtIconEncryption animate-on-enter />
-    <ArtIconStorage animate-on-enter />
-    <ArtIconIdentity animate-on-enter />
-    <ArtIconKeys animate-on-enter />
-  </VStack>
+    <VStack
+      align="center"
+      direction="column"
+      gap="50vh"
+      justify="center"
+      :style="{ marginTop: '1vh', marginBottom: '50vh' }"
+    >
+      <VText color="secondary" size="0.75rem">Scroll down &darr;</VText>
+      <ArtIconEncryption animate-on-enter />
+      <ArtIconStorage animate-on-enter />
+      <ArtIconIdentity animate-on-enter />
+      <ArtIconKeys animate-on-enter />
+    </VStack>
+  </div>
 `
 
 export const sizes = () => `
