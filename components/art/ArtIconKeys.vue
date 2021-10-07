@@ -27,15 +27,15 @@
         </g>
       </g>
       <g class="key">
-        <g class="key-bow">
+        <g class="key-bow-up">
           <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-e)" />
           <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-f)" />
           <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-g)" />
         </g>
-        <g class="key-tip">
-          <circle cx="111.44" cy="68.45" r="5" fill="url(#icon-keys-h)" />
-          <circle cx="111.44" cy="68.45" r="5" fill="url(#icon-keys-i)" />
-          <circle cx="111.44" cy="68.45" r="5" fill="url(#icon-keys-j)" />
+        <g class="key-bow-down" transform="scale(1, -1) translate(0, -127)" opacity="0">
+          <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-e)" />
+          <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-f)" />
+          <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-g)" />
         </g>
         <g class="key-stem-up">
           <g filter="url(#icon-keys-k)">
@@ -148,6 +148,11 @@
               rx="1.36"
             />
           </g>
+        </g>
+        <g class="key-tip">
+          <circle cx="111.44" cy="68.45" r="5" fill="url(#icon-keys-h)" />
+          <circle cx="111.44" cy="68.45" r="5" fill="url(#icon-keys-i)" />
+          <circle cx="111.44" cy="68.45" r="5" fill="url(#icon-keys-j)" />
         </g>
       </g>
       <defs>
@@ -486,6 +491,8 @@ export default {
     animate() {
       if (this.isAnimating) return
 
+      const keyBowUp = this.$refs.iconKeys.querySelectorAll('.key-bow-up')
+      const keyBowDown = this.$refs.iconKeys.querySelectorAll('.key-bow-down')
       const keyStemUp = this.$refs.iconKeys.querySelectorAll('.key-stem-up')
       const keyStemDown = this.$refs.iconKeys.querySelectorAll('.key-stem-down')
 
@@ -495,7 +502,7 @@ export default {
           easing: 'easeOutCubic',
         })
         .add({
-          targets: [keyStemUp],
+          targets: [keyBowUp, keyStemUp],
           opacity: [1, 0, 1],
           begin: () => {
             this.isAnimating = true
@@ -503,14 +510,14 @@ export default {
         })
         .add(
           {
-            targets: [keyStemDown],
+            targets: [keyBowDown, keyStemDown],
             opacity: [0, 1, 0],
             complete: () => {
               this.isAnimating = false
-              anime.set([keyStemUp], {
+              anime.set([keyBowUp, keyStemUp], {
                 opacity: 1,
               })
-              anime.set([keyStemDown], {
+              anime.set([keyBowDown, keyStemDown], {
                 opacity: 0,
               })
             },
