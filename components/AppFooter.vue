@@ -1,8 +1,14 @@
 <template>
   <footer>
     <v-container>
-      <v-stack align="center" justify="space-around" :grow="1">
+      <v-stack
+        align="center"
+        justify="space-around"
+        :grow="1"
+        class="footer-logo-container"
+      >
         <v-image path="images/arcana-footer.svg" />
+        <v-image path="images/footer-orbs.svg" class="position-absolute" />
       </v-stack>
       <v-stack
         justify="space-between"
@@ -43,15 +49,25 @@
           :grow="1"
         >
           <v-stack direction="column" class="footer-links">
-            <a><v-text>Technology</v-text></a>
-            <a><v-text>About</v-text></a>
-            <a><v-text>Technical Paper</v-text></a>
-            <a><v-text>Blog</v-text></a>
+            <a href="/tech"><v-text>Technology</v-text></a>
+            <a href="/about"><v-text>About</v-text></a>
+            <a
+              href="https://www.notion.so/Arcana-Technical-Docs-a1d7fd0d2970452586c693e4fee14d08"
+              target="__blank"
+            >
+              <v-text>Technical Paper</v-text>
+            </a>
+            <a href="/blog"><v-text>Blog</v-text></a>
           </v-stack>
           <v-stack direction="column" class="footer-links">
-            <a><v-text>Careers</v-text></a>
-            <a><v-text>Privacy</v-text></a>
-            <a><v-text>Terms of use</v-text></a>
+            <a
+              href="https://angel.co/company/arcana-network/jobs"
+              target="__blank"
+            >
+              <v-text>Careers</v-text>
+            </a>
+            <a href="/privacy"><v-text>Privacy</v-text></a>
+            <a href="/terms"><v-text>Terms of use</v-text></a>
           </v-stack>
         </v-stack>
       </v-stack>
@@ -68,6 +84,25 @@ export default {
 <style lang="postcss" scoped>
 @import url('./lib/media-query-helper.css');
 
+footer {
+  background: url('~assets/images/footer_bg.svg') no-repeat;
+  background-size: cover;
+
+  @media (--viewport-small) {
+    background: url('~assets/images/footer_bg_mobile.svg') no-repeat;
+    background-size: 100%;
+  }
+}
+
+.footer-logo-container {
+  padding: 16rem 0;
+  position: relative;
+
+  @media (--viewport-small) {
+    padding: 8rem 0;
+  }
+}
+
 .footer-logo {
   margin: 0 auto;
   width: 8rem;
@@ -79,7 +114,11 @@ export default {
 }
 
 .footer-navigation-container {
-  margin-top: 10rem;
+  padding: 8rem 0;
+
+  @media (--viewport-small) {
+    padding: 4rem 0;
+  }
 }
 
 .footer-links-container {
@@ -94,7 +133,7 @@ export default {
 }
 
 .footer-links > * + * {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .footer-social-link {
@@ -124,6 +163,16 @@ a {
   @media (--viewport-medium) {
     font-size: 1.125rem;
     line-height: 1.5rem;
+  }
+}
+
+@media (--viewport-small) {
+  .footer-logo-container > *:first-child {
+    width: 40%;
+  }
+
+  .footer-logo-container > *:last-child {
+    width: 150%;
   }
 }
 </style>
