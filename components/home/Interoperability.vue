@@ -42,9 +42,16 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 section {
-  background: url('~assets/images/section-bg.svg');
-  background-repeat: no-repeat;
+  background: url('~assets/images/interoperability_bg.svg') no-repeat;
   background-size: cover;
+  box-shadow: 0 1rem 2rem 0.5rem black, 0 -1rem 2rem 0.5rem black;
+  padding: 8rem 0;
+
+  @media (--viewport-small) {
+    background: url('~assets/images/interoperability_bg_mobile.svg') no-repeat;
+    background-size: 100%;
+    padding: 1rem 0;
+  }
 }
 
 .interoperability-illustration {
