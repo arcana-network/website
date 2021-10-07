@@ -59,9 +59,10 @@ export default {
     }
   },
   mounted() {
-    document.addEventListener('click', () => {
-      this.isOpen = false
-    })
+    document.addEventListener('click', this.closeOnOutsideClick)
+  },
+  beforeDestroy() {
+    document.removeEventListener('click', this.closeOnOutsideClick)
   },
   methods: {
     toggle() {
@@ -71,6 +72,9 @@ export default {
       this.$emit('input', option)
       this.$emit('change', { ...ev, value: option })
       this.toggle()
+    },
+    closeOnOutsideClick() {
+      this.isOpen = false
     },
   },
 }
