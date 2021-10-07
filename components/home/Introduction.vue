@@ -81,6 +81,7 @@ export default {
   width: 40rem;
   height: 40rem;
   margin-top: 4rem;
+
   @media (--viewport-medium) {
     width: 22rem;
     height: 22rem;
