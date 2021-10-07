@@ -1,17 +1,17 @@
 <template>
   <main>
     <AppHeader />
-    <HeroSection />
-    <Introduction />
-    <Features />
-    <Testimonials />
-    <Investors />
-    <Roadmap />
-    <NewsAndMedia />
-    <OurPartners />
-    <Interoperability />
-    <Community />
-    <Newsletter />
+    <HomeHeroSection />
+    <HomeIntroduction />
+    <HomeFeatures />
+    <HomeTestimonials />
+    <HomeInvestors />
+    <HomeRoadmap />
+    <HomeNewsAndMedia />
+    <HomeOurPartners />
+    <HomeInteroperability />
+    <HomeCommunity />
+    <HomeNewsletter />
     <AppFooter />
     <AppCopyright />
   </main>
