@@ -114,10 +114,10 @@ footer {
 }
 
 .footer-navigation-container {
-  padding: 8rem 0;
+  padding: 6rem 0;
 
   @media (--viewport-small) {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 }
 

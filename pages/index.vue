@@ -31,6 +31,6 @@ main {
 }
 
 main > *:not(:last-child):not(:first-child) {
-  margin: 6rem 0;
+  margin-top: 6rem;
 }
 </style>

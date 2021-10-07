@@ -98,6 +98,7 @@ section {
     width: 100%;
     max-width: 30rem;
     margin-left: -12.5%;
+    margin-top: 4rem;
   }
 }
 

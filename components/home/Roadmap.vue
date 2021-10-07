@@ -10,7 +10,7 @@
         />
       </v-stack>
     </v-container>
-    <div style="margin-top: 2rem; text-align: center">
+    <div class="roadmap-container">
       <v-image
         path="images/roadmap-desktop.svg"
         class="tablet-remove mobile-remove roadmap-desktop"
@@ -37,6 +37,15 @@ section {
 
   @media (--viewport-small) {
     padding: 3rem 0;
+  }
+}
+
+.roadmap-container {
+  margin-top: 6rem;
+  text-align: center;
+
+  @media (--viewport-medium) {
+    margin-top: 3rem;
   }
 }
 
