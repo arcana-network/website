@@ -13,6 +13,7 @@
           label="View Stack"
           label-transform="uppercase"
           style="margin-top: 2rem"
+          :action="openTechPage"
         />
       </v-stack>
       <v-stack justify="space-between" md-direction="column" md-align="center">
@@ -68,20 +69,35 @@
 <script>
 export default {
   name: 'Features',
+  methods: {
+    openTechPage() {
+      window.open('/tech', '_self')
+    },
+  },
 }
 </script>
 
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
+section {
+  padding-bottom: 6rem;
+
+  @media (--viewport-small) {
+    padding-bottom: 3rem;
+  }
+}
+
 .features-illustration {
   @media (--viewport-large) {
     margin-right: -12.5%;
-    margin-left: 12.5%;
+    margin-left: 20%;
   }
 
   @media (--viewport-medium) {
-    transform: scale(60%);
+    width: 100%;
+    max-width: 30rem;
+    margin-left: -12.5%;
   }
 }
 
