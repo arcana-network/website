@@ -4,57 +4,44 @@
       <v-stack justify="space-between">
         <app-section-descriptor
           title="Our team"
-          heading="The backbone of our company"
+          heading="The builders behind Arcana"
         />
-        <!-- <v-button type="link" label="View all" label-transform="uppercase" /> -->
       </v-stack>
       <v-stack
         justify="space-between"
         md-direction="column"
         class="member-container"
       >
-        <v-stack
-          v-for="member in members"
+        <div
+          v-for="member in executiveMembers"
           :key="member.name + member.designation"
-          direction="column"
-          align="center"
         >
-          <div class="position-relative member-image-container">
-            <div class="position-relative member-image">
-              <v-image :path="`images/${member.image}.png`" />
-            </div>
-            <div class="position-relative" style="margin-top: -15%">
-              <v-image path="images/team-member-ellipse.svg" />
-            </div>
-            <v-stack direction="column" gap="1rem" class="social-links">
-              <a
-                v-if="member.links.linkedin"
-                href="https://google.com"
-                target="__blank"
-              >
-                <v-image path="images/linkedin.svg" />
-              </a>
-              <a
-                v-if="member.links.twitter"
-                href="https://google.com"
-                target="__blank"
-              >
-                <v-image path="images/twitter.svg" />
-              </a>
-            </v-stack>
-          </div>
-          <v-text :weight="600" line-height="1.5rem" size="1.25rem">
-            {{ member.name }}
-          </v-text>
-          <v-text
-            color="secondary"
-            size="1.125rem"
-            transform="uppercase"
-            style="margin-top: 1rem"
-          >
-            {{ member.designation }}
-          </v-text>
-        </v-stack>
+          <about-team-member :member="member" />
+        </div>
+      </v-stack>
+      <v-stack
+        justify="space-between"
+        md-direction="column"
+        class="member-container other-members"
+        :class="{ expanded: isTeamExpanded }"
+        wrap
+      >
+        <div v-for="member in members" :key="member.name + member.designation">
+          <about-team-member :member="member" />
+        </div>
+      </v-stack>
+      <v-stack
+        v-if="!isTeamExpanded"
+        align="center"
+        justify="center"
+        class="mobile-remove tablet-remove"
+      >
+        <v-button
+          type="link"
+          label="View all"
+          label-transform="uppercase"
+          :action="expandTeam"
+        />
       </v-stack>
     </v-container>
   </section>
@@ -65,6 +52,34 @@ export default {
   name: 'OurTeam',
   data() {
     return {
+      executiveMembers: [
+        {
+          name: 'Mayur Relekar',
+          designation: 'CEO',
+          image: 'about-placeholder',
+          links: {
+            linkedin: '1',
+            twitter: '1',
+          },
+        },
+        {
+          name: 'Aravindh Kumar',
+          designation: 'Growth',
+          image: 'about-placeholder',
+          links: {
+            linkedin: '1',
+          },
+        },
+        {
+          name: 'Ajay Shetty',
+          designation: 'COO',
+          image: 'about-placeholder',
+          links: {
+            twitter: '1',
+            github: '1',
+          },
+        },
+      ],
       members: [
         {
           name: 'Mayur Relekar',
@@ -91,8 +106,64 @@ export default {
             twitter: '1',
           },
         },
+        {
+          name: 'Mayur Relekar',
+          designation: 'CEO',
+          image: 'about-placeholder',
+          links: {
+            linkedin: '1',
+            twitter: '1',
+          },
+        },
+        {
+          name: 'Aravindh Kumar',
+          designation: 'Growth',
+          image: 'about-placeholder',
+          links: {
+            linkedin: '1',
+          },
+        },
+        {
+          name: 'Ajay Shetty',
+          designation: 'COO',
+          image: 'about-placeholder',
+          links: {
+            twitter: '1',
+          },
+        },
+        {
+          name: 'Mayur Relekar',
+          designation: 'CEO',
+          image: 'about-placeholder',
+          links: {
+            linkedin: '1',
+            twitter: '1',
+          },
+        },
+        {
+          name: 'Aravindh Kumar',
+          designation: 'Growth',
+          image: 'about-placeholder',
+          links: {
+            linkedin: '1',
+          },
+        },
+        {
+          name: 'Ajay Shetty',
+          designation: 'COO',
+          image: 'about-placeholder',
+          links: {
+            twitter: '1',
+          },
+        },
       ],
+      isTeamExpanded: false,
     }
+  },
+  methods: {
+    expandTeam() {
+      this.isTeamExpanded = true
+    },
   },
 }
 </script>
@@ -100,39 +171,35 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
-.member-image-container {
-  margin-bottom: 1rem;
+.member-container {
+  margin: 1rem 0;
 }
 
-.member-image {
-  text-align: center;
-  z-index: 10;
+.member-container > * {
+  margin: 1rem 0;
+  flex: 1 0 33%;
 }
 
-.social-links {
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  z-index: 20;
-  cursor: pointer;
-  visibility: hidden;
+.other-members {
+  max-height: 0;
   opacity: 0;
-  transition: opacity 0.4s;
+  overflow: hidden;
+  transition: max-height 0.4s, opacity 0.8s;
 
   @media (--viewport-medium) {
-    visibility: visible;
+    max-height: 100%;
     opacity: 1;
   }
 }
 
-.member-image-container:hover .social-links {
-  visibility: visible;
+.expanded {
   opacity: 1;
+  max-height: 100%;
 }
 
 @media (--viewport-medium) {
   .member-container > * + * {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 }
 </style>

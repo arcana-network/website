@@ -3,6 +3,10 @@
     <AppHeader />
     <AboutOurPrinciples />
     <AboutOurTeam />
+    <HomeNewsAndMedia />
+    <!-- <TechJoinUs /> -->
+    <AppFooter />
+    <AppCopyright />
   </main>
 </template>
 

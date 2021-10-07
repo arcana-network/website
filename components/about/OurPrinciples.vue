@@ -1,7 +1,7 @@
 <template>
   <section>
     <v-container>
-      <v-stack justify="space-between" md-direction="column" md-align="center">
+      <v-stack justify="space-between" md-direction="column">
         <v-stack direction="column" style="max-width: 38rem">
           <v-heading :level="1">
             Driven by the principles Privacy by Design
@@ -33,6 +33,7 @@ export default {
     width: 100%;
     max-width: 20rem;
     margin-top: 4rem;
+    align-self: center;
   }
 }
 </style>
