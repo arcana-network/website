@@ -5,8 +5,9 @@
     :src="resolvedPath"
     :style="styles"
     :width="dimension[0] ? dimension[0] : ''"
-    v-bind="$attrs"
     @click.stop="(ev) => $emit('click', ev)"
+    @mouseenter="(ev) => $emit('mouseenter', ev)"
+    @mouseleave="(ev) => $emit('mouseleave', ev)"
   />
 </template>
 
