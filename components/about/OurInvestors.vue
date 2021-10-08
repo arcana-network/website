@@ -38,6 +38,7 @@
         align="center"
         justify="center"
         class="mobile-remove tablet-remove"
+        style="margin: 2rem 0"
       >
         <v-button
           type="link"

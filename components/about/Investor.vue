@@ -111,8 +111,9 @@ export default {
   z-index: 100;
 
   @media (--viewport-small) {
-    left: calc(100% + 1rem);
+    left: 100%;
     top: 10%;
+    width: 10rem;
   }
 }
 
