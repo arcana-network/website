@@ -372,7 +372,7 @@ export default {
       if (this.isAnimating) return
 
       gsap.to(this.diamond, {
-        duration: 0.5,
+        duration: 0.75,
         rotation: 360,
         ease: 'power3.out',
         onStart: () => {
