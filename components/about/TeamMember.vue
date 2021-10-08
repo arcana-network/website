@@ -59,7 +59,7 @@
       </v-stack>
       <v-image
         path="icons/arrow-down.svg"
-        class="member-expansion-icon"
+        class="member-expansion-icon laptop-remove"
         :class="{ expanded: isMemberExpanded }"
         @click.stop="toggleExpansionPanel"
       />
@@ -144,8 +144,12 @@ export default {
   transform: rotate(-180deg);
 }
 
-@media (--viewport-medium) {
-  .member-description-container {
+.member-description-container {
+  @media (--viewport-large) {
+    margin: 1rem 0;
+  }
+
+  @media (--viewport-medium) {
     width: 100%;
     max-width: 24rem;
   }

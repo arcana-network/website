@@ -3,7 +3,9 @@
     <AppHeader />
     <AboutOurPrinciples />
     <AboutOurTeam />
-    <HomeNewsAndMedia />
+    <AboutOurInvestors />
+    <!-- <HomeNewsAndMedia />  -->
+    <AboutOurCulture />
     <!-- <TechJoinUs /> -->
     <AppFooter />
     <AppCopyright />
