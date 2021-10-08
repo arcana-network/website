@@ -334,7 +334,7 @@
 import { gsap } from 'gsap'
 
 export default {
-  name: 'ArtIconIdentity',
+  name: 'ArtIdentityIcon',
   props: {
     animateOnEnter: {
       type: Boolean,

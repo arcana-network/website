@@ -5,7 +5,7 @@
     @enter="onEnter"
   >
     <svg
-      ref="iconKeys"
+      ref="iconStorage"
       :height="size"
       :width="size"
       fill="none"
@@ -13,181 +13,93 @@
       xmlns="http://www.w3.org/2000/svg"
     >
       <g class="crater" @mouseenter="onHover">
-        <g filter="url(#icon-keys-a)">
-          <circle cx="51" cy="64" r="50" fill="url(#icon-keys-b)" />
+        <g filter="url(#icon-storage-a)">
+          <circle cx="61" cy="61" r="50" fill="url(#icon-storage-b)" />
         </g>
-        <g filter="url(#icon-keys-c)">
+        <g filter="url(#icon-storage-c)">
           <ellipse
-            fill="url(#icon-keys-d)"
+            fill="url(#icon-storage-d)"
             fill-opacity=".5"
             rx="20"
             ry="20"
-            transform="rotate(65.3 49.3 57.96)"
+            transform="matrix(.41565 .90953 -.90749 .42008 65.1 60.03)"
           />
         </g>
       </g>
-      <g class="key">
-        <g class="key-bow-up">
-          <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-e)" />
-          <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-f)" />
-          <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-g)" />
+      <g class="orbs">
+        <g class="orb">
+          <circle cx="110" cy="60" r="7.5" fill="url(#icon-storage-i)" />
+          <circle cx="110" cy="60" r="7.5" fill="url(#icon-storage-j)" />
+          <circle cx="110" cy="60" r="7.5" fill="url(#icon-storage-k)" />
         </g>
-        <g
-          class="key-bow-down"
-          transform="scale(1, -1) translate(0, -127)"
-          opacity="0"
-        >
-          <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-e)" />
-          <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-f)" />
-          <circle cx="34.67" cy="63.79" r="22.79" fill="url(#icon-keys-g)" />
+        <g class="orb">
+          <circle cx="60" cy="110" r="7.5" fill="url(#icon-storage-l)" />
+          <circle cx="60" cy="110" r="7.5" fill="url(#icon-storage-m)" />
+          <circle cx="60" cy="110" r="7.5" fill="url(#icon-storage-n)" />
         </g>
-        <g class="key-stem-up">
-          <g filter="url(#icon-keys-k)">
-            <rect
-              width="60.54"
-              height="5.44"
-              x="57.46"
-              y="47.12"
-              fill="url(#icon-keys-l)"
-              rx="2.72"
-            />
-            <rect
-              width="60.54"
-              height="5.44"
-              x="57.46"
-              y="47.12"
-              fill="url(#icon-keys-m)"
-              rx="2.72"
-            />
-            <rect
-              width="60.54"
-              height="5.44"
-              x="57.46"
-              y="47.12"
-              fill="url(#icon-keys-n)"
-              rx="2.72"
-            />
-          </g>
-          <g filter="url(#icon-keys-o)">
-            <rect
-              width="47.62"
-              height="2.72"
-              x="70.38"
-              y="56.65"
-              fill="url(#icon-keys-p)"
-              rx="1.36"
-            />
-            <rect
-              width="47.62"
-              height="2.72"
-              x="70.38"
-              y="56.65"
-              fill="url(#icon-keys-q)"
-              rx="1.36"
-            />
-            <rect
-              width="47.62"
-              height="2.72"
-              x="70.38"
-              y="56.65"
-              fill="url(#icon-keys-r)"
-              rx="1.36"
-            />
-          </g>
+        <g class="orb">
+          <circle cx="10" cy="60" r="7.5" fill="url(#icon-storage-r)" />
+          <circle cx="10" cy="60" r="7.5" fill="url(#icon-storage-s)" />
+          <circle cx="10" cy="60" r="7.5" fill="url(#icon-storage-t)" />
         </g>
-        <g
-          class="key-stem-down"
-          transform="scale(1, -1) translate(0, -137)"
-          style="opacity: 0"
-        >
-          <g filter="url(#icon-keys-k)">
-            <rect
-              width="60.54"
-              height="5.44"
-              x="57.46"
-              y="47.12"
-              fill="url(#icon-keys-l)"
-              rx="2.72"
-            />
-            <rect
-              width="60.54"
-              height="5.44"
-              x="57.46"
-              y="47.12"
-              fill="url(#icon-keys-m)"
-              rx="2.72"
-            />
-            <rect
-              width="60.54"
-              height="5.44"
-              x="57.46"
-              y="47.12"
-              fill="url(#icon-keys-n)"
-              rx="2.72"
-            />
-          </g>
-          <g filter="url(#icon-keys-o)">
-            <rect
-              width="47.62"
-              height="2.72"
-              x="70.38"
-              y="56.65"
-              fill="url(#icon-keys-p)"
-              rx="1.36"
-            />
-            <rect
-              width="47.62"
-              height="2.72"
-              x="70.38"
-              y="56.65"
-              fill="url(#icon-keys-q)"
-              rx="1.36"
-            />
-            <rect
-              width="47.62"
-              height="2.72"
-              x="70.38"
-              y="56.65"
-              fill="url(#icon-keys-r)"
-              rx="1.36"
-            />
-          </g>
+        <g class="orb">
+          <circle cx="60" cy="10" r="7.5" fill="url(#icon-storage-o)" />
+          <circle cx="60" cy="10" r="7.5" fill="url(#icon-storage-p)" />
+          <circle cx="60" cy="10" r="7.5" fill="url(#icon-storage-q)" />
         </g>
-        <g class="key-tip">
-          <circle cx="111.44" cy="68.45" r="5" fill="url(#icon-keys-h)" />
-          <circle cx="111.44" cy="68.45" r="5" fill="url(#icon-keys-i)" />
-          <circle cx="111.44" cy="68.45" r="5" fill="url(#icon-keys-j)" />
-        </g>
+      </g>
+      <g class="diamond" filter="url(#icon-storage-e)">
+        <rect
+          width="38.26"
+          height="38.26"
+          fill="url(#f)"
+          rx="5"
+          transform="scale(.99678 1.0032) rotate(45 -7.9 89.82)"
+        />
+        <rect
+          width="38.26"
+          height="38.26"
+          fill="url(#icon-storage-g)"
+          rx="5"
+          transform="scale(.99678 1.0032) rotate(45 -7.9 89.82)"
+        />
+        <rect
+          width="38.26"
+          height="38.26"
+          fill="url(#icon-storage-h)"
+          rx="5"
+          transform="scale(.99678 1.0032) rotate(45 -7.9 89.82)"
+        />
       </g>
       <defs>
         <radialGradient
-          id="icon-keys-d"
+          id="icon-storage-d"
           cx="0"
           cy="0"
           r="1"
-          gradientTransform="matrix(-32.47387 24.0101 -24.98303 -33.78975 49.3 57.96)"
+          gradientTransform="rotate(143.64 8.35 15.66) scale(45.4638 47.2478)"
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#fff" />
           <stop offset="1" stop-color="#8C8C8C" stop-opacity="0" />
         </radialGradient>
         <radialGradient
-          id="icon-keys-f"
+          id="icon-storage-g"
           cx="0"
           cy="0"
           r="1"
-          gradientTransform="rotate(132.51 8.28 35.86) scale(19.944)"
+          gradientTransform="rotate(132.51 9.53 10.7) scale(16.7446)"
           gradientUnits="userSpaceOnUse"
         >
           <stop offset=".14" stop-color="#fff" />
           <stop offset="1" stop-color="#fff" stop-opacity=".27" />
         </radialGradient>
         <radialGradient
-          id="icon-keys-g"
+          id="icon-storage-h"
           cx="0"
           cy="0"
           r="1"
-          gradientTransform="rotate(141.49 11.1 34.16) scale(29.1215)"
+          gradientTransform="rotate(141.49 10.34 9.73) scale(24.4499)"
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#fff" />
@@ -195,22 +107,22 @@
           <stop offset="1" stop-color="#fff" stop-opacity="0" />
         </radialGradient>
         <radialGradient
-          id="icon-keys-i"
+          id="icon-storage-j"
           cx="0"
           cy="0"
           r="1"
-          gradientTransform="rotate(132.51 41.75 57.93) scale(4.37603)"
+          gradientTransform="rotate(132.51 44.08 53.57) scale(6.56404)"
           gradientUnits="userSpaceOnUse"
         >
           <stop offset=".14" stop-color="#fff" />
           <stop offset="1" stop-color="#fff" stop-opacity=".27" />
         </radialGradient>
         <radialGradient
-          id="icon-keys-j"
+          id="icon-storage-k"
           cx="0"
           cy="0"
           r="1"
-          gradientTransform="rotate(141.49 44.84 52.86) scale(6.38971)"
+          gradientTransform="rotate(141.49 46.8 48.48) scale(9.58457)"
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#fff" />
@@ -218,22 +130,22 @@
           <stop offset="1" stop-color="#fff" stop-opacity="0" />
         </radialGradient>
         <radialGradient
-          id="icon-keys-m"
+          id="icon-storage-m"
           cx="0"
           cy="0"
           r="1"
-          gradientTransform="rotate(174.4 46.42 26.66) scale(17.9877 3.50735)"
+          gradientTransform="rotate(132.51 7.22 68.17) scale(6.56404)"
           gradientUnits="userSpaceOnUse"
         >
           <stop offset=".14" stop-color="#fff" />
           <stop offset="1" stop-color="#fff" stop-opacity=".27" />
         </radialGradient>
         <radialGradient
-          id="icon-keys-n"
+          id="icon-storage-n"
           cx="0"
           cy="0"
           r="1"
-          gradientTransform="rotate(175.91 47.23 26.05) scale(30.3477 4.43233)"
+          gradientTransform="rotate(141.49 12.28 65.39) scale(9.58457)"
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#fff" />
@@ -241,22 +153,45 @@
           <stop offset="1" stop-color="#fff" stop-opacity="0" />
         </radialGradient>
         <radialGradient
-          id="icon-keys-q"
+          id="icon-storage-p"
           cx="0"
           cy="0"
           r="1"
-          gradientTransform="matrix(-14.08007 .8777 -.10942 -1.75526 100.08 57.42)"
+          gradientTransform="rotate(132.51 29.8 16.85) scale(6.56404)"
           gradientUnits="userSpaceOnUse"
         >
           <stop offset=".14" stop-color="#fff" />
           <stop offset="1" stop-color="#fff" stop-opacity=".27" />
         </radialGradient>
         <radialGradient
-          id="icon-keys-r"
+          id="icon-storage-q"
           cx="0"
           cy="0"
           r="1"
-          gradientTransform="rotate(177.4 49.77 29.86) scale(23.8327 2.21953)"
+          gradientTransform="rotate(141.49 30.2 14.07) scale(9.58457)"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#fff" />
+          <stop offset=".34" stop-color="#fff" />
+          <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient
+          id="icon-storage-s"
+          cx="0"
+          cy="0"
+          r="1"
+          gradientTransform="rotate(132.51 -6.92 31.13) scale(6.56404)"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset=".14" stop-color="#fff" />
+          <stop offset="1" stop-color="#fff" stop-opacity=".27" />
+        </radialGradient>
+        <radialGradient
+          id="icon-storage-t"
+          cx="0"
+          cy="0"
+          r="1"
+          gradientTransform="rotate(141.49 -4.2 30.66) scale(9.58457)"
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#fff" />
@@ -264,66 +199,77 @@
           <stop offset="1" stop-color="#fff" stop-opacity="0" />
         </radialGradient>
         <linearGradient
-          id="icon-keys-b"
-          x1="1"
-          x2="135.1"
-          y1="5.8"
-          y2="166.35"
+          id="icon-storage-b"
+          x1="11"
+          x2="145.1"
+          y1="2.8"
+          y2="163.35"
           gradientUnits="userSpaceOnUse"
         >
           <stop />
           <stop offset="1" />
         </linearGradient>
         <linearGradient
-          id="icon-keys-e"
-          x1="53.78"
-          x2="13.35"
-          y1="91.97"
-          y2="30.71"
+          id="icon-storage-f"
+          x1="35.18"
+          x2="1.23"
+          y1="42.79"
+          y2="-8.64"
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#3E3E3E" />
           <stop offset="1" stop-color="#0D0D0D" />
         </linearGradient>
         <linearGradient
-          id="icon-keys-h"
-          x1="115.63"
-          x2="106.76"
-          y1="74.63"
-          y2="61.19"
+          id="icon-storage-i"
+          x1="117.79"
+          x2="104.48"
+          y1="69.77"
+          y2="49.61"
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#3E3E3E" />
           <stop offset="1" stop-color="#0D0D0D" />
         </linearGradient>
         <linearGradient
-          id="icon-keys-l"
-          x1="113.12"
-          x2="112.5"
-          y1="53.21"
-          y2="42.74"
+          id="icon-storage-l"
+          x1="66.79"
+          x2="53.48"
+          y1="121.41"
+          y2="101.25"
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#3E3E3E" />
           <stop offset="1" stop-color="#0D0D0D" />
         </linearGradient>
         <linearGradient
-          id="icon-keys-p"
-          x1="114.16"
-          x2="113.96"
-          y1="59.69"
-          y2="54.45"
+          id="icon-storage-o"
+          x1="66.79"
+          x2="53.48"
+          y1="18.77"
+          y2="-1.39"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#3E3E3E" />
+          <stop offset="1" stop-color="#0D0D0D" />
+        </linearGradient>
+        <linearGradient
+          id="icon-storage-r"
+          x1="15.79"
+          x2="2.48"
+          y1="69.77"
+          y2="49.61"
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#3E3E3E" />
           <stop offset="1" stop-color="#0D0D0D" />
         </linearGradient>
         <filter
-          id="icon-keys-a"
+          id="icon-storage-a"
           width="156"
           height="154"
-          x="-50"
-          y="9"
+          x="-40"
+          y="6"
           color-interpolation-filters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -386,11 +332,11 @@
           <feBlend in2="effect3_innerShadow" result="effect4_innerShadow" />
         </filter>
         <filter
-          id="icon-keys-c"
-          width="129.85"
-          height="130.94"
-          x="-15.62"
-          y="-7.51"
+          id="icon-storage-c"
+          width="134.93"
+          height="136.47"
+          x="-2.37"
+          y="-8.2"
           color-interpolation-filters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -399,43 +345,11 @@
           <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="22" />
         </filter>
         <filter
-          id="icon-keys-k"
-          width="60.54"
-          height="12.44"
-          x="57.46"
-          y="40.12"
-          color-interpolation-filters="sRGB"
-          filterUnits="userSpaceOnUse"
-        >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-          <feColorMatrix
-            in="SourceAlpha"
-            result="hardAlpha"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          />
-          <feOffset dy="-7" />
-          <feGaussianBlur stdDeviation="33" />
-          <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
-          <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.37 0" />
-          <feBlend in2="shape" result="effect1_innerShadow" />
-          <feColorMatrix
-            in="SourceAlpha"
-            result="hardAlpha"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          />
-          <feOffset dy="-7" />
-          <feGaussianBlur stdDeviation="33" />
-          <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
-          <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.37 0" />
-          <feBlend in2="effect1_innerShadow" result="effect2_innerShadow" />
-        </filter>
-        <filter
-          id="icon-keys-o"
-          width="47.62"
-          height="9.72"
-          x="70.38"
-          y="49.65"
+          id="icon-storage-e"
+          width="49.81"
+          height="57.13"
+          x="36.09"
+          y="27.08"
           color-interpolation-filters="sRGB"
           filterUnits="userSpaceOnUse"
         >
@@ -471,7 +385,7 @@
 import { gsap } from 'gsap'
 
 export default {
-  name: 'ArtIconKeys',
+  name: 'ArtStorageIcon',
   props: {
     animateOnEnter: {
       type: Boolean,
@@ -496,51 +410,32 @@ export default {
     }
   },
   computed: {
-    keyBowUp() {
-      return this.$refs.iconKeys.querySelectorAll('.key-bow-up')
+    orbs() {
+      return this.$refs.iconStorage.querySelectorAll('.orb')
     },
-    keyBowDown() {
-      return this.$refs.iconKeys.querySelectorAll('.key-bow-down')
+    orbsGroup() {
+      return this.$refs.iconStorage.querySelectorAll('.orbs')
     },
-    keyStemUp() {
-      return this.$refs.iconKeys.querySelectorAll('.key-stem-up')
-    },
-    keyStemDown() {
-      return this.$refs.iconKeys.querySelectorAll('.key-stem-down')
-    },
+  },
+  mounted() {
+    gsap.set([this.orbsGroup, this.orbs], { transformOrigin: '50% 50%' })
   },
   methods: {
     animate() {
       if (this.isAnimating) return
 
-      gsap
-        .timeline({
-          duration: 0.25,
-          repeat: 1,
-          yoyo: true,
-          onStart: () => {
-            this.isAnimating = true
-          },
-          onComplete: () => {
-            this.isAnimating = false
-            gsap.set([this.keyBowUp, this.keyStemUp], {
-              opacity: 1,
-            })
-            gsap.set([this.keyBowDown, this.keyStemDown], {
-              opacity: 0,
-            })
-          },
-        })
-        .to([this.keyBowUp, this.keyStemUp], {
-          opacity: 0,
-        })
-        .to(
-          [this.keyBowDown, this.keyStemDown],
-          {
-            opacity: 1,
-          },
-          '-=0.5'
-        )
+      gsap.to([this.orbsGroup, this.orbs], {
+        duration: 0.5,
+        rotation: '360',
+        ease: 'power3.out',
+        onStart: () => {
+          this.isAnimating = true
+        },
+        onComplete: () => {
+          this.isAnimating = false
+          gsap.set([this.orbsGroup, this.orbs], { rotation: 0 })
+        },
+      })
     },
     onEnter() {
       if (this.animateOnEnter) {
@@ -557,7 +452,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.key {
+.orb,
+.diamond {
   pointer-events: none;
 }
 </style>

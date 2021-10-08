@@ -266,7 +266,7 @@
 import { gsap } from 'gsap'
 
 export default {
-  name: 'ArtIconEncryption',
+  name: 'ArtEncryptionIcon',
   props: {
     animateOnEnter: {
       type: Boolean,
