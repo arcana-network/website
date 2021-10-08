@@ -382,7 +382,7 @@
 </template>
 
 <script>
-import anime from 'animejs'
+import { gsap } from 'gsap'
 
 export default {
   name: 'ArtIconStorage',
@@ -409,26 +409,31 @@ export default {
       isAnimating: false,
     }
   },
+  computed: {
+    orbs() {
+      return this.$refs.iconStorage.querySelectorAll('.orb')
+    },
+    orbsGroup() {
+      return this.$refs.iconStorage.querySelectorAll('.orbs')
+    },
+  },
+  mounted() {
+    gsap.set([this.orbsGroup, this.orbs], { transformOrigin: '50% 50%' })
+  },
   methods: {
     animate() {
       if (this.isAnimating) return
 
-      const orbsGroup = this.$refs.iconStorage.querySelectorAll('.orbs')
-      const orbs = this.$refs.iconStorage.querySelectorAll('.orb')
-
-      anime({
-        targets: [orbsGroup, orbs],
-        duration: 500,
-        rotate: 360,
-        easing: 'easeOutCubic',
-        begin: () => {
+      gsap.to([this.orbsGroup, this.orbs], {
+        duration: 0.5,
+        rotation: '360',
+        ease: 'power3.out',
+        onStart: () => {
           this.isAnimating = true
         },
-        complete: () => {
+        onComplete: () => {
           this.isAnimating = false
-          anime.set([orbsGroup, orbs], {
-            rotate: 0,
-          })
+          gsap.set([this.orbsGroup, this.orbs], { rotation: 0 })
         },
       })
     },
@@ -447,15 +452,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.orbs {
-  transform-origin: center;
-}
-
-.orb {
-  transform-origin: center;
-  transform-box: fill-box;
-}
-
 .orb,
 .diamond {
   pointer-events: none;

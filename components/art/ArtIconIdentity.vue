@@ -331,7 +331,7 @@
 </template>
 
 <script>
-import anime from 'animejs'
+import { gsap } from 'gsap'
 
 export default {
   name: 'ArtIconIdentity',
@@ -358,25 +358,28 @@ export default {
       isAnimating: false,
     }
   },
+  computed: {
+    diamond() {
+      return this.$refs.iconIdentity.querySelectorAll('.diamond')
+    },
+  },
+  mounted() {
+    gsap.set(this.diamond, { transformOrigin: '50% 50%' })
+  },
   methods: {
     animate() {
       if (this.isAnimating) return
 
-      const diamond = this.$refs.iconIdentity.querySelectorAll('.diamond')
-
-      anime({
-        targets: [diamond],
-        duration: 500,
-        rotate: 360,
-        easing: 'easeOutCubic',
-        begin: () => {
+      gsap.to(this.diamond, {
+        duration: 0.5,
+        rotation: 360,
+        ease: 'power3.out',
+        onStart: () => {
           this.isAnimating = true
         },
-        complete: () => {
+        onComplete: () => {
           this.isAnimating = false
-          anime.set([diamond], {
-            rotate: 0,
-          })
+          gsap.set([this.diamond], { rotation: 0 })
         },
       })
     },
@@ -395,11 +398,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.diamond {
-  transform-origin: center;
-  transform-box: fill-box;
-}
-
 .diamond,
 .person {
   pointer-events: none;

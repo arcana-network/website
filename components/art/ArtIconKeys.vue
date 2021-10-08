@@ -468,7 +468,7 @@
 </template>
 
 <script>
-import anime from 'animejs'
+import { gsap } from 'gsap'
 
 export default {
   name: 'ArtIconKeys',
@@ -495,42 +495,51 @@ export default {
       isAnimating: false,
     }
   },
+  computed: {
+    keyBowUp() {
+      return this.$refs.iconKeys.querySelectorAll('.key-bow-up')
+    },
+    keyBowDown() {
+      return this.$refs.iconKeys.querySelectorAll('.key-bow-down')
+    },
+    keyStemUp() {
+      return this.$refs.iconKeys.querySelectorAll('.key-stem-up')
+    },
+    keyStemDown() {
+      return this.$refs.iconKeys.querySelectorAll('.key-stem-down')
+    },
+  },
   methods: {
     animate() {
       if (this.isAnimating) return
 
-      const keyBowUp = this.$refs.iconKeys.querySelectorAll('.key-bow-up')
-      const keyBowDown = this.$refs.iconKeys.querySelectorAll('.key-bow-down')
-      const keyStemUp = this.$refs.iconKeys.querySelectorAll('.key-stem-up')
-      const keyStemDown = this.$refs.iconKeys.querySelectorAll('.key-stem-down')
-
-      anime
+      gsap
         .timeline({
-          duration: 500,
-          easing: 'easeOutCubic',
-        })
-        .add({
-          targets: [keyBowUp, keyStemUp],
-          opacity: [1, 0, 1],
-          begin: () => {
+          duration: 0.25,
+          repeat: 1,
+          yoyo: true,
+          onStart: () => {
             this.isAnimating = true
           },
-        })
-        .add(
-          {
-            targets: [keyBowDown, keyStemDown],
-            opacity: [0, 1, 0],
-            complete: () => {
-              this.isAnimating = false
-              anime.set([keyBowUp, keyStemUp], {
-                opacity: 1,
-              })
-              anime.set([keyBowDown, keyStemDown], {
-                opacity: 0,
-              })
-            },
+          onComplete: () => {
+            this.isAnimating = false
+            gsap.set([this.keyBowUp, this.keyStemUp], {
+              opacity: 1,
+            })
+            gsap.set([this.keyBowDown, this.keyStemDown], {
+              opacity: 0,
+            })
           },
-          '-=500'
+        })
+        .to([this.keyBowUp, this.keyStemUp], {
+          opacity: 0,
+        })
+        .to(
+          [this.keyBowDown, this.keyStemDown],
+          {
+            opacity: 1,
+          },
+          '-=0.5'
         )
     },
     onEnter() {
