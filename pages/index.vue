@@ -2,7 +2,7 @@
   <main>
     <AppHeader />
     <HomeHeroSection />
-    <HomeIntroduction />
+    <!-- <HomeIntroduction /> -->
     <HomeFeatures />
     <HomeTestimonials />
     <HomeInvestors />
@@ -30,12 +30,7 @@ main {
   overflow-x: hidden;
 }
 
-main > * + *:not(:last-child) {
-  padding: 6rem 0;
-  margin: 6rem 0;
-
-  @media (--viewport-small) {
-    padding: 3rem 0;
-  }
+main > *:not(:last-child):not(:first-child) {
+  margin-top: 6rem;
 }
 </style>

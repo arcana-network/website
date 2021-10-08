@@ -28,7 +28,7 @@
             description="If you have a great idea for an application to build on the Arcana stack, sign up here to get access to our developer dashboard and the SDK as soon as it’s available."
           />
           <v-button
-            label="Get started"
+            label="Sign up now"
             label-transform="uppercase"
             style="margin-top: 1.5rem"
           />
@@ -38,7 +38,7 @@
         md-direction="column"
         justify="space-between"
         align="start"
-        style="margin-top: 4rem"
+        class="provide-section"
       >
         <v-stack direction="column" style="max-width: 32rem">
           <app-section-descriptor
@@ -57,44 +57,54 @@
             name="provider-type"
             style="margin-top: 0.625rem"
           />
-          <v-label value="capacity" strong style="margin-top: 3rem" />
-          <v-input-group style="margin-top: 0.625rem">
-            <v-text-field
-              v-model="capacity.value"
-              type="number"
-              style="width: 100%"
+          <v-stack v-if="providerType" direction="column">
+            <v-label
+              v-if="providerType === 'Storage Provider'"
+              value="capacity"
+              strong
+              style="margin-top: 3rem"
             />
+            <v-input-group
+              v-if="providerType === 'Storage Provider'"
+              style="margin-top: 0.625rem"
+            >
+              <v-text-field
+                v-model="capacity.value"
+                type="number"
+                style="width: 100%"
+              />
+              <v-dropdown
+                v-model="capacity.unit"
+                :options="['GB', 'TB']"
+                style="width: 25ch"
+              />
+            </v-input-group>
+            <v-label value="location" strong style="margin-top: 3rem" />
             <v-dropdown
-              v-model="capacity.unit"
-              :options="['MB', 'GB']"
-              style="width: 25ch"
+              v-model="location"
+              :options="[
+                'Asia',
+                'North America',
+                'Europe',
+                'Australia',
+                'South America',
+                'Africa',
+              ]"
+              placeholder="Select Location"
+              style="margin-top: 0.625rem"
             />
-          </v-input-group>
-          <v-label value="location" strong style="margin-top: 3rem" />
-          <v-dropdown
-            v-model="location"
-            :options="[
-              'Asia',
-              'North America',
-              'Europe',
-              'Australia',
-              'South America',
-              'Africa',
-            ]"
-            placeholder="Select Location"
-            style="margin-top: 0.625rem"
-          />
-          <v-label value="email" strong style="margin-top: 3rem" />
-          <v-text-field
-            v-model="email"
-            placeholder="Enter here"
-            style="margin-top: 0.625rem"
-          />
-          <v-button
-            label="submit"
-            label-transform="uppercase"
-            style="margin-top: 3rem; width: 12rem"
-          />
+            <v-label value="email" strong style="margin-top: 3rem" />
+            <v-text-field
+              v-model="email"
+              placeholder="Enter here"
+              style="margin-top: 0.625rem"
+            />
+            <v-button
+              label="submit"
+              label-transform="uppercase"
+              style="margin-top: 3rem; width: 12rem"
+            />
+          </v-stack>
         </v-stack>
         <v-image path="images/provide-illustration.svg" class="illustration" />
       </v-stack>
@@ -107,7 +117,7 @@ export default {
   name: 'Community',
   data() {
     return {
-      providerType: 'Storage Provider',
+      providerType: '',
       capacity: {
         value: 100,
         unit: 'GB',
@@ -122,9 +132,25 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
+section {
+  padding: 6rem 0;
+
+  @media (--viewport-small) {
+    padding: 3rem 0;
+  }
+}
+
+.provide-section {
+  margin-top: 6rem;
+
+  @media (--viewport-small) {
+    margin-top: 2rem;
+  }
+}
+
 .illustration {
   @media (--viewport-medium) {
-    margin: 4rem auto;
+    margin: 1rem auto;
     width: 100%;
     max-width: 420px;
   }

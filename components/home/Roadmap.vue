@@ -10,7 +10,7 @@
         />
       </v-stack>
     </v-container>
-    <div style="margin-top: 2rem; text-align: center">
+    <div class="roadmap-container">
       <v-image
         path="images/roadmap-desktop.svg"
         class="tablet-remove mobile-remove roadmap-desktop"
@@ -31,6 +31,23 @@ export default {
 <style lang="postcss" scoped>
 /* Imported this for getting helper classes laptop-remove and mobile-remove */
 @import url('../lib/media-query-helper.css');
+
+section {
+  padding: 6rem 0;
+
+  @media (--viewport-small) {
+    padding: 3rem 0;
+  }
+}
+
+.roadmap-container {
+  margin-top: 6rem;
+  text-align: center;
+
+  @media (--viewport-medium) {
+    margin-top: 3rem;
+  }
+}
 
 .roadmap-desktop {
   width: 100%;

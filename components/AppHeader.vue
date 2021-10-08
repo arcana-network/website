@@ -15,11 +15,11 @@ export default {
       menuItems: [
         {
           name: 'Technology',
-          link: '/tech',
+          link: '/tech/',
         },
         {
           name: 'About',
-          link: '/about',
+          link: '/about/',
         },
         {
           name: 'Docs',

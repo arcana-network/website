@@ -12,7 +12,7 @@ export default {
 
 <style lang="postcss" scoped>
 div {
-  padding: 2.5rem 0;
+  padding-bottom: 2.5rem;
   text-align: center;
 }
 </style>

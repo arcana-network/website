@@ -12,6 +12,9 @@
             :href="item.link"
             :target="item.external ? '__blank' : ''"
             class="header-menu-item"
+            :class="{
+              'active-link': !item.extenal && item.link === currentLocation,
+            }"
           >
             <v-text :weight="600" font="sans" color="primary">
               {{ item.name }}
@@ -25,6 +28,7 @@
             :action="cta.action"
             label-transform="uppercase"
             :show="show"
+            style="visibility: hidden"
           />
           <v-image
             :path="`icons/${icon}.svg`"
@@ -67,7 +71,11 @@ export default {
     return {
       icon: 'menu',
       show: false,
+      currentLocation: '',
     }
+  },
+  mounted() {
+    this.currentLocation = window.location.pathname
   },
   methods: {
     showClicked(ev) {
@@ -89,6 +97,7 @@ header {
 
 .header-menu-item {
   text-decoration: none;
+  padding: 0.75rem 2rem;
 }
 
 .header-menu-item:hover {
@@ -99,15 +108,47 @@ header {
   transform: scale(0.98);
 }
 
+.active-link {
+  background: linear-gradient(
+      87.28deg,
+      rgba(255, 38, 103, 0.6) -16.82%,
+      rgba(255, 175, 55, 0) 49.13%
+    ),
+    radial-gradient(
+      71.51% 71.51% at 88.17% 103.23%,
+      rgba(255, 219, 92, 0.6) 0,
+      rgba(255, 219, 92, 0.496875) 32.29%,
+      rgba(255, 219, 92, 0) 100%
+    ),
+    radial-gradient(
+      50% 50% at 63.98% 28.49%,
+      rgba(255, 255, 255, 0.8) 0,
+      rgba(255, 255, 255, 0.8) 23.44%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      32.26% 32.26% at 62.37% 28.49%,
+      rgba(255, 255, 255, 0.8) 0,
+      rgba(255, 255, 255, 0.216) 100%
+    ),
+    linear-gradient(326.58deg, #ffe177 -3.92%, #ff975c 112.32%);
+  box-shadow: inset 0 -7px 66px rgba(255, 111, 66, 0.37);
+  border-radius: 10px;
+}
+
+.active-link > * {
+  color: #2d2d2d;
+}
+
 @media (--viewport-large) {
   .header-menu > * + * {
-    margin-left: 4vw;
+    margin-left: 1vw;
   }
 }
 
 @media (--viewport-medium) {
   .header-menu > * + * {
-    margin-left: 3vw;
+    margin-left: 1vw;
   }
 }
 

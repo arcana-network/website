@@ -17,7 +17,7 @@
             gap="1.5rem"
             style="margin-top: 2rem"
           >
-            <v-button label="Get started" label-transform="uppercase" />
+            <v-button label="Sign up now" label-transform="uppercase" />
             <v-text color="secondary" size="1.125rem">
               Testnet Launching Soon!
             </v-text>
@@ -48,9 +48,23 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
+section {
+  padding: 6rem 0;
+
+  @media (--viewport-small) {
+    padding: 0;
+  }
+}
+
 .section-orbs {
   @media (--viewport-large) {
-    margin-right: -12.5%;
+    margin-right: -21%;
+  }
+}
+
+.section-orbs > * {
+  @media (--viewport-medium) {
+    width: 100%;
   }
 }
 

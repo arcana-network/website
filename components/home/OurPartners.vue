@@ -5,13 +5,13 @@
         <v-stack direction="column" align="start">
           <app-section-descriptor
             title="Our Partners"
-            heading="A Strong Network"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nunc, luctus urna pulvinar ullamcorper viverra cras. Faucibus posuere at mollis auctor id. Nulla posuere a arcu nunc ultricies senectus vitae."
+            heading="Scaling Privacy Across the Ethereum Ecosystem"
+            description="We’re partnering with great projects in the ecosystem to help them with Authentication, Managing access to data, secure their keys, and build new use cases."
             style="max-width: 48rem"
           />
           <v-button
             type="link"
-            label="View All"
+            label="Read more on Medium"
             label-transform="uppercase"
             style="margin-top: 2rem"
           />
@@ -64,6 +64,14 @@ export default {
 
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
+
+section {
+  padding: 6rem 0;
+
+  @media (--viewport-small) {
+    padding: 3rem 0;
+  }
+}
 
 @media (--viewport-small) {
   .partner-logo-container {
