@@ -30,12 +30,7 @@
           <about-team-member :member="member" />
         </div>
       </v-stack>
-      <v-stack
-        v-if="!isTeamExpanded"
-        align="center"
-        justify="center"
-        class="mobile-remove tablet-remove"
-      >
+      <v-stack v-if="!isTeamExpanded" align="center" justify="center">
         <v-button
           type="link"
           label="View all"
@@ -58,8 +53,7 @@ export default {
           designation: 'CEO',
           image: 'about-placeholder',
           links: {
-            linkedin: '1',
-            twitter: '1',
+            linkedin: 'https://www.linkedin.com/in/mayurrelekar/',
           },
         },
         {
@@ -67,7 +61,7 @@ export default {
           designation: 'Growth',
           image: 'about-placeholder',
           links: {
-            linkedin: '1',
+            linkedin: 'https://www.linkedin.com/in/aravindhkumar61',
           },
         },
         {
@@ -75,85 +69,125 @@ export default {
           designation: 'COO',
           image: 'about-placeholder',
           links: {
-            twitter: '1',
-            github: '1',
+            linkedin: 'https://www.linkedin.com/in/ajayshetty88/',
+            twitter: 'https://twitter.com/AjayShe59753410',
           },
         },
       ],
       members: [
         {
-          name: 'Mayur Relekar',
-          designation: 'CEO',
+          name: 'Ajith',
+          designation: 'Front End Developer',
           image: 'about-placeholder',
           links: {
-            linkedin: '1',
-            twitter: '1',
+            linkedin: 'https://www.linkedin.com/in/ajithranka/',
+            twitter: 'https://twitter.com/ajithranka',
+            github: 'https://github.com/ajithranka',
           },
         },
         {
-          name: 'Aravindh Kumar',
-          designation: 'Growth',
+          name: 'Lakshmikanth',
+          designation: 'Devops',
           image: 'about-placeholder',
           links: {
-            linkedin: '1',
+            linkedin: 'linkedin.com/in/lakshmikanth-bharathi-2a4754b8',
+            twitter: 'https://twitter.com/LakshmikanthBh8',
+            github: 'https://github.com/lakshmikanth-tesla',
           },
         },
         {
-          name: 'Ajay Shetty',
-          designation: 'COO',
+          name: 'Abhishek',
+          designation: 'Backend Developer',
           image: 'about-placeholder',
           links: {
-            twitter: '1',
+            linkedin: 'https://in.linkedin.com/in/makyl',
+            github: 'https://github.com/makylfang',
           },
         },
         {
-          name: 'Mayur Relekar',
-          designation: 'CEO',
+          name: 'Saurav',
+          designation: 'Blockchain Developer',
           image: 'about-placeholder',
           links: {
-            linkedin: '1',
-            twitter: '1',
+            linkedin: 'https://www.linkedin.com/in/sauravkanchan/',
+            twitter: 'https://twitter.com/sauravnk30',
+            github: 'https://github.com/SauravKanchan',
           },
         },
         {
-          name: 'Aravindh Kumar',
-          designation: 'Growth',
+          name: 'Jobin',
+          designation: 'Blockchain Developer Evangelist',
           image: 'about-placeholder',
           links: {
-            linkedin: '1',
+            linkedin: 'https://www.linkedin.com/in/the-injineer/',
+            twitter: 'https://twitter.com/the_injineer',
+            github: 'https://github.com/the-injineer',
           },
         },
         {
-          name: 'Ajay Shetty',
-          designation: 'COO',
+          name: 'Himank',
+          designation: 'Blockchain Developer',
           image: 'about-placeholder',
           links: {
-            twitter: '1',
+            linkedin: 'https://linkedin.com/in/himankjain',
+            github: 'https://github.com/steel-feel',
           },
         },
         {
-          name: 'Mayur Relekar',
-          designation: 'CEO',
+          name: 'Narendran',
+          designation: ' ',
+          image: 'about-placeholder',
+          links: {},
+        },
+        {
+          name: 'Naga Pramod',
+          designation: 'Content Strategist',
           image: 'about-placeholder',
           links: {
-            linkedin: '1',
-            twitter: '1',
+            linkedin: 'https://www.linkedin.com/in/naga-pramod/',
+            twitter: 'https://twitter.com/dnagapramod',
           },
         },
         {
-          name: 'Aravindh Kumar',
-          designation: 'Growth',
+          name: 'Rohith',
+          designation: 'Intern',
           image: 'about-placeholder',
           links: {
-            linkedin: '1',
+            linkedin: 'https://www.linkedin.com/in/rohith-narahari-40211818b/',
+            twitter: 'https://twitter.com/mr_deadpool_93',
+            github: 'https://github.com/naraharirohith',
           },
         },
         {
-          name: 'Ajay Shetty',
-          designation: 'COO',
+          name: 'Sharan',
+          designation: ' ',
+          image: 'about-placeholder',
+          links: {},
+        },
+        {
+          name: 'Arush',
+          designation: 'UI/UX Designer',
           image: 'about-placeholder',
           links: {
-            twitter: '1',
+            linkedin: 'https://www.linkedin.com/in/arush-pandya-33263b200/',
+          },
+        },
+        {
+          name: 'Shrinath',
+          designation: 'Front End Developer',
+          image: 'about-placeholder',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/shrinath-prabhu-459107b2/',
+            github: 'https://github.com/shrinathprabhu',
+          },
+        },
+        {
+          name: 'Anirudh',
+          designation: 'Product Manager',
+          image: 'about-placeholder',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/anirudh-venu-174121120/',
+            twitter: 'https://twitter.com/anirvenu',
           },
         },
       ],
@@ -186,10 +220,10 @@ export default {
   overflow: hidden;
   transition: max-height 0.4s, opacity 0.8s;
 
-  @media (--viewport-medium) {
+  /* @media (--viewport-medium) {
     max-height: 100%;
     opacity: 1;
-  }
+  } */
 }
 
 .expanded {

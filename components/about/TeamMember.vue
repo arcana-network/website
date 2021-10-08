@@ -18,21 +18,21 @@
       <v-stack direction="column" gap="1rem" class="social-links">
         <a
           v-if="member.links.linkedin"
-          href="https://google.com"
+          :href="member.links.linkedin"
           target="__blank"
         >
           <v-image path="images/linkedin.svg" />
         </a>
         <a
           v-if="member.links.twitter"
-          href="https://google.com"
+          :href="member.links.twitter"
           target="__blank"
         >
           <v-image path="images/twitter.svg" />
         </a>
         <a
           v-if="member.links.github"
-          href="https://google.com"
+          :href="member.links.github"
           target="__blank"
         >
           <v-image path="images/github.svg" />
