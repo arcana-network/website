@@ -23,37 +23,45 @@
         >
           <v-stack justify="space-between" style="margin-top: 2rem">
             <v-blurb
-              image="images/storage.svg"
-              alt="Decentralised Storage"
               title="Decentralised Storage"
               description="Any assets uploaded to Arcana is encrypted, split up and distributed among multiple storage nodes. Without a single-point of failure your assets are protected against geo-specific disasters and hacking attempts"
               class="blurb"
-            />
+            >
+              <template #art>
+                <art-storage-icon animate-on-enter animate-on-hover />
+              </template>
+            </v-blurb>
             <v-blurb
-              image="images/encryption.svg"
-              alt="End to end encryption"
               title="End to End Encryption"
               description="Want to make sure nobody snoops on your users’ data? Implement end-to-end encryption simply and easily with Arcana’s E2E Encryption"
               class="blurb"
               style="margin-left: 2rem"
-            />
+            >
+              <template #art>
+                <art-encryption-icon animate-on-enter animate-on-hover />
+              </template>
+            </v-blurb>
           </v-stack>
           <v-stack justify="space-between" style="margin-top: 2rem">
             <v-blurb
-              image="images/iam.svg"
-              alt="Identity and Access Management"
               title="Identity and Access Management"
               description="Decentralised Identity and Access Controls are verifiable in a trust-less way and adhere to the W3C DID spec. You can rest easy knowing that your app will only allow verified users to access assets stored on the system"
               class="blurb"
-            />
+            >
+              <template #art>
+                <art-identity-icon animate-on-enter animate-on-hover />
+              </template>
+            </v-blurb>
             <v-blurb
-              image="images/dkg.svg"
-              alt="Simple Keys Management"
               title="Simple Keys Management"
               description="A big hurdle to cryptographic encryption has to do with public+private keys management. We’ve made it simple by generating keys using authentications like email/password and popular Single Sign On’s (SSO’s)"
               class="blurb"
               style="margin-left: 2rem"
-            />
+            >
+              <template #art>
+                <art-keys-icon animate-on-enter animate-on-hover />
+              </template>
+            </v-blurb>
           </v-stack>
         </v-stack>
         <v-image
