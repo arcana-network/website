@@ -12,6 +12,7 @@
       viewBox="0 0 120 120"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>End to End Encryption</title>
       <g class="crater" @mouseenter="onHover">
         <g filter="url(#icon-encryption-a)">
           <circle cx="60" cy="60" r="50" fill="url(#icon-encryption-b)" />

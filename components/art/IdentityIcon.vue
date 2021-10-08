@@ -12,6 +12,7 @@
       fill="none"
       viewBox="0 0 120 120"
     >
+      <title>Identity and Access Management</title>
       <g class="crater" @mouseenter="onHover">
         <g filter="url(#icon-identity-a)">
           <circle cx="52" cy="56" r="50" fill="url(#icon-identity-b)" />

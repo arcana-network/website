@@ -12,6 +12,7 @@
       viewBox="0 0 120 120"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Simple Keys Management</title>
       <g class="crater" @mouseenter="onHover">
         <g filter="url(#icon-keys-a)">
           <circle cx="51" cy="64" r="50" fill="url(#icon-keys-b)" />

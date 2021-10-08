@@ -12,6 +12,7 @@
       viewBox="0 0 120 120"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Decentralised Storage</title>
       <g class="crater" @mouseenter="onHover">
         <g filter="url(#icon-storage-a)">
           <circle cx="61" cy="61" r="50" fill="url(#icon-storage-b)" />
