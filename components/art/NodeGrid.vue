@@ -1,6 +1,7 @@
 <template>
   <svg
     ref="nodeGrid"
+    :width="width"
     viewBox="0 0 715.3 595.2"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +22,7 @@
             opacity=".63"
           />
         </g>
-        <g class="crater-highlight" opacity="0">
+        <g class="crater-highlight">
           <path
             id="highlight-crater-1"
             fill="none"
@@ -133,7 +134,7 @@
             opacity=".63"
           />
         </g>
-        <g class="crater-highlight" opacity="0">
+        <g class="crater-highlight">
           <path
             id="highlight-crater-2"
             fill="none"
@@ -245,7 +246,7 @@
             opacity=".63"
           />
         </g>
-        <g class="crater-highlight" opacity="0">
+        <g class="crater-highlight">
           <path
             id="highlight-crater-3"
             fill="none"
@@ -363,7 +364,7 @@
             opacity=".63"
           />
         </g>
-        <g class="crater-highlight" opacity="0">
+        <g class="crater-highlight">
           <path
             id="highlight-crater-4"
             fill="none"
@@ -481,7 +482,7 @@
             opacity=".63"
           />
         </g>
-        <g class="crater-highlight" opacity="0">
+        <g class="crater-highlight">
           <path
             id="highlight-crater-5"
             fill="none"
@@ -593,7 +594,7 @@
             opacity=".63"
           />
         </g>
-        <g class="crater-highlight" opacity="0">
+        <g class="crater-highlight">
           <path
             id="highlight-crater-9"
             fill="none"
@@ -690,6 +691,12 @@
       </g>
     </g>
     <g class="node node-7">
+      <g class="crater">
+        <g class="crater-base"></g>
+        <g class="crater-hightlight">
+          <path />
+        </g>
+      </g>
       <g class="sphere">
         <g id="sphere-base">
           <ellipse
@@ -797,7 +804,7 @@
             opacity=".63"
           />
         </g>
-        <g class="crater-highlight" opacity="0">
+        <g class="crater-highlight">
           <path
             id="highlight-crater-8"
             fill="none"
@@ -915,7 +922,7 @@
             opacity=".63"
           />
         </g>
-        <g class="crater-highlight" opacity="0">
+        <g class="crater-highlight">
           <path
             id="highlight-crater-9"
             fill="none"
@@ -1027,7 +1034,7 @@
             opacity=".63"
           />
         </g>
-        <g class="crater-highlight" opacity="0">
+        <g class="crater-highlight">
           <path
             id="highlight-crater-10"
             fill="none"
@@ -2239,13 +2246,96 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+
 export default {
   name: 'NodeGrid',
+  props: {
+    width: {
+      type: [String, Number],
+      default: '100%',
+    },
+  },
+  computed: {
+    nodes() {
+      return this.$refs.nodeGrid.querySelectorAll('.node')
+    },
+  },
+  async mounted() {
+    await this.introTween().play()
+    while (true) {
+      await this.nodeTween()
+    }
+  },
+  methods: {
+    introTween() {
+      return gsap.from(this.nodes, {
+        duration: 1.75,
+        ease: 'power3.out',
+        opacity: 0,
+        paused: true,
+        stagger: 0.25,
+        y: 100,
+      })
+    },
+    nodeTween() {
+      const randomNodeId = this.random(1, 10)
+
+      return gsap
+        .timeline({
+          repeat: 1,
+          yoyo: true,
+        })
+        .to(this.craterHighlightPath(randomNodeId), {
+          duration: 1,
+          ease: 'power3.out',
+          strokeDashoffset: 0,
+        })
+        .to(
+          this.sphere(randomNodeId),
+          {
+            duration: 2,
+            ease: 'back.inOut',
+            y: -150,
+          },
+          '-=0.5'
+        )
+        .to(
+          this.sphereHighlight(randomNodeId),
+          {
+            duration: 2,
+            ease: 'power3.out',
+            opacity: 1,
+          },
+          '-=2'
+        )
+    },
+    node(id) {
+      return this.$refs.nodeGrid.querySelector(`.node-${id}`)
+    },
+    craterHighlightPath(id) {
+      return this.node(id).querySelector('.crater-highlight path')
+    },
+    sphere(id) {
+      return this.node(id).querySelector('.sphere')
+    },
+    sphereHighlight(id) {
+      return this.node(id).querySelector('.sphere .sphere-highlight')
+    },
+    random(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min)
+    },
+  },
 }
 </script>
 
 <style lang="postcss" scoped>
 .dn {
   display: none;
+}
+
+.crater-highlight path {
+  stroke-dasharray: 550;
+  stroke-dashoffset: 550;
 }
 </style>
