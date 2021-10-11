@@ -747,7 +747,7 @@
             ry="43.4"
           />
         </g>
-        <g id="sphere-highlight" opacity="0">
+        <g class="sphere-highlight" opacity="0">
           <ellipse
             cx="586"
             cy="118.4"
