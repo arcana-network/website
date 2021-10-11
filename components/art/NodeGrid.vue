@@ -2258,30 +2258,32 @@ export default {
   },
   computed: {
     nodes() {
-      return this.$refs.nodeGrid.querySelectorAll('.node')
+      return [...this.$refs.nodeGrid.querySelectorAll('.node')]
     },
   },
-  async mounted() {
-    await this.introTween().play()
-    while (true) {
-      const randomId = this.random(1, 10)
-      await this.nodeTween(randomId)
-    }
+  mounted() {
+    const mainTimeline = gsap.timeline()
+
+    const nodesTimeline = gsap.timeline({ repeat: -1 })
+    this.shuffle(this.nodes).map((node) =>
+      nodesTimeline.add(this.nodeAnimation(node))
+    )
+
+    mainTimeline.add(this.introAnimation()).add(nodesTimeline)
   },
   methods: {
-    introTween() {
+    introAnimation() {
       return gsap.from(this.nodes, {
         duration: 1.75,
         ease: 'power3.out',
         opacity: 0,
-        paused: true,
         stagger: 0.25,
         y: 100,
       })
     },
-    nodeTween(id) {
+    nodeAnimation(node) {
       const { craterHighlightPath, sphere, sphereHighlight } =
-        this.nodeParts(id)
+        this.nodeParts(node)
 
       return gsap
         .timeline({
@@ -2312,17 +2314,15 @@ export default {
           '-=2'
         )
     },
-    nodeParts(id) {
-      const node = this.$refs.nodeGrid.querySelector(`.node-${id}`)
-
+    nodeParts(node) {
       return {
         craterHighlightPath: node.querySelector('.crater-highlight path'),
         sphere: node.querySelector('.sphere'),
         sphereHighlight: node.querySelector('.sphere .sphere-highlight'),
       }
     },
-    random(min, max) {
-      return Math.floor(Math.random() * (max - min + 1) + min)
+    shuffle(array) {
+      return array.sort(() => Math.random() - 0.5)
     },
   },
 }
