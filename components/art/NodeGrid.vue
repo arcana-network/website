@@ -2,7 +2,7 @@
   <svg
     ref="nodeGrid"
     :width="width"
-    viewBox="0 0 715.3 595.2"
+    viewBox="0 0 615.3 595.2"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns="http://www.w3.org/2000/svg"
   >
