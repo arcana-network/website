@@ -2296,7 +2296,7 @@ export default {
           {
             duration: 2,
             ease: 'back.inOut',
-            y: -150,
+            y: '-70%',
           },
           '-=0.5'
         )
