@@ -2264,7 +2264,8 @@ export default {
   async mounted() {
     await this.introTween().play()
     while (true) {
-      await this.nodeTween()
+      const randomId = this.random(1, 10)
+      await this.nodeTween(randomId)
     }
   },
   methods: {
@@ -2278,21 +2279,22 @@ export default {
         y: 100,
       })
     },
-    nodeTween() {
-      const randomNodeId = this.random(1, 10)
+    nodeTween(id) {
+      const { craterHighlightPath, sphere, sphereHighlight } =
+        this.nodeParts(id)
 
       return gsap
         .timeline({
           repeat: 1,
           yoyo: true,
         })
-        .to(this.craterHighlightPath(randomNodeId), {
+        .to(craterHighlightPath, {
           duration: 1,
           ease: 'power3.out',
           strokeDashoffset: 0,
         })
         .to(
-          this.sphere(randomNodeId),
+          sphere,
           {
             duration: 2,
             ease: 'back.inOut',
@@ -2301,7 +2303,7 @@ export default {
           '-=0.5'
         )
         .to(
-          this.sphereHighlight(randomNodeId),
+          sphereHighlight,
           {
             duration: 2,
             ease: 'power3.out',
@@ -2310,17 +2312,14 @@ export default {
           '-=2'
         )
     },
-    node(id) {
-      return this.$refs.nodeGrid.querySelector(`.node-${id}`)
-    },
-    craterHighlightPath(id) {
-      return this.node(id).querySelector('.crater-highlight path')
-    },
-    sphere(id) {
-      return this.node(id).querySelector('.sphere')
-    },
-    sphereHighlight(id) {
-      return this.node(id).querySelector('.sphere .sphere-highlight')
+    nodeParts(id) {
+      const node = this.$refs.nodeGrid.querySelector(`.node-${id}`)
+
+      return {
+        craterHighlightPath: node.querySelector('.crater-highlight path'),
+        sphere: node.querySelector('.sphere'),
+        sphereHighlight: node.querySelector('.sphere .sphere-highlight'),
+      }
     },
     random(min, max) {
       return Math.floor(Math.random() * (max - min + 1) + min)
