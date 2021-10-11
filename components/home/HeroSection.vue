@@ -31,8 +31,8 @@
             </v-stack>
           </v-stack>
         </v-stack>
-        <div class="position-relative section-orbs">
-          <v-image path="images/hero-section-orbs.svg" />
+        <div class="section-orbs">
+          <art-node-grid />
         </div>
       </v-stack>
     </v-container>
@@ -49,9 +49,8 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 .section-orbs {
-  @media (--viewport-large) {
-    margin-right: -12.5%;
-  }
+  max-width: 800px;
+  width: 100%;
 }
 
 .support-icons a {
