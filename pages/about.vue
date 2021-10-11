@@ -4,9 +4,9 @@
     <AboutOurPrinciples />
     <AboutOurTeam />
     <AboutOurInvestors />
-    <!-- <HomeNewsAndMedia />  -->
+    <HomeNewsAndMedia />
     <AboutOurCulture />
-    <!-- <TechJoinUs /> -->
+    <TechJoinUs />
     <AppFooter />
     <AppCopyright />
   </main>
@@ -27,13 +27,10 @@ export default {
 
 main {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-main > * + *:not(:last-child) {
-  margin: 6rem 0;
-
-  @media (--viewport-small) {
-    margin: 3rem 0;
-  }
+main > *:not(:last-child):not(:first-child) {
+  margin-top: 6rem;
 }
 </style>

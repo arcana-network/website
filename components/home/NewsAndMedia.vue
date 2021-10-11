@@ -74,7 +74,23 @@ section {
   }
 }
 
-.coverage * {
+.coverage > a > * {
   min-width: 14rem;
+  padding: 2rem;
+}
+
+a {
+  display: inline-block;
+}
+
+a > *:hover {
+  background: radial-gradient(
+    134.5% 939.99% at -23.59% -12.9%,
+    #262626 0%,
+    #1a1a1a 31.41%,
+    rgba(32, 32, 32, 0.76) 100%
+  );
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
 }
 </style>

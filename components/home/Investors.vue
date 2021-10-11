@@ -18,6 +18,7 @@
           label="View all investors"
           label-transform="uppercase"
           style="margin-top: 2rem"
+          :action="goToInvestors"
         />
       </v-stack>
     </v-container>
@@ -187,6 +188,9 @@ export default {
     hideDesc() {
       this.investorDescription = false
       this.selectedInvestor = {}
+    },
+    goToInvestors() {
+      window.open('/about/#our-investors', '_self')
     },
   },
 }

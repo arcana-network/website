@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="our-investors">
     <v-container>
       <app-section-descriptor
         title="Our investors"
@@ -8,7 +8,7 @@
       />
       <app-section-descriptor
         description="Everyone of these great investors are well known and well respected in their own right. Through us, they’re helping shape the world like the way they envision it should be. "
-        style="max-width: 60rem"
+        style="max-width: 60rem; margin-bottom: 3rem"
       />
       <v-stack justify="space-between" wrap>
         <div
@@ -170,10 +170,12 @@ export default {
 .other-investors {
   max-height: 0;
   opacity: 0;
+  visibility: hidden;
   transition: max-height 0.3s, opacity 0.6s;
 }
 
 .other-investors.expanded {
+  visibility: visible;
   max-height: 100%;
   opacity: 1;
 }

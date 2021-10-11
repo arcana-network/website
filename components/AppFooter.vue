@@ -49,8 +49,8 @@
           :grow="1"
         >
           <v-stack direction="column" class="footer-links">
-            <a href="/tech"><v-text>Technology</v-text></a>
-            <a href="/about"><v-text>About</v-text></a>
+            <a href="/tech/"><v-text>Technology</v-text></a>
+            <a href="/about/"><v-text>About</v-text></a>
             <a
               href="https://www.notion.so/Arcana-Technical-Docs-a1d7fd0d2970452586c693e4fee14d08"
               target="__blank"

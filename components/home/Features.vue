@@ -71,7 +71,7 @@ export default {
   name: 'Features',
   methods: {
     openTechPage() {
-      window.open('/tech', '_self')
+      window.open('/tech/', '_self')
     },
   },
 }
