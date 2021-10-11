@@ -2329,10 +2329,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.dn {
-  display: none;
-}
-
 .crater-highlight path {
   stroke-dasharray: 550;
   stroke-dashoffset: 550;
