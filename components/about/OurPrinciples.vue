@@ -29,11 +29,12 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 .principles-illustration {
+  width: 100%;
   max-width: 28rem;
   align-self: center;
 
   @media (--viewport-medium) {
-    max-width: 24rem;
+    max-width: 20rem;
     margin: 2rem auto;
   }
 }

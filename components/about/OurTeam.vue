@@ -51,7 +51,7 @@ export default {
         {
           name: 'Mayur Relekar',
           designation: 'CEO',
-          image: 'about-placeholder',
+          image: 'Mayur',
           links: {
             linkedin: 'https://www.linkedin.com/in/mayurrelekar/',
             twitter: 'https://twitter.com/mayurrelekar',
@@ -60,7 +60,7 @@ export default {
         {
           name: 'Aravindh Kumar',
           designation: 'Growth',
-          image: 'about-placeholder',
+          image: 'Aravindh',
           links: {
             linkedin: 'https://www.linkedin.com/in/aravindhkumar61',
             twitter: 'https://twitter.com/Aravindh_Kumarr',
@@ -69,7 +69,7 @@ export default {
         {
           name: 'Ajay Shetty',
           designation: 'COO',
-          image: 'about-placeholder',
+          image: 'Ajay',
           links: {
             linkedin: 'https://www.linkedin.com/in/ajayshetty88/',
             twitter: 'https://twitter.com/AjayShe59753410',
@@ -80,7 +80,7 @@ export default {
         {
           name: 'Ajith',
           designation: 'Front End Developer',
-          image: 'about-placeholder',
+          image: 'Ajith',
           links: {
             linkedin: 'https://www.linkedin.com/in/ajithranka/',
             twitter: 'https://twitter.com/ajithranka',
@@ -90,7 +90,7 @@ export default {
         {
           name: 'Lakshmikanth',
           designation: 'DevOps',
-          image: 'about-placeholder',
+          image: 'Lakshmikanth',
           links: {
             linkedin: 'linkedin.com/in/lakshmikanth-bharathi-2a4754b8',
             twitter: 'https://twitter.com/LakshmikanthBh8',
@@ -100,7 +100,7 @@ export default {
         {
           name: 'Abhishek',
           designation: 'Backend Developer',
-          image: 'about-placeholder',
+          image: 'Abhishek',
           links: {
             linkedin: 'https://in.linkedin.com/in/makyl',
             github: 'https://github.com/makylfang',
@@ -109,7 +109,7 @@ export default {
         {
           name: 'Saurav',
           designation: 'Blockchain Developer',
-          image: 'about-placeholder',
+          image: 'Saurav',
           links: {
             linkedin: 'https://www.linkedin.com/in/sauravkanchan/',
             twitter: 'https://twitter.com/sauravnk30',
@@ -119,7 +119,7 @@ export default {
         {
           name: 'Jobin',
           designation: 'Blockchain Developer Evangelist',
-          image: 'about-placeholder',
+          image: 'Jobin',
           links: {
             linkedin: 'https://www.linkedin.com/in/the-injineer/',
             twitter: 'https://twitter.com/the_injineer',
@@ -129,7 +129,7 @@ export default {
         {
           name: 'Himank',
           designation: 'Blockchain Developer',
-          image: 'about-placeholder',
+          image: 'Himank',
           links: {
             linkedin: 'https://linkedin.com/in/himankjain',
             github: 'https://github.com/steel-feel',
@@ -138,13 +138,13 @@ export default {
         {
           name: 'Narendran',
           designation: 'Pricinpal Engineer',
-          image: 'about-placeholder',
+          image: 'moon',
           links: {},
         },
         {
           name: 'Naga Pramod',
           designation: 'Content Strategist',
-          image: 'about-placeholder',
+          image: 'Naga',
           links: {
             linkedin: 'https://www.linkedin.com/in/naga-pramod/',
             twitter: 'https://twitter.com/dnagapramod',
@@ -153,7 +153,7 @@ export default {
         {
           name: 'Rohith',
           designation: 'Intern',
-          image: 'about-placeholder',
+          image: 'Rohith',
           links: {
             linkedin: 'https://www.linkedin.com/in/rohith-narahari-40211818b/',
             twitter: 'https://twitter.com/mr_deadpool_93',
@@ -163,13 +163,13 @@ export default {
         {
           name: 'Sharan',
           designation: 'Head of Design',
-          image: 'about-placeholder',
+          image: 'Sharan',
           links: {},
         },
         {
           name: 'Arush',
           designation: 'UI/UX Designer',
-          image: 'about-placeholder',
+          image: 'Arush',
           links: {
             linkedin: 'https://www.linkedin.com/in/arush-pandya-33263b200/',
           },
@@ -177,7 +177,7 @@ export default {
         {
           name: 'Shrinath',
           designation: 'Front End Developer',
-          image: 'about-placeholder',
+          image: 'Shrinath',
           links: {
             linkedin: 'https://www.linkedin.com/in/shrinath-prabhu-459107b2/',
             github: 'https://github.com/shrinathprabhu',
@@ -186,7 +186,7 @@ export default {
         {
           name: 'Anirudh',
           designation: 'Product Manager',
-          image: 'about-placeholder',
+          image: 'Anirudh',
           links: {
             linkedin: 'https://www.linkedin.com/in/anirudh-venu-174121120/',
             twitter: 'https://twitter.com/anirvenu',

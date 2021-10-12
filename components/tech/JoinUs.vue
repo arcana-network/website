@@ -4,9 +4,10 @@
       <v-stack md-direction="column" justify="space-between" align="center">
         <v-stack direction="column" align="start" gap="2rem">
           <app-section-descriptor
-            title="community"
+            title="We are Hiring"
             heading="Join Our Team"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            description="There is no shortage of interesting challenges to work on at Arcana. Being at the bleeding edge of technology in Web 3 and privacy, we are defining the tools the developers of future will use.
+If you are interesting in what we are building, checkout our existing openings, if there isn’t an open role for you, but you are great at what you do, we’d still love to talk."
             class="joinus-description"
           />
           <v-button

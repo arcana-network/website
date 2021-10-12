@@ -10,12 +10,20 @@
       :class="{ expanded: isMemberExpanded }"
     >
       <div class="position-relative member-image">
-        <v-image :path="`images/${member.image}.png`" />
+        <v-image :path="`images/team/${member.image}.png`" />
       </div>
-      <div class="position-relative" style="margin-top: -15%">
+      <!-- <div class="position-relative" style="margin-top: -15%">
         <v-image path="images/team-member-ellipse.svg" />
-      </div>
-      <v-stack direction="column" gap="1rem" class="social-links">
+      </div> -->
+      <v-stack
+        direction="column"
+        md-direction="row"
+        wrap
+        gap="1rem"
+        md-gap="1rem"
+        md-justify="center"
+        class="social-links"
+      >
         <a
           v-if="member.links.linkedin"
           :href="member.links.linkedin"
@@ -113,10 +121,14 @@ export default {
   z-index: 10;
 }
 
+.member-image > * {
+  width: 16rem;
+}
+
 .social-links {
   position: absolute;
-  top: 10%;
-  right: 10%;
+  top: 20%;
+  right: -12%;
   z-index: 20;
   cursor: pointer;
   visibility: hidden;
@@ -124,6 +136,10 @@ export default {
   transition: opacity 0.4s;
 
   @media (--viewport-medium) {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-top: 1rem;
     visibility: visible;
     opacity: 1;
   }
