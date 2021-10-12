@@ -101,8 +101,8 @@
             href="https://twitter.com/ArcanaNetwork"
             target="_blank"
           >
-            @ArcanaNetwork </a
-          >.
+            @ArcanaNetwork</a
+          >. Top 3 most engaging tweets win $100.
         </v-text>
       </div>
     </div>
