@@ -1,25 +1,23 @@
 <template>
   <main>
-    <AppHeader />
     <HomeHeroSection />
     <!-- <HomeIntroduction /> -->
     <HomeFeatures />
     <HomeTestimonials />
-    <HomeInvestors />
+    <AboutOurInvestors />
     <HomeRoadmap />
     <HomeNewsAndMedia />
     <HomeOurPartners />
     <HomeInteroperability />
     <HomeCommunity />
     <HomeNewsletter />
-    <AppFooter />
-    <AppCopyright />
   </main>
 </template>
 
 <script>
 export default {
   layout: 'page',
+  scrollToTop: true,
 }
 </script>
 
@@ -30,7 +28,7 @@ main {
   overflow-x: hidden;
 }
 
-main > *:not(:last-child):not(:first-child) {
+main > * {
   margin-top: 6rem;
 }
 </style>

@@ -1,19 +1,17 @@
 <template>
   <main>
-    <AppHeader />
     <AboutOurPrinciples />
     <AboutOurTeam />
     <AboutOurInvestors />
     <HomeNewsAndMedia />
     <AboutOurCulture />
     <TechJoinUs />
-    <AppFooter />
-    <AppCopyright />
   </main>
 </template>
 
 <script>
 export default {
+  scrollToTop: true,
   head() {
     return {
       title: 'About Us - Arcana Network',
@@ -30,7 +28,7 @@ main {
   scroll-behavior: smooth;
 }
 
-main > *:not(:last-child):not(:first-child) {
+main > * {
   margin-top: 6rem;
 }
 </style>
