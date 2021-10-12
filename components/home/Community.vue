@@ -31,6 +31,7 @@
             label="Sign up now"
             label-transform="uppercase"
             style="margin-top: 1.5rem"
+            :action="onSignup"
           />
         </v-stack>
       </v-stack>
@@ -120,6 +121,7 @@
         />
       </v-stack>
     </v-container>
+    <app-developer-signup v-if="devSignup" @close="() => (devSignup = false)" />
   </section>
 </template>
 
@@ -139,6 +141,7 @@ export default {
       email: '',
       success: true,
       message: '',
+      devSignup: false,
     }
   },
   methods: {
@@ -174,6 +177,9 @@ export default {
         this.success = false
         this.message = 'Enter all details to continue'
       }
+    },
+    onSignup() {
+      this.devSignup = true
     },
   },
 }

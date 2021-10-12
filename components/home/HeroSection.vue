@@ -18,7 +18,11 @@
             md-gap="1.5rem"
             style="margin-top: 2rem"
           >
-            <v-button label="Sign up now" label-transform="uppercase" />
+            <v-button
+              label="Sign up now"
+              label-transform="uppercase"
+              :action="onSignup"
+            />
             <v-text color="secondary" size="1.125rem">
               Testnet Launching Soon!
             </v-text>
@@ -37,12 +41,23 @@
         </div>
       </v-stack>
     </v-container>
+    <app-developer-signup v-if="devSignup" @close="() => (devSignup = false)" />
   </section>
 </template>
 
 <script>
 export default {
   name: 'HeroSection',
+  data() {
+    return {
+      devSignup: false,
+    }
+  },
+  methods: {
+    onSignup() {
+      this.devSignup = true
+    },
+  },
 }
 </script>
 
