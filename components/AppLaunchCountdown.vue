@@ -30,34 +30,30 @@
           font="sans"
           :weight="700"
           gradient="linear-gradient(180deg, #47E7FF 0%, #14A7F0 100%)"
-        >
-          {{ String(remainingHours).padStart(2, '0')
+          >{{ String(remainingHours).padStart(2, '0')
           }}<v-text
             class="unit-text uppercase"
             font="sans"
             :weight="700"
             gradient="linear-gradient(180deg, #47E7FF 0%, #14A7F0 100%)"
-          >
-            hrs
-          </v-text>
-          {{ String(remainingMinutes).padStart(2, '0')
+            style="margin-right: 1rem"
+            >hrs</v-text
+          >{{ String(remainingMinutes).padStart(2, '0')
           }}<v-text
             class="unit-text uppercase"
             font="sans"
             :weight="700"
             gradient="linear-gradient(180deg, #47E7FF 0%, #14A7F0 100%)"
-          >
-            mins
-          </v-text>
-          {{ String(remainingSeconds).padStart(2, '0')
+            style="margin-right: 1rem"
+            >mins</v-text
+          >{{ String(remainingSeconds).padStart(2, '0')
           }}<v-text
             class="unit-text uppercase"
             font="sans"
             :weight="700"
             gradient="linear-gradient(180deg, #47E7FF 0%, #14A7F0 100%)"
+            >secs</v-text
           >
-            secs
-          </v-text>
         </v-text>
         <div class="instruction-text" style="margin-top: 2rem">
           <v-text font="sans" line-height="1.5rem" :weight="700" size="1rem">
