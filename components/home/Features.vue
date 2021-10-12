@@ -1,18 +1,18 @@
 <template>
   <section>
     <v-container>
-      <v-stack justify="space-between" md-direction="column" md-align="start">
+      <v-stack direction="column" align="start">
         <app-section-descriptor
           title="Arcana’s Privacy Stack"
           heading="Four Decentralized Services To Secure Your Apps. Four Less Reasons Not To Worry"
-          description="Users care about Privacy and Security, set your app apart with the most developer friendly data storage and privacy platform. Takes minutes to integrate"
-          style="max-width: 48rem"
+          description="Users care about Privacy and Security, set your app apart with the most developer friendly data storage and privacy platform. Takes minutes to integrate."
+          style="max-width: 64rem"
         />
         <v-button
           type="link"
           label="View Stack"
           label-transform="uppercase"
-          style="margin-top: 2rem"
+          style="margin: 1.5rem 0"
           :action="openTechPage"
         />
       </v-stack>
@@ -25,7 +25,7 @@
           <v-stack justify="space-between" style="margin-top: 2rem">
             <v-blurb
               title="Decentralised Storage"
-              description="Any assets uploaded to Arcana is encrypted, split up and distributed among multiple storage nodes. Without a single-point of failure your assets are protected against geo-specific disasters and hacking attempts"
+              description="Any assets uploaded to Arcana is encrypted, split up and distributed among multiple storage nodes. Without a single-point of failure your assets are protected against geo-specific disasters and hacking attempts."
               class="blurb"
             >
               <template #art>
@@ -34,7 +34,7 @@
             </v-blurb>
             <v-blurb
               title="End to End Encryption"
-              description="Want to make sure nobody snoops on your users’ data? Implement end-to-end encryption simply and easily with Arcana’s E2E Encryption"
+              description="Want to make sure nobody snoops on your users’ data? Implement end-to-end encryption simply and easily with Arcana’s E2E Encryption."
               class="blurb"
               style="margin-left: 2rem"
             >
@@ -46,7 +46,7 @@
           <v-stack justify="space-between" style="margin-top: 2rem">
             <v-blurb
               title="Identity and Access Management"
-              description="Decentralised Identity and Access Controls are verifiable in a trust-less way and adhere to the W3C DID spec. You can rest easy knowing that your app will only allow verified users to access assets stored on the system"
+              description="Decentralised Identity and Access Controls are verifiable in a trust-less way and adhere to the W3C DID spec. You can rest easy knowing that your app will only allow verified users to access assets stored on the system."
               class="blurb"
             >
               <template #art>
@@ -55,7 +55,7 @@
             </v-blurb>
             <v-blurb
               title="Simple Keys Management"
-              description="A big hurdle to cryptographic encryption has to do with public+private keys management. We’ve made it simple by generating keys using authentications like email/password and popular Single Sign On’s (SSO’s)"
+              description="A big hurdle to cryptographic encryption has to do with public+private keys management. We’ve made it simple by generating keys using authentications like email/password and popular Single Sign On’s (SSO’s)."
               class="blurb"
               style="margin-left: 2rem"
             >
@@ -66,7 +66,7 @@
           </v-stack>
         </v-stack>
         <v-image
-          path="images/features-illustration.svg"
+          path="images/features-illustration.png"
           class="features-illustration"
         />
       </v-stack>
@@ -98,8 +98,7 @@ section {
 
 .features-illustration {
   @media (--viewport-large) {
-    margin-right: -12.5%;
-    margin-left: 20%;
+    margin: -10% -20% 0 12.5%;
   }
 
   @media (--viewport-medium) {
@@ -129,7 +128,7 @@ section {
 }
 
 .blurb {
-  width: 16rem;
+  width: 24rem;
 }
 
 .blurb img {

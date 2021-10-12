@@ -56,10 +56,6 @@ export default {
 <style scoped>
 @import url('./lib/media-query-helper.css');
 
-.heading {
-  padding-bottom: 0.825rem;
-}
-
 .description {
   font-size: 1.375rem;
   line-height: 2rem;

@@ -6,7 +6,7 @@
           <app-section-descriptor
             title="community"
             heading="Join Our Team"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             class="joinus-description"
           />
           <v-button
@@ -17,7 +17,7 @@
           />
         </v-stack>
         <v-image
-          path="images/joinus-illustration.svg"
+          path="images/join-us-illustration.png"
           class="joinus-illustration"
         />
       </v-stack>
@@ -57,7 +57,7 @@ section {
 
   @media (--viewport-medium) {
     width: 150%;
-    margin-top: -20%;
+    margin-top: -10%;
   }
 }
 

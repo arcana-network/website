@@ -2,10 +2,39 @@
   <section>
     <v-container>
       <v-stack justify="space-between" align="center" md-direction="column">
-        <v-image
-          path="images/newsletter-illustration.svg"
-          class="newsletter-illustration"
-        />
+        <div style="position: relative">
+          <v-image
+            path="images/newsletter-illustration.svg"
+            class="newsletter-illustration"
+          />
+          <div style="text-align: center; z-index: 100" class="absolute-center">
+            <!-- <v-text
+              gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
+              style="height: 16rem"
+            > -->
+            <v-text
+              font="sans"
+              :weight="700"
+              size="9rem"
+              line-height="11rem"
+              gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
+            >
+              1000’s
+            </v-text>
+            <br />
+            <v-text
+              font="sans"
+              :weight="700"
+              size="2.625rem"
+              line-height="3.25rem"
+              transform="uppercase"
+              gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
+            >
+              and counting
+            </v-text>
+            <!-- </v-text> -->
+          </div>
+        </div>
         <v-stack direction="column">
           <app-section-descriptor
             title="Newsletter"

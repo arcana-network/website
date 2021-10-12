@@ -41,6 +41,17 @@
                 alt="Arcana telegram channel"
               />
             </a>
+            <a
+              style="margin-left: 3rem"
+              href="https://discord.gg/w6ej4FtqYS"
+              target="__blank"
+            >
+              <v-image
+                path="images/discord-white.svg"
+                class="footer-social-link"
+                alt="Arcana discord channel"
+              />
+            </a>
           </v-stack>
         </v-stack>
         <v-stack
@@ -57,7 +68,9 @@
             >
               <v-text>Technical Paper</v-text>
             </a>
-            <a href="/blog"><v-text>Blog</v-text></a>
+            <a href="https://medium.com/arcana-network-blog" target="__blank">
+              <v-text>Blog</v-text>
+            </a>
           </v-stack>
           <v-stack direction="column" class="footer-links">
             <a

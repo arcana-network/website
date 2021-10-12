@@ -67,7 +67,7 @@ section {
 }
 
 .coverage {
-  margin-top: 4rem;
+  margin-top: 2rem;
 
   @media (--viewport-small) {
     margin-top: 2rem;
@@ -75,8 +75,8 @@ section {
 }
 
 .coverage > a > * {
-  min-width: 14rem;
-  padding: 2rem;
+  min-width: 10rem;
+  padding: 1.5rem;
 }
 
 a {

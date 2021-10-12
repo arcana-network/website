@@ -1,7 +1,7 @@
 <template>
   <section>
     <v-image
-      path="images/roadmap-spheres.svg"
+      path="images/roadmap-illustration.png"
       style="width: 100%; z-index: -1; margin-bottom: -12.5%"
     />
     <v-container>
@@ -13,11 +13,11 @@
             :options="years"
             class="roadmap-dropdown"
           />
-          <v-dropdown
+          <!-- <v-dropdown
             v-model="selectedQuarter"
             :options="quarters"
             class="roadmap-dropdown"
-          />
+          /> -->
         </v-stack>
         <v-stack style="margin-top: 4rem">
           <v-stack
@@ -28,11 +28,14 @@
             <div v-for="year in years" :key="year">
               <v-chip
                 class="clickable-chip"
+                :class="{
+                  'selected-year': selectedYear === year,
+                }"
                 @click="() => (selectedYear = year)"
               >
                 <v-text :weight="600">{{ year }}</v-text>
               </v-chip>
-              <ul v-if="selectedYear === year">
+              <!-- <ul v-if="selectedYear === year">
                 <li
                   v-for="quarter in quarters"
                   :key="quarter + year"
@@ -44,13 +47,13 @@
                 >
                   <v-text>{{ quarter }}</v-text>
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </v-stack>
           <ul>
             <li
-              v-for="item in roadmap[selectedYear][selectedQuarter]"
-              :key="item.milestone"
+              v-for="item in roadmap[selectedYear]"
+              :key="selectedYear + item.quarter"
             >
               <v-heading
                 :level="4"
@@ -58,15 +61,18 @@
                 font="serif"
                 class="milestone-heading"
               >
-                {{ item.month }} {{ selectedYear }}
+                {{ item.quarter }} {{ selectedYear }}
               </v-heading>
-              <v-text
-                color="secondary"
-                :weight="400"
-                class="milestone-description"
-              >
-                {{ item.milestone }}
-              </v-text>
+              <div v-for="milestone in item.milestones" :key="milestone">
+                <v-text
+                  color="secondary"
+                  :weight="400"
+                  size="1.125rem"
+                  class="milestone-description"
+                >
+                  {{ milestone }}
+                </v-text>
+              </div>
             </li>
           </ul>
         </v-stack>
@@ -92,136 +98,72 @@ export default {
       selectedYear,
       selectedQuarter,
       roadmap: {
-        2019: {
-          Q1: [],
-          Q2: [
-            {
-              month: 'June',
-              milestone:
-                'Newfang Founded. Work on decentralised storage network.',
-            },
-          ],
-          Q3: [],
-          Q4: [
-            {
-              month: 'October',
-              milestone: 'Newfang PoC on Testnet',
-            },
-          ],
-        },
-        2020: {
-          Q1: [
-            {
-              month: 'February',
-              milestone: 'Work on Skizzle commences',
-            },
-          ],
-          Q2: [],
-          Q3: [
-            {
-              month: 'August',
-              milestone: 'Skizzle Launched',
-            },
-          ],
-          Q4: [
-            {
-              month: 'December',
-              milestone:
-                'Pivot from Newfang to Arcana. Arcana is a privacy and storage stack.',
-            },
-          ],
-        },
-        2021: {
-          Q1: [],
-          Q2: [
-            {
-              month: 'Q2',
-              milestone:
-                'Arcana DKG v1. Distributed key generation based on Cachin et. al.',
-            },
-            {
-              month: 'Q2',
-              milestone: 'Storage network using min.io as base file system',
-            },
-            {
-              month: 'Q2',
-              milestone:
-                'ArcanaStore JS SDK. SDK to perform storage and access control.',
-            },
-          ],
-          Q3: [
-            {
-              month: 'Q3',
-              milestone:
-                'ArcanaAuth JS SDK. SDK to perform end user authentication and key management.',
-            },
-            {
-              month: 'Q3',
-              milestone: 'Basic Permissions',
-            },
-            {
-              month: 'Q3',
-              milestone: 'Polygon SDK implementation',
-            },
-          ],
-          Q4: [
-            {
-              month: 'Q4',
-              milestone: 'Arcana Alpha Testnet launch',
-            },
-            {
-              month: 'Q4',
-              milestone: 'Arcana Alpha Bug Bounty launch',
-            },
-            {
-              month: 'Q4',
-              milestone: 'Arcana server-side SDK (Golang)',
-            },
-            {
-              month: 'Q4',
-              milestone: 'Web Wallet',
-            },
-            {
-              month: 'Q4',
-              milestone: 'Usage graph privacy',
-            },
-            {
-              month: 'Q4',
-              milestone: 'Advanced Permissions',
-            },
-            {
-              month: 'Q4',
-              milestone: 'Arcana DKG v2 based on Kokoris-Kogias et. al.',
-            },
-            {
-              month: 'Q4',
-              milestone: 'Token Contracts',
-            },
-            {
-              month: 'Q4',
-              milestone: 'Arcana Beta Testnet launch',
-            },
-            {
-              month: 'Q4',
-              milestone: 'Arcana Beta Bug Bounty launch',
-            },
-          ],
-        },
-        2022: {
-          Q1: [
-            {
-              month: 'Q1',
-              milestone: 'Arcana Public Token Sale and TGE',
-            },
-            {
-              month: 'Q1',
-              milestone: 'Arcana Mainnet launch',
-            },
-          ],
-          Q2: [],
-          Q3: [],
-          Q4: [],
-        },
+        2019: [
+          {
+            quarter: 'Q2',
+            milestones: [
+              'Newfang Founded. Work on decentralised storage network.',
+            ],
+          },
+          {
+            quarter: 'Q4',
+            milestones: ['Newfang PoC on Testnet.'],
+          },
+        ],
+        2020: [
+          {
+            quarter: 'Q1',
+            milestones: ['Work on Skizzle commences.'],
+          },
+          {
+            quarter: 'Q3',
+            milestones: ['Skizzle Launched.'],
+          },
+
+          {
+            quarter: 'Q4',
+            milestones: [
+              'Pivot from Newfang to Arcana. Arcana is a privacy and storage stack.',
+            ],
+          },
+        ],
+        2021: [
+          {
+            quarter: 'Q1 to Q3',
+            milestones: [
+              'Arcana DKG v1. Distributed key generation based on Cachin et. al.',
+              'Storage network using min.io as base file system.',
+              'ArcanaStore JS SDK. SDK to perform storage and access control.',
+              'ArcanaAuth JS SDK. SDK to perform end user authentication and key management.',
+              'Basic Permissions.',
+              'Polygon SDK implementation.',
+            ],
+          },
+          {
+            quarter: 'Q4',
+            milestones: [
+              'Arcana Alpha Testnet launch.',
+              'Arcana Alpha Bug Bounty launch.',
+              'Arcana server-side SDK (Golang).',
+              'Web Wallet.',
+              'Usage graph privacy.',
+              'Advanced Permissions.',
+              'Arcana DKG v2 based on Kokoris-Kogias et. al.',
+              'Token Contracts.',
+              'Arcana Beta Testnet launch.',
+              'Arcana Beta Bug Bounty launch.',
+            ],
+          },
+        ],
+        2022: [
+          {
+            quarter: 'Q1',
+            milestones: [
+              'Arcana Public Token Sale and TGE.',
+              'Arcana Mainnet launch.',
+            ],
+          },
+        ],
       },
     }
   },
@@ -295,7 +237,8 @@ ul li {
   line-height: 2.5rem;
 }
 
-.selected-quarter {
+.selected-quarter,
+.selected-year {
   background: linear-gradient(
       87.28deg,
       rgba(255, 38, 103, 0.6) -16.82%,
@@ -323,7 +266,8 @@ ul li {
   border-radius: 1rem;
 }
 
-.selected-quarter > * {
+.selected-quarter > *,
+.selected-year > * {
   color: black;
   font-weight: 600;
 }

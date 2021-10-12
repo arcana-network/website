@@ -39,7 +39,7 @@
         </v-text>
       </div>
       <v-image
-        class="laptop-remove investor-expansion-icon"
+        class="laptop-remove tablet-remove mobile-show investor-expansion-icon"
         :class="{ expanded: isExpanded }"
         path="icons/arrow-down.svg"
         @click.stop="toggleInvestorImage"

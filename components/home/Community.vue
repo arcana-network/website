@@ -106,7 +106,7 @@
             />
           </v-stack>
         </v-stack>
-        <v-image path="images/provide-illustration.svg" class="illustration" />
+        <v-image path="images/provide-illustration.png" class="illustration" />
       </v-stack>
     </v-container>
   </section>

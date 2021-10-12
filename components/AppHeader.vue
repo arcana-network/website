@@ -11,7 +11,10 @@ export default {
   name: 'AppHeader',
   data() {
     return {
-      headerCta: {},
+      headerCta: {
+        label: 'Technical Paper',
+        action: this.openTechnicalPaper,
+      },
       menuItems: [
         {
           name: 'Technology',
@@ -29,13 +32,13 @@ export default {
       ],
     }
   },
-  created() {
-    this.headerCta = {
-      label: 'Log In',
-      action() {
-        alert('Login clicked')
-      },
-    }
+  methods: {
+    openTechnicalPaper() {
+      window.open(
+        'https://www.notion.so/Arcana-Technical-Docs-a1d7fd0d2970452586c693e4fee14d08',
+        '_blank'
+      )
+    },
   },
 }
 </script>

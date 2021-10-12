@@ -1,15 +1,25 @@
 <template>
   <section id="our-investors">
     <v-container>
-      <app-section-descriptor
-        title="Our investors"
-        heading="They’re Awesome Investors. And They Chose To Back Us!"
-        style="max-width: 40rem"
-      />
-      <app-section-descriptor
-        description="Everyone of these great investors are well known and well respected in their own right. Through us, they’re helping shape the world like the way they envision it should be. "
-        style="max-width: 60rem; margin-bottom: 3rem"
-      />
+      <v-stack direction="column" align="start" style="margin-bottom: 3rem">
+        <app-section-descriptor
+          title="Our investors"
+          heading="They’re Awesome Investors. And They Chose To Back Us!"
+          style="max-width: 40rem"
+        />
+        <app-section-descriptor
+          description="Everyone of these great investors are well known and well respected in their own right. Through us, they’re helping shape the world like the way they envision it should be. "
+          style="max-width: 60rem"
+        />
+        <v-button
+          v-if="currentPage !== 'about'"
+          type="link"
+          label="View all investors"
+          label-transform="uppercase"
+          style="margin-top: 2rem"
+          :action="goToInvestors"
+        />
+      </v-stack>
       <v-stack justify="space-between" wrap>
         <div
           v-for="investor in initialInvestors"
@@ -37,12 +47,12 @@
         v-if="!isInvestorsExpanded"
         align="center"
         justify="center"
-        class="mobile-remove tablet-remove"
         style="margin: 2rem 0"
       >
         <v-button
+          v-if="currentPage === 'about'"
           type="link"
-          label="View all"
+          label="View more"
           label-transform="uppercase"
           :action="expandInvestors"
         />
@@ -142,9 +152,17 @@ export default {
       isInvestorsExpanded: false,
     }
   },
+  computed: {
+    currentPage() {
+      return this.$nuxt.$route.name
+    },
+  },
   methods: {
     expandInvestors() {
       this.isInvestorsExpanded = true
+    },
+    goToInvestors() {
+      window.open('/about/#our-investors', '_self')
     },
   },
 }
