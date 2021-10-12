@@ -1,9 +1,9 @@
 import jsonp from 'jsonp'
 import queryString from 'query-string'
 
-const userId = '6cb42a85a84a8c85e669165b2'
-const listId = '06cf8ac082'
-const listUrl = 'https://gmail.us1.list-manage.com/subscribe/post-json'
+const userId = 'c9473907136742316b62eebd9'
+const listId = '9c780f0e4e'
+const listUrl = 'https://network.us1.list-manage.com/subscribe/post-json'
 
 export function subscribe({ email, groups, providerType, storage, location }) {
   return new Promise((resolve, reject) => {
@@ -18,13 +18,13 @@ export function subscribe({ email, groups, providerType, storage, location }) {
     }
     if (groups instanceof Array) {
       if (groups.includes('Newsletter')) {
-        data['group[380970][2]'] = 2
+        data['group[381006][2]'] = 2
       }
       if (groups.includes('Developer')) {
-        data['group[380970][1]'] = 1
+        data['group[381006][1]'] = 1
       }
       if (groups.includes('Provider')) {
-        data['group[380970][4]'] = 4
+        data['group[381006][4]'] = 4
       }
     }
     const stringifiedData = queryString.stringify(data)
