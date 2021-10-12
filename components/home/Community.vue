@@ -175,14 +175,6 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
-section {
-  padding: 6rem 0;
-
-  @media (--viewport-small) {
-    padding: 3rem 0;
-  }
-}
-
 .provide-section {
   margin-top: 6rem;
 

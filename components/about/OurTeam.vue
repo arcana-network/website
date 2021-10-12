@@ -137,7 +137,7 @@ export default {
         },
         {
           name: 'Narendran',
-          designation: 'Pricinple Engineer',
+          designation: 'Pricinpal Engineer',
           image: 'about-placeholder',
           links: {},
         },

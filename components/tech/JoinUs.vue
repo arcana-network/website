@@ -39,10 +39,6 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
-section {
-  padding-bottom: 6rem;
-}
-
 .joinus-description {
   max-width: 36rem;
 }

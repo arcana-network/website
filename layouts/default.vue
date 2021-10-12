@@ -1,8 +1,3 @@
 <template>
-  <div>
-    <AppHeader />
-    <Nuxt />
-    <AppFooter />
-    <AppCopyright />
-  </div>
+  <Nuxt />
 </template>

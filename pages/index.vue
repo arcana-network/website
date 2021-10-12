@@ -17,7 +17,6 @@
 <script>
 export default {
   layout: 'page',
-  scrollToTop: true,
 }
 </script>
 

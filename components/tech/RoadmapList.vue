@@ -2,7 +2,7 @@
   <section>
     <v-image
       path="images/roadmap-illustration.png"
-      style="width: 100%; z-index: -1; margin-bottom: -12.5%"
+      class="roadmap-illustration"
     />
     <v-container>
       <v-stack direction="column">
@@ -172,6 +172,12 @@ export default {
 
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
+
+.roadmap-illustration {
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -12.5%;
+}
 
 .roadmap-dropdown {
   width: 50%;

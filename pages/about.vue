@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  scrollToTop: true,
+  layout: 'page',
   head() {
     return {
       title: 'About Us - Arcana Network',

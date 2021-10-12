@@ -29,6 +29,7 @@
               line-height="3.25rem"
               transform="uppercase"
               gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
+              style="white-space: nowrap"
             >
               and counting
             </v-text>

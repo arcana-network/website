@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  scrollToTop: true,
+  layout: 'page',
   head() {
     return {
       title: 'Technology - Arcana Network',

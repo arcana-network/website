@@ -2,7 +2,7 @@
   <div class="app">
     <AppHeader />
     <Nuxt />
-    <AppFooter style="margin-top: 6rem" />
+    <AppFooter class="footer" />
     <AppCopyright />
   </div>
 </template>
@@ -10,5 +10,9 @@
 <style scoped>
 .app {
   overflow-x: hidden;
+}
+
+.footer {
+  margin-top: 6rem;
 }
 </style>

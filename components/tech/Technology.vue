@@ -219,7 +219,7 @@ img {
 }
 
 .technology-container > *:not(:first-child) {
-  padding-top: 10rem;
+  margin-top: 6rem;
 }
 
 .tech-stack-description {
