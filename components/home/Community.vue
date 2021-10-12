@@ -19,7 +19,7 @@
         justify="space-between"
         align="center"
         md-align="start"
-        style="margin-top: 4rem"
+        style="margin-top: 1rem"
       >
         <v-image path="images/build-illustration.svg" class="illustration" />
         <v-stack direction="column" align="start" style="max-width: 34rem">
@@ -28,7 +28,7 @@
             description="If you have a great idea for an application to build on the Arcana stack, sign up here to get access to our developer dashboard and the SDK as soon as it’s available."
           />
           <v-button
-            label="Get started"
+            label="Sign up now"
             label-transform="uppercase"
             style="margin-top: 1.5rem"
           />
@@ -38,12 +38,16 @@
         md-direction="column"
         justify="space-between"
         align="start"
-        style="margin-top: 4rem"
+        class="provide-section"
       >
         <v-stack direction="column" style="max-width: 32rem">
           <app-section-descriptor
             heading="Provide"
             description="If have resources such as computing power or storage, you could generate revenue using unused resources. We need storage providers, distributed key generators and network validators and if you're interested, sign up below. "
+          />
+          <v-image
+            path="images/provide-illustration.png"
+            class="illustration laptop-remove"
           />
           <v-label
             value="how do you want to participate:"
@@ -57,64 +61,120 @@
             name="provider-type"
             style="margin-top: 0.625rem"
           />
-          <v-label value="capacity" strong style="margin-top: 3rem" />
-          <v-input-group style="margin-top: 0.625rem">
-            <v-text-field
-              v-model="capacity.value"
-              type="number"
-              style="width: 100%"
+          <v-stack v-if="providerType" direction="column">
+            <v-label
+              v-if="providerType === 'Storage Provider'"
+              value="capacity"
+              strong
+              style="margin-top: 3rem"
             />
+            <v-input-group
+              v-if="providerType === 'Storage Provider'"
+              style="margin-top: 0.625rem"
+            >
+              <v-text-field
+                v-model="capacity.value"
+                type="number"
+                style="width: 100%"
+              />
+              <v-dropdown
+                v-model="capacity.unit"
+                :options="['GB', 'TB']"
+                style="width: 25ch"
+              />
+            </v-input-group>
+            <v-label value="location" strong style="margin-top: 3rem" />
             <v-dropdown
-              v-model="capacity.unit"
-              :options="['MB', 'GB']"
-              style="width: 25ch"
+              v-model="location"
+              :options="[
+                'Asia',
+                'North America',
+                'Europe',
+                'Australia',
+                'South America',
+                'Africa',
+              ]"
+              placeholder="Select Location"
+              style="margin-top: 0.625rem"
             />
-          </v-input-group>
-          <v-label value="location" strong style="margin-top: 3rem" />
-          <v-dropdown
-            v-model="location"
-            :options="[
-              'Asia',
-              'North America',
-              'Europe',
-              'Australia',
-              'South America',
-              'Africa',
-            ]"
-            placeholder="Select Location"
-            style="margin-top: 0.625rem"
-          />
-          <v-label value="email" strong style="margin-top: 3rem" />
-          <v-text-field
-            v-model="email"
-            placeholder="Enter here"
-            style="margin-top: 0.625rem"
-          />
-          <v-button
-            label="submit"
-            label-transform="uppercase"
-            style="margin-top: 3rem; width: 12rem"
-          />
+            <v-label value="email" strong style="margin-top: 3rem" />
+            <v-text-field
+              v-model="email"
+              placeholder="Enter here"
+              style="margin-top: 0.625rem"
+            />
+            <v-button
+              label="submit"
+              label-transform="uppercase"
+              style="margin-top: 3rem; width: 12rem"
+              :action="submitProvider"
+            />
+          </v-stack>
+          <v-text class="subscription-message" :class="{ success }">
+            {{ message }}
+          </v-text>
         </v-stack>
-        <v-image path="images/provide-illustration.svg" class="illustration" />
+        <v-image
+          path="images/provide-illustration.png"
+          class="illustration tablet-remove mobile-remove"
+        />
       </v-stack>
     </v-container>
   </section>
 </template>
 
 <script>
+import { subscribe } from '~/services/mailchimp'
+
 export default {
   name: 'Community',
   data() {
     return {
-      providerType: 'Storage Provider',
+      providerType: '',
       capacity: {
         value: 100,
         unit: 'GB',
       },
       location: '',
       email: '',
+      success: true,
+      message: '',
     }
+  },
+  methods: {
+    async submitProvider() {
+      if (this.email.trim() && this.providerType && this.location) {
+        this.success = true
+        this.message = 'Submitting...'
+        try {
+          const data = {
+            email: this.email,
+            groups: ['Provider', 'Newsletter'],
+            providerType: this.providerType,
+            location: this.location,
+          }
+          if (this.providerType === 'Storage Provider') {
+            data.providerType = 'Storage'
+            data.storage = {
+              capacity: this.capacity.value,
+              unit: this.capacity.unit,
+            }
+          }
+          await subscribe(data)
+          this.message = 'Thank you for subscribing!'
+        } catch (e) {
+          this.success = false
+          if (/subscribed/.test(e)) {
+            this.message = 'Already Subscribed'
+          } else if (/0 - /.test(e)) {
+            this.message = 'Invalid email'
+          }
+        }
+      } else {
+        this.success = false
+        this.message = 'Enter all details to continue'
+      }
+    },
   },
 }
 </script>
@@ -122,11 +182,32 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
+section {
+  margin-top: 8rem !important;
+
+  @media (--viewport-medium) {
+    margin-top: 6rem !important;
+  }
+}
+
+.provide-section {
+  margin-top: 2rem;
+}
+
 .illustration {
   @media (--viewport-medium) {
-    margin: 4rem auto;
+    margin: 1rem auto;
     width: 100%;
     max-width: 420px;
   }
+}
+
+.subscription-message {
+  margin: 1rem;
+  color: var(--color-orange);
+}
+
+.subscription-message.success {
+  color: var(--color-white);
 }
 </style>

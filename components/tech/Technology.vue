@@ -9,11 +9,11 @@
             preserving apps
           </v-heading>
           <app-section-descriptor
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            description="Decentralised storage, identity, access management, and KMS to help developers build secure and privacy‑preserving apps."
             class="technology-hero-description"
           />
         </v-stack>
-        <v-image path="images/technology-hero.svg" class="hero-image" />
+        <v-image path="images/tech-illustration.png" class="hero-image" />
       </v-stack>
 
       <v-stack justify="space-between" align="center">
@@ -24,27 +24,32 @@
         <v-stack direction="column" md-align="center" class="tech-stack">
           <app-section-descriptor
             heading="Decentralised Storage"
-            description="Storage nodes store only a piece of an encrypted file, ensuring data security at rest. No snooping by anyone! "
+            description="Storage nodes store only a piece of an encrypted file, ensuring data security at rest. No snooping by anyone!"
             class="tech-stack-description"
           />
           <v-image
             path="images/decentralised-storage.svg"
             class="laptop-remove"
           />
-          <v-stack wrap gap="1.5rem" md-justify="center">
+          <v-stack
+            wrap
+            class="features-list"
+            md-direction="column"
+            md-justify="center"
+          >
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                Files uploaded to Arcana are erasure coded into shards.
               </v-text>
             </v-chip>
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                Each shard is stored on a unique Arcana storage node.
               </v-text>
             </v-chip>
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                Only a subset of these shards are required to retrieve the file.
               </v-text>
             </v-chip>
           </v-stack>
@@ -55,24 +60,31 @@
         <v-stack direction="column" md-align="center" class="tech-stack">
           <app-section-descriptor
             heading="End to End Encryption"
-            description="Storage nodes store only a piece of an encrypted file, ensuring data security at rest. No snooping by anyone!"
+            description="No one except intended recipients can access files."
             class="tech-stack-description"
           />
           <v-image path="images/e2e-encryption.svg" class="laptop-remove" />
-          <v-stack wrap gap="1.5rem" md-justify="center">
+          <v-stack
+            wrap
+            class="features-list"
+            md-direction="column"
+            md-justify="center"
+          >
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                All files are encrypted by the client even before they hit the
+                network.
               </v-text>
             </v-chip>
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                Symmetric key encryption of files and asymmetric encryption of
+                symmetric keys.
               </v-text>
             </v-chip>
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                Proxy re-encryption (PRE) to seamlessly share /re share files.
               </v-text>
             </v-chip>
           </v-stack>
@@ -91,24 +103,31 @@
         <v-stack direction="column" md-align="center" class="tech-stack">
           <app-section-descriptor
             heading="Non-Custodial Key Management"
-            description="Storage nodes store only a piece of an encrypted file, ensuring data security at rest. No snooping by anyone!"
+            description="Users need not store or manage keys."
             class="tech-stack-description"
           />
           <v-image path="images/key-management.svg" class="laptop-remove" />
-          <v-stack wrap gap="1.5rem" md-justify="center">
+          <v-stack
+            wrap
+            class="features-list"
+            md-direction="column"
+            md-justify="center"
+          >
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                Secure and distributed key generation and storage.
               </v-text>
             </v-chip>
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                Verifiable logs of key generation and storage steps. Fully
+                customisable signup/login.
               </v-text>
             </v-chip>
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                Password-less sign up/login with any popular auth. mechanism
+                (Gmail, Facebook, etc.).
               </v-text>
             </v-chip>
           </v-stack>
@@ -119,24 +138,32 @@
         <v-stack direction="column" md-align="center" class="tech-stack">
           <app-section-descriptor
             heading="Decentralised IAM"
-            description="Storage nodes store only a piece of an encrypted file, ensuring data security at rest. No snooping by anyone!"
+            description="Your users truly own and control sharing access to their data."
             class="tech-stack-description"
           />
           <v-image path="images/decentralised-iam.svg" class="laptop-remove" />
-          <v-stack wrap gap="1.5rem" md-justify="center">
+          <v-stack
+            wrap
+            md-direction="column"
+            class="features-list"
+            md-justify="center"
+          >
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                Every file uploaded to Arcana is assigned a DID, as per the W3C
+                DID spec(link).
               </v-text>
             </v-chip>
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                DID points to document stored on the public Arcana blockchain
+                for trust-less verification.
               </v-text>
             </v-chip>
             <v-chip>
               <v-text color="secondary" line-height="1.5rem" size="1.125rem">
-                Proxy re-encryption (PRE) to seamlessly share / re share files.
+                Access control list maintained in the DID document can only be
+                updated by the file owner/uploader.
               </v-text>
             </v-chip>
           </v-stack>
@@ -156,7 +183,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
 img {
@@ -168,16 +195,12 @@ img {
   }
 }
 
-.technology-container > * {
-  margin-top: 10rem;
-}
-
 .technology-hero-section {
   max-width: 48rem;
 }
 
 .technology-hero-description {
-  max-width: 40rem;
+  max-width: 38rem;
 }
 
 .hero-image {
@@ -192,6 +215,26 @@ img {
 
 .tech-stack > * {
   margin-top: 1rem;
+}
+
+.features-list {
+  margin: 0 0 0 -1.5rem;
+}
+
+.features-list > * {
+  margin: 1.5rem 0 0 1.5rem;
+}
+
+.technology-container > *:not(:first-child) {
+  margin-top: 6rem;
+
+  @media (--viewport-medium) {
+    margin-top: 4rem;
+  }
+
+  @media (--viewport-small) {
+    margin-top: 2rem;
+  }
 }
 
 .tech-stack-description {

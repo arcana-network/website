@@ -4,19 +4,21 @@
       <v-stack md-direction="column" justify="space-between" align="center">
         <v-stack direction="column" align="start" gap="2rem">
           <app-section-descriptor
-            title="community"
+            title="We are Hiring"
             heading="Join Our Team"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+            description="There is no shortage of interesting challenges to work on at Arcana. Being at the bleeding edge of technology in Web 3 and privacy, we are defining the tools the developers of future will use.
+If you are interesting in what we are building, checkout our existing openings, if there isn’t an open role for you, but you are great at what you do, we’d still love to talk."
             class="joinus-description"
           />
           <v-button
             label="Join us"
             label-transform="uppercase"
             class="joinus-btn"
+            :action="openCareers"
           />
         </v-stack>
         <v-image
-          path="images/joinus-illustration.svg"
+          path="images/join-us-illustration.png"
           class="joinus-illustration"
         />
       </v-stack>
@@ -27,15 +29,16 @@
 <script>
 export default {
   name: 'JoinUs',
+  methods: {
+    openCareers() {
+      window.open('https://angel.co/company/arcana-network/jobs', '_blank')
+    },
+  },
 }
 </script>
 
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
-
-section {
-  margin-top: 10rem;
-}
 
 .joinus-description {
   max-width: 36rem;
@@ -51,7 +54,7 @@ section {
 
   @media (--viewport-medium) {
     width: 150%;
-    margin-top: -20%;
+    margin-top: -10%;
   }
 }
 

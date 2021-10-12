@@ -1,19 +1,16 @@
 <template>
   <main>
-    <AppHeader />
     <HomeHeroSection />
-    <HomeIntroduction />
+    <!-- <HomeIntroduction /> -->
     <HomeFeatures />
     <HomeTestimonials />
-    <HomeInvestors />
+    <AboutOurInvestors />
     <HomeRoadmap />
     <HomeNewsAndMedia />
     <HomeOurPartners />
     <HomeInteroperability />
     <HomeCommunity />
     <HomeNewsletter />
-    <AppFooter />
-    <AppCopyright />
   </main>
 </template>
 
@@ -30,12 +27,15 @@ main {
   overflow-x: hidden;
 }
 
-main > * + *:not(:last-child) {
-  padding: 6rem 0;
-  margin: 6rem 0;
+main > * {
+  margin-top: 6rem;
+
+  @media (--viewport-medium) {
+    margin-top: 4rem;
+  }
 
   @media (--viewport-small) {
-    padding: 3rem 0;
+    margin-top: 2rem;
   }
 }
 </style>

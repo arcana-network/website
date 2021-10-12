@@ -9,24 +9,25 @@
           <app-section-descriptor
             description="Decentralised storage, identity, access management and key
             management services to help developers build secure and
-            privacy-preserving apps"
+            privacy-preserving apps."
           />
           <v-stack
             md-direction="column"
             align="center"
             gap="1.5rem"
+            md-gap="1.5rem"
             style="margin-top: 2rem"
           >
-            <v-button label="Get started" label-transform="uppercase" />
+            <v-button label="Sign up now" label-transform="uppercase" />
             <v-text color="secondary" size="1.125rem">
               Testnet Launching Soon!
             </v-text>
             <v-stack align="center" class="support-icons">
               <a href="https://t.me/ArcanaNetwork" target="__blank">
-                <v-image path="images/telegram.svg" />
+                <v-image path="images/telegram.svg" :dimension="[36, 36]" />
               </a>
-              <a href="https://discord.gg/BcbrsRsR" target="__blank">
-                <v-image path="images/discord.svg" />
+              <a href="https://discord.gg/w6ej4FtqYS" target="__blank">
+                <v-image path="images/discord.svg" :dimension="[36, 42]" />
               </a>
             </v-stack>
           </v-stack>
@@ -48,13 +49,28 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
+section {
+  padding: 0 0 6rem;
+
+  @media (--viewport-small) {
+    padding: 0;
+  }
+}
+
 .section-orbs {
   max-width: 800px;
   width: 100%;
+
+  @media (--viewport-large) {
+    margin-right: -12.5%;
+  }
 }
 
 .support-icons a {
   margin-left: 1.5rem;
-  margin-top: 1.5rem;
+
+  @media (--viewport-medium) {
+    margin-top: 1.5rem;
+  }
 }
 </style>

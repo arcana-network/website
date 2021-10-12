@@ -6,17 +6,22 @@
           <v-image :path="logo" alt="logo" class="cursor-pointer logo" />
         </NuxtLink>
         <nav class="header-menu" :class="{ show }">
-          <a
+          <NuxtLink
             v-for="item in menuItems"
             :key="item.name"
-            :href="item.link"
+            :to="item.link"
             :target="item.external ? '__blank' : ''"
             class="header-menu-item"
+            :class="{
+              'active-link':
+                (!item.external && item.link === `/${currentLocation}/`) ||
+                (item.link === '/' && currentLocation === 'index'),
+            }"
           >
             <v-text :weight="600" font="sans" color="primary">
               {{ item.name }}
             </v-text>
-          </a>
+          </NuxtLink>
         </nav>
         <v-stack gap="3vw">
           <v-button
@@ -24,6 +29,7 @@
             :label="cta.label"
             :action="cta.action"
             label-transform="uppercase"
+            class="mobile-remove tablet-remove"
             :show="show"
           />
           <v-image
@@ -69,6 +75,11 @@ export default {
       show: false,
     }
   },
+  computed: {
+    currentLocation() {
+      return this.$nuxt.$route.name
+    },
+  },
   methods: {
     showClicked(ev) {
       this.show = !this.show
@@ -80,34 +91,43 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 @import url('./media-query-helper.css');
 
 header {
-  margin: 1.5rem 0;
+  padding: 1.5rem 0;
+  z-index: 10000;
 }
 
 .header-menu-item {
   text-decoration: none;
+  padding: 0.75rem 2rem;
 }
 
 .header-menu-item:hover {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .header-menu-item:active {
   transform: scale(0.98);
 }
 
+.active-link {
+  text-decoration: underline;
+  text-decoration-color: var(--color-white);
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.25rem;
+}
+
 @media (--viewport-large) {
   .header-menu > * + * {
-    margin-left: 4vw;
+    margin-left: 1vw;
   }
 }
 
 @media (--viewport-medium) {
   .header-menu > * + * {
-    margin-left: 3vw;
+    margin-left: 1vw;
   }
 }
 

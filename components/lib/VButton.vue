@@ -77,9 +77,11 @@ export default {
     }
   },
   methods: {
-    handleClick() {
+    handleClick(ev) {
       if (!this.disabled && 'call' in this.action) {
         this.action.call()
+      } else {
+        this.$emit('click', ev)
       }
     },
   },
@@ -92,27 +94,25 @@ a {
   position: relative;
   font-size: 1.1rem;
   font-weight: 600;
-  padding: 0.8rem 1rem;
+  padding: 1.125rem 2rem;
   border: none;
   text-align: center;
-  min-width: 8rem;
-  border-radius: 10px;
+  border-radius: 4px;
   background: none;
   white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 /* Primary Button Styles */
 button {
-  background: linear-gradient(to bottom, #0085ff, #29c8fa);
+  background: linear-gradient(0deg, #0085ff 0%, #29c8fa 100%);
   color: var(--color-white);
 }
 button:disabled {
-  background: linear-gradient(to bottom, #4e4e4e, #2b2b2b);
+  background: linear-gradient(180deg, #2b2b2b -4.5%, #4e4e4e 100.1%);
   color: var(--color-grey);
   cursor: not-allowed;
-}
-button:hover:not(:disabled) {
-  background: linear-gradient(0deg, #1891ff 0%, #b0ecff 100%);
 }
 
 /* Link styles */
@@ -122,14 +122,17 @@ a {
   min-width: 0;
   text-decoration: none;
 }
-a:not([disabled='true']):hover {
-  color: #00519c;
-}
 a:not([disabled='true']):active {
   transform: scale(0.99);
 }
 a[disabled='true'] {
   cursor: not-allowed;
   color: #8d8d8d;
+}
+
+/* Hover styles */
+button:hover:not(:disabled),
+a:not([disabled='true']):hover {
+  opacity: 0.8;
 }
 </style>
