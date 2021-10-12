@@ -14,6 +14,7 @@
             label="Read more on Medium"
             label-transform="uppercase"
             style="margin-top: 2rem"
+            :action="goToBlog"
           />
         </v-stack>
         <div class="position-relative partner-logo-container">
@@ -59,6 +60,11 @@
 <script>
 export default {
   name: 'OurPartners',
+  methods: {
+    goToBlog() {
+      window.open('https://medium.com/arcana-network-blog', '_blank')
+    },
+  },
 }
 </script>
 
@@ -66,7 +72,7 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 section {
-  padding: 6rem 0;
+  padding: 0 0 6rem;
 
   @media (--viewport-small) {
     padding: 3rem 0;

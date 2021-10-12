@@ -2,10 +2,39 @@
   <section>
     <v-container>
       <v-stack justify="space-between" align="center" md-direction="column">
-        <v-image
-          path="images/newsletter-illustration.svg"
-          class="newsletter-illustration"
-        />
+        <div style="position: relative">
+          <v-image
+            path="images/newsletter-illustration.svg"
+            class="newsletter-illustration"
+          />
+          <div style="text-align: center; z-index: 100" class="absolute-center">
+            <!-- <v-text
+              gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
+              style="height: 16rem"
+            > -->
+            <v-text
+              font="sans"
+              :weight="700"
+              size="9rem"
+              line-height="11rem"
+              gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
+            >
+              1000’s
+            </v-text>
+            <br />
+            <v-text
+              font="sans"
+              :weight="700"
+              size="2.625rem"
+              line-height="3.25rem"
+              transform="uppercase"
+              gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
+            >
+              and counting
+            </v-text>
+            <!-- </v-text> -->
+          </div>
+        </div>
         <v-stack direction="column">
           <app-section-descriptor
             title="Newsletter"
@@ -23,8 +52,12 @@
               label="Sign up"
               label-transform="uppercase"
               class="sign-up-btn"
+              :action="subscribeNewsletter"
             />
           </v-input-group>
+          <v-text class="subscription-message" :class="{ success }">
+            {{ message }}
+          </v-text>
         </v-stack>
       </v-stack>
     </v-container>
@@ -32,12 +65,41 @@
 </template>
 
 <script>
+import { subscribe } from '~/services/mailchimp'
+
 export default {
   name: 'Newsletter',
   data() {
     return {
       newsletterEmail: '',
+      success: true,
+      message: '',
     }
+  },
+  methods: {
+    async subscribeNewsletter() {
+      if (this.newsletterEmail.trim()) {
+        this.success = true
+        this.message = 'Submitting...'
+        try {
+          await subscribe({
+            email: this.newsletterEmail,
+            groups: ['Newsletter'],
+          })
+          this.message = 'Thank you for subscribing!'
+        } catch (e) {
+          this.success = false
+          if (/subscribed/.test(e)) {
+            this.message = 'Already Subscribed'
+          } else if (/0 - /.test(e)) {
+            this.message = 'Invalid email'
+          }
+        }
+      } else {
+        this.success = false
+        this.message = 'Enter email to continue'
+      }
+    },
   },
 }
 </script>
@@ -72,5 +134,14 @@ section {
   @media (--viewport-small) {
     max-width: 10rem;
   }
+}
+
+.subscription-message {
+  margin: 1rem;
+  color: var(--color-orange);
+}
+
+.subscription-message.success {
+  color: var(--color-white);
 }
 </style>

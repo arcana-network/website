@@ -51,8 +51,8 @@
         <v-text
           color="secondary"
           size="1.125rem"
-          transform="uppercase"
-          style="margin-top: 1rem"
+          line-height="1.5rem"
+          style="margin-top: 0.8rem"
         >
           {{ member.designation }}
         </v-text>
@@ -96,7 +96,7 @@ export default {
   @media (--viewport-medium) {
     max-height: 0;
     opacity: 0;
-    margin-top: 0;
+    margin: 0 auto;
     overflow: hidden;
     transition: max-height 0.1s, opacity 0.6s, margin-top 0.2s;
   }
@@ -151,7 +151,6 @@ export default {
 
   @media (--viewport-medium) {
     width: 100%;
-    max-width: 24rem;
   }
 }
 </style>

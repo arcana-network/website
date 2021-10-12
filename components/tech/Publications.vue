@@ -15,7 +15,7 @@
           <app-section-descriptor
             title="PUBLICATION"
             heading="Keep up to date with our network."
-            description="Our codebase will be publicly verifiable with independent audits to validate the security and promise of ARCANA before Mainnet"
+            description="Our codebase will be publicly verifiable with independent audits to validate the security and promise of ARCANA before Mainnet."
             class="publication-description"
           />
           <v-button

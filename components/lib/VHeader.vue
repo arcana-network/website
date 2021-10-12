@@ -13,7 +13,8 @@
             :target="item.external ? '__blank' : ''"
             class="header-menu-item"
             :class="{
-              'active-link': !item.extenal && item.link === currentLocation,
+              'active-link':
+                !item.external && item.link === `/${currentLocation}/`,
             }"
           >
             <v-text :weight="600" font="sans" color="primary">
@@ -27,8 +28,8 @@
             :label="cta.label"
             :action="cta.action"
             label-transform="uppercase"
+            class="mobile-remove tablet-remove"
             :show="show"
-            style="visibility: hidden"
           />
           <v-image
             :path="`icons/${icon}.svg`"
@@ -71,11 +72,12 @@ export default {
     return {
       icon: 'menu',
       show: false,
-      currentLocation: '',
     }
   },
-  mounted() {
-    this.currentLocation = window.location.pathname
+  computed: {
+    currentLocation() {
+      return this.$nuxt.$route.name
+    },
   },
   methods: {
     showClicked(ev) {
@@ -88,11 +90,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 @import url('./media-query-helper.css');
 
 header {
-  margin: 1.5rem 0;
+  padding: 1.5rem 0;
 }
 
 .header-menu-item {
@@ -101,7 +103,7 @@ header {
 }
 
 .header-menu-item:hover {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .header-menu-item:active {

@@ -1,18 +1,16 @@
 <template>
   <main>
-    <AppHeader />
     <TechTechnology />
     <TechRoadmapList />
     <TechPublications />
     <HomeCommunity />
     <TechJoinUs />
-    <AppFooter />
-    <AppCopyright />
   </main>
 </template>
 
 <script>
 export default {
+  scrollToTop: true,
   head() {
     return {
       title: 'Technology - Arcana Network',
@@ -28,7 +26,7 @@ main {
   overflow-x: hidden;
 }
 
-main > *:not(:last-child):not(:first-child) {
+main > * {
   margin-top: 6rem;
 }
 </style>

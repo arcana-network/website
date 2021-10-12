@@ -33,7 +33,7 @@
       <v-stack v-if="!isTeamExpanded" align="center" justify="center">
         <v-button
           type="link"
-          label="View all"
+          label="View more"
           label-transform="uppercase"
           :action="expandTeam"
         />
@@ -54,6 +54,7 @@ export default {
           image: 'about-placeholder',
           links: {
             linkedin: 'https://www.linkedin.com/in/mayurrelekar/',
+            twitter: 'https://twitter.com/mayurrelekar',
           },
         },
         {
@@ -62,6 +63,7 @@ export default {
           image: 'about-placeholder',
           links: {
             linkedin: 'https://www.linkedin.com/in/aravindhkumar61',
+            twitter: 'https://twitter.com/Aravindh_Kumarr',
           },
         },
         {
@@ -87,7 +89,7 @@ export default {
         },
         {
           name: 'Lakshmikanth',
-          designation: 'Devops',
+          designation: 'DevOps',
           image: 'about-placeholder',
           links: {
             linkedin: 'linkedin.com/in/lakshmikanth-bharathi-2a4754b8',
@@ -135,7 +137,7 @@ export default {
         },
         {
           name: 'Narendran',
-          designation: ' ',
+          designation: 'Pricinple Engineer',
           image: 'about-placeholder',
           links: {},
         },
@@ -160,7 +162,7 @@ export default {
         },
         {
           name: 'Sharan',
-          designation: ' ',
+          designation: 'Head of Design',
           image: 'about-placeholder',
           links: {},
         },

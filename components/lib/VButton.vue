@@ -77,9 +77,11 @@ export default {
     }
   },
   methods: {
-    handleClick() {
+    handleClick(ev) {
       if (!this.disabled && 'call' in this.action) {
         this.action.call()
+      } else {
+        this.$emit('click', ev)
       }
     },
   },

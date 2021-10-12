@@ -16,11 +16,7 @@
               <v-heading :level="4" class="testimonial-quote">
                 “{{ slide.quote }}”
               </v-heading>
-              <v-stack
-                md-direction="column"
-                style="margin-top: 1.5rem"
-                align="baseline"
-              >
+              <v-stack md-direction="column" align="baseline">
                 <v-text class="testimonial-quoted-by">
                   {{ slide.quotedBy }},
                 </v-text>
@@ -47,7 +43,7 @@ export default {
       slides: [
         {
           quote:
-            'We’ve always been intensely focused on enabling our partners and customers to improve business outcomes. The addition of Arcana’s Security and Privacy will complement our mission of decentralizing our network',
+            'We’ve always been intensely focused on enabling our partners and customers to improve business outcomes. The addition of Arcana’s Security and Privacy will complement our mission of decentralizing our network.',
           quotedBy: 'Ram Sharma',
           designation: 'CEO and Co-Founder',
           companyLogo: 'images/testimonials/unmarshal.svg',
@@ -57,14 +53,14 @@ export default {
             'We are very excited to start working with Arcana Network to improve the developer experience of the crowd building the DIA ecosystem by offering a number of privacy and security features to our tech stack.',
           quotedBy: 'Dia',
           designation: 'CEO and Co-Founder',
-          companyLogo: 'images/testimonials/unmarshal.svg',
+          companyLogo: 'images/testimonials/dia-labs.png',
         },
         {
           quote:
             'Partnerships are all about pushing the boundaries on innovating for the customer through our products. Our partnership with Arcana will help us deliver exactly that while we explore new and innovative ways to deploy and bring robust scalability and privacy to our technology stack and eventually the RageFan users and community.',
           quotedBy: 'Rage.fan',
           designation: 'CEO and Co-Founder',
-          companyLogo: 'images/testimonials/unmarshal.svg',
+          companyLogo: 'images/testimonials/rage-fan.png',
         },
       ],
     }
@@ -92,14 +88,14 @@ section {
 .carousel-container {
   width: 100%;
   height: 100vh;
-  max-height: 36rem;
+  max-height: 30rem;
 
   @media (--viewport-medium) {
-    max-height: 48rem;
+    max-height: 52rem;
   }
 
   @media (--viewport-small) {
-    max-height: 40rem;
+    max-height: 44rem;
   }
 }
 
@@ -109,8 +105,8 @@ section {
 }
 
 .testimonial-quote {
-  font-size: 1.75rem;
-  line-height: 2.125rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin-top: 0;
 
   @media (--viewport-medium) {
@@ -125,8 +121,8 @@ section {
 }
 
 .testimonial-quoted-by {
-  font-size: 1.625rem;
-  line-height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 
   @media (--viewport-medium) {
     font-size: 0.875rem;
@@ -148,7 +144,7 @@ section {
 
 .testimonial-illustration {
   margin-right: 10vw;
-  max-width: 30vw;
+  max-width: 20rem;
 
   @media (--viewport-medium) {
     margin: 6rem auto;
@@ -156,7 +152,6 @@ section {
 
   @media (--viewport-small) {
     margin: 1rem auto;
-    max-width: 50vw;
   }
 }
 </style>

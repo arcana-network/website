@@ -102,6 +102,7 @@ export default {
   position: absolute;
   bottom: 0;
   width: 100%;
+  margin-top: 1rem;
 }
 
 .icons > * {

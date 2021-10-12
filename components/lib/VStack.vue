@@ -119,7 +119,11 @@ export default {
     }
     if (this.gap) {
       this.styles['--flex-gap'] = this.gap
-      this.classes.gap = true
+      if (this.direction === 'column') {
+        this.classes['column-gap'] = true
+      } else {
+        this.classes['row-gap'] = true
+      }
     }
     if (this.grow) {
       this.styles['flex-grow'] = this.grow
@@ -138,7 +142,11 @@ export default {
     }
     if (this.smGap) {
       this.styles['--sm-flex-gap'] = this.smGap
-      this.classes['sm-gap'] = true
+      if (this.smDirection === 'column') {
+        this.classes['sm-column-gap'] = true
+      } else {
+        this.classes['sm-row-gap'] = true
+      }
     }
     if (this.mdDirection) {
       this.classes['md-' + this.mdDirection] = true
@@ -151,7 +159,11 @@ export default {
     }
     if (this.mdGap) {
       this.styles['--md-flex-gap'] = this.mdGap
-      this.classes['md-gap'] = true
+      if (this.mdDirection === 'column') {
+        this.classes['md-column-gap'] = true
+      } else {
+        this.classes['md-row-gap'] = true
+      }
     }
   },
 }
@@ -213,11 +225,13 @@ export default {
 .wrap {
   flex-wrap: wrap;
 }
-.gap {
-  margin: calc(-1 * var(--flex-gap)) 0 0 calc(-1 * var(--flex-gap));
+.row-gap > * + * {
+  margin-left: var(--flex-gap);
+  margin-top: 0;
 }
-.gap > * {
-  margin: var(--flex-gap) 0 0 var(--flex-gap);
+.column-gap > * + * {
+  margin-left: 0;
+  margin-top: var(--flex-gap);
 }
 
 @media (--viewport-medium) {
@@ -266,11 +280,13 @@ export default {
   .md-wrap {
     flex-wrap: wrap;
   }
-  .md-gap {
-    margin: calc(-1 * var(--md-flex-gap)) 0 0 calc(-1 * var(--md-flex-gap));
+  .md-row-gap > * + * {
+    margin-left: var(--md-flex-gap);
+    margin-top: 0;
   }
-  .md-gap > * {
-    margin: var(--md-flex-gap) 0 0 var(--md-flex-gap);
+  .md-column-gap > * + * {
+    margin-left: 0;
+    margin-top: var(--md-flex-gap);
   }
 }
 
@@ -320,11 +336,13 @@ export default {
   .sm-wrap {
     flex-wrap: wrap;
   }
-  .sm-gap {
-    margin: calc(-1 * var(--sm-flex-gap)) 0 0 calc(-1 * var(--sm-flex-gap));
+  .sm-row-gap > * + * {
+    margin-left: var(--sm-flex-gap);
+    margin-top: 0;
   }
-  .sm-gap > * {
-    margin: var(--sm-flex-gap) 0 0 var(--sm-flex-gap);
+  .sm-column-gap > * + * {
+    margin-left: 0;
+    margin-top: var(--sm-flex-gap);
   }
 }
 </style>

@@ -33,7 +33,7 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 section {
-  padding: 6rem 0;
+  padding: 6rem 0 0;
 
   @media (--viewport-small) {
     padding: 3rem 0;
