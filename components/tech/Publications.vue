@@ -74,7 +74,7 @@ section {
 }
 
 .publication-description {
-  max-width: 24rem;
+  max-width: 30rem;
 }
 
 .technical-paper-btn {

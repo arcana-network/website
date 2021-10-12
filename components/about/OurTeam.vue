@@ -138,7 +138,7 @@ export default {
         {
           name: 'Narendran',
           designation: 'Pricinpal Engineer',
-          image: 'moon',
+          image: 'Naren',
           links: {},
         },
         {
