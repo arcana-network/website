@@ -18,9 +18,9 @@
                 (item.link === '/' && currentLocation === 'index'),
             }"
           >
-            <v-text :weight="600" font="sans" color="primary">
-              {{ item.name }}
-            </v-text>
+            <v-text :weight="600" font="sans" color="primary">{{
+              item.name
+            }}</v-text>
           </NuxtLink>
         </nav>
         <v-stack gap="3vw">
