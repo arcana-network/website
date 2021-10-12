@@ -137,6 +137,7 @@ export default {
 .investor-image {
   border-radius: 50%;
   cursor: pointer;
+  width: 8rem;
 
   @media (--viewport-small) {
     max-height: 0;
