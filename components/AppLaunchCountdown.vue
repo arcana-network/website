@@ -42,6 +42,15 @@
           >
             mins
           </v-text>
+          {{ String(remainingSeconds).padStart(2, '0')
+          }}<v-text
+            class="unit-text uppercase"
+            font="sans"
+            :weight="700"
+            gradient="linear-gradient(180deg, #47E7FF 0%, #14A7F0 100%)"
+          >
+            secs
+          </v-text>
         </v-text>
         <div class="instruction-text" style="margin-top: 2rem">
           <v-text font="sans" line-height="1.5rem" :weight="700" size="1rem">
