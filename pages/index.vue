@@ -29,5 +29,13 @@ main {
 
 main > * {
   margin-top: 6rem;
+
+  @media (--viewport-medium) {
+    margin-top: 4rem;
+  }
+
+  @media (--viewport-small) {
+    margin-top: 2rem;
+  }
 }
 </style>

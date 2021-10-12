@@ -95,7 +95,7 @@ section {
   }
 
   @media (--viewport-small) {
-    max-height: 44rem;
+    max-height: 36rem;
   }
 }
 
@@ -152,6 +152,7 @@ section {
 
   @media (--viewport-small) {
     margin: 1rem auto;
+    max-width: 12rem;
   }
 }
 </style>
