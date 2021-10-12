@@ -86,11 +86,12 @@
           <v-button :action="handlePasswordSubmit" label=" →" />
         </v-input-group>
         <v-text
+          class="hint-text"
           color="link"
           font="serif"
           :weight="600"
           size="1rem"
-          line-height="1.2em"
+          line-height="1.5em"
         >
           Hint: The year when the privacy big bang begins.
         </v-text>
@@ -195,10 +196,19 @@ export default {
 
 .container,
 .countdown-container,
-.loader-container,
-.countdown-content {
+.loader-container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.countdown-content {
+  min-height: 100vh;
+
+  @media (--viewport-small) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-height: 80vh;
+  }
 }
 
 .loader,
@@ -260,8 +270,11 @@ export default {
   font-size: 10.625rem;
   line-height: 1em;
 
-  @media (--viewport-small) {
+  @media (--viewport-medium) {
     font-size: 5rem;
+  }
+  @media (--viewport-small) {
+    font-size: 2rem;
   }
 }
 
@@ -283,6 +296,15 @@ export default {
   }
 }
 
+.hint-text {
+  text-align: center;
+
+  @media (--viewport-small) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .instruction-text > * {
   display: block;
 }
@@ -296,6 +318,10 @@ export default {
   padding: 2rem 1rem;
   width: 100%;
   text-align: center;
+
+  @media (--viewport-small) {
+    position: static;
+  }
 }
 
 .twitter-link {
@@ -326,10 +352,10 @@ export default {
   font-size: 14px;
   line-height: 24px;
   padding: 1rem;
-  width: 439px;
+  width: 450px;
 
   @media (--viewport-small) {
-    width: 295px;
+    width: 100%;
   }
 }
 
