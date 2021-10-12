@@ -46,6 +46,7 @@ body {
       rgba(18, 18, 18, 0.7) 100%
     );
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .color-primary {
