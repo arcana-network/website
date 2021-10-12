@@ -112,7 +112,6 @@ section {
   max-width: 30rem;
 
   @media (--viewport-large) {
-    max-width: 36rem;
     margin: -10% -20% 0 2rem;
   }
 
