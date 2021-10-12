@@ -53,7 +53,7 @@ export default {
         this.message = 'Submitting...'
         try {
           await subscribe({
-            email: this.newsletterEmail,
+            email: this.email.trim(),
             groups: ['Developer', 'Newsletter'],
           })
           this.message = 'Thank you for subscribing!'
