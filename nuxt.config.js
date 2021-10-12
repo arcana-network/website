@@ -55,7 +55,7 @@ export default {
       Montserrat: [500, 600, 700],
       Sora: [300, 400, 600, 700],
     },
-    display: 'swap',
+    display: 'block',
     prefetch: true,
     preconnect: true,
     preload: true,
