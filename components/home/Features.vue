@@ -15,6 +15,10 @@
           style="margin: 1.5rem 0"
           :action="openTechPage"
         />
+        <v-image
+          path="images/features-illustration.png"
+          class="features-illustration laptop-remove"
+        />
       </v-stack>
       <v-stack justify="space-between" md-direction="column" md-align="center">
         <v-stack direction="column" class="features-description-container">
@@ -69,7 +73,7 @@
         </v-stack>
         <v-image
           path="images/features-illustration.png"
-          class="features-illustration"
+          class="features-illustration tablet-remove"
         />
       </v-stack>
     </v-container>
@@ -106,8 +110,7 @@ section {
   @media (--viewport-medium) {
     width: 100%;
     max-width: 30rem;
-    margin-left: -12.5%;
-    margin-top: 4rem;
+    margin: 2rem 0;
   }
 }
 

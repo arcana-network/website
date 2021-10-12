@@ -60,6 +60,10 @@ section {
 .section-orbs {
   max-width: 800px;
   width: 100%;
+
+  @media (--viewport-large) {
+    margin-right: -12.5%;
+  }
 }
 
 .support-icons a {

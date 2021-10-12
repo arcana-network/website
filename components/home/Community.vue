@@ -19,7 +19,7 @@
         justify="space-between"
         align="center"
         md-align="start"
-        style="margin-top: 4rem"
+        style="margin-top: 1rem"
       >
         <v-image path="images/build-illustration.svg" class="illustration" />
         <v-stack direction="column" align="start" style="max-width: 34rem">
@@ -44,6 +44,10 @@
           <app-section-descriptor
             heading="Provide"
             description="If have resources such as computing power or storage, you could generate revenue using unused resources. We need storage providers, distributed key generators and network validators and if you're interested, sign up below. "
+          />
+          <v-image
+            path="images/provide-illustration.png"
+            class="illustration laptop-remove"
           />
           <v-label
             value="how do you want to participate:"
@@ -110,7 +114,10 @@
             {{ message }}
           </v-text>
         </v-stack>
-        <v-image path="images/provide-illustration.png" class="illustration" />
+        <v-image
+          path="images/provide-illustration.png"
+          class="illustration tablet-remove mobile-remove"
+        />
       </v-stack>
     </v-container>
   </section>
@@ -175,12 +182,16 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
-.provide-section {
-  margin-top: 6rem;
+section {
+  margin-top: 8rem !important;
 
-  @media (--viewport-small) {
-    margin-top: 2rem;
+  @media (--viewport-medium) {
+    margin-top: 6rem !important;
   }
+}
+
+.provide-section {
+  margin-top: 2rem;
 }
 
 .illustration {

@@ -15,7 +15,10 @@
         @mouseenter="showDesc"
         @mouseleave="hideDesc"
       />
-      <div class="investor-description" :class="{ show: showDescription }">
+      <div
+        class="investor-description"
+        :class="{ show: showDescription, expand: isExpanded }"
+      >
         {{ investor.description }}
       </div>
     </div>
@@ -121,6 +124,13 @@ export default {
 .investor-description.show {
   visibility: visible;
   opacity: 1;
+}
+
+.investor-description.expand {
+  @media (--viewport-small) {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .investor-image {
