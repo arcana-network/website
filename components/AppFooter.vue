@@ -80,7 +80,9 @@
               <v-text>Careers</v-text>
             </a>
             <a href="/privacy"><v-text>Privacy</v-text></a>
-            <a href="/terms"><v-text>Terms of use</v-text></a>
+            <a href="/terms" style="visibility: hidden"
+              ><v-text>Terms of use</v-text></a
+            >
           </v-stack>
         </v-stack>
       </v-stack>
