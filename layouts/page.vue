@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <app-launch-countdown>
     <Nuxt />
-  </div>
+  </app-launch-countdown>
 </template>
