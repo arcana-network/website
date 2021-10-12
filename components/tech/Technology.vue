@@ -9,7 +9,7 @@
             preserving apps
           </v-heading>
           <app-section-descriptor
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            description="Decentralised storage, identity, access management, and KMS to help developers build secure and privacy‑preserving apps."
             class="technology-hero-description"
           />
         </v-stack>
@@ -176,7 +176,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
 img {
@@ -193,7 +193,7 @@ img {
 }
 
 .technology-hero-description {
-  max-width: 40rem;
+  max-width: 38rem;
 }
 
 .hero-image {
@@ -220,6 +220,14 @@ img {
 
 .technology-container > *:not(:first-child) {
   margin-top: 6rem;
+
+  @media (--viewport-medium) {
+    margin-top: 4rem;
+  }
+
+  @media (--viewport-small) {
+    margin-top: 2rem;
+  }
 }
 
 .tech-stack-description {

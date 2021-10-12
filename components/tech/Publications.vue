@@ -13,13 +13,13 @@
           class="publication-description-container"
         >
           <app-section-descriptor
-            title="PUBLICATION"
-            heading="Keep up to date with our network."
-            description="Our codebase will be publicly verifiable with independent audits to validate the security and promise of ARCANA before Mainnet."
+            title="Arcana’s Blog"
+            heading="Keep up to date with Arcana Network and our research."
+            description="We frequently not only write about updates and partnerships at Arcana but deep dive into research, share insights through ‘Engineering at Arcana’ and ‘Design at Arcana’ series, and break down the future of Web 3."
             class="publication-description"
           />
           <v-button
-            label="Technical Paper"
+            label="View Blog"
             label-transform="uppercase"
             class="technical-paper-btn"
             :action="openTechnicalPaper"
