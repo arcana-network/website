@@ -321,6 +321,7 @@ export default {
 
   @media (--viewport-small) {
     position: static;
+    width: inherit;
   }
 }
 
