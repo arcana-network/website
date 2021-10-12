@@ -346,7 +346,7 @@ export default {
 
 .password-input {
   background: linear-gradient(141.48deg, #161616 -4.56%, #151515 135.63%);
-  border-radius: 10px;
+  border-radius: 4px;
   box-shadow: inset -2px -2px 4px rgba(57, 57, 57, 0.44),
     inset 5px 5px 10px rgba(11, 11, 11, 0.5);
   color: white;
