@@ -97,7 +97,7 @@ a {
   padding: 1.125rem 2rem;
   border: none;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 4px;
   background: none;
   white-space: nowrap;
 }
@@ -106,6 +106,7 @@ a {
 button {
   background: linear-gradient(0deg, #0085ff 0%, #29c8fa 100%);
   color: var(--color-white);
+  transition: all 0.5s;
 }
 button:disabled {
   background: linear-gradient(180deg, #2b2b2b -4.5%, #4e4e4e 100.1%);
