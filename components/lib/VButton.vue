@@ -97,9 +97,11 @@ a {
   padding: 1.125rem 2rem;
   border: none;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 4px;
   background: none;
   white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 /* Primary Button Styles */
@@ -112,9 +114,6 @@ button:disabled {
   color: var(--color-grey);
   cursor: not-allowed;
 }
-button:hover:not(:disabled) {
-  background: linear-gradient(180deg, #0088b3 -3.41%, #00519c 100.1%);
-}
 
 /* Link styles */
 a {
@@ -123,14 +122,17 @@ a {
   min-width: 0;
   text-decoration: none;
 }
-a:not([disabled='true']):hover {
-  color: #00519c;
-}
 a:not([disabled='true']):active {
   transform: scale(0.99);
 }
 a[disabled='true'] {
   cursor: not-allowed;
   color: #8d8d8d;
+}
+
+/* Hover styles */
+button:hover:not(:disabled),
+a:not([disabled='true']):hover {
+  opacity: 0.8;
 }
 </style>
