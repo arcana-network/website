@@ -6,21 +6,22 @@
           <v-image :path="logo" alt="logo" class="cursor-pointer logo" />
         </NuxtLink>
         <nav class="header-menu" :class="{ show }">
-          <a
+          <NuxtLink
             v-for="item in menuItems"
             :key="item.name"
-            :href="item.link"
+            :to="item.link"
             :target="item.external ? '__blank' : ''"
             class="header-menu-item"
             :class="{
               'active-link':
-                !item.external && item.link === `/${currentLocation}/`,
+                (!item.external && item.link === `/${currentLocation}/`) ||
+                (item.link === '/' && currentLocation === 'index'),
             }"
           >
             <v-text :weight="600" font="sans" color="primary">
               {{ item.name }}
             </v-text>
-          </a>
+          </NuxtLink>
         </nav>
         <v-stack gap="3vw">
           <v-button
@@ -95,6 +96,7 @@ export default {
 
 header {
   padding: 1.5rem 0;
+  z-index: 10000;
 }
 
 .header-menu-item {

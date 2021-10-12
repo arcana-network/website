@@ -60,6 +60,7 @@ section {
 
 .publication-container {
   background: #080808;
+  padding: 4rem 0;
 }
 
 .publication-description-container {
