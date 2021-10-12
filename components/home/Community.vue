@@ -103,8 +103,12 @@
               label="submit"
               label-transform="uppercase"
               style="margin-top: 3rem; width: 12rem"
+              :action="submitProvider"
             />
           </v-stack>
+          <v-text class="subscription-message" :class="{ success }">
+            {{ message }}
+          </v-text>
         </v-stack>
         <v-image path="images/provide-illustration.png" class="illustration" />
       </v-stack>
@@ -113,6 +117,8 @@
 </template>
 
 <script>
+import { subscribe } from '~/services/mailchimp'
+
 export default {
   name: 'Community',
   data() {
@@ -124,7 +130,44 @@ export default {
       },
       location: '',
       email: '',
+      success: true,
+      message: '',
     }
+  },
+  methods: {
+    async submitProvider() {
+      if (this.email.trim() && this.providerType && this.location) {
+        this.success = true
+        this.message = 'Submitting...'
+        try {
+          const data = {
+            email: this.email,
+            groups: ['Provider', 'Newsletter'],
+            providerType: this.providerType,
+            location: this.location,
+          }
+          if (this.providerType === 'Storage Provider') {
+            data.providerType = 'Storage'
+            data.storage = {
+              capacity: this.capacity.value,
+              unit: this.capacity.unit,
+            }
+          }
+          await subscribe(data)
+          this.message = 'Thank you for subscribing!'
+        } catch (e) {
+          this.success = false
+          if (/subscribed/.test(e)) {
+            this.message = 'Already Subscribed'
+          } else if (/0 - /.test(e)) {
+            this.message = 'Invalid email'
+          }
+        }
+      } else {
+        this.success = false
+        this.message = 'Enter all details to continue'
+      }
+    },
   },
 }
 </script>
@@ -154,5 +197,14 @@ section {
     width: 100%;
     max-width: 420px;
   }
+}
+
+.subscription-message {
+  margin: 1rem;
+  color: var(--color-orange);
+}
+
+.subscription-message.success {
+  color: var(--color-white);
 }
 </style>

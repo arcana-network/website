@@ -52,8 +52,12 @@
               label="Sign up"
               label-transform="uppercase"
               class="sign-up-btn"
+              :action="subscribeNewsletter"
             />
           </v-input-group>
+          <v-text class="subscription-message" :class="{ success }">
+            {{ message }}
+          </v-text>
         </v-stack>
       </v-stack>
     </v-container>
@@ -61,12 +65,41 @@
 </template>
 
 <script>
+import { subscribe } from '~/services/mailchimp'
+
 export default {
   name: 'Newsletter',
   data() {
     return {
       newsletterEmail: '',
+      success: true,
+      message: '',
     }
+  },
+  methods: {
+    async subscribeNewsletter() {
+      if (this.newsletterEmail.trim()) {
+        this.success = true
+        this.message = 'Submitting...'
+        try {
+          await subscribe({
+            email: this.newsletterEmail,
+            groups: ['Newsletter'],
+          })
+          this.message = 'Thank you for subscribing!'
+        } catch (e) {
+          this.success = false
+          if (/subscribed/.test(e)) {
+            this.message = 'Already Subscribed'
+          } else if (/0 - /.test(e)) {
+            this.message = 'Invalid email'
+          }
+        }
+      } else {
+        this.success = false
+        this.message = 'Enter email to continue'
+      }
+    },
   },
 }
 </script>
@@ -101,5 +134,14 @@ section {
   @media (--viewport-small) {
     max-width: 10rem;
   }
+}
+
+.subscription-message {
+  margin: 1rem;
+  color: var(--color-orange);
+}
+
+.subscription-message.success {
+  color: var(--color-white);
 }
 </style>
