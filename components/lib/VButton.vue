@@ -100,21 +100,19 @@ a {
   border-radius: 4px;
   background: none;
   white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 /* Primary Button Styles */
 button {
   background: linear-gradient(0deg, #0085ff 0%, #29c8fa 100%);
   color: var(--color-white);
-  transition: all 0.5s;
 }
 button:disabled {
   background: linear-gradient(180deg, #2b2b2b -4.5%, #4e4e4e 100.1%);
   color: var(--color-grey);
   cursor: not-allowed;
-}
-button:hover:not(:disabled) {
-  background: linear-gradient(180deg, #0088b3 -3.41%, #00519c 100.1%);
 }
 
 /* Link styles */
@@ -124,14 +122,17 @@ a {
   min-width: 0;
   text-decoration: none;
 }
-a:not([disabled='true']):hover {
-  color: #00519c;
-}
 a:not([disabled='true']):active {
   transform: scale(0.99);
 }
 a[disabled='true'] {
   cursor: not-allowed;
   color: #8d8d8d;
+}
+
+/* Hover styles */
+button:hover:not(:disabled),
+a:not([disabled='true']):hover {
+  opacity: 0.8;
 }
 </style>
