@@ -15,7 +15,10 @@
         @mouseenter="showDesc"
         @mouseleave="hideDesc"
       />
-      <div class="investor-description" :class="{ show: showDescription }">
+      <div
+        class="investor-description"
+        :class="{ show: showDescription, expand: isExpanded }"
+      >
         {{ investor.description }}
       </div>
     </div>
@@ -39,7 +42,7 @@
         </v-text>
       </div>
       <v-image
-        class="laptop-remove investor-expansion-icon"
+        class="laptop-remove tablet-remove mobile-show investor-expansion-icon"
         :class="{ expanded: isExpanded }"
         path="icons/arrow-down.svg"
         @click.stop="toggleInvestorImage"
@@ -102,6 +105,7 @@ export default {
   transition: visibility 0.1s, opacity 0.6s;
   font-weight: 500;
   font-family: var(--font-serif);
+  line-height: 1.5rem;
   width: 16rem;
   left: -4rem;
   top: calc(100% + 0.5rem);
@@ -120,6 +124,13 @@ export default {
 .investor-description.show {
   visibility: visible;
   opacity: 1;
+}
+
+.investor-description.expand {
+  @media (--viewport-small) {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .investor-image {

@@ -8,7 +8,7 @@
   --color-orange: #ff6826;
   --font-sans: 'Montserrat', sans-serif;
   --font-serif: 'Sora', sans-serif;
-  --dark-theme-bg: #181818;
+  --dark-theme-bg: #333;
 }
 
 /* Custom Scrollbar for all elements */
@@ -39,7 +39,12 @@
 }
 
 body {
-  background-color: var(--dark-theme-bg);
+  background: var(--dark-theme-bg)
+    radial-gradient(
+      967.28% 288.75% at -2.92% 117.8%,
+      #060606 0%,
+      rgba(18, 18, 18, 0.7) 100%
+    );
   overflow-x: hidden;
 }
 

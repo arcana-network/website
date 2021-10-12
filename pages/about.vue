@@ -1,19 +1,17 @@
 <template>
   <main>
-    <AppHeader />
     <AboutOurPrinciples />
     <AboutOurTeam />
     <AboutOurInvestors />
-    <!-- <HomeNewsAndMedia />  -->
+    <HomeNewsAndMedia />
     <AboutOurCulture />
-    <!-- <TechJoinUs /> -->
-    <AppFooter />
-    <AppCopyright />
+    <TechJoinUs />
   </main>
 </template>
 
 <script>
 export default {
+  layout: 'page',
   head() {
     return {
       title: 'About Us - Arcana Network',
@@ -27,13 +25,18 @@ export default {
 
 main {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-main > * + *:not(:last-child) {
-  margin: 6rem 0;
+main > * {
+  margin-top: 6rem;
+
+  @media (--viewport-medium) {
+    margin-top: 4rem;
+  }
 
   @media (--viewport-small) {
-    margin: 3rem 0;
+    margin-top: 2rem;
   }
 }
 </style>

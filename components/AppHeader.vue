@@ -11,31 +11,38 @@ export default {
   name: 'AppHeader',
   data() {
     return {
-      headerCta: {},
+      headerCta: {
+        label: 'Technical Paper',
+        action: this.openTechnicalPaper,
+      },
       menuItems: [
         {
+          name: 'Home',
+          link: '/',
+        },
+        {
           name: 'Technology',
-          link: '/tech',
+          link: '/tech/',
         },
         {
           name: 'About',
-          link: '/about',
+          link: '/about/',
         },
-        {
-          name: 'Docs',
-          link: 'https://docs.arcana.network',
-          external: true,
-        },
+        // {
+        //   name: 'Docs',
+        //   link: 'https://docs.arcana.network',
+        //   external: true,
+        // },
       ],
     }
   },
-  created() {
-    this.headerCta = {
-      label: 'Log In',
-      action() {
-        alert('Login clicked')
-      },
-    }
+  methods: {
+    openTechnicalPaper() {
+      window.open(
+        'https://www.notion.so/Arcana-Technical-Docs-a1d7fd0d2970452586c693e4fee14d08',
+        '_blank'
+      )
+    },
   },
 }
 </script>
