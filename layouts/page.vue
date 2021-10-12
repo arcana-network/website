@@ -1,12 +1,10 @@
 <template>
-  <app-launch-countdown>
-    <div class="app">
-      <AppHeader />
-      <Nuxt />
-      <AppFooter class="footer" />
-      <AppCopyright />
-    </div>
-  </app-launch-countdown>
+  <div class="app">
+    <AppHeader />
+    <Nuxt />
+    <AppFooter class="footer" />
+    <AppCopyright />
+  </div>
 </template>
 
 <style scoped>
