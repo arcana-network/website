@@ -41,6 +41,7 @@
 body {
   background-color: var(--dark-theme-bg);
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .color-primary {
