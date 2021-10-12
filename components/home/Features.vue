@@ -109,13 +109,15 @@ section {
 }
 
 .features-illustration {
+  max-width: 30rem;
+
   @media (--viewport-large) {
+    max-width: 36rem;
     margin: -10% -20% 0 2rem;
   }
 
   @media (--viewport-medium) {
     width: 100%;
-    max-width: 30rem;
     margin: 2rem 0;
   }
 }
