@@ -4,7 +4,7 @@
       <v-stack justify="space-between">
         <app-section-descriptor
           title="Our team"
-          heading="The builders behind Arcana"
+          heading="The Builders Behind Arcana"
         />
       </v-stack>
       <v-stack
