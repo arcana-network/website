@@ -11,52 +11,39 @@
       >
         <v-image path="images/arcana-logo-vertical.svg" />
         <v-text
-          class="uppercase"
+          class="launch-text uppercase"
           font="sans"
           :weight="700"
-          size="2.625rem"
-          line-height="1em"
           gradient="linear-gradient(180deg, #47E7FF 0%, #14A7F0 100%)"
         >
           Launching website in
         </v-text>
         <v-text
-          class="tabular-nums uppercase"
+          class="count-text tabular-nums uppercase"
           font="sans"
           :weight="700"
-          size="10.635rem"
-          line-height="120px"
           gradient="linear-gradient(180deg, #47E7FF 0%, #14A7F0 100%)"
         >
           {{ String(remainingHours).padStart(2, '0')
           }}<v-text
-            class="uppercase"
+            class="unit-text uppercase"
             font="sans"
             :weight="700"
-            size="1.25rem"
-            line-height="100px"
             gradient="linear-gradient(180deg, #47E7FF 0%, #14A7F0 100%)"
           >
             hrs
           </v-text>
           {{ String(remainingMinutes).padStart(2, '0')
           }}<v-text
-            class="uppercase"
+            class="unit-text uppercase"
             font="sans"
             :weight="700"
-            size="1.25rem"
-            line-height="120px"
             gradient="linear-gradient(180deg, #47E7FF 0%, #14A7F0 100%)"
           >
             mins
           </v-text>
         </v-text>
-        <v-stack
-          align="center"
-          direction="column"
-          gap="0.25rem"
-          style="margin-top: 2rem"
-        >
+        <div class="instruction-text" style="margin-top: 2rem">
           <v-text font="sans" line-height="1.5rem" :weight="700" size="1rem">
             Until launch, the website is encrypted.
           </v-text>
@@ -69,7 +56,7 @@
             BUT, if you can break the code and enter it below, you can gain
             access to the website before it goes live.
           </v-text>
-        </v-stack>
+        </div>
 
         <v-input-group :class="{ shakeX: incorrectPasswordEntered }">
           <input
@@ -201,6 +188,46 @@ export default {
   background: url('~assets/images/launch-countdown-background.png');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.launch-text {
+  font-size: 2.625rem;
+  line-height: 1em;
+
+  @media (--viewport-small) {
+    font-size: 1.3125rem;
+  }
+}
+
+.count-text {
+  font-size: 10.625rem;
+  line-height: 1em;
+
+  @media (--viewport-small) {
+    font-size: 5rem;
+  }
+}
+
+.unit-text {
+  font-size: 1.25rem;
+  line-height: 1em;
+
+  @media (--viewport-small) {
+    font-size: 0.875rem;
+  }
+}
+
+.instruction-text {
+  text-align: center;
+
+  @media (--viewport-small) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.instruction-text > * {
+  display: block;
 }
 
 .countdown-footer {
