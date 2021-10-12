@@ -4,7 +4,7 @@
       <v-stack direction="column" align="start">
         <app-section-descriptor
           title="Arcana’s Privacy Stack"
-          heading="Four Decentralized Services To Secure Your Apps. Four Less Reasons Not To Worry"
+          heading="Four Decentralized Services To Secure Your Apps. Four Less Reasons To Worry"
           description="Users care about Privacy and Security, set your app apart with the most developer friendly data storage and privacy platform. Takes minutes to integrate."
           style="max-width: 64rem"
         />
@@ -18,14 +18,17 @@
         <v-image
           path="images/features-illustration.png"
           class="features-illustration laptop-remove"
+          style="margin: 1rem auto"
         />
       </v-stack>
       <v-stack justify="space-between" md-direction="column" md-align="center">
         <v-stack direction="column" class="features-description-container">
           <v-stack
             sm-direction="column"
-            justify="space-between"
+            md-justify="center"
+            gap="3rem"
             class="blurb-container"
+            wrap
           >
             <v-blurb
               title="Decentralised Storage"
@@ -48,8 +51,10 @@
           </v-stack>
           <v-stack
             sm-direction="column"
-            justify="space-between"
+            md-justify="center"
+            gap="3rem"
             class="blurb-container"
+            wrap
           >
             <v-blurb
               title="Identity and Access Management"
@@ -74,6 +79,7 @@
         <v-image
           path="images/features-illustration.png"
           class="features-illustration tablet-remove"
+          style="align-self: start"
         />
       </v-stack>
     </v-container>
@@ -104,7 +110,7 @@ section {
 
 .features-illustration {
   @media (--viewport-large) {
-    margin: -10% -20% 0 12.5%;
+    margin: -10% -20% 0 2rem;
   }
 
   @media (--viewport-medium) {
@@ -141,6 +147,7 @@ section {
 
 .blurb {
   max-width: 24rem;
+  min-width: 12rem;
 }
 
 .blurb img {

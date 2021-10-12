@@ -28,6 +28,12 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
+section {
+  @media (--viewport-small) {
+    margin-top: 0 !important;
+  }
+}
+
 .principles-illustration {
   width: 100%;
   max-width: 28rem;

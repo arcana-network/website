@@ -1,11 +1,7 @@
 <template>
   <section>
     <v-container>
-      <v-carousel
-        :current-slide="currentSlide"
-        :transition-name="transitionName"
-        class="carousel-container"
-      >
+      <v-carousel class="carousel-container">
         <div
           v-for="(slide, index) in slides"
           :key="'testimonial-carousel-' + index"
@@ -40,28 +36,26 @@ export default {
   name: 'Testimonials',
   data() {
     return {
-      currentSlide: 0,
-      transitionName: 'next',
       slides: [
         {
           quote:
             'We’ve always been intensely focused on enabling our partners and customers to improve business outcomes. The addition of Arcana’s Security and Privacy will complement our mission of decentralizing our network.',
-          quotedBy: 'Ram Sharma',
-          designation: 'CEO and Co-Founder',
+          quotedBy: 'Manohar K',
+          designation: 'CEO of Unmarshal',
           companyLogo: 'images/testimonials/unmarshal.png',
         },
         {
           quote:
             'We are very excited to start working with Arcana Network to improve the developer experience of the crowd building the DIA ecosystem by offering a number of privacy and security features to our tech stack.',
-          quotedBy: 'Dia',
-          designation: 'CEO and Co-Founder',
+          quotedBy: 'Michael Weber',
+          designation: 'DIA Association President',
           companyLogo: 'images/testimonials/dia.png',
         },
         {
           quote:
             'Partnerships are all about pushing the boundaries on innovating for the customer through our products. Our partnership with Arcana will help us deliver exactly that while we explore new and innovative ways to deploy and bring robust scalability and privacy to our technology stack and eventually the RageFan users and community.',
-          quotedBy: 'Rage.fan',
-          designation: 'CEO and Co-Founder',
+          quotedBy: 'Satheesh Ananth',
+          designation: 'Founder & CEO - Rage.Fan',
           companyLogo: 'images/testimonials/rage-fan.png',
         },
       ],

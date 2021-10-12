@@ -8,7 +8,7 @@
           style="max-width: 40rem"
         />
         <app-section-descriptor
-          description="Everyone of these great investors are well known and well respected in their own right. Through us, they’re helping shape the world like the way they envision it should be. "
+          description="Every one of these great investors are well known and well respected in their own right. Through us, they’re helping shape the world like the way they envision it should be. "
           style="max-width: 60rem"
         />
         <v-button
@@ -29,14 +29,14 @@
           <about-investor :investor="investor" />
         </div>
       </v-stack>
-      <v-stack
+      <!-- <v-stack
         justify="space-between"
         class="other-investors"
         :class="{ expanded: isInvestorsExpanded }"
         wrap
       >
         <div
-          v-for="investor in initialInvestors"
+          v-for="investor in otherInvestors"
           :key="investor.name"
           class="investor-blurb"
         >
@@ -56,7 +56,7 @@
           label-transform="uppercase"
           :action="expandInvestors"
         />
-      </v-stack>
+      </v-stack> -->
     </v-container>
   </section>
 </template>
@@ -142,6 +142,15 @@ export default {
           description:
             'Aniket Jindal is the co-founder and COO of Biconomy. His diverse background and work experiences span across multiple companies, including Polygon, WeStart, Nucleus Vision, and Binance. ',
         },
+        {
+          image: 'images/arcanum.png',
+          name: 'Arcanum Capital',
+          description:
+            'Arcanum Capital is a US-based seed-stage venture capital firm that’s focused on empowering enterprises and teams working in decentralized applications and networks. Arcanum has been active in the Indian blockchain space since 2013.',
+        },
+      ],
+
+      otherInvestors: [
         {
           image: 'images/arcanum.png',
           name: 'Arcanum Capital',

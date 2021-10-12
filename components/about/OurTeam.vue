@@ -78,23 +78,24 @@ export default {
       ],
       members: [
         {
-          name: 'Ajith',
-          designation: 'Front End Developer',
-          image: 'Ajith',
-          links: {
-            linkedin: 'https://www.linkedin.com/in/ajithranka/',
-            twitter: 'https://twitter.com/ajithranka',
-            github: 'https://github.com/ajithranka',
-          },
+          name: 'Narendran',
+          designation: 'Pricinpal Engineer',
+          image: 'Naren',
+          links: {},
         },
         {
-          name: 'Lakshmikanth',
-          designation: 'DevOps',
-          image: 'Lakshmikanth',
+          name: 'Sharan',
+          designation: 'Head of Design',
+          image: 'Sharan',
+          links: {},
+        },
+        {
+          name: 'Anirudh',
+          designation: 'Product Manager',
+          image: 'Anirudh',
           links: {
-            linkedin: 'linkedin.com/in/lakshmikanth-bharathi-2a4754b8',
-            twitter: 'https://twitter.com/LakshmikanthBh8',
-            github: 'https://github.com/lakshmikanth-tesla',
+            linkedin: 'https://www.linkedin.com/in/anirudh-venu-174121120/',
+            twitter: 'https://twitter.com/anirvenu',
           },
         },
         {
@@ -117,6 +118,26 @@ export default {
           },
         },
         {
+          name: 'Ajith',
+          designation: 'Front End Developer',
+          image: 'Ajith',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/ajithranka/',
+            twitter: 'https://twitter.com/ajithranka',
+            github: 'https://github.com/ajithranka',
+          },
+        },
+        {
+          name: 'Lakshmikanth',
+          designation: 'DevOps',
+          image: 'Lakshmikanth',
+          links: {
+            linkedin: 'linkedin.com/in/lakshmikanth-bharathi-2a4754b8',
+            twitter: 'https://twitter.com/LakshmikanthBh8',
+            github: 'https://github.com/lakshmikanth-tesla',
+          },
+        },
+        {
           name: 'Jobin',
           designation: 'Blockchain Developer Evangelist',
           image: 'Jobin',
@@ -136,12 +157,6 @@ export default {
           },
         },
         {
-          name: 'Narendran',
-          designation: 'Pricinpal Engineer',
-          image: 'moon',
-          links: {},
-        },
-        {
           name: 'Naga Pramod',
           designation: 'Content Strategist',
           image: 'Naga',
@@ -149,22 +164,6 @@ export default {
             linkedin: 'https://www.linkedin.com/in/naga-pramod/',
             twitter: 'https://twitter.com/dnagapramod',
           },
-        },
-        {
-          name: 'Rohith',
-          designation: 'Intern',
-          image: 'Rohith',
-          links: {
-            linkedin: 'https://www.linkedin.com/in/rohith-narahari-40211818b/',
-            twitter: 'https://twitter.com/mr_deadpool_93',
-            github: 'https://github.com/naraharirohith',
-          },
-        },
-        {
-          name: 'Sharan',
-          designation: 'Head of Design',
-          image: 'Sharan',
-          links: {},
         },
         {
           name: 'Arush',
@@ -184,12 +183,13 @@ export default {
           },
         },
         {
-          name: 'Anirudh',
-          designation: 'Product Manager',
-          image: 'Anirudh',
+          name: 'Rohith',
+          designation: 'Intern',
+          image: 'Rohith',
           links: {
-            linkedin: 'https://www.linkedin.com/in/anirudh-venu-174121120/',
-            twitter: 'https://twitter.com/anirvenu',
+            linkedin: 'https://www.linkedin.com/in/rohith-narahari-40211818b/',
+            twitter: 'https://twitter.com/mr_deadpool_93',
+            github: 'https://github.com/naraharirohith',
           },
         },
       ],

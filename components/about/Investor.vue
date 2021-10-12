@@ -16,6 +16,7 @@
         @mouseleave="hideDesc"
       />
       <div
+        v-if="investor.description"
         class="investor-description"
         :class="{ show: showDescription, expand: isExpanded }"
       >

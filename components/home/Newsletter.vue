@@ -15,8 +15,7 @@
             <v-text
               font="sans"
               :weight="700"
-              size="6rem"
-              line-height="8rem"
+              size="6.4rem"
               gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
             >
               1000’s
@@ -25,8 +24,8 @@
             <v-text
               font="sans"
               :weight="700"
-              size="2.5rem"
-              line-height="3.25rem"
+              size="2.24rem"
+              line-height="4rem"
               transform="uppercase"
               gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
               style="white-space: nowrap"
