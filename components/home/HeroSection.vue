@@ -54,6 +54,7 @@ section {
 
   @media (--viewport-small) {
     padding: 0;
+    margin-top: 0 !important;
   }
 }
 
