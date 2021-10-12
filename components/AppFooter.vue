@@ -100,6 +100,7 @@ export default {
 footer {
   background: url('~assets/images/footer_bg.svg') no-repeat;
   background-size: cover;
+  overflow-x: hidden;
 
   @media (--viewport-small) {
     background: url('~assets/images/footer_bg_mobile.svg') no-repeat;

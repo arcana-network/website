@@ -18,7 +18,7 @@
         class="coverage"
         align="center"
         gap="1rem"
-        md-gap="3rem"
+        md-gap="0.5rem"
         wrap
         justify="space-between"
         sm-justify="center"
@@ -77,6 +77,10 @@ section {
 .coverage > a > * {
   min-width: 10rem;
   padding: 1.5rem;
+
+  @media (--viewport-small) {
+    padding: 0;
+  }
 }
 
 a {
