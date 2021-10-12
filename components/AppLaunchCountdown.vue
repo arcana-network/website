@@ -260,6 +260,7 @@ export default {
 .launch-text {
   font-size: 2.625rem;
   line-height: 1em;
+  letter-spacing: 0.1ch;
 
   @media (--viewport-small) {
     font-size: 1.3125rem;
