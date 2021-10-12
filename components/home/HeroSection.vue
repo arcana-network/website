@@ -31,8 +31,8 @@
             </v-stack>
           </v-stack>
         </v-stack>
-        <div class="position-relative section-orbs">
-          <v-image path="images/hero-section-orbs.svg" />
+        <div class="section-orbs">
+          <art-node-grid />
         </div>
       </v-stack>
     </v-container>
@@ -57,15 +57,8 @@ section {
 }
 
 .section-orbs {
-  @media (--viewport-large) {
-    margin-right: -21%;
-  }
-}
-
-.section-orbs > * {
-  @media (--viewport-medium) {
-    width: 100%;
-  }
+  max-width: 800px;
+  width: 100%;
 }
 
 .support-icons a {
