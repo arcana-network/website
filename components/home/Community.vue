@@ -8,7 +8,7 @@
           style="max-width: 28rem"
         />
         <app-section-descriptor
-          description="We’re growing fast and need your help make our eco-system stronger."
+          description="We’re growing fast and need your help to make our eco-system stronger."
         />
         <app-section-descriptor
           description="If you’re technically inclined, take a look at the ways you can get involved below."
