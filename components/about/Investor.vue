@@ -161,6 +161,14 @@ export default {
 
 .investor-details {
   max-width: 10rem;
+
+  @media (--viewport-medium) {
+    text-align: center;
+  }
+
+  @media (--viewport-small) {
+    text-align: unset !important;
+  }
 }
 
 .investor-name {
@@ -171,6 +179,11 @@ export default {
   @media (--viewport-medium) {
     font-size: 1.2rem;
     line-height: 1.325rem;
+    text-align: center;
+  }
+
+  @media (--viewport-small) {
+    text-align: unset !important;
   }
 }
 
@@ -182,6 +195,11 @@ export default {
   @media (--viewport-medium) {
     font-size: 1rem;
     line-height: 1.25rem;
+    text-align: center;
+  }
+
+  @media (--viewport-small) {
+    text-align: unset !important;
   }
 }
 
