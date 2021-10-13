@@ -81,10 +81,8 @@ export default {
             'Digital Currency Group is a New York based venture capital firm that invests in Bitcoin and blockchain companies by leveraging its network, capital, and insights.',
         },
         {
-          image: 'images/investors/ld-capital.png',
-          name: 'LD Capital',
-          description:
-            'LD Capital is one of the most prominent investment firms based out of China that exclusively focuses on securities, equity investment and trading, and blockchain investment. LD Capital has a track record of investing in more than 200 companies.',
+          image: 'images/investors/hyperedge.png',
+          name: 'Hyperedge',
         },
         {
           image: 'images/investors/shl.png',
@@ -99,16 +97,23 @@ export default {
             'Fenbushi Capital is one of the most active blockchain-centered venture capital firms in the whole of Asia. Founded in 2015 by blockchain and traditional finance veterans, Fenbushi Capital has so far supported over 60 projects in the blockchain space.',
         },
         {
-          image: 'images/investors/paradigm-shift.png',
-          name: 'Paradigm Shift VC',
+          image: 'images/investors/ld-capital.png',
+          name: 'LD Capital',
           description:
-            'Paradigm Shift Capital is a venture capital and private equity firm that exclusively works with startups based out of India and the Silicon Valley.',
+            'LD Capital is one of the most prominent investment firms based out of China that exclusively focuses on securities, equity investment and trading, and blockchain investment. LD Capital has a track record of investing in more than 200 companies.',
         },
+
         {
           image: 'images/investors/arcanum.png',
           name: 'Arcanum Capital',
           description:
             'Arcanum Capital is a US-based seed-stage venture capital firm that’s focused on empowering enterprises and teams working in decentralized applications and networks. Arcanum has been active in the Indian blockchain space since 2013.',
+        },
+        {
+          image: 'images/investors/paradigm-shift.png',
+          name: 'Paradigm Shift VC',
+          description:
+            'Paradigm Shift Capital is a venture capital and private equity firm that exclusively works with startups based out of India and the Silicon Valley.',
         },
         {
           image: 'images/investors/au21.png',
@@ -117,18 +122,16 @@ export default {
             'AU21 Capital is a venture capital firm based out of San Francisco that backs promising entrepreneurs in the Blockchain space. It was founded in 2017 by Chandler Guo, co-founder of Gate.io and Kenzi Wang, former VP and GM at Huobi Global. ',
         },
         {
+          image: 'images/investors/ganesh.png',
+          name: 'Ganesh Swami',
+          designation: 'CEO, Covalent',
+        },
+        {
           image: 'images/investors/balaji-s.png',
           name: 'Balaji. S',
           designation: 'Ex-CTO, Coinbase',
           description:
             'Balaji Srinivasan is an entrepreneur and angel investor who has co-founded Earn.com, Counsyl, Teleport, and Coin Center. He also served as the former CTO of Coinbase and General Partner at Andreessen Horowitz. ',
-        },
-        {
-          image: 'images/investors/sandeep-n.png',
-          name: 'Sandeep. N',
-          designation: 'Co-Founder, Polygon',
-          description:
-            'Sandeep Nailwal co-founded Polygon (formerly Matic), and is currently serving as its Chief Operations Officer (COO). He has also founded a community-run fund called “Crypto Relief” to deliver COVID-19 relief in India. ',
         },
         {
           image: 'images/investors/jd-kanani.png',
@@ -145,12 +148,6 @@ export default {
             'Santiago Santos is a de-fi investor who currently serves as the Advisor at Synthetix, a derivatives liquidity protocol. He is a former partner at ParaFi Capital and Director of Research and Growth at Elysium Health. ',
         },
         {
-          image: 'images/investors/kenetic.png',
-          name: 'Kenetic Capital',
-          description:
-            'Kenetic Capital is a Hong Kong-based venture capital firm that invests in digital assets and blockchain startups and companies. It was founded in 2016 by Jehan Chu and Lawrence Chu. ',
-        },
-        {
           image: 'images/investors/john-lilic.png',
           name: 'John Lilic',
           designation: 'Ex ConsenSys',
@@ -160,6 +157,19 @@ export default {
       ],
 
       otherInvestors: [
+        {
+          image: 'images/investors/kenetic.png',
+          name: 'Kenetic Capital',
+          description:
+            'Kenetic Capital is a Hong Kong-based venture capital firm that invests in digital assets and blockchain startups and companies. It was founded in 2016 by Jehan Chu and Lawrence Chu. ',
+        },
+        {
+          image: 'images/investors/sandeep-n.png',
+          name: 'Sandeep. N',
+          designation: 'Co-Founder, Polygon',
+          description:
+            'Sandeep Nailwal co-founded Polygon (formerly Matic), and is currently serving as its Chief Operations Officer (COO). He has also founded a community-run fund called “Crypto Relief” to deliver COVID-19 relief in India. ',
+        },
         {
           image: 'images/investors/kendrick-n.png',
           name: 'Kendrick. N',
@@ -201,15 +211,6 @@ export default {
           designation: 'Head of Institutional Business, Aave',
           description:
             'Ajit Tripathi is the Head of Institutional Business at Aave, one of the world’s leading DeFi liquidity protocols. Ajit’s focus lies on bridging the gap between financial institutions and crypto/internet ecosystems.',
-        },
-        {
-          image: 'images/investors/hyperedge.png',
-          name: 'Hyperedge',
-        },
-        {
-          image: 'images/investors/ganesh.png',
-          name: 'Ganesh Swami',
-          designation: 'CEO, Covalent',
         },
       ],
       isInvestorsExpanded: false,
