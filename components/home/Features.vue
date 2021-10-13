@@ -132,12 +132,16 @@ section {
 
 .blurb-container {
   margin-top: 2rem;
+
+  @media (max-width: 1423px) {
+    flex-direction: column;
+  }
 }
 
 .blurb-container > * + * {
   margin-left: 2rem;
 
-  @media (--viewport-small) {
+  @media (max-width: 1423px) {
     margin-left: 0;
     margin-top: 2rem;
   }
