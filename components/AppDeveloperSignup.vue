@@ -11,9 +11,9 @@
         style="text-align: center; margin-bottom: 3rem"
       >
         <v-image path="images/arcana-logo.svg" />
-        <v-text style="max-width: 360px">
-          We will be launching the Arcana Beta very soon. Please signup for
-          early access.
+        <v-text line-height="1.75rem" style="max-width: 400px">
+          We will be launching the Arcana Alpha Testnet very soon. Please signup
+          for early access.
         </v-text>
       </v-stack>
       <v-stack direction="column" gap="1.5rem" align="center">
@@ -49,11 +49,11 @@ export default {
   methods: {
     async signup() {
       if (this.email.trim()) {
-        this.success = true
+        this.success = false
         this.message = 'Submitting...'
         try {
           await subscribe({
-            email: this.newsletterEmail,
+            email: this.email.trim(),
             groups: ['Developer', 'Newsletter'],
           })
           this.message = 'Thank you for subscribing!'
@@ -63,6 +63,8 @@ export default {
             this.message = 'Already Subscribed'
           } else if (/0 - /.test(e)) {
             this.message = 'Invalid email'
+          } else {
+            this.message = 'Something went wrong'
           }
         }
       } else {
@@ -78,9 +80,9 @@ export default {
 .signup-container {
   width: 25%;
   max-width: 960px;
-  min-width: 320px;
+  min-width: 280px;
   border-radius: 10px;
-  background: #1a1a1a;
+  background: #1c1c1c;
   opacity: 0.95;
   padding: 3rem;
 }

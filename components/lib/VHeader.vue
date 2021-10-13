@@ -17,6 +17,7 @@
                 (!item.external && item.link === `/${currentLocation}/`) ||
                 (item.link === '/' && currentLocation === 'index'),
             }"
+            @click.native="closeMenu"
           >
             <v-text :weight="600" font="sans" color="primary">{{
               item.name
@@ -85,6 +86,12 @@ export default {
       this.show = !this.show
       setTimeout(() => {
         this.icon = this.show ? 'close' : 'menu'
+      }, 200)
+    },
+    closeMenu() {
+      this.show = false
+      setTimeout(() => {
+        this.icon = 'menu'
       }, 200)
     },
   },

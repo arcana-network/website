@@ -22,7 +22,7 @@
             label="View Blog"
             label-transform="uppercase"
             class="technical-paper-btn"
-            :action="openTechnicalPaper"
+            :action="openBlog"
           />
         </v-stack>
       </v-stack>
@@ -34,17 +34,14 @@
 export default {
   name: 'Publications',
   methods: {
-    openTechnicalPaper() {
-      window.open(
-        'https://www.notion.so/Arcana-Technical-Docs-a1d7fd0d2970452586c693e4fee14d08',
-        '_blank'
-      )
+    openBlog() {
+      window.open('https://medium.com/arcana-network-blog', '_blank')
     },
   },
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
 section {
@@ -56,6 +53,10 @@ section {
       rgba(255, 255, 255, 0.07) 47.35%,
       rgba(32, 32, 32, 0) 100%
     );
+
+  @media (--viewport-medium) {
+    margin-top: 1rem;
+  }
 }
 
 .publication-container {

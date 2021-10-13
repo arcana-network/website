@@ -94,15 +94,16 @@
       </v-stack>
       <div class="countdown-footer">
         <v-text font="serif" :weight="500" size="1rem" line-height="1.5em">
-          Crack the password, see the website before launch and share it with
-          the community on twitter. Don’t forget to tag us on
+          Crack the password, see the website before launch. Share a
+          screenshot/photo of the homepage with the community on twitter. Don’t
+          forget to tag us on
           <a
             class="twitter-link"
             href="https://twitter.com/ArcanaNetwork"
             target="_blank"
           >
-            @ArcanaNetwork </a
-          >.
+            @ArcanaNetwork</a
+          >. Top 3 most engaging tweets win $100 each.
         </v-text>
       </div>
     </div>

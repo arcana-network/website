@@ -36,7 +36,8 @@ section {
   padding: 6rem 0 0;
 
   @media (--viewport-small) {
-    padding: 3rem 0;
+    padding: 3rem 0 0;
+    margin-bottom: -4rem;
   }
 }
 
