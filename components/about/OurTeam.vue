@@ -210,6 +210,10 @@ export default {
 
 .member-container {
   margin: 1rem 0;
+
+  @media (--viewport-large) {
+    text-align: center;
+  }
 }
 
 .member-container > * {
