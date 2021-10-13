@@ -175,7 +175,7 @@ export default {
         {
           image: 'images/investors/siddharth-m.png',
           name: 'Siddharth. M',
-          designation: 'Co-Founder, WazirX Home',
+          designation: 'Co-Founder, WazirX',
           description:
             'Siddharth Menon is a serial entrepreneur, co-founder and COO of WazirX, India’s largest crypto exchange, which is now Binance. He has also co-founded ventures such as Crowdfire, Justmigrate, and 3CRUMBS in the past. ',
         },
