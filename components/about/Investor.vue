@@ -168,6 +168,7 @@ export default {
 
   @media (--viewport-small) {
     text-align: unset !important;
+    max-width: 100%;
   }
 }
 
