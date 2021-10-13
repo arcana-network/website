@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
 section {
@@ -53,6 +53,10 @@ section {
       rgba(255, 255, 255, 0.07) 47.35%,
       rgba(32, 32, 32, 0) 100%
     );
+
+  @media (--viewport-medium) {
+    margin-top: 1rem;
+  }
 }
 
 .publication-container {
