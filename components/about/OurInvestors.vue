@@ -70,7 +70,7 @@ export default {
         },
         {
           image: 'images/investors/hyperedge.png',
-          name: 'Hyperedge',
+          name: 'Hyperedge Capital',
         },
         {
           image: 'images/investors/shl.png',
