@@ -11,14 +11,6 @@
           description="Every one of these great investors are well known and well respected in their own right. Through us, they’re helping shape the world like the way they envision it should be. "
           style="max-width: 60rem"
         />
-        <v-button
-          v-if="currentPage !== 'about'"
-          type="link"
-          label="View all investors"
-          label-transform="uppercase"
-          style="margin-top: 2rem"
-          :action="goToInvestors"
-        />
       </v-stack>
       <v-stack wrap>
         <div
@@ -38,20 +30,16 @@
           <about-investor :investor="investor" />
         </div>
       </v-stack>
-      <!-- <v-stack
-        v-if="!isInvestorsExpanded"
-        align="center"
-        justify="center"
-        style="margin: 2rem 0"
-      >
+      <v-stack align="center" justify="center" style="margin: 2rem 0">
         <v-button
-          v-if="currentPage === 'about'"
+          v-if="currentPage !== 'about'"
           type="link"
-          label="View more"
+          label="View all investors"
           label-transform="uppercase"
-          :action="expandInvestors"
+          style="margin-top: 1rem"
+          :action="goToInvestors"
         />
-      </v-stack> -->
+      </v-stack>
     </v-container>
   </section>
 </template>
