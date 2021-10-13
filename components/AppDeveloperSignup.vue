@@ -49,7 +49,7 @@ export default {
   methods: {
     async signup() {
       if (this.email.trim()) {
-        this.success = false
+        this.success = true
         this.message = 'Submitting...'
         try {
           await subscribe({
