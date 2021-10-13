@@ -5,6 +5,13 @@
     <v-heading v-if="title" :level="4" :weight="600" class="blurb-title">
       {{ title }}
     </v-heading>
+    <div v-if="lineBreaks">
+      <div
+        v-for="lineBreak in lineBreaks"
+        :key="lineBreak"
+        style="margin-top: 1.4rem"
+      />
+    </div>
     <v-text
       v-if="description"
       font="serif"
@@ -36,6 +43,10 @@ export default {
     description: {
       type: String,
       default: null,
+    },
+    lineBreaks: {
+      type: Number,
+      default: 0,
     },
   },
 }

@@ -11,6 +11,7 @@
         justify="space-between"
         md-direction="column"
         class="member-container"
+        wrap
       >
         <div
           v-for="member in executiveMembers"
@@ -50,7 +51,7 @@ export default {
       executiveMembers: [
         {
           name: 'Mayur Relekar',
-          designation: 'CEO',
+          designation: 'Co-Founder and CEO',
           image: 'Mayur',
           links: {
             linkedin: 'https://www.linkedin.com/in/mayurrelekar/',
@@ -59,7 +60,7 @@ export default {
         },
         {
           name: 'Aravindh Kumar',
-          designation: 'Growth',
+          designation: 'Co-Founder, Growth and Partnerships',
           image: 'Aravindh',
           links: {
             linkedin: 'https://www.linkedin.com/in/aravindhkumar61',
@@ -75,14 +76,6 @@ export default {
             twitter: 'https://twitter.com/AjayShe59753410',
           },
         },
-      ],
-      members: [
-        {
-          name: 'Narendran',
-          designation: 'Pricinpal Engineer',
-          image: 'Naren',
-          links: {},
-        },
         {
           name: 'Sharan',
           designation: 'Head of Design',
@@ -90,13 +83,10 @@ export default {
           links: {},
         },
         {
-          name: 'Anirudh',
-          designation: 'Product Manager',
-          image: 'Anirudh',
-          links: {
-            linkedin: 'https://www.linkedin.com/in/anirudh-venu-174121120/',
-            twitter: 'https://twitter.com/anirvenu',
-          },
+          name: 'Narendran',
+          designation: 'Pricinpal Engineer',
+          image: 'Naren',
+          links: {},
         },
         {
           name: 'Abhishek',
@@ -105,6 +95,17 @@ export default {
           links: {
             linkedin: 'https://in.linkedin.com/in/makyl',
             github: 'https://github.com/makylfang',
+          },
+        },
+      ],
+      members: [
+        {
+          name: 'Anirudh',
+          designation: 'Product Manager',
+          image: 'Anirudh',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/anirudh-venu-174121120/',
+            twitter: 'https://twitter.com/anirvenu',
           },
         },
         {
@@ -209,6 +210,10 @@ export default {
 
 .member-container {
   margin: 1rem 0;
+
+  @media (--viewport-large) {
+    text-align: center;
+  }
 }
 
 .member-container > * {

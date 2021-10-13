@@ -108,7 +108,7 @@ export default {
   font-family: var(--font-serif);
   line-height: 1.5rem;
   width: 16rem;
-  left: -4rem;
+  left: -5rem;
   top: calc(100% + 0.5rem);
   border-radius: 10px;
   padding: 1rem;
@@ -118,7 +118,7 @@ export default {
   @media (--viewport-small) {
     left: 100%;
     top: 10%;
-    width: 10rem;
+    width: calc(100vw - 12rem);
   }
 }
 
@@ -137,6 +137,7 @@ export default {
 .investor-image {
   border-radius: 50%;
   cursor: pointer;
+  width: 8rem;
 
   @media (--viewport-small) {
     max-height: 0;
@@ -160,6 +161,15 @@ export default {
 
 .investor-details {
   max-width: 10rem;
+
+  @media (--viewport-medium) {
+    text-align: center;
+  }
+
+  @media (--viewport-small) {
+    text-align: unset !important;
+    max-width: 100%;
+  }
 }
 
 .investor-name {
@@ -170,6 +180,11 @@ export default {
   @media (--viewport-medium) {
     font-size: 1.2rem;
     line-height: 1.325rem;
+    text-align: center;
+  }
+
+  @media (--viewport-small) {
+    text-align: unset !important;
   }
 }
 
@@ -181,6 +196,11 @@ export default {
   @media (--viewport-medium) {
     font-size: 1rem;
     line-height: 1.25rem;
+    text-align: center;
+  }
+
+  @media (--viewport-small) {
+    text-align: unset !important;
   }
 }
 
