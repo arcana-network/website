@@ -11,8 +11,8 @@
         style="text-align: center; margin-bottom: 3rem"
       >
         <v-image path="images/arcana-logo.svg" />
-        <v-text style="max-width: 360px">
-          We will be launching the Arcana Beta very soon. Please signup for
+        <v-text style="max-width: 400px">
+          We will be launching the Arcana Alpha very soon. Please signup for
           early access.
         </v-text>
       </v-stack>
@@ -80,9 +80,9 @@ export default {
 .signup-container {
   width: 25%;
   max-width: 960px;
-  min-width: 320px;
+  min-width: 280px;
   border-radius: 10px;
-  background: #1a1a1a;
+  background: #1c1c1c;
   opacity: 0.95;
   padding: 3rem;
 }

@@ -51,7 +51,6 @@ img {
 .blurb-title {
   font-size: 1.125rem;
   line-height: 1.375rem;
-  max-width: 18rem;
 
   @media (--viewport-medium) {
     font-size: 1rem;
@@ -62,7 +61,6 @@ img {
 .blurb-description {
   font-size: 1rem;
   line-height: 1.25rem;
-  max-width: 18rem;
 
   @media (--viewport-medium) {
     font-size: 1rem;
