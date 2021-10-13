@@ -23,6 +23,15 @@
               item.name
             }}</v-text>
           </NuxtLink>
+          <a
+            v-if="cta.label"
+            class="laptop-remove header-menu-item"
+            @click.stop="onCTAClick"
+          >
+            <v-text :weight="600" font="sans" color="primary">{{
+              cta.label
+            }}</v-text>
+          </a>
         </nav>
         <v-stack gap="3vw">
           <v-button
@@ -94,6 +103,12 @@ export default {
         this.icon = 'menu'
       }, 200)
     },
+    onCTAClick() {
+      this.closeMenu()
+      if (this.cta?.action?.call) {
+        this.cta.action.call()
+      }
+    },
   },
 }
 </script>
@@ -109,6 +124,8 @@ header {
 .header-menu-item {
   text-decoration: none;
   padding: 0.75rem 2rem;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .header-menu-item:hover {
