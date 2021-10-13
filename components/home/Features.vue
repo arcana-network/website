@@ -67,6 +67,7 @@
             </v-blurb>
             <v-blurb
               title="Non-custodial Key Management"
+              :line-breaks="1"
               description="A big hurdle to cryptographic encryption has to do with public+private keys management. Our DKG and KMS simplifies it. The network handles keys that belong to the users and their data so you don’t have to."
               class="blurb"
             >
