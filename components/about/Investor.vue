@@ -118,7 +118,7 @@ export default {
   @media (--viewport-small) {
     left: 100%;
     top: 10%;
-    width: calc(100vw - 16rem);
+    width: calc(100vw - 12rem);
   }
 }
 
