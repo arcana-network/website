@@ -30,7 +30,7 @@
         </div>
       </v-stack>
       <v-stack
-        justify="space-between"
+        justify="space-around"
         class="other-investors"
         :class="{ expanded: isInvestorsExpanded }"
         wrap
