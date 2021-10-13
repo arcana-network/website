@@ -12,8 +12,8 @@
       >
         <v-image path="images/arcana-logo.svg" />
         <v-text line-height="1.75rem" style="max-width: 400px">
-          We will be launching the Arcana Alpha very soon. Please signup for
-          early access.
+          We will be launching the Arcana Alpha Testnet very soon. Please signup
+          for early access.
         </v-text>
       </v-stack>
       <v-stack direction="column" gap="1.5rem" align="center">
