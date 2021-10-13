@@ -108,7 +108,7 @@ export default {
   font-family: var(--font-serif);
   line-height: 1.5rem;
   width: 16rem;
-  left: -4rem;
+  left: -5rem;
   top: calc(100% + 0.5rem);
   border-radius: 10px;
   padding: 1rem;
