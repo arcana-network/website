@@ -11,7 +11,7 @@
         style="text-align: center; margin-bottom: 3rem"
       >
         <v-image path="images/arcana-logo.svg" />
-        <v-text style="max-width: 400px">
+        <v-text line-height="1.75rem" style="max-width: 400px">
           We will be launching the Arcana Alpha very soon. Please signup for
           early access.
         </v-text>
