@@ -57,8 +57,8 @@
             wrap
           >
             <v-blurb
-              title="Identity and Access Management"
-              description="Decentralised Identity and Access Controls are verifiable in a trust-less way and adhere to the W3C DID spec. You can rest easy knowing that your app will only allow verified users to access assets stored on the system."
+              title="Social Auth with Identity and Access Management"
+              description="Remove friction and allow users to signup/login with social auth and generate keys. Decentralised Identity and Access Controls are verifiable in a trust-less way and adhere to the W3C DID spec. You can rest easy knowing that your app will only allow verified users to access assets stored on the system."
               class="blurb"
             >
               <template #art>
@@ -66,8 +66,8 @@
               </template>
             </v-blurb>
             <v-blurb
-              title="Simple Keys Management"
-              description="A big hurdle to cryptographic encryption has to do with public+private keys management. We’ve made it simple by generating keys using authentications like email/password and popular Single Sign On’s (SSO’s)."
+              title="Non-custodial Key Management"
+              description="A big hurdle to cryptographic encryption has to do with public+private keys management. Our DKG and KMS simplifies it. The network handles keys that belong to the users and their data so you don’t have to."
               class="blurb"
             >
               <template #art>
