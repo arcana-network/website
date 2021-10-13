@@ -44,13 +44,7 @@
           />
           <v-image
             :path="`icons/${icon}.svg`"
-            class="
-              cursor-pointer
-              laptop-remove
-              tablet-remove
-              mobile-show
-              menu-icon
-            "
+            class="cursor-pointer laptop-remove menu-icon"
             :class="{ show }"
             @click="showClicked"
           />
@@ -123,7 +117,7 @@ header {
 
 .header-menu-item {
   text-decoration: none;
-  padding: 0.75rem 2rem;
+  padding: 0.5rem;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -145,17 +139,17 @@ header {
 
 @media (--viewport-large) {
   .header-menu > * + * {
-    margin-left: 1vw;
+    margin-left: 4vw;
   }
 }
 
 @media (--viewport-medium) {
   .header-menu > * + * {
-    margin-left: 1vw;
+    margin-left: 2vw;
   }
 }
 
-@media (--viewport-small) {
+@media (--viewport-medium) {
   .header-menu {
     position: fixed;
     max-height: 0;
