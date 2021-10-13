@@ -133,7 +133,7 @@ section {
 .blurb-container {
   margin-top: 2rem;
 
-  @media (max-width: 1423px) {
+  @media (max-width: 1439px) {
     flex-direction: column;
   }
 }
@@ -141,7 +141,7 @@ section {
 .blurb-container > * + * {
   margin-left: 2rem;
 
-  @media (max-width: 1423px) {
+  @media (max-width: 1439px) {
     margin-left: 0;
     margin-top: 2rem;
   }
