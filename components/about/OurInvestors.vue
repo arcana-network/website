@@ -101,7 +101,7 @@ export default {
           image: 'images/investors/paradigm-shift.png',
           name: 'Paradigm Shift VC',
           description:
-            'Paradigm Shift Capital is a venture capital and private equity firm that exclusively works with startups based out of India and the Silicon Valley.',
+            "India's first truly Global Venture Capital Firm. Backing Indian Founders building for Global Markets and disruptive innovation in the US. Web 2 + Web 3",
         },
         {
           image: 'images/investors/au21.png',
