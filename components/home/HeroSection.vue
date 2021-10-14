@@ -2,14 +2,15 @@
   <section>
     <v-container>
       <v-stack justify="space-between" md-direction="column" md-align="center">
-        <v-stack direction="column" style="max-width: 38rem">
-          <v-heading :level="1">
+        <v-stack direction="column">
+          <v-heading :level="1" style="max-width: 38rem">
             The Storage and Privacy Stack for Ethereum dApps
           </v-heading>
           <app-section-descriptor
             description="Decentralised storage, identity, access management and key
             management services to help developers build secure and
             privacy-preserving apps."
+            style="max-width: 38rem"
           />
           <v-stack
             md-direction="column"
@@ -30,8 +31,8 @@
               <a href="https://t.me/ArcanaNetwork" target="__blank">
                 <v-image path="images/telegram.svg" :dimension="[36, 36]" />
               </a>
-              <a href="https://discord.gg/w6ej4FtqYS" target="__blank">
-                <v-image path="images/discord.svg" :dimension="[36, 42]" />
+              <a href="https://twitter.com/arcananetwork" target="__blank">
+                <v-image path="images/twitter.png" :dimension="[36, 36]" />
               </a>
             </v-stack>
           </v-stack>
@@ -86,7 +87,14 @@ section {
   margin-left: 1.5rem;
 
   @media (--viewport-medium) {
+    margin-left: 0;
     margin-top: 1.5rem;
+  }
+}
+
+.support-icons > a + a {
+  @media (--viewport-medium) {
+    margin-left: 1.5rem;
   }
 }
 </style>
