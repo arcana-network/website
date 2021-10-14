@@ -77,10 +77,13 @@ export default {
           },
         },
         {
-          name: 'Sharan',
-          designation: 'Head of Design',
+          name: 'Sharan Grandigae',
+          designation: 'CDO',
           image: 'Sharan',
-          links: {},
+          links: {
+            linkedin: 'https://www.linkedin.com/in/sharangrandigae',
+            twitter: 'https://twitter.com/sharangrandigae',
+          },
         },
         {
           name: 'Narendran',
