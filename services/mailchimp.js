@@ -1,9 +1,9 @@
 import jsonp from 'jsonp'
 import queryString from 'query-string'
 
-const userId = 'c9473907136742316b62eebd9'
-const listId = '9c780f0e4e'
-const listUrl = 'https://network.us1.list-manage.com/subscribe/post-json'
+const userId = process.env.MAILCHIMP_USER_ID
+const listId = process.env.MAILCHIMP_LIST_ID
+const listUrl = process.env.MAILCHIMP_LIST_URL
 
 export function subscribe({ email, groups, providerType, storage, location }) {
   return new Promise((resolve, reject) => {

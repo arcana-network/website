@@ -1,6 +1,8 @@
 export default {
   target: 'static',
 
+  env: process.env, // Passed this so env variables can be accessible to vue components
+
   head: {
     title: 'Arcana Network',
     htmlAttrs: {
@@ -27,7 +29,15 @@ export default {
     '@nuxtjs/google-fonts',
   ],
 
-  modules: ['@nuxtjs/axios', '@nuxt/content'],
+  modules: ['@nuxtjs/axios', '@nuxt/content', '@nuxtjs/gtm'],
+
+  gtm: {
+    id: process.env.GTM_ID, // Passing actual GTM_ID
+    enabled: process.env.NODE_ENV !== 'development', // enable gtm init only on production
+    debug: process.env.NODE_ENV === 'development', // Activate debug logs in development mode
+    pageTracking: true,
+    pageViewEventName: 'page-view',
+  },
 
   axios: {},
 
