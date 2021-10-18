@@ -1,7 +1,7 @@
 export default {
   target: 'static',
 
-  env: process.env, // Passed this so env variables can be accessible to vue components
+  env: process.env,
 
   head: {
     title: 'Arcana Network',
@@ -32,9 +32,9 @@ export default {
   modules: ['@nuxtjs/axios', '@nuxt/content', '@nuxtjs/gtm'],
 
   gtm: {
-    id: process.env.GTM_ID, // Passing actual GTM_ID
-    enabled: process.env.NODE_ENV !== 'development', // enable gtm init only on production
-    debug: process.env.NODE_ENV === 'development', // Activate debug logs in development mode
+    id: process.env.GOOGLE_TAG_MANAGER_ID,
+    enabled: process.env.NODE_ENV === 'production',
+    debug: process.env.NODE_ENV === 'development',
     pageTracking: true,
     pageViewEventName: 'page-view',
   },
