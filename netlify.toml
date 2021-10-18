@@ -1,0 +1,6 @@
+[build]
+  command = "npm run generate"
+  publish = "dist"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
