@@ -5,6 +5,17 @@ const userId = process.env.MAILCHIMP_USER_ID
 const listId = process.env.MAILCHIMP_LIST_ID
 const listUrl = process.env.MAILCHIMP_LIST_URL
 
+export const groupTypes = Object.freeze({
+  DEVELOPER: 'Developer',
+  NEWSLETTER: 'Newsletter',
+  PROVIDER: 'Provider',
+})
+
+export const providerTypes = Object.freeze({
+  STORAGE_PROVIDER: 'Storage Provider',
+  VALIDATOR: 'Validator',
+})
+
 export function subscribe({ email, groups, providerType, storage, location }) {
   return new Promise((resolve, reject) => {
     const data = {
@@ -17,13 +28,13 @@ export function subscribe({ email, groups, providerType, storage, location }) {
       LOCATION: location,
     }
     if (groups instanceof Array) {
-      if (groups.includes('Newsletter')) {
+      if (groups.includes(groupTypes.NEWSLETTER)) {
         data['group[381006][2]'] = 2
       }
-      if (groups.includes('Developer')) {
+      if (groups.includes(groupTypes.DEVELOPER)) {
         data['group[381006][1]'] = 1
       }
-      if (groups.includes('Provider')) {
+      if (groups.includes(groupTypes.PROVIDER)) {
         data['group[381006][4]'] = 4
       }
     }
