@@ -90,7 +90,7 @@
             </template>
             <template #tab-1>
               <v-stack
-                align="center"
+                align="start"
                 sm-align="start"
                 direction="row"
                 sm-direction="column"
