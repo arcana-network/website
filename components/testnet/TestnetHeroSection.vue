@@ -56,6 +56,7 @@
         </v-stack>
       </v-stack>
     </v-container>
+    <div class="section-gradient mobile-remove" />
   </section>
 </template>
 
@@ -68,15 +69,22 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
+section {
+  position: relative;
+  min-height: calc((941 - 86) / 1440 * 100vw);
+
+  @media (--viewport-small) {
+    height: auto;
+  }
+}
+
 .hero-section-container {
   margin-top: 20vh;
-  min-height: calc((941 - 86) / 1440 * 100vw - 20vh);
   float: right;
 
   @media (--viewport-small) {
     margin-top: calc(((451 - 86) / 375) * 100vw + 10vh);
     margin-bottom: 10vh;
-    height: auto;
     float: none;
   }
 }
@@ -110,5 +118,14 @@ export default {
     font-size: 1.14rem;
     text-align: center;
   }
+}
+
+.section-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(0deg, #0f0908 22.92%, rgba(15, 9, 8, 0) 125%);
 }
 </style>
