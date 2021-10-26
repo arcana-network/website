@@ -3,6 +3,7 @@
     <TestnetHeader />
     <main>
       <TestnetHeroSection />
+      <TestnetOverview />
     </main>
     <TestnetFooter />
   </div>
