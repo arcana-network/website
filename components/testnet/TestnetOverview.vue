@@ -300,8 +300,8 @@ export default {
 
 .feature-capabilities-dos,
 .feature-capabilities-donts {
-  max-width: 35rem;
-  padding: 2rem;
+  max-width: 35rem !important;
+  padding: 2rem !important;
 
   @media (--viewport-small) {
     padding: inherit;
@@ -309,8 +309,6 @@ export default {
 }
 
 .feature-capabilities-dos {
-  max-width: none !important;
-
   @media (--viewport-small) {
     background: transparent !important;
     padding: 0 !important;
