@@ -309,6 +309,8 @@ export default {
 }
 
 .feature-capabilities-dos {
+  max-width: none !important;
+
   @media (--viewport-small) {
     background: transparent !important;
     padding: 0 !important;
