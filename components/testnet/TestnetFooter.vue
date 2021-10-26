@@ -15,13 +15,13 @@
         >
           Disclaimers
         </v-heading>
-        <v-text size="1.375rem" line-height="1.5">
+        <v-text class="footer-text" line-height="1.5" :weight="400">
           Participating in Arcana's Testnet: Quantum Descent does not constitute
           any guarantees of performance, reliability, or availability. Any loss
           arising from the use of our SDK will be the developer's sole
           responsibility.
         </v-text>
-        <v-text size="1.375rem" line-height="1.5">
+        <v-text class="footer-text" line-height="1.5" :weight="400">
           Arcana's Testnet is only meant for experimentation and not for running
           apps in production. We expect participating developers to cooperate in
           sharing logs, metrics, and other data related to bugs/feature
@@ -30,6 +30,8 @@
         <v-button
           type="link"
           label="Read more"
+          label-size="1.14rem"
+          label-weight="700"
           label-transform="uppercase"
           :action="openDisclaimers"
         />
@@ -79,6 +81,14 @@ footer {
 
   @media (--viewport-small) {
     font-size: 2.25rem;
+  }
+}
+
+.footer-text {
+  font-size: 1.375rem;
+
+  @media (--viewport-small) {
+    font-size: 1rem;
   }
 }
 </style>
