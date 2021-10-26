@@ -51,6 +51,7 @@ export default {
 
 .list {
   list-style: none;
+  padding-left: 10px;
 }
 
 .list-item {

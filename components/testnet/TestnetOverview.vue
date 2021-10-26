@@ -304,7 +304,7 @@ export default {
   padding: 2rem !important;
 
   @media (--viewport-small) {
-    padding: inherit;
+    padding: inherit !important;
   }
 }
 
