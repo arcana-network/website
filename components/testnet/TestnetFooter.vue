@@ -31,7 +31,7 @@
           type="link"
           label="Read more"
           label-size="1.14rem"
-          label-weight="700"
+          :label-weight="700"
           label-transform="uppercase"
           :action="openDisclaimers"
         />
