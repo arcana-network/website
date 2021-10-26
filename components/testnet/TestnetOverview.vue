@@ -310,8 +310,8 @@ export default {
 
 .feature-capabilities-dos {
   @media (--viewport-small) {
-    background: transparent;
-    padding: 0;
+    background: transparent !important;
+    padding: 0 !important;
   }
 }
 
