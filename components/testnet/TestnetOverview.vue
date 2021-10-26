@@ -85,7 +85,6 @@
                     />
                   </div>
                 </v-stack>
-                <div class="feature-overview-illustration full-bleed" />
               </v-stack>
             </template>
             <template #tab-1>
@@ -134,6 +133,8 @@
             </template>
           </v-tabs>
         </v-stack>
+
+        <div class="feature-overview-illustration full-bleed" />
       </v-stack>
     </v-container>
   </section>
