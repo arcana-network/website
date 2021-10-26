@@ -88,7 +88,50 @@
                 <div class="feature-overview-illustration full-bleed" />
               </v-stack>
             </template>
-            <template #tab-1>Capabilities contents</template>
+            <template #tab-1>
+              <v-stack
+                align="center"
+                sm-align="start"
+                direction="row"
+                sm-direction="column"
+                justify="center"
+                sm-justify="baseline"
+                gap="3.75rem"
+                sm-gap="3.75rem"
+                class="feature-capabilities"
+              >
+                <v-chip class="feature-capabilities-dos">
+                  <v-stack direction="column" gap="2.25rem">
+                    <v-heading
+                      class="feature-capabilities-heading"
+                      :level="3"
+                      line-height="1.2"
+                    >
+                      Do&rsquo;s
+                    </v-heading>
+                    <v-list
+                      :list-items="featureCapabilitiesDoItems"
+                      variant="positive"
+                    />
+                  </v-stack>
+                </v-chip>
+                <div class="feature-capabilities-donts">
+                  <v-stack direction="column" gap="2.25rem">
+                    <v-heading
+                      class="feature-capabilities-heading"
+                      :level="3"
+                      line-height="1.2"
+                    >
+                      Dont&rsquo;s
+                    </v-heading>
+                    <v-list
+                      :list-items="featureCapabilitiesDontItems"
+                      variant="negative"
+                    />
+                  </v-stack>
+                </div>
+              </v-stack>
+            </template>
           </v-tabs>
         </v-stack>
       </v-stack>
@@ -133,6 +176,25 @@ export default {
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         },
+      ],
+      featureCapabilitiesDoItems: [
+        { description: 'Create test accounts.' },
+        { description: 'Develop new Use Cases.' },
+        {
+          description:
+            'Test the integration / migration from existing infrastructure like IPFS and Metamask.',
+        },
+        { description: 'Test access control and data integrity.' },
+        { description: 'Report bugs and share feedback.' },
+      ],
+      featureCapabilitiesDontItems: [
+        { description: 'Performance and stress testing' },
+        { description: 'Testing high Availability or Reliability of nodes' },
+        {
+          description:
+            'Long term storage of data. The network might reset and also go through breaking changes or upgrades',
+        },
+        { description: 'Transfer of token assets.' },
       ],
     }
   },
@@ -228,6 +290,41 @@ export default {
 
   @media (--viewport-small) {
     height: 420px;
+  }
+}
+
+.feature-capabilities {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.feature-capabilities-dos,
+.feature-capabilities-donts {
+  max-width: 35rem;
+  padding: 2rem;
+
+  @media (--viewport-small) {
+    padding: inherit;
+  }
+}
+
+.feature-capabilities-dos {
+  @media (--viewport-small) {
+    background: transparent;
+    padding: 0;
+  }
+}
+
+.feature-capabilities-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: normal;
+
+  @media (--viewport-small) {
+    font-size: 1.25rem;
+    font-weight: 600;
   }
 }
 </style>
