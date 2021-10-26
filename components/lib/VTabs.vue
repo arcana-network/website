@@ -34,7 +34,11 @@
       </div>
     </v-stack>
     <template v-for="(tabTitle, tabIndex) in tabsList">
-      <div v-if="tabIndex === selectedTabIndex" :key="tabTitle">
+      <div
+        v-if="tabIndex === selectedTabIndex"
+        :key="tabTitle"
+        style="width: 100%"
+      >
         <slot :name="`tab-${tabIndex}`" />
       </div>
     </template>
