@@ -2,6 +2,7 @@
   <button
     v-if="type === 'button'"
     class="font-serif cursor-pointer"
+    :data-variant="variant"
     :disabled="disabled"
     :aria-disabled="disabled"
     :aria-label="label"
@@ -59,6 +60,11 @@ export default {
       type: Number,
       default: null,
     },
+    variant: {
+      type: String,
+      default: 'primary',
+      validator: (value) => ['primary', 'outline'].includes(value),
+    },
   },
   data() {
     return {
@@ -104,15 +110,40 @@ a {
   transition: opacity 0.5s;
 }
 
+button:disabled {
+  color: var(--color-grey);
+  cursor: not-allowed;
+}
+
 /* Primary Button Styles */
-button {
+button[data-variant='primary'] {
   background: linear-gradient(0deg, #0085ff 0%, #29c8fa 100%);
   color: var(--color-white);
 }
-button:disabled {
+button[data-variant='primary']:disabled {
   background: linear-gradient(180deg, #2b2b2b -4.5%, #4e4e4e 100.1%);
-  color: var(--color-grey);
-  cursor: not-allowed;
+}
+
+/* Outline Button Styles */
+button[data-variant='outline'] {
+  color: var(--color-blue);
+  position: relative;
+}
+
+button[data-variant='outline']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background: linear-gradient(180deg, #0085ff 0%, #29c8fa 100%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
 
 /* Link styles */
