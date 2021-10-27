@@ -270,7 +270,7 @@ export default {
 }
 
 .full-bleed {
-  margin-left: -10%;
+  margin-left: -10vw;
   max-width: none;
   width: 100vw;
 
