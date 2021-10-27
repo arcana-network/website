@@ -289,7 +289,7 @@ export default {
   background-position: top, bottom, top;
   background-repeat: no-repeat;
   width: 100vw;
-  height: clamp(420px, calc((1155 / 1440) * 100vw), 900px);
+  height: clamp(420px, calc((1155 / 1440) * 80vw), 900px);
 
   @media (--viewport-small) {
     margin-top: -5rem;
