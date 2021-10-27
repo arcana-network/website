@@ -280,17 +280,19 @@ export default {
 }
 
 .feature-overview-illustration {
-  margin-top: -1rem;
+  margin-top: -10rem;
+  z-index: -1;
   background-image: url('~assets/images/testnet-overview-top-gradient.png'),
     url('~assets/images/testnet-overview-bottom-gradient.png'),
     url('~assets/images/testnet-overview.png');
-  background-size: contain;
+  background-size: contain, contain, cover;
   background-position: top, bottom, top;
   background-repeat: no-repeat;
-  height: 1155px;
+  width: 100vw;
+  height: clamp(420px, calc((1155 / 1440) * 100vw), 900px);
 
   @media (--viewport-small) {
-    height: 420px;
+    margin-top: -5rem;
   }
 }
 
