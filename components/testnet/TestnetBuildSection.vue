@@ -63,7 +63,7 @@
                         <v-text
                           class="build-feature-card-text"
                           :weight="400"
-                          line-height="1.2"
+                          line-height="1.5"
                         >
                           {{ feature.description }}
                         </v-text>
