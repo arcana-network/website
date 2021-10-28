@@ -20,6 +20,9 @@
           <template #tab-0>
             <testnet-build-overview />
           </template>
+          <template #tab-1>
+            <testnet-build-use-cases />
+          </template>
         </v-tabs>
 
         <div class="build-illustration full-bleed" />
