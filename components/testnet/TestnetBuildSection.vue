@@ -179,6 +179,7 @@ export default {
   grid-template-columns: repeat(2, 1fr);
 
   @media (--viewport-small) {
+    grid-gap: 1.25rem;
     grid-template-columns: 1fr;
   }
 }
