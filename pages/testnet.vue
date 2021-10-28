@@ -4,6 +4,7 @@
     <main>
       <TestnetHeroSection />
       <TestnetOverviewSection />
+      <TestnetBuildSection />
     </main>
     <TestnetFooter />
   </div>
