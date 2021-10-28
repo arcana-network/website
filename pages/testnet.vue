@@ -38,7 +38,8 @@ main {
   overflow-x: hidden;
 }
 
-main > * + * {
+main > * + *,
+footer {
   margin-top: 6rem;
 
   @media (--viewport-medium) {
