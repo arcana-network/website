@@ -142,7 +142,7 @@
 
 <script>
 export default {
-  name: 'TestnetOverview',
+  name: 'TestnetOverviewSection',
   data() {
     return {
       tabsList: ['Overview', 'Capabilities'],
