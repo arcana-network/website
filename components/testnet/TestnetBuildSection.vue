@@ -23,6 +23,9 @@
           <template #tab-1>
             <testnet-build-use-cases />
           </template>
+          <template #tab-2>
+            <testnet-build-support />
+          </template>
         </v-tabs>
 
         <div class="build-illustration full-bleed" />
