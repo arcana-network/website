@@ -8,7 +8,7 @@
 [context.deploy-preview.environment]
   NODE_ENV = "development"
 
-[redirects]
+[[redirects]]
 from = "https://testnet.arcana.network"
 to = "https://arcana.network/testnet"
 status = 200 
