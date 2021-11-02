@@ -34,7 +34,7 @@
             Arrival.
           </v-text>
           <v-text class="hero-section-launch" line-height="1.5" :weight="700">
-            Launching on 29th Oct
+            Launching on 10th November, 2021
           </v-text>
         </v-stack>
         <v-stack align="start" justify="center" gap="30px" sm-gap="15px">
