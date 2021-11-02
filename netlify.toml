@@ -9,6 +9,6 @@
   NODE_ENV = "development"
 
 [[redirects]]
-  from = "https://testnet.arcana.network"
-  to = "https://arcana.network/testnet"
+  from = "https://testnet.arcana.network/*"
+  to = "https://arcana.network/testnet/:splat"
   status = 200 
