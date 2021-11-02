@@ -150,32 +150,27 @@ export default {
         {
           icon: 'images/login.svg',
           title: 'Login',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          description: '',
         },
         {
           icon: 'images/share.svg',
           title: 'Share',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          description: '',
         },
         {
           icon: 'images/revoke.svg',
           title: 'Revoke',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          description: '',
         },
         {
           icon: 'images/upload.svg',
           title: 'Upload',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          description: '',
         },
         {
           icon: 'images/download.svg',
           title: 'Download',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          description: '',
         },
       ],
       featureCapabilitiesDoItems: [
