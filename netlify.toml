@@ -9,6 +9,9 @@
   NODE_ENV = "development"
 
 [[redirects]]
-  from = "https://testnet.arcana.network/*"
-  to = "https://arcana.network/testnet/:splat"
+  from = "/testnet"
+  to = "https://testnet.arcana.network"
   status = 200 
+  force = true
+  headers = {X-From = "Netlify"}
+  
