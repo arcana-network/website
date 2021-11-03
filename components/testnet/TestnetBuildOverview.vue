@@ -52,7 +52,7 @@
           Next Steps
         </v-heading>
         <v-text
-          class="build-overview-description"
+          class="build-overview-description dn"
           color="secondary"
           :weight="400"
           line-height="1.5"
@@ -257,5 +257,9 @@ export default {
   @media (--viewport-small) {
     padding: 1rem;
   }
+}
+
+.dn {
+  display: none
 }
 </style>
