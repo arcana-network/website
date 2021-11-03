@@ -1,6 +1,7 @@
 <template>
   <v-stack class="build-support" direction="column" gap="6rem">
     <v-stack
+      class="dn"
       direction="column"
       sm-direction="column"
       gap="1.875rem"
@@ -177,5 +178,9 @@ a {
 
 .build-support-social-link {
   width: 3rem;
+}
+
+.dn {
+  display: none;
 }
 </style>

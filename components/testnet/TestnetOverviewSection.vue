@@ -150,27 +150,32 @@ export default {
         {
           icon: 'images/login.svg',
           title: 'Login',
-          description: '',
+          description:
+            'Allow users to signup with Social Auth, frictionless UX',
         },
         {
           icon: 'images/share.svg',
           title: 'Share',
-          description: '',
+          description:
+            'Define permissions and Share data with others on-chain with just an email ID or public address',
         },
         {
           icon: 'images/revoke.svg',
           title: 'Revoke',
-          description: '',
+          description:
+            'Remove access to shared data so they can no longer be downloaded and decrypted',
         },
         {
           icon: 'images/upload.svg',
           title: 'Upload',
-          description: '',
+          description:
+            'Upload data with unique DIDs and add on or more users who can access it',
         },
         {
           icon: 'images/download.svg',
           title: 'Download',
-          description: '',
+          description:
+            'Download data from DID links, verify permission and decrypt data',
         },
       ],
       featureCapabilitiesDoItems: [

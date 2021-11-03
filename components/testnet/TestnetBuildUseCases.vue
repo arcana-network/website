@@ -94,25 +94,25 @@ export default {
           key: 'gaming',
           heading: 'Gaming',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
+            'Store game assets and player profiles seamlessly. Selectively share data with other players.',
         },
         {
           key: 'nfts',
           heading: 'NFTs',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
+            'Save metadata and assets through a DID link instead of centralised servers. Create private NFTs that can only be accessed by the NFT owner.',
         },
         {
           key: 'file-sharing',
           heading: 'File Sharing',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
+            'Securely store, share, and delete files. Decide who gets access and for how long. Track all actions on the file onchain.',
         },
         {
           name: 'identity',
           heading: 'Identity',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
+            'Give unique identity to users and data. Attach data that matters to them and selectively share them with an email ID or public address. Build identity based access permissions to access data.',
         },
       ],
     }

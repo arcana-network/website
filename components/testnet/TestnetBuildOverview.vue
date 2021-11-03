@@ -52,7 +52,7 @@
           Next Steps
         </v-heading>
         <v-text
-          class="build-overview-description dn"
+          class="build-overview-description"
           color="secondary"
           :weight="400"
           line-height="1.5"
@@ -149,8 +149,8 @@ export default {
       quickLinks: [
         { name: 'docs', description: 'View Docs' },
         { name: 'demo', description: 'Reference Tutorial App' },
-        { name: 'discord', description: 'Get Support When You Need' },
-        { name: 'discourse', description: 'Get in Touch' },
+        { name: 'discord', description: 'Get Started' },
+        { name: 'discourse', description: 'Get Support' },
       ],
     }
   },
@@ -257,9 +257,5 @@ export default {
   @media (--viewport-small) {
     padding: 1rem;
   }
-}
-
-.dn {
-  display: none;
 }
 </style>
