@@ -7,11 +7,3 @@
 
 [context.deploy-preview.environment]
   NODE_ENV = "development"
-
-[[redirects]]
-  from = "/testnet"
-  to = "https://testnet.arcana.network"
-  status = 200 
-  force = true
-  headers = {X-From = "Netlify"}
-  
