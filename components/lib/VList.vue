@@ -21,6 +21,7 @@
           "
           class="list-item-description"
           color="secondary"
+          :data-variant="listItem.variant"
           line-height="1.5"
           :weight="400"
         >
@@ -36,6 +37,7 @@
             :key="index"
             class="list-item-description"
             color="secondary"
+            :data-variant="listItem.variant"
             line-height="1.5"
             :weight="400"
           >
@@ -142,5 +144,11 @@ export default {
 
 .list-item-description {
   max-width: 45ch;
+}
+
+.list-item-description[data-variant='outlined'] {
+  border: 1px solid var(--color-white);
+  border-radius: 10px;
+  padding: 20px 30px;
 }
 </style>
