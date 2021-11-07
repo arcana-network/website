@@ -260,6 +260,6 @@ export default {
 }
 
 .dn {
-  display: none
+  display: none;
 }
 </style>
