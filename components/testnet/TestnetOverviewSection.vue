@@ -303,7 +303,7 @@ export default {
 
 .feature-capabilities-dos,
 .feature-capabilities-donts {
-  max-width: 35rem !important;
+  max-width: 36rem !important;
   padding: 2rem !important;
 
   @media (--viewport-small) {

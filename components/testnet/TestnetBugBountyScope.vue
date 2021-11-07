@@ -67,7 +67,7 @@ export default {
 
 .bug-bounty-scope-in,
 .bug-bounty-scope-out {
-  max-width: 35rem !important;
+  max-width: 36rem !important;
   padding: 2rem !important;
 
   @media (--viewport-small) {
