@@ -149,8 +149,8 @@ export default {
       quickLinks: [
         { name: 'docs', description: 'View Docs' },
         { name: 'demo', description: 'Reference Tutorial App' },
-        { name: 'discord', description: 'Get Support When You Need' },
-        { name: 'discourse', description: 'Get in Touch' },
+        { name: 'discord', description: 'Get Started' },
+        { name: 'discourse', description: 'Get Support' },
       ],
     }
   },
