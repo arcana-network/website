@@ -16,7 +16,9 @@
           {{ listItem.title }}
         </v-text>
         <v-text
-          v-if="listItem.description"
+          v-if="
+            listItem.description && typeof listItem.description === 'string'
+          "
           class="list-item-description"
           color="secondary"
           line-height="1.5"
@@ -24,6 +26,22 @@
         >
           {{ listItem.description }}
         </v-text>
+        <v-stack
+          v-if="listItem.description && Array.isArray(listItem.description)"
+          direction="column"
+          gap="1.25rem"
+        >
+          <v-text
+            v-for="(descriptionLine, index) in listItem.description"
+            :key="index"
+            class="list-item-description"
+            color="secondary"
+            line-height="1.5"
+            :weight="400"
+          >
+            {{ descriptionLine }}
+          </v-text>
+        </v-stack>
       </v-stack>
     </li>
   </ul>
