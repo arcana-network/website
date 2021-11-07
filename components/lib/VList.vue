@@ -10,7 +10,7 @@
           v-if="listItem.title"
           class="list-item-title"
           color="primary"
-          line-height="1.2"
+          line-height="1.5"
           :weight="600"
         >
           {{ listItem.title }}
