@@ -19,6 +19,7 @@ export default {
       default: null,
       validator: (value) =>
         [
+          'start',
           'space-between',
           'space-around',
           'space-evenly',
@@ -54,6 +55,7 @@ export default {
       default: null,
       validator: (value) =>
         [
+          'start',
           'space-between',
           'space-around',
           'space-evenly',
@@ -82,6 +84,7 @@ export default {
       default: null,
       validator: (value) =>
         [
+          'start',
           'space-between',
           'space-around',
           'space-evenly',
@@ -195,6 +198,9 @@ export default {
 .flex-baseline {
   align-items: baseline;
 }
+.justify-start {
+  justify-content: start;
+}
 .justify-space-between {
   justify-content: space-between;
 }
@@ -249,6 +255,9 @@ export default {
   }
   .md-flex-baseline {
     align-items: baseline;
+  }
+  .md-justify-start {
+    justify-content: start;
   }
   .md-justify-space-between {
     justify-content: space-between;
@@ -305,6 +314,9 @@ export default {
   }
   .sm-flex-baseline {
     align-items: baseline;
+  }
+  .sm-justify-start {
+    justify-content: start;
   }
   .sm-justify-space-between {
     justify-content: space-between;
