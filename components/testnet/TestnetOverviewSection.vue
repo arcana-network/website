@@ -93,7 +93,7 @@
                 sm-align="start"
                 direction="row"
                 sm-direction="column"
-                justify="center"
+                justify="start"
                 sm-justify="baseline"
                 gap="3.75rem"
                 sm-gap="3.75rem"
