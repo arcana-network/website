@@ -114,7 +114,7 @@ export default {
 }
 
 .list-item-title,
-.list-list-item-description {
+.list-item-description {
   font-size: 1.375rem;
 
   @media (--viewport-small) {
