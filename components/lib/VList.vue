@@ -121,4 +121,8 @@ export default {
     font-size: 1.25rem;
   }
 }
+
+.list-item-description {
+  max-width: 45ch;
+}
 </style>
