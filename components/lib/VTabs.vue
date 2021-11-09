@@ -94,9 +94,9 @@ export default {
 .tab-title {
   display: block;
   font-size: 2.1875rem;
-  font-weight: 300;
   color: var(--color-grey);
   border-bottom: 4px solid transparent;
+  font-weight: 300;
 
   @media (--viewport-small) {
     font-size: 1.25rem;
@@ -106,5 +106,6 @@ export default {
 .tab-title--selected {
   color: var(--color-white);
   border-color: currentColor;
+  font-weight: 700;
 }
 </style>
