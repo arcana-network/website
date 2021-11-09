@@ -93,7 +93,7 @@ export default {
 
 .tab-title {
   display: block;
-  font-size: 2.25rem;
+  font-size: 2.1875rem;
   font-weight: 300;
   color: var(--color-grey);
   border-bottom: 4px solid transparent;
