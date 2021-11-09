@@ -14,7 +14,8 @@ export default {
         },
         {
           name: 'Blog',
-          link: '/',
+          link: 'https://medium.com/arcana-network-blog',
+          external: true,
         },
       ],
     }
