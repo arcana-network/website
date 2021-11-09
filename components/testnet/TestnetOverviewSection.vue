@@ -177,20 +177,20 @@ export default {
       ],
       featureCapabilitiesDoItems: [
         { description: 'Create test accounts.' },
-        { description: 'Develop new Use Cases.' },
+        { description: 'Develop new use cases.' },
         {
           description:
-            'Test the integration / migration from existing infrastructure like IPFS and Metamask.',
+            'Test the integration / migration from existing infrastructure like IPFS and MetaMask.',
         },
         { description: 'Test access control and data integrity.' },
         { description: 'Report bugs and share feedback.' },
       ],
       featureCapabilitiesDontItems: [
-        { description: 'Performance and stress testing' },
-        { description: 'Testing high Availability or Reliability of nodes' },
+        { description: 'Performance and stress testing.' },
+        { description: 'Testing high-availability or reliability of nodes.' },
         {
           description:
-            'Long term storage of data. The network might reset and also go through breaking changes or upgrades',
+            'Long term storage of data. The network might reset and also go through breaking changes or upgrades.',
         },
         { description: 'Transfer of token assets.' },
       ],
