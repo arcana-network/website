@@ -61,10 +61,8 @@
 </template>
 
 <script>
-import VButton from '../lib/VButton.vue'
 export default {
   name: 'TestnetQuickLinks',
-  components: { VButton },
   data() {
     return {
       quickLinks: [
