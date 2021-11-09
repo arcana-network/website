@@ -60,6 +60,11 @@ export default {
   grid-gap: 2.5rem 3.75rem;
   grid-template-columns: repeat(3, 1fr);
 
+  @media (--viewport-medium) {
+    grid-gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media (--viewport-small) {
     justify-items: center;
     grid-gap: 2.5rem;
