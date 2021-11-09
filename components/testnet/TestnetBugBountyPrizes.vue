@@ -80,6 +80,10 @@ export default {
   }
 }
 
+.bug-bounty-prize-amount {
+  white-space: nowrap;
+}
+
 .bug-bounty-prize-stack[data-variant='best'] .bug-bounty-prize-amount {
   color: black;
 }
