@@ -46,23 +46,6 @@
         </div>
       </v-stack>
     </div>
-    <div>
-      <v-stack direction="column" gap="1.25rem">
-        <v-heading class="build-overview-heading" :level="3" line-height="1.2">
-          Next Steps
-        </v-heading>
-        <v-text
-          class="build-overview-description dn"
-          color="secondary"
-          :weight="400"
-          line-height="1.5"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit.
-        </v-text>
-        <testnet-quick-links />
-      </v-stack>
-    </div>
   </v-stack>
 </template>
 
@@ -153,9 +136,5 @@ export default {
   @media (--viewport-small) {
     font-size: 1rem;
   }
-}
-
-.dn {
-  display: none;
 }
 </style>

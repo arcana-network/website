@@ -54,7 +54,6 @@
         <v-list :list-items="stepsList" />
       </v-stack>
     </div>
-    <testnet-quick-links />
   </v-stack>
 </template>
 
