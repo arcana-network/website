@@ -5,7 +5,7 @@
       :key="listItemIndex"
       class="list-item"
     >
-      <v-stack direction="column" gap="10px">
+      <v-stack class="list-item-content" direction="column" gap="10px">
         <v-text
           v-if="listItem.title"
           class="list-item-title"
@@ -131,6 +131,10 @@ export default {
 }
 .list[data-variant='negative'] .list-item::after {
   content: url('~/assets/images/list-bullet-negative.png');
+}
+
+.list-item-content > *:first-child {
+  margin-top: -0.3rem;
 }
 
 .list-item-title,
