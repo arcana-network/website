@@ -18,7 +18,7 @@
       >
         If you're a developer with a knack for testing SDKs and APIs -
         participate in our Bug Bounty Program, from anywhere in the world. Win
-        from a pool of 50,000 USDT or 25,000 USD in XAR token rewards.
+        from a pool of 50,000 USD or 25,000 USD in XAR token rewards.
       </v-text>
       <v-text
         class="bug-bounty-overview-description"
@@ -26,7 +26,7 @@
         :weight="400"
         line-height="1.5"
       >
-        The bug bounty will begin on the 25th of October, and last for a 4 week
+        The bug bounty will begin on the 17th of November, and last for a 4 week
         timeframe. Signup on the Developer Dashboard, checkout our documentation
         and get going!
       </v-text>
@@ -46,7 +46,7 @@
           :weight="400"
           line-height="1.5"
         >
-          The bug bounty will start on 10th November and last for four weeks.
+          The bug bounty will start on 17th November and last for four weeks.
           The main scope of the program is to find bugs in UI and
           functionalities of SDK's APIs. Before submitting your bug to the
           typeform/google form, prepare the following details.
