@@ -13,7 +13,7 @@
               :href="item.link"
               target="_blank"
               class="header-menu-item"
-              @click.native="closeMenu"
+              @click="closeMenu"
             >
               <v-text :weight="600" font="sans" color="primary">{{
                 item.name
