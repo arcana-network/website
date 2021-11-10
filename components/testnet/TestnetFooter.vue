@@ -27,14 +27,6 @@
           sharing logs, metrics, and other data related to bugs/feature
           suggestions, in order to help improve the Arcana Network.
         </v-text>
-        <v-button
-          type="link"
-          label="Read more"
-          label-size="1.14rem"
-          :label-weight="700"
-          label-transform="uppercase"
-          :action="openDisclaimers"
-        />
       </v-stack>
     </v-container>
   </footer>
@@ -43,11 +35,6 @@
 <script>
 export default {
   name: 'TestnetFooter',
-  methods: {
-    openDisclaimers() {
-      window.open('/', '_self')
-    },
-  },
 }
 </script>
 

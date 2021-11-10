@@ -9,12 +9,14 @@ export default {
     return {
       menuItems: [
         {
-          name: 'Rules',
-          link: '/',
+          name: 'Discord',
+          link: 'https://discord.gg/w6ej4FtqYS',
+          external: true,
         },
         {
           name: 'Blog',
-          link: '/',
+          link: 'https://medium.com/arcana-network-blog',
+          external: true,
         },
       ],
     }

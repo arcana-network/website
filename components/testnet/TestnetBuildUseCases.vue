@@ -1,86 +1,32 @@
 <template>
-  <v-stack class="build-usecases" direction="column" gap="6rem">
+  <v-stack
+    class="build-usecases"
+    direction="column"
+    sm-direction="column"
+    gap="3.125rem"
+    sm-gap="3.75rem"
+  >
     <v-stack
-      direction="column"
+      v-for="useCase in useCasesList"
+      :key="useCase.key"
+      direction="row"
       sm-direction="column"
-      gap="3.125rem"
-      sm-gap="3.75rem"
+      gap="1.875rem"
+      sm-gap="1.5rem"
+      justify="space-between"
     >
-      <v-stack
-        v-for="useCase in useCasesList"
-        :key="useCase.key"
-        direction="row"
-        sm-direction="column"
-        gap="1.875rem"
-        sm-gap="1.5rem"
-        justify="space-between"
+      <v-heading class="build-usecases-heading" :level="3" line-height="1.2">
+        {{ useCase.heading }}
+      </v-heading>
+      <v-text
+        class="build-usecases-description"
+        color="secondary"
+        line-height="1.5"
+        :weight="400"
       >
-        <v-heading class="build-usecases-heading" :level="3" line-height="1.2">
-          {{ useCase.heading }}
-        </v-heading>
-        <v-text
-          class="build-usecases-description"
-          color="secondary"
-          line-height="1.5"
-          :weight="400"
-        >
-          {{ useCase.description }}
-        </v-text>
-      </v-stack>
+        {{ useCase.description }}
+      </v-text>
     </v-stack>
-
-    <v-card class="build-callout">
-      <v-stack
-        align="center"
-        direction="column"
-        sm-direction="column"
-        gap="1.25rem"
-        sm-gap="2.5rem"
-      >
-        <div>
-          <v-text
-            class="build-callout-text"
-            font="serif"
-            line-height="1.5"
-            :weight="600"
-          >
-            Have an idea? Sign up and try out our SDK.
-          </v-text>
-          <v-text
-            class="build-callout-text"
-            font="serif"
-            line-height="1.5"
-            :weight="600"
-          >
-            Join our Discord community if you are stuck along the way or want to
-            share any feedback.
-          </v-text>
-        </div>
-        <v-stack
-          direction="row"
-          sm-direction="row"
-          gap="1.875rem"
-          sm-gap="1rem"
-        >
-          <v-button
-            label="Sign Up"
-            type="button"
-            variant="primary"
-            label-size="1.125"
-            :label-weight="600"
-            label-transform="uppercase"
-          />
-          <v-button
-            label="Join Discord"
-            type="button"
-            variant="outline"
-            label-size="1.125"
-            :label-weight="600"
-            label-transform="uppercase"
-          />
-        </v-stack>
-      </v-stack>
-    </v-card>
   </v-stack>
 </template>
 
@@ -148,30 +94,5 @@ export default {
   @media (--viewport-small) {
     font-size: 1rem;
   }
-}
-
-.build-callout {
-  @media (--viewport-small) {
-    padding: 2rem 0;
-    border-radius: 0;
-    width: 100vw;
-    margin-left: -5%;
-  }
-}
-
-.build-callout-text {
-  display: block;
-  text-align: center;
-  font-size: 1.875rem;
-  max-width: 40ch;
-
-  @media (--viewport-small) {
-    font-size: 1.25rem;
-    max-width: 35ch;
-  }
-}
-
-.build-callout-text:not(:first-child) {
-  margin-top: 1.875rem;
 }
 </style>
