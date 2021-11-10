@@ -22,7 +22,7 @@
         <v-list :list-items="inScopeItems" variant="positive" />
       </v-stack>
     </v-chip>
-    <div class="bug-bounty-scope-out">
+    <v-chip class="bug-bounty-scope-out">
       <v-stack direction="column" gap="2.25rem">
         <v-heading
           class="bug-bounty-scope-heading"
@@ -33,7 +33,7 @@
         </v-heading>
         <v-list :list-items="outOfScopeItems" variant="negative" />
       </v-stack>
-    </div>
+    </v-chip>
   </v-stack>
 </template>
 
@@ -71,14 +71,8 @@ export default {
   padding: 2rem !important;
 
   @media (--viewport-small) {
-    padding: inherit !important;
-  }
-}
-
-.bug-bounty-scope-in {
-  @media (--viewport-small) {
     background: transparent !important;
-    padding: 0 !important;
+    padding: inherit !important;
   }
 }
 

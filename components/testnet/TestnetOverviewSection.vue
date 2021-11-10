@@ -111,7 +111,7 @@
                       />
                     </v-stack>
                   </v-chip>
-                  <div class="feature-capabilities-donts">
+                  <v-chip class="feature-capabilities-donts">
                     <v-stack direction="column" gap="2.25rem">
                       <v-heading
                         class="feature-capabilities-heading"
@@ -125,7 +125,7 @@
                         variant="negative"
                       />
                     </v-stack>
-                  </div>
+                  </v-chip>
                 </v-stack>
               </template>
             </v-tabs>
@@ -305,14 +305,8 @@ export default {
   padding: 2rem !important;
 
   @media (--viewport-small) {
-    padding: inherit !important;
-  }
-}
-
-.feature-capabilities-dos {
-  @media (--viewport-small) {
     background: transparent !important;
-    padding: 0 !important;
+    padding: inherit !important;
   }
 }
 
