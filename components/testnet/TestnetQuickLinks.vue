@@ -51,7 +51,7 @@
     </div>
     <v-button
       class="btn-submit-bugs"
-      label="Submit Bugs →"
+      label="Submit Bugs"
       type="button"
       label-transform="uppercase"
       label-size="1rem"
