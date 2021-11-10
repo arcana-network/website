@@ -12,7 +12,9 @@
           align="start"
           sm-align="center"
           direction="column"
-          gap="1.875rem"
+          sm-direction="column"
+          gap="2.5rem"
+          sm-gap="1.25rem"
         >
           <v-heading
             class="hero-section-heading"
@@ -22,27 +24,33 @@
           >
             Testnet Launch
           </v-heading>
-          <v-stack
-            align="start"
-            sm-align="center"
-            direction="column"
-            sm-direction="column"
-            gap="0.625rem"
-            sm-gap="1.25rem"
-          >
-            <v-text
-              class="hero-section-description"
-              color="secondary"
-              line-height="1.5"
-              :weight="400"
+          <div>
+            <v-stack
+              align="start"
+              sm-align="center"
+              direction="column"
+              sm-direction="column"
+              gap="1.25rem"
+              sm-gap="1.25rem"
             >
-              Descend into the Arcana Testnet and ready our Network for Mainnet
-              Arrival.
-            </v-text>
-            <v-text class="hero-section-launch" line-height="1.5" :weight="700">
-              Launching on 17th November, 2021
-            </v-text>
-          </v-stack>
+              <v-text
+                class="hero-section-description"
+                color="secondary"
+                line-height="1.5"
+                :weight="400"
+              >
+                Descend into the Arcana Testnet and ready our Network for
+                Mainnet Arrival.
+              </v-text>
+              <v-text
+                class="hero-section-launch"
+                line-height="1.5"
+                :weight="700"
+              >
+                Launching on 17th November, 2021
+              </v-text>
+            </v-stack>
+          </div>
         </v-stack>
         <v-stack
           class="dn"
