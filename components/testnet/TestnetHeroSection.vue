@@ -45,6 +45,7 @@
           </v-stack>
         </v-stack>
         <v-stack
+          class="dn"
           align="start"
           justify="center"
           gap="1.875rem"
@@ -149,5 +150,9 @@ section {
   right: 0;
   height: 200px;
   background: linear-gradient(0deg, #0f0908 30%, rgba(15, 9, 8, 0) 100%);
+}
+
+.dn {
+  display: none;
 }
 </style>
