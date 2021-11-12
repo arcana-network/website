@@ -5,25 +5,45 @@
       :key="listItemIndex"
       class="list-item"
     >
-      <v-stack direction="column" gap="10px">
+      <v-stack class="list-item-content" direction="column" gap="10px">
         <v-text
           v-if="listItem.title"
           class="list-item-title"
           color="primary"
-          line-height="1.2"
+          line-height="1.5"
           :weight="600"
         >
           {{ listItem.title }}
         </v-text>
         <v-text
-          v-if="listItem.description"
+          v-if="
+            listItem.description && typeof listItem.description === 'string'
+          "
           class="list-item-description"
           color="secondary"
+          :data-variant="listItem.variant"
           line-height="1.5"
           :weight="400"
         >
           {{ listItem.description }}
         </v-text>
+        <v-stack
+          v-if="listItem.description && Array.isArray(listItem.description)"
+          direction="column"
+          gap="1.25rem"
+        >
+          <v-text
+            v-for="(descriptionLine, index) in listItem.description"
+            :key="index"
+            class="list-item-description"
+            color="secondary"
+            :data-variant="listItem.variant"
+            line-height="1.5"
+            :weight="400"
+          >
+            {{ descriptionLine }}
+          </v-text>
+        </v-stack>
       </v-stack>
     </li>
   </ul>
@@ -113,12 +133,26 @@ export default {
   content: url('~/assets/images/list-bullet-negative.png');
 }
 
+.list-item-content > *:first-child {
+  margin-top: -0.3rem;
+}
+
 .list-item-title,
-.list-list-item-description {
+.list-item-description {
   font-size: 1.375rem;
 
   @media (--viewport-small) {
     font-size: 1.25rem;
   }
+}
+
+.list-item-description {
+  max-width: 45ch;
+}
+
+.list-item-description[data-variant='outlined'] {
+  border: 1px solid var(--color-white);
+  border-radius: 10px;
+  padding: 20px 30px;
 }
 </style>

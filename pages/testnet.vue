@@ -5,6 +5,7 @@
       <TestnetHeroSection />
       <TestnetOverviewSection />
       <TestnetBuildSection />
+      <TestnetBugBountySection />
     </main>
     <TestnetFooter />
   </div>
