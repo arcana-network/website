@@ -4,6 +4,7 @@ const site = {
   description:
     'The decentralized storage layer for Ethereum. A privacy stack for apps on EVM compatible chains. Identity, Authentication, Access Control, KMS, and Storage.',
   image: 'https://arcana.network/cover-image.jpeg',
+  keywords: ['decentralised storage', 'ethereum'].join(', '),
 }
 
 export default {
@@ -24,6 +25,7 @@ export default {
       // Primary meta tags
       { hid: 'title', name: 'title', content: site.title },
       { hid: 'description', name: 'description', content: site.description },
+      { hid: 'keywords', name: 'keywords', content: site.keywords },
 
       // Open Graph / Facebook
       { hid: 'og:type', property: 'og:type', content: 'website' },
