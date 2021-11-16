@@ -25,10 +25,10 @@
               :action="onGetStarted"
             />
             <v-stack align="center" class="support-icons">
-              <a href="https://t.me/ArcanaNetwork" target="__blank">
+              <a href="https://t.me/ArcanaNetwork" target="_blank">
                 <v-image path="images/telegram.svg" :dimension="[36, 36]" />
               </a>
-              <a href="https://twitter.com/arcananetwork" target="__blank">
+              <a href="https://twitter.com/arcananetwork" target="_blank">
                 <v-image path="images/twitter.png" :dimension="[36, 36]" />
               </a>
             </v-stack>
