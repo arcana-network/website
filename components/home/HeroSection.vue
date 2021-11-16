@@ -20,13 +20,10 @@
             style="margin-top: 2rem"
           >
             <v-button
-              label="Sign up now"
+              label="Get started"
               label-transform="uppercase"
-              :action="onSignup"
+              :action="onGetStarted"
             />
-            <v-text color="secondary" size="1.125rem">
-              Testnet Launching Soon!
-            </v-text>
             <v-stack align="center" class="support-icons">
               <a href="https://t.me/ArcanaNetwork" target="__blank">
                 <v-image path="images/telegram.svg" :dimension="[36, 36]" />
@@ -42,21 +39,15 @@
         </div>
       </v-stack>
     </v-container>
-    <app-developer-signup v-if="devSignup" @close="() => (devSignup = false)" />
   </section>
 </template>
 
 <script>
 export default {
   name: 'HeroSection',
-  data() {
-    return {
-      devSignup: false,
-    }
-  },
   methods: {
-    onSignup() {
-      this.devSignup = true
+    onGetStarted() {
+      window.open('https://dashboard.arcana.network', '_blank')
     },
   },
 }
