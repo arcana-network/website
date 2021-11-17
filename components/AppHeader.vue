@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="banner">
-      <v-text line-height="1.5" :weight="400" size="1rem">
+      <v-text line-height="1.5" :weight="500" size="1rem">
         <a href="https://testnet.arcana.network" target="_blank"
           >Arcana Alpha Testnet</a
         >
