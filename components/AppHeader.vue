@@ -28,8 +28,9 @@ export default {
       },
       menuItems: [
         {
-          name: 'Home',
-          link: '/',
+          name: 'Build',
+          link: 'https://testnet.arcana.network',
+          external: true,
         },
         {
           name: 'Technology',
