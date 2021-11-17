@@ -28,8 +28,8 @@ export default {
       },
       menuItems: [
         {
-          name: 'Build',
-          link: 'https://testnet.arcana.network',
+          name: 'Docs',
+          link: 'https://docs.arcana.network',
           external: true,
         },
         {
