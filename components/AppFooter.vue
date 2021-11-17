@@ -52,6 +52,18 @@
                 alt="Arcana discord channel"
               />
             </a>
+            <a
+              style="margin-left: 3rem"
+              href="https://forum.arcana.network"
+              target="__blank"
+            >
+              <v-image
+                style="height: 40px"
+                path="images/discourse-white.svg"
+                class="footer-social-link"
+                alt="Arcana discourse channel"
+              />
+            </a>
           </v-stack>
         </v-stack>
         <v-stack
