@@ -40,11 +40,6 @@ export default {
           name: 'About',
           link: '/about/',
         },
-        // {
-        //   name: 'Docs',
-        //   link: 'https://docs.arcana.network',
-        //   external: true,
-        // },
       ],
     }
   },
