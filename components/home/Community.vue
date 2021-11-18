@@ -28,10 +28,10 @@
             description="If you have a great idea for an application to build on the Arcana stack, sign up here to get access to our developer dashboard and the SDK as soon as it’s available."
           />
           <v-button
-            label="Sign up now"
+            label="Build on Testnet"
             label-transform="uppercase"
             style="margin-top: 1.5rem"
-            :action="onSignup"
+            :action="onBuild"
           />
         </v-stack>
       </v-stack>
@@ -121,7 +121,6 @@
         />
       </v-stack>
     </v-container>
-    <app-developer-signup v-if="devSignup" @close="() => (devSignup = false)" />
   </section>
 </template>
 
@@ -144,7 +143,6 @@ export default {
       email: '',
       success: true,
       message: '',
-      devSignup: false,
     }
   },
   methods: {
@@ -180,8 +178,8 @@ export default {
         this.message = 'Enter all details to continue'
       }
     },
-    onSignup() {
-      this.devSignup = true
+    onBuild() {
+      window.open('https://testnet.arcana.network', '_blank')
     },
   },
 }
