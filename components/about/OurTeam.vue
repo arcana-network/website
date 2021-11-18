@@ -87,9 +87,13 @@ export default {
         },
         {
           name: 'Narendran',
-          designation: 'Pricinpal Engineer',
+          designation: 'Principal Engineer',
           image: 'Naren',
-          links: {},
+          links: {
+            linkedin: 'https://www.linkedin.com/in/dudewhocode/',
+            twitter: 'https://twitter.com/DudeWhoCode',
+            github: 'https://github.com/dudewhocode',
+          },
         },
         {
           name: 'Abhishek',
