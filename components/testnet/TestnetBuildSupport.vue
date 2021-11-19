@@ -62,7 +62,7 @@
           </v-text>
         </a>
         <v-stack style="margin-top: 3rem" md-justify="space-evenly">
-          <a href="https://twitter.com/arcananetwork" target="__blank">
+          <a href="https://twitter.com/arcananetwork" target="_blank">
             <v-image
               path="images/twitter-white.svg"
               class="build-support-social-link"
@@ -72,7 +72,7 @@
           <a
             style="margin-left: 3rem"
             href="https://t.me/ArcanaNetwork"
-            target="__blank"
+            target="_blank"
           >
             <v-image
               path="images/telegram-white.svg"
@@ -83,7 +83,7 @@
           <a
             style="margin-left: 3rem"
             href="https://discord.gg/w6ej4FtqYS"
-            target="__blank"
+            target="_blank"
           >
             <v-image
               path="images/discord-white.svg"

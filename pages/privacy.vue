@@ -6,7 +6,7 @@
         This Privacy Policy (“Privacy Policy”) discloses the privacy practices
         for Arcana Technologies Limited (“Company” or We” or “Us”) with regard
         to Your (“You” or “Your”) use of the online platform
-        <a href="https://arcana.network" target="__blank" rel="noopener">
+        <a href="https://arcana.network" target="_blank" rel="noopener">
           arcana.network
         </a>
         , any valid subdomains, mobile apps, downloaded/hosted software or any
