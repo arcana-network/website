@@ -24,24 +24,24 @@
         <!-- <v-image path="images/news/forbes.svg" /> -->
         <a
           href="https://markets.businessinsider.com/news/stocks/blockchain-startup-arcana-raises-seed-from-balaji-srinivasan-and-other-angels-1030598497"
-          target="__blank"
+          target="_blank"
         >
           <v-image path="images/news/businessinsider.svg" />
         </a>
         <a
           href="https://cointelegraph.com/press-releases/blockchain-startup-arcana-receives-funding-from-balaji-srinivasan-and-other-angels"
-          target="__blank"
+          target="_blank"
         >
           <v-image path="images/news/cointelegraph.svg" />
         </a>
         <!-- <v-image path="images/news/bloomberg.svg" /> -->
         <a
           href="https://yourstory.com/2021/07/funding-alert-blockchain-startup-arcana-coinbase-balaji-srinivasan/amp"
-          target="__blank"
+          target="_blank"
         >
           <v-image path="images/news/yourstory.svg" />
         </a>
-        <a href="https://www.entrepreneur.com/article/377102" target="__blank">
+        <a href="https://www.entrepreneur.com/article/377102" target="_blank">
           <v-image path="images/news/enterprenuer.svg" />
         </a>
       </v-stack>

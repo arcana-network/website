@@ -27,21 +27,21 @@
         <a
           v-if="member.links.linkedin"
           :href="member.links.linkedin"
-          target="__blank"
+          target="_blank"
         >
           <v-image path="images/linkedin.svg" />
         </a>
         <a
           v-if="member.links.twitter"
           :href="member.links.twitter"
-          target="__blank"
+          target="_blank"
         >
           <v-image path="images/twitter.svg" />
         </a>
         <a
           v-if="member.links.github"
           :href="member.links.github"
-          target="__blank"
+          target="_blank"
         >
           <v-image path="images/github.svg" />
         </a>
