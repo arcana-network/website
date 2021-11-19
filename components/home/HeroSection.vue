@@ -28,8 +28,8 @@
                 <a href="https://t.me/ArcanaNetwork" target="_blank">
                   <v-image path="images/telegram.svg" :dimension="[36, 36]" />
                 </a>
-                <a href="https://twitter.com/arcananetwork" target="_blank">
-                  <v-image path="images/twitter.png" :dimension="[36, 36]" />
+                <a href="https://discord.gg/w6ej4FtqYS" target="_blank">
+                  <v-image path="images/discord.svg" :dimension="[36, 36]" />
                 </a>
               </v-stack>
             </v-stack>
