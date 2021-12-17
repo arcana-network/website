@@ -59,7 +59,7 @@ export default {
       })
     },
     setupSlides() {
-      this.$refs.carousel.children.forEach((child, index) => {
+      ;[...this.$refs.carousel.children].forEach((child, index) => {
         child.classList.add('carousel-item')
         if (index !== 0) {
           child.classList.add('inactive-item')
@@ -67,7 +67,7 @@ export default {
       })
     },
     setActiveSlide() {
-      this.$refs.carousel.children.forEach((child, index) => {
+      ;[...this.$refs.carousel.children].forEach((child, index) => {
         child.classList.add('carousel-item') // Added this because it was getting removed on update. Not sure why
         if (index === this.currentSlide) {
           child.classList.remove('inactive-item')
