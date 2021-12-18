@@ -5,7 +5,7 @@
         <a href="https://testnet.arcana.network" target="_blank"
           >Arcana Alpha Testnet</a
         >
-        is now live with 25K USD in Bug bounty. Read our
+        is now live. Read our
         <a
           href="https://medium.com/arcana-network-blog/launching-arcanas-alpha-testnet-quantum-descent-and-25k-usd-bug-bounty-a22cbc3f8ef3"
           target="_blank"
