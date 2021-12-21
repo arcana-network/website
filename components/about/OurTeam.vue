@@ -107,7 +107,7 @@ export default {
       ],
       members: [
         {
-          name: 'Prof. Bill Buchanan OBE',
+          name: 'Prof. Bill Buchanan, O. B. E.',
           designation: 'Crypto Researcher',
           image: 'Bill',
           links: {
