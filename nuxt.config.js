@@ -54,6 +54,17 @@ export default {
       { hid: 'twitter:image', property: 'twitter:image', content: site.image },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
+    script: [
+      {
+        hid: 'btw-widget', async: true, defer: true, id: 'btw-widget',
+        'data-project-code': '54bb5a67-baf9-4df7-93d4-f90ec061e166',
+        'data-iframe-domain': 'https://app.btw.so',
+        'data-conversations-domain': 'https://conversations.btw.so',
+        'data-events-domain': 'https://events.btw.so',
+        'data-events-secret': 'js.nti5bhj8o8nqaikp1k4fb.kkvwbs6pqqj2jgkksmodvw',
+        src: 'https://conversations.btw.so/widget/dist/btw.js'
+      }
+    ]
   },
 
   css: ['~/assets/css/normalize.css', '~/assets/css/styles.css'],
