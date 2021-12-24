@@ -131,7 +131,7 @@ export default {
         {
           image: 'images/investors/santiago-s.png',
           name: 'Santiago. S',
-          designation: 'General Partner, Parafi Capital',
+          designation: 'Ex-General Partner, Parafi Capital',
           description:
             'Santiago Santos is a de-fi investor who currently serves as the Advisor at Synthetix, a derivatives liquidity protocol. He is a former partner at ParaFi Capital and Director of Research and Growth at Elysium Health. ',
         },
