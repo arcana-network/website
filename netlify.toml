@@ -9,8 +9,13 @@
   NODE_ENV = "development"
 
 [[redirects]]
+  from = "/blog"
+  to = "https://blog.arcana.network"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/testnet"
   to = "https://testnet.arcana.network"
   status = 301
   force = true
-
