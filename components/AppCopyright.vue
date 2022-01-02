@@ -1,12 +1,19 @@
 <template>
   <div>
-    <v-text font="sans" size="1.25rem"> 2021 Arcana Technologies Ltd. </v-text>
+    <v-text font="sans" size="1.25rem">
+      {{ currentYear }} Arcana Technologies Ltd.
+    </v-text>
   </div>
 </template>
 
 <script>
 export default {
   name: 'AppCopyright',
+  computed: {
+    currentYear() {
+      return new Date().getFullYear()
+    },
+  },
 }
 </script>
 
