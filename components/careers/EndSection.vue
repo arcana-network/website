@@ -29,7 +29,3 @@ export default {
   name: 'EndSection',
 }
 </script>
-
-<style lang="postcss" scoped>
-@import url('../lib/media-query-helper.css');
-</style>
