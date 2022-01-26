@@ -1,7 +1,14 @@
 <template>
   <section>
     <v-container>
-      <v-stack direction="column" gap="6rem" sm-gap="3rem">
+      <v-stack
+        direction="column"
+        md-direction="column"
+        sm-direction="column"
+        gap="6rem"
+        md-gap="4rem"
+        sm-gap="2rem"
+      >
         <div>
           <v-stack justify="space-between" md-direction="column">
             <v-stack direction="column" style="max-width: 42rem">
@@ -110,9 +117,5 @@ section {
 .join-us-illustration {
   max-width: 42rem;
   width: 100%;
-
-  @media (--viewport-large) {
-    margin-right: -12.5%;
-  }
 }
 </style>
