@@ -150,7 +150,8 @@ export default {
             title: 'Blockchain Lead Developer',
             requirements: [
               'Experience in managing a team of engineers for at least 2+ years',
-              'Must have significant experience with Geth (Go Ethereum) or equivalent blockchain nodes and p2p',
+              'Experience with Geth (Go Ethereum) or equivalent blockchain nodes and p2p',
+              'Deep understanding of Blockchain, Solidity, Assembly, and the EVM',
             ],
             location: 'Bengaluru | Remote',
             compensation: '$120k – $200k | 0.5% – 2.0%',
@@ -161,6 +162,7 @@ export default {
             requirements: [
               'Verifiable Delay Function (VDF) implementation',
               'Distributed key generation (DKG) and management (DKMS)',
+              'Zero knowledge proofs',
             ],
             location: 'Bengaluru | Remote',
             compensation: '$100k – $150k | 0.5% – 1.0%',
@@ -169,10 +171,8 @@ export default {
           {
             title: 'QA Engineer',
             requirements: [
-              'Design and develop a QA framework',
-              'Develop and implement test cases, scripts, plans, and procedures',
-              'Track key QA metrics for product and maintain a process for logging bugs/issues and debugging them',
-              'Handle QA validation of UIs, backend APIs, databases, SDKs, and performance',
+              'Design and develop a QA framework. Automate parts of the framework wherever feasible.',
+              'Develop and implement test cases, scripts, plans, and procedures (manual and automated)',
             ],
             location: 'India | Remote',
             compensation: '₹10L – ₹20L | No equity',
@@ -181,8 +181,9 @@ export default {
           {
             title: 'Senior Golang Engineer',
             requirements: [
-              'Decentralised Storage',
-              'Identity and Access Management',
+              'Strong Go development skills – structuring, reading and navigating go codebases',
+              'Have written scalable APIs and worked with databases',
+              'Are comfortable with systems programming',
             ],
             location: 'Europe | India | USA | Remote',
             compensation: '$50k – $120k | No equity',
@@ -191,8 +192,9 @@ export default {
           {
             title: 'Solidity/Blockchain Developer',
             requirements: [
-              'Our token contracts (ERC20, Vesting, Staking...)',
-              'Core blockchain modules (if you have the requisite skills or can quickly learn them)',
+              'Good experience in Solidity',
+              'Good experience in Web3JS, EthersJS',
+              'OpenZeppelin Contracts and other standard contracts and EIPs',
             ],
             location: 'Bengaluru | Remote',
             compensation: '₹25L – ₹40L | No equity',
@@ -205,7 +207,7 @@ export default {
               'Have 3+ years of Golang development experience in production',
             ],
             location: 'Bengaluru | Remote',
-            compensation: '$40k – $60k • No equity',
+            compensation: '$40k – $60k | No equity',
             link: 'https://angel.co/company/arcana-network/jobs/1338647-sr-protocol-developer-golang',
           },
         ],
@@ -223,8 +225,9 @@ export default {
           {
             title: 'Technical Docs Writer',
             requirements: [
-              'Decentralised Storage',
-              'Identity and Access Management',
+              'Be fully responsible for the quality, discoverability and accuracy of our docs',
+              'Document new products, features, and APIs',
+              'Document standards, guidelines, and best practices on documentation for developers',
             ],
             location: 'India | Remote',
             compensation: '₹10L – ₹20L | No equity',
