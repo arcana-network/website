@@ -10,17 +10,19 @@
         sm-gap="2rem"
       >
         <div>
-          <v-stack justify="space-between" md-direction="column">
+          <v-stack align="center" justify="space-between" md-direction="column">
             <v-stack direction="column" style="max-width: 42rem">
               <v-heading :level="1">
                 Evolve to Web3 with&nbsp;Arcana&nbsp;Network
               </v-heading>
-              <app-section-descriptor
-                description="We are at the brink of a web3 renaissance. While this new internet revolution upends
-almost everything we've taken for granted: capital, applications, content, gaming,
-platforms, music, art, creators, and users. Apart from decentralization, security and
-privacy play a pivotal role underpinning the workings of anything web3."
-              />
+              <v-stack direction="column" gap="2rem">
+                <app-section-descriptor
+                  description="We are at the brink of a web3 renaissance. This new internet revolution upends almost everything we’ve taken for granted: capital, applications, content, gaming, platforms, music, art, creators, and users. Apart from decentralization and security, privacy plays a pivotal role underpinning the workings of anything web3."
+                />
+                <app-section-descriptor
+                  description="At Arcana, you will be a part of a highly skilled and collaborative team. Be it engineering, community, or marketing, we never run out of exciting challenges. If you’re looking forward to working in an emerging blockchain project, alongside some of the best talent in each field, Arcana Network is the place for you! For us, every decision is centered around user privacy and security. Do you believe top-tier privacy should be a first-class citizen? Then come join us and help redefine privacy!"
+                />
+              </v-stack>
             </v-stack>
             <v-image
               class="join-us-illustration"
