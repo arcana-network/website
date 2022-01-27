@@ -116,6 +116,10 @@ export default {
   color: var(--color-white);
   font-weight: 400;
   padding: 0.5rem 1.3rem;
+
+  @media (--viewport-small) {
+    padding: 0.5rem;
+  }
 }
 
 .tab-title--selected[data-variant='underlined'] {
