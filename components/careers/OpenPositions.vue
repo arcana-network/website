@@ -118,6 +118,7 @@
                       >
                     </v-stack>
                     <v-button
+                      :action="() => openLink(position.link)"
                       class="apply-button"
                       label="Apply now"
                       label-size="1rem"
@@ -245,6 +246,11 @@ export default {
         Design: [],
       },
     }
+  },
+  methods: {
+    openLink(link) {
+      window.open(link, '_blank')
+    },
   },
 }
 </script>
