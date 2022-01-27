@@ -15,7 +15,7 @@
           style="max-width: 60rem"
         />
         <app-section-descriptor
-          description="We love work but love beaches and beer more. While we build privacy-preserving apps, we also do our fair bit of work to preserve our app-yiness and sanity."
+          description="We love work but love to chill and party too. While we build privacy-preserving apps, we also do our fair bit of work to preserve our app-yiness and sanity."
           style="max-width: 60rem"
         />
       </v-container>
