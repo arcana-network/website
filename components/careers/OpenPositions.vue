@@ -97,8 +97,8 @@
                     sm-align="start"
                   >
                     <v-stack direction="column" gap=".5rem">
-                      <v-stack align="center" gap=".5rem">
-                        <v-image path="icons/location.svg"></v-image>
+                      <v-stack align="baseline" gap=".5rem">
+                        <v-image path="icons/location.svg" />
                         <v-text
                           class="position-details"
                           font="serif"
