@@ -10,7 +10,7 @@
         sm-gap="2rem"
       >
         <div>
-          <v-stack align="center" justify="space-between" md-direction="column">
+          <v-stack align="start" justify="space-between" md-direction="column">
             <v-stack direction="column" style="max-width: 42rem">
               <v-heading :level="1">
                 Evolve to Web3 with Arcana Network
@@ -119,9 +119,14 @@ section {
 .join-us-illustration {
   max-width: 38rem;
   width: 100%;
+  margin-top: 4rem;
 
   @media (--viewport-large) {
     margin-right: -12.5%;
+  }
+
+  @media (--viewport-small) {
+    margin-top: 2rem;
   }
 }
 </style>
