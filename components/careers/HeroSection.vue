@@ -13,7 +13,7 @@
           <v-stack align="center" justify="space-between" md-direction="column">
             <v-stack direction="column" style="max-width: 42rem">
               <v-heading :level="1">
-                Evolve to Web3 with&nbsp;Arcana&nbsp;Network
+                Evolve to Web3 with Arcana Network
               </v-heading>
               <v-stack direction="column" gap="2rem">
                 <app-section-descriptor
@@ -117,7 +117,11 @@ section {
 }
 
 .join-us-illustration {
-  max-width: 42rem;
+  max-width: 38rem;
   width: 100%;
+
+  @media (--viewport-large) {
+    margin-right: -12.5%;
+  }
 }
 </style>
