@@ -19,7 +19,7 @@
           style="max-width: 60rem"
         />
       </v-container>
-      <v-image class="team" path="images/careers/team.png" />
+      <v-image class="team-image" path="images/careers/team.png" />
     </v-stack>
   </section>
 </template>
@@ -29,3 +29,10 @@ export default {
   name: 'EndSection',
 }
 </script>
+
+<style lang="postcss" scoped>
+.team-image {
+  width: 100%;
+  height: 100%;
+}
+</style>
