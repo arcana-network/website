@@ -37,11 +37,11 @@ privacy play a pivotal role underpinning the workings of anything web3."
             sm-direction="column"
           >
             <v-stack
-              v-for="(highlight, i) in highlights"
+              v-for="highlight in highlights"
               :key="highlight.title"
               gap="1.25rem"
               align="center"
-              :style="{ maxWidth: i === 2 ? '21rem' : '18rem' }"
+              :style="{ maxWidth: '18rem' }"
             >
               <v-text
                 class="highlight-value"
@@ -74,9 +74,9 @@ export default {
   data() {
     return {
       highlights: [
-        { title: 'Employees Worldwide', value: '600+' },
-        { title: 'Total Raised', value: '2,000+' },
-        { title: 'New Customers Monthly', value: '400+' },
+        { title: 'Employees Worldwide', value: '20+' },
+        { title: 'Renowned Investors', value: '30+' },
+        { title: 'Funds Raised', value: '$2.7M+' },
       ],
     }
   },
