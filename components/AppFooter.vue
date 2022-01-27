@@ -85,10 +85,7 @@
             </a>
           </v-stack>
           <v-stack direction="column" class="footer-links">
-            <a
-              href="https://angel.co/company/arcana-network/jobs"
-              target="_blank"
-            >
+            <a href="/careers">
               <v-text>Careers</v-text>
             </a>
             <a href="/privacy"><v-text>Privacy</v-text></a>
