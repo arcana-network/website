@@ -1,13 +1,6 @@
 <template>
   <section>
-    <v-stack
-      direction="column"
-      md-direction="column"
-      sm-direction="column"
-      gap="6rem"
-      md-gap="4rem"
-      sm-gap="2rem"
-    >
+    <v-stack direction="column" gap="6rem" md-gap="4rem" sm-gap="2rem">
       <v-container>
         <app-section-descriptor
           title="Small Team. Big Mission."
