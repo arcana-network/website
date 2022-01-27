@@ -2,6 +2,7 @@
   <main>
     <CareersHeroSection />
     <AboutOurCulture />
+    <CareersOpenPositions />
     <CareersEndSection />
   </main>
 </template>
