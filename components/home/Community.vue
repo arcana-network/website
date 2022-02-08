@@ -28,10 +28,10 @@
             description="If you have a great idea for an application to build on the Arcana stack, sign up here to get access to our developer dashboard and the SDK as soon as it’s available."
           />
           <v-button
-            label="Sign up now"
+            label="Build on Testnet"
             label-transform="uppercase"
             style="margin-top: 1.5rem"
-            :action="onSignup"
+            :action="onBuild"
           />
         </v-stack>
       </v-stack>
@@ -58,19 +58,19 @@
           <v-radio-group
             v-model="providerType"
             layout="column"
-            :options="['Storage Provider', 'Validator']"
+            :options="[providerTypes.STORAGE_PROVIDER, providerTypes.VALIDATOR]"
             name="provider-type"
             style="margin-top: 0.625rem"
           />
           <v-stack v-if="providerType" direction="column">
             <v-label
-              v-if="providerType === 'Storage Provider'"
+              v-if="providerType === providerTypes.STORAGE_PROVIDER"
               value="capacity"
               strong
               style="margin-top: 3rem"
             />
             <v-input-group
-              v-if="providerType === 'Storage Provider'"
+              v-if="providerType === providerTypes.STORAGE_PROVIDER"
               style="margin-top: 0.625rem"
             >
               <v-text-field
@@ -121,17 +121,19 @@
         />
       </v-stack>
     </v-container>
-    <app-developer-signup v-if="devSignup" @close="() => (devSignup = false)" />
   </section>
 </template>
 
 <script>
-import { subscribe } from '~/services/mailchimp'
+import { groupTypes, providerTypes, subscribe } from '~/services/mailchimp'
 
 export default {
   name: 'Community',
   data() {
     return {
+      groupTypes,
+      providerTypes,
+
       providerType: '',
       capacity: {
         value: 100,
@@ -141,7 +143,6 @@ export default {
       email: '',
       success: true,
       message: '',
-      devSignup: false,
     }
   },
   methods: {
@@ -152,12 +153,11 @@ export default {
         try {
           const data = {
             email: this.email,
-            groups: ['Provider', 'Newsletter'],
+            groups: [groupTypes.PROVIDER, groupTypes.NEWSLETTER],
             providerType: this.providerType,
             location: this.location,
           }
-          if (this.providerType === 'Storage Provider') {
-            data.providerType = 'Storage'
+          if (this.providerType === providerTypes.STORAGE_PROVIDER) {
             data.storage = {
               capacity: this.capacity.value,
               unit: this.capacity.unit,
@@ -178,8 +178,8 @@ export default {
         this.message = 'Enter all details to continue'
       }
     },
-    onSignup() {
-      this.devSignup = true
+    onBuild() {
+      window.open('https://testnet.arcana.network', '_blank')
     },
   },
 }

@@ -31,7 +31,7 @@ export default {
   name: 'JoinUs',
   methods: {
     openCareers() {
-      window.open('https://angel.co/company/arcana-network/jobs', '_blank')
+      window.open('/careers', '_self')
     },
   },
 }

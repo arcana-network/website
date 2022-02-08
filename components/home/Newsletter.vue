@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import { subscribe } from '~/services/mailchimp'
+import { groupTypes, subscribe } from '~/services/mailchimp'
 
 export default {
   name: 'Newsletter',
@@ -84,7 +84,7 @@ export default {
         try {
           await subscribe({
             email: this.newsletterEmail,
-            groups: ['Newsletter'],
+            groups: [groupTypes.NEWSLETTER],
           })
           this.message = 'Thank you for subscribing!'
         } catch (e) {

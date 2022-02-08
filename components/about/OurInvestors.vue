@@ -58,9 +58,9 @@ export default {
         },
         {
           image: 'images/investors/woodstock.png',
-          name: 'Woodstock Capital Fund',
+          name: 'Woodstock Fund',
           description:
-            'Woodstock Capital is an emerging technology investment fund that focuses on investing in domains such as decentralized finance (DeFi), NFT and tokenization, and web 3.0 protocols.',
+            'Woodstock Fund is an emerging technology investment fund that focuses on investing in domains such as decentralized finance (DeFi), NFT and tokenization, and web 3.0 protocols.',
         },
         {
           image: 'images/investors/dcg.png',
@@ -101,7 +101,7 @@ export default {
           image: 'images/investors/paradigm-shift.png',
           name: 'Paradigm Shift VC',
           description:
-            'Paradigm Shift Capital is a venture capital and private equity firm that exclusively works with startups based out of India and the Silicon Valley.',
+            "India's first truly Global Venture Capital Firm. Backing Indian Founders building for Global Markets and disruptive innovation in the US. Web 2 + Web 3",
         },
         {
           image: 'images/investors/au21.png',
@@ -131,7 +131,7 @@ export default {
         {
           image: 'images/investors/santiago-s.png',
           name: 'Santiago. S',
-          designation: 'General Partner, Parafi Capital',
+          designation: 'Ex-General Partner, Parafi Capital',
           description:
             'Santiago Santos is a de-fi investor who currently serves as the Advisor at Synthetix, a derivatives liquidity protocol. He is a former partner at ParaFi Capital and Director of Research and Growth at Elysium Health. ',
         },

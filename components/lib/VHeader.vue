@@ -6,25 +6,38 @@
           <v-image :path="logo" alt="logo" class="cursor-pointer logo" />
         </NuxtLink>
         <nav class="header-menu" :class="{ show }">
-          <NuxtLink
-            v-for="item in menuItems"
-            :key="item.name"
-            :to="item.link"
-            :target="item.external ? '__blank' : ''"
-            class="header-menu-item"
-            :class="{
-              'active-link':
-                (!item.external && item.link === `/${currentLocation}/`) ||
-                (item.link === '/' && currentLocation === 'index'),
-            }"
-            @click.native="closeMenu"
-          >
-            <v-text :weight="600" font="sans" color="primary">{{
-              item.name
-            }}</v-text>
-          </NuxtLink>
+          <template v-for="item in menuItems">
+            <a
+              v-if="item.external"
+              :key="item.name"
+              :href="item.link"
+              target="_blank"
+              class="header-menu-item"
+              @click="closeMenu"
+            >
+              <v-text :weight="600" font="sans" color="primary">{{
+                item.name
+              }}</v-text>
+            </a>
+            <NuxtLink
+              v-else
+              :key="item.name"
+              :to="item.link"
+              class="header-menu-item"
+              :class="{
+                'active-link':
+                  (!item.external && item.link === `/${currentLocation}/`) ||
+                  (item.link === '/' && currentLocation === 'index'),
+              }"
+              @click.native="closeMenu"
+            >
+              <v-text :weight="600" font="sans" color="primary">{{
+                item.name
+              }}</v-text>
+            </NuxtLink>
+          </template>
           <a
-            v-if="cta.label"
+            v-if="cta && cta.label"
             class="laptop-remove header-menu-item"
             @click.stop="onCTAClick"
           >
@@ -33,22 +46,20 @@
             }}</v-text>
           </a>
         </nav>
-        <v-stack gap="3vw">
-          <v-button
-            v-if="cta"
-            :label="cta.label"
-            :action="cta.action"
-            label-transform="uppercase"
-            class="mobile-remove tablet-remove"
-            :show="show"
-          />
-          <v-image
-            :path="`icons/${icon}.svg`"
-            class="cursor-pointer laptop-remove menu-icon"
-            :class="{ show }"
-            @click="showClicked"
-          />
-        </v-stack>
+        <v-button
+          v-if="cta"
+          :label="cta.label"
+          :action="cta.action"
+          label-transform="uppercase"
+          class="mobile-remove tablet-remove"
+          :show="show"
+        />
+        <v-image
+          :path="`icons/${icon}.svg`"
+          class="cursor-pointer laptop-remove menu-icon"
+          :class="{ show }"
+          @click="showClicked"
+        />
       </v-stack>
     </v-container>
   </header>

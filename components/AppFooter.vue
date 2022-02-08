@@ -23,7 +23,7 @@
             </v-text>
           </a>
           <v-stack style="margin-top: 3rem" md-justify="space-evenly">
-            <a href="https://twitter.com/arcananetwork" target="__blank">
+            <a href="https://twitter.com/arcananetwork" target="_blank">
               <v-image
                 path="images/twitter-white.svg"
                 class="footer-social-link"
@@ -33,7 +33,7 @@
             <a
               style="margin-left: 3rem"
               href="https://t.me/ArcanaNetwork"
-              target="__blank"
+              target="_blank"
             >
               <v-image
                 path="images/telegram-white.svg"
@@ -44,12 +44,24 @@
             <a
               style="margin-left: 3rem"
               href="https://discord.gg/w6ej4FtqYS"
-              target="__blank"
+              target="_blank"
             >
               <v-image
                 path="images/discord-white.svg"
                 class="footer-social-link"
                 alt="Arcana discord channel"
+              />
+            </a>
+            <a
+              style="margin-left: 3rem"
+              href="https://forum.arcana.network"
+              target="_blank"
+            >
+              <v-image
+                style="height: 40px"
+                path="images/discourse-white.svg"
+                class="footer-social-link"
+                alt="Arcana discourse channel"
               />
             </a>
           </v-stack>
@@ -64,19 +76,16 @@
             <a href="/about/"><v-text>About</v-text></a>
             <a
               href="https://www.notion.so/Arcana-Technical-Docs-a1d7fd0d2970452586c693e4fee14d08"
-              target="__blank"
+              target="_blank"
             >
               <v-text>Technical Paper</v-text>
             </a>
-            <a href="https://medium.com/arcana-network-blog" target="__blank">
+            <a href="https://medium.com/arcana-network-blog" target="_blank">
               <v-text>Blog</v-text>
             </a>
           </v-stack>
           <v-stack direction="column" class="footer-links">
-            <a
-              href="https://angel.co/company/arcana-network/jobs"
-              target="__blank"
-            >
+            <a href="/careers">
               <v-text>Careers</v-text>
             </a>
             <a href="/privacy"><v-text>Privacy</v-text></a>

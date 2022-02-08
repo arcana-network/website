@@ -77,16 +77,23 @@ export default {
           },
         },
         {
-          name: 'Sharan',
-          designation: 'Head of Design',
+          name: 'Sharan Grandigae',
+          designation: 'CDO',
           image: 'Sharan',
-          links: {},
+          links: {
+            linkedin: 'https://www.linkedin.com/in/sharangrandigae',
+            twitter: 'https://twitter.com/sharangrandigae',
+          },
         },
         {
           name: 'Narendran',
-          designation: 'Pricinpal Engineer',
+          designation: 'Principal Engineer',
           image: 'Naren',
-          links: {},
+          links: {
+            linkedin: 'https://www.linkedin.com/in/dudewhocode/',
+            twitter: 'https://twitter.com/DudeWhoCode',
+            github: 'https://github.com/dudewhocode',
+          },
         },
         {
           name: 'Abhishek',
@@ -99,6 +106,15 @@ export default {
         },
       ],
       members: [
+        {
+          name: 'Prof. Bill Buchanan, O. B. E.',
+          designation: 'Crypto Researcher',
+          image: 'Bill',
+          links: {
+            linkedin: 'https://linkedin.com/in/billatnapier',
+            twitter: 'https://twitter.com/billatnapier',
+          },
+        },
         {
           name: 'Anirudh',
           designation: 'Product Manager',
@@ -120,7 +136,7 @@ export default {
         },
         {
           name: 'Ajith',
-          designation: 'Front End Developer',
+          designation: 'Lead Frontend Developer',
           image: 'Ajith',
           links: {
             linkedin: 'https://www.linkedin.com/in/ajithranka/',
@@ -176,11 +192,20 @@ export default {
         },
         {
           name: 'Shrinath',
-          designation: 'Front End Developer',
+          designation: 'Frontend Developer',
           image: 'Shrinath',
           links: {
             linkedin: 'https://www.linkedin.com/in/shrinath-prabhu-459107b2/',
             github: 'https://github.com/shrinathprabhu',
+          },
+        },
+        {
+          name: 'Maharshi',
+          designation: 'Software Engineer',
+          image: 'Maharshi',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/maharshi-m-8b00a1219',
+            github: 'https://github.com/mmjee',
           },
         },
         {
