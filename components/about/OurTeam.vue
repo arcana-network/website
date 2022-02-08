@@ -218,6 +218,33 @@ export default {
             github: 'https://github.com/naraharirohith',
           },
         },
+        {
+          name: 'Karthik Durai',
+          designation: 'Frontend Developer',
+          image: 'Karthik',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/karthik-durai/',
+            github: 'https://github.com/KarthikSiddarth',
+          },
+        },
+        {
+          name: 'Shaloo Shalini',
+          designation: 'Information Architect',
+          image: 'Shaloo',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/shalooshalini/',
+            twitter: 'https://twitter.com/shalooshalini',
+            github: 'https://github.com/shaloo',
+          },
+        },
+        {
+          name: 'Jonny Dee',
+          designation: 'Marketing Manager',
+          image: 'Jonathan',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/jonny-dee-16924289/',
+          },
+        },
       ],
       isTeamExpanded: false,
     }
