@@ -149,7 +149,7 @@ export default {
           designation: 'DevOps',
           image: 'Lakshmikanth',
           links: {
-            linkedin: 'http://linkedin.com/in/lakshmikanth-bharathi-2a4754b8',
+            linkedin: 'https://linkedin.com/in/lakshmikanth-bharathi-2a4754b8',
             twitter: 'https://twitter.com/LxmikanthBarati',
             github: 'https://github.com/lakshmikanth-tesla',
           },
