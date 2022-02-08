@@ -210,7 +210,7 @@ export default {
         },
         {
           name: 'Rohith',
-          designation: 'Intern',
+          designation: 'Blockchain Developer',
           image: 'Rohith',
           links: {
             linkedin: 'https://www.linkedin.com/in/rohith-narahari-40211818b/',
