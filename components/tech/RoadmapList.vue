@@ -158,10 +158,15 @@ export default {
         2022: [
           {
             quarter: 'Q1',
-            milestones: [
-              'Arcana Public Token Sale and TGE.',
-              'Arcana Mainnet launch.',
-            ],
+            milestones: ['Beta Testnet'],
+          },
+          {
+            quarter: 'Q2',
+            milestones: ['Alpha Mainnet'],
+          },
+          {
+            quarter: 'Q4',
+            milestones: ['TGE & Mainnet'],
           },
         ],
       },
