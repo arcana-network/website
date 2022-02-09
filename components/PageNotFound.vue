@@ -5,6 +5,7 @@
         justify="space-between"
         align="center"
         direction="column"
+        md-justify="space-evenly"
         class="error-content-container"
       >
         <v-image
