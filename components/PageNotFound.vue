@@ -3,10 +3,8 @@
     <v-container>
       <v-stack
         justify="space-between"
-        md-direction="column-reverse"
         align="center"
         direction="column"
-        md-justify="space-evenly"
         class="error-content-container"
       >
         <v-image
