@@ -5,6 +5,7 @@
         justify="space-between"
         md-direction="column-reverse"
         align="center"
+        direction="column"
         md-justify="space-evenly"
         class="error-content-container"
       >
@@ -21,8 +22,6 @@
 <style lang="postcss" scoped>
 .error-content-container {
   height: 80vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .error-content {
