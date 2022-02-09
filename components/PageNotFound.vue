@@ -12,9 +12,7 @@
           path="images/404-illustration.png"
           class="error-illustration"
         />
-        <v-stack direction="column" class="error-content">
-          <v-heading>Page Not Found!</v-heading>
-        </v-stack>
+        <v-heading>Page Not Found!</v-heading>
       </v-stack>
     </v-container>
   </section>
