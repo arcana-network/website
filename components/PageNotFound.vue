@@ -22,10 +22,6 @@
   height: 80vh;
 }
 
-.error-content {
-  max-width: 40rem;
-}
-
 .error-illustration {
   width: 90%;
   max-width: 40rem;
