@@ -164,7 +164,7 @@ header {
   .header-menu {
     position: fixed;
     max-height: 0;
-    top: 4.8rem;
+    top: 10rem;
     left: 0;
     right: 0;
     flex-direction: column;
