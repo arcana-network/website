@@ -19,7 +19,7 @@
             class="roadmap-dropdown"
           /> -->
         </v-stack>
-        <v-stack class="content-container">
+        <v-stack>
           <v-stack
             direction="column"
             style="margin: 1.5rem 6rem 0 0"
@@ -281,9 +281,5 @@ ul li {
 .selected-year > * {
   color: black;
   font-weight: 600;
-}
-
-.content-container {
-  /* border: 1px solid red; */
 }
 </style>
