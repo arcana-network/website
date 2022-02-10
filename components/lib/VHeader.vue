@@ -162,7 +162,7 @@ header {
 
 @media (--viewport-medium) {
   .header-menu {
-    position: fixed;
+    position: absolute;
     max-height: 0;
     top: 10rem;
     left: 0;
