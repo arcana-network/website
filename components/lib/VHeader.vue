@@ -184,7 +184,7 @@ header {
     text-align: center;
   }
   .header-menu.show {
-    max-height: 100%;
+    max-height: 100vh;
     padding: 1rem;
   }
   .menu-icon {
