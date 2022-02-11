@@ -165,7 +165,7 @@ header {
   .header-menu {
     position: absolute;
     max-height: 0;
-    top: 10rem;
+    top: 100%;
     left: 0;
     right: 0;
     flex-direction: column;
