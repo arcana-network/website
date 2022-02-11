@@ -124,6 +124,7 @@ export default {
 header {
   padding: 1.5rem 0;
   z-index: 10000;
+  position: relative;
 }
 
 .header-menu-item {
@@ -162,9 +163,9 @@ header {
 
 @media (--viewport-medium) {
   .header-menu {
-    position: fixed;
+    position: absolute;
     max-height: 0;
-    top: 4.8rem;
+    top: 100%;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -183,7 +184,7 @@ header {
     text-align: center;
   }
   .header-menu.show {
-    max-height: 100%;
+    max-height: 100vh;
     padding: 1rem;
   }
   .menu-icon {
