@@ -124,6 +124,7 @@ export default {
 header {
   padding: 1.5rem 0;
   z-index: 10000;
+  position: relative;
 }
 
 .header-menu-item {
