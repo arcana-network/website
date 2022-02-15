@@ -149,8 +149,8 @@ export default {
           designation: 'DevOps',
           image: 'Lakshmikanth',
           links: {
-            linkedin: 'linkedin.com/in/lakshmikanth-bharathi-2a4754b8',
-            twitter: 'https://twitter.com/LakshmikanthBh8',
+            linkedin: 'https://linkedin.com/in/lakshmikanth-bharathi-2a4754b8',
+            twitter: 'https://twitter.com/LxmikanthBarati',
             github: 'https://github.com/lakshmikanth-tesla',
           },
         },
@@ -210,12 +210,39 @@ export default {
         },
         {
           name: 'Rohith',
-          designation: 'Intern',
+          designation: 'Blockchain Developer',
           image: 'Rohith',
           links: {
             linkedin: 'https://www.linkedin.com/in/rohith-narahari-40211818b/',
             twitter: 'https://twitter.com/mr_deadpool_93',
             github: 'https://github.com/naraharirohith',
+          },
+        },
+        {
+          name: 'Karthik Durai',
+          designation: 'Frontend Developer',
+          image: 'Karthik',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/karthik-durai/',
+            github: 'https://github.com/KarthikSiddarth',
+          },
+        },
+        {
+          name: 'Shaloo Shalini',
+          designation: 'Information Architect',
+          image: 'Shaloo',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/shalooshalini/',
+            twitter: 'https://twitter.com/shalooshalini',
+            github: 'https://github.com/shaloo',
+          },
+        },
+        {
+          name: 'Jonny Dee',
+          designation: 'Marketing Manager',
+          image: 'Jonathan',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/jonny-dee-16924289/',
           },
         },
       ],

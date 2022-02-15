@@ -126,4 +126,7 @@ export default {
     preconnect: true,
     preload: true,
   },
+  generate: {
+    fallback: true,
+  },
 }
