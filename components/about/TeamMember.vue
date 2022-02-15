@@ -123,6 +123,7 @@ export default {
 
 .member-image > * {
   width: 16rem;
+  border-radius: 50%;
 }
 
 .social-links {
