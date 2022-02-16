@@ -31,6 +31,12 @@
                 <a href="https://discord.gg/w6ej4FtqYS" target="_blank">
                   <v-image path="images/discord.svg" :dimension="[36, 36]" />
                 </a>
+                <a href="https://twitter.com/arcananetwork" target="_blank">
+                  <v-image
+                    path="images/twitter_social_icon_rounded_square_blue.png"
+                    :dimension="[36, 36]"
+                  />
+                </a>
               </v-stack>
             </v-stack>
             <v-chip class="testnet-chip">
