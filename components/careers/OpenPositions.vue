@@ -222,17 +222,6 @@ export default {
             compensation: '$40k – $100k | No equity',
             link: 'https://angel.co/company/arcana-network/jobs/1822884-lead-developer-evangelist',
           },
-          {
-            title: 'Technical Docs Writer',
-            requirements: [
-              'Be fully responsible for the quality, discoverability and accuracy of our docs',
-              'Document new products, features, and APIs',
-              'Document standards, guidelines, and best practices on documentation for developers',
-            ],
-            location: 'India | Remote',
-            compensation: '₹10L – ₹20L | No equity',
-            link: 'https://angel.co/company/arcana-network/jobs/1837985-technical-docs-writer',
-          },
         ],
         Sales: [
           {
