@@ -19,7 +19,14 @@
           style="max-width: 60rem"
         />
       </v-container>
-      <v-image class="team-image" path="images/careers/team.png" />
+      <v-stack class="team-image-container">
+        <v-image width="32%" path="images/careers/photo_1.png" />
+        <v-image width="68%" path="images/careers/photo_2.png" />
+      </v-stack>
+      <v-stack class="team-image-container">
+        <v-image width="68%" path="images/careers/photo_3.png" />
+        <v-image width="32%" path="images/careers/photo_4.png" />
+      </v-stack>
     </v-stack>
   </section>
 </template>
@@ -31,8 +38,11 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.team-image {
-  width: 100%;
+.team-image-container {
+  max-width: 100%;
   height: 100%;
+}
+.team-image-container:nth-child(2) {
+  margin-top: 100px;
 }
 </style>
