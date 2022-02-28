@@ -49,6 +49,7 @@ export default {
     margin-top: 50px;
   }
 }
+
 .team-image-row {
   max-width: 100%;
   height: 100%;
