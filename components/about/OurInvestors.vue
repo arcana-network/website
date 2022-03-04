@@ -58,9 +58,9 @@ export default {
         },
         {
           image: 'images/investors/woodstock.png',
-          name: 'Woodstock Fund',
+          name: 'Woodstock',
           description:
-            'Woodstock Fund is an emerging technology investment fund that focuses on investing in domains such as decentralized finance (DeFi), NFT and tokenization, and web 3.0 protocols.',
+            'Woodstock is an emerging technology investment fund that focuses on investing in domains such as decentralized finance (DeFi), NFT and tokenization, and web 3.0 protocols.',
         },
         {
           image: 'images/investors/dcg.png',
