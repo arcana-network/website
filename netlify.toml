@@ -9,6 +9,20 @@
   NODE_ENV = "development"
 
 [[redirects]]
+  from = "/blog"
+  to = "https://arcana-network.ghost.io/blog/"
+  status = 200
+  force = true
+  headers = {X-Forwarded-Host = "arcana.network"}
+
+[[redirects]]
+  from = "/blog/*"
+  to = "https://arcana-network.ghost.io/blog/:splat"
+  status = 200
+  force = true
+  headers = {X-Forwarded-Host = "arcana.network"}
+
+[[redirects]]
   from = "/testnet"
   to = "https://testnet.arcana.network"
   status = 301
