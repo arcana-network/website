@@ -9,6 +9,7 @@
     default-src 'self';
 
     font-src 'self' fonts.gstatic.com gstatic.com *.gstatic.com;
+    frame-src 'self' btw.so *.btw.so;
     img-src 'self' data:;
     script-src 'self' googletagmanager.com *.googletagmanager.com btw.so *.btw.so;
     style-src 'self' 'unsafe-inline' fonts.googleapis.com;
