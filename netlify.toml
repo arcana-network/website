@@ -11,7 +11,7 @@
     font-src 'self' fonts.gstatic.com gstatic.com *.gstatic.com;
     frame-src 'self' btw.so *.btw.so;
     img-src 'self' data:;
-    script-src 'self' btw.so *.btw.so googletagmanager.com *.googletagmanager.com list-manage.com *.list-manage.com;
+    script-src 'self' 'unsafe-inline' btw.so *.btw.so googletagmanager.com *.googletagmanager.com list-manage.com *.list-manage.com;
     style-src 'self' 'unsafe-inline' fonts.googleapis.com;
 
     connect-src 'self' arcana.network *.arcana.network btw.so *.btw.so google-analytics.com *.google-analytics.com list-manage.com *.list-manage.com sentry.io *.sentry.io;
