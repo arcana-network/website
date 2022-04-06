@@ -240,7 +240,7 @@ export default {
         {
           name: 'Ronak Kadhi',
           designation: 'Product Marketing Manager',
-          image: 'Team_Placeholder',
+          image: 'Ronak',
           links: {
             linkedin: 'https://linkedin.com/in/ronakkadhi',
             twitter: 'https://twitter.com/ronakkadhi'
