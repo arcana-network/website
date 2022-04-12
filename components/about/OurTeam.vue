@@ -2,21 +2,10 @@
   <section style="margin-bottom: 10rem">
     <v-container>
       <v-stack justify="space-between">
-        <app-section-descriptor
-          title="Our team"
-          heading="The Builders Behind Arcana"
-        />
+        <app-section-descriptor title="Our team" heading="The Builders Behind Arcana" />
       </v-stack>
-      <v-stack
-        justify="space-between"
-        md-direction="column"
-        class="member-container"
-        wrap
-      >
-        <div
-          v-for="member in executiveMembers"
-          :key="member.name + member.designation"
-        >
+      <v-stack justify="space-between" md-direction="column" class="member-container" wrap>
+        <div v-for="member in executiveMembers" :key="member.name + member.designation">
           <about-team-member :member="member" />
         </div>
       </v-stack>
@@ -32,12 +21,7 @@
         </div>
       </v-stack>
       <v-stack v-if="!isTeamExpanded" align="center" justify="center">
-        <v-button
-          type="link"
-          label="View more"
-          label-transform="uppercase"
-          :action="expandTeam"
-        />
+        <v-button type="link" label="View more" label-transform="uppercase" :action="expandTeam" />
       </v-stack>
     </v-container>
   </section>
@@ -245,6 +229,33 @@ export default {
             linkedin: 'https://www.linkedin.com/in/jonny-dee-16924289/',
           },
         },
+        {
+          name: 'Nitish Kumar Tiwari',
+          designation: 'Senior Backend Engineer',
+          image: 'Nitish_Kumar',
+          links: {
+            github: 'https://github.com/nitisht'
+          }
+        },
+        {
+          name: 'Ronak Kadhi',
+          designation: 'Product Marketing Manager',
+          image: 'Ronak',
+          links: {
+            linkedin: 'https://linkedin.com/in/ronakkadhi',
+            twitter: 'https://twitter.com/ronakkadhi'
+          }
+        },
+        {
+          name: 'Garry F. C. Ranee',
+          designation: 'Cryptography Researcher',
+          image: 'Garry',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/garry-f-c-ranee',
+            twitter: 'https://twitter.com/_Alpha23',
+            github: 'https://github.com/GarryFCR'
+          }
+        }
       ],
       isTeamExpanded: false,
     }
@@ -258,7 +269,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-@import url('../lib/media-query-helper.css');
+@import url("../lib/media-query-helper.css");
 
 .member-container {
   margin: 1rem 0;
