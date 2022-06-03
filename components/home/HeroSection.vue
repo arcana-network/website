@@ -33,7 +33,7 @@
             </v-stack>
           </v-stack>
         </v-stack>
-        <div class="section-orbs">
+        <div class="video-thumbnail-container">
           <v-video-thumbnail
             src="images/Arcana-intro-video-thumbnail.png"
             style="position: absolute"
@@ -80,47 +80,12 @@ section {
   }
 }
 
-.section-orbs {
+.video-thumbnail-container {
   max-width: 800px;
   width: 100%;
 
   @media (--viewport-large) {
     margin-right: -12.5%;
   }
-}
-
-.support-icons a {
-  margin-left: 1.5rem;
-
-  @media (--viewport-medium) {
-    margin-left: 0;
-    margin-top: 1.5rem;
-  }
-}
-
-.support-icons > a + a {
-  @media (--viewport-medium) {
-    margin-left: 1.5rem;
-  }
-}
-
-.testnet-chip {
-  max-width: unset;
-  padding: 1.5rem;
-
-  @media (--viewport-small) {
-    width: calc(100% - 3rem);
-  }
-}
-
-.testnet-chip-link {
-  color: var(--color-secondary);
-  text-decoration: none;
-  opacity: 0.7;
-  transition: opacity 0.2s ease-in;
-}
-
-.testnet-chip-link:hover {
-  opacity: 1;
 }
 </style>
