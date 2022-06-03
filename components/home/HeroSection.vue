@@ -18,10 +18,12 @@
             privacy-preserving apps."
             />
             <v-stack
-              md-direction="column"
+              sm-direction="column"
               align="center"
               gap="1.5rem"
-              md-gap="1.5rem"
+              sm-gap="1.5rem"
+              sm-justify="space-around"
+              wrap
             >
               <v-button
                 label="Start Building"
@@ -32,6 +34,7 @@
                 variant="outline"
                 label="Go To Docs"
                 label-transform="uppercase"
+                class="secondary-button"
                 :action="handleOpenDocs"
               />
             </v-stack>
@@ -107,6 +110,10 @@ export default {
 
 .hero-title {
   margin-top: 0;
+}
+
+.secondary-button {
+  padding: 1.125rem calc(2rem + 16px);
 }
 
 .arcana-video-thumbnail-container {
