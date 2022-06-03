@@ -1,7 +1,6 @@
 <template>
   <main>
     <HomeHeroSection />
-    <!-- <HomeIntroduction /> -->
     <HomeFeatures />
     <HomeTestimonials />
     <AboutOurInvestors />
