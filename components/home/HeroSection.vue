@@ -110,6 +110,8 @@ export default {
 }
 
 .arcana-video-thumbnail-container {
+  overflow: visible;
+
   @media (--viewport-large) {
     max-width: 48rem;
     width: 72%;
@@ -124,6 +126,23 @@ export default {
     width: 80%;
     max-width: 40rem;
   }
+}
+
+.arcana-video-thumbnail-container::before {
+  content: '';
+  overflow: visible;
+  position: absolute;
+  top: -2%;
+  left: -2%;
+  right: -2%;
+  bottom: -2%;
+  z-index: -1;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(214, 69, 85, 0.3) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transform: skew(30deg);
 }
 
 .intro-video-outer-circle {
