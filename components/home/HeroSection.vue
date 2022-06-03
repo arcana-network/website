@@ -111,7 +111,7 @@ export default {
 
 .arcana-video-thumbnail-container {
   @media (--viewport-large) {
-    max-width: 60rem;
+    max-width: 48rem;
     width: 72%;
     object-fit: contain;
     position: absolute;
@@ -158,9 +158,9 @@ export default {
 .intro-video-dark-orb {
   position: absolute;
   vertical-align: middle;
-  width: 10%;
-  bottom: 6%;
-  left: 16%;
+  width: 8%;
+  bottom: 8%;
+  left: 15%;
   z-index: 1;
 }
 
