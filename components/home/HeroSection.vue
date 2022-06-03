@@ -31,18 +31,6 @@
                 :action="handleOpenDocs"
               />
             </v-stack>
-            <v-chip class="testnet-chip">
-              <v-text size="1.25rem" line-height="1.4" color="secondary">
-                Participate in Arcana's Alpha Testnet Launch!
-                <a
-                  class="testnet-chip-link"
-                  href="http://testnet.arcana.network"
-                  target="_blank"
-                >
-                  See details &rarr;
-                </a>
-              </v-text>
-            </v-chip>
           </v-stack>
         </v-stack>
         <div class="section-orbs">
