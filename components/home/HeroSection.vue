@@ -123,8 +123,8 @@ export default {
 
   @media (--viewport-medium) {
     position: relative;
-    width: 80%;
-    max-width: 40rem;
+    width: 120%;
+    max-width: 36rem;
   }
 }
 
