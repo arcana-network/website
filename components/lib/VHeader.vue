@@ -45,15 +45,15 @@
               cta.label
             }}</v-text>
           </a>
+          <v-button
+            v-if="cta"
+            :label="cta.label"
+            :action="cta.action"
+            label-transform="uppercase"
+            class="mobile-remove tablet-remove"
+            :show="show"
+          />
         </nav>
-        <v-button
-          v-if="cta"
-          :label="cta.label"
-          :action="cta.action"
-          label-transform="uppercase"
-          class="mobile-remove tablet-remove"
-          :show="show"
-        />
         <v-image
           :path="`icons/${icon}.svg`"
           class="cursor-pointer laptop-remove menu-icon"
