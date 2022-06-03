@@ -8,6 +8,7 @@
     >
       <v-image
         path="icons/play.svg"
+        title="Play video"
         :dimension="[64, 64]"
         class="video-play-button absolute-center"
         @click.stop="onPlay"
