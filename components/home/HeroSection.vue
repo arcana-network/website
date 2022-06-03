@@ -34,16 +34,29 @@
           </v-stack>
         </v-stack>
         <div class="section-orbs">
-          <art-node-grid />
+          <v-video-thumbnail
+            src="images/Arcana-intro-video-thumbnail.png"
+            style="position: absolute"
+            @play="isIntroPlaying = true"
+          />
         </div>
       </v-stack>
     </v-container>
+    <home-arcana-intro-video
+      v-if="isIntroPlaying"
+      @close="isIntroPlaying = false"
+    />
   </section>
 </template>
 
 <script>
 export default {
   name: 'HeroSection',
+  data() {
+    return {
+      isIntroPlaying: false,
+    }
+  },
   methods: {
     handleOpenDashboard() {
       window.open('https://dashboard.arcana.network', '_blank')
