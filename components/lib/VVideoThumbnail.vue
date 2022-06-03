@@ -3,6 +3,7 @@
     <v-image :path="src" :dimension="dimension" class="video-thumbnail" />
     <div
       class="video-controls absolute-center cursor-pointer"
+      role="button"
       @click.stop="onPlay"
     >
       <v-image
@@ -50,16 +51,16 @@ export default {
 }
 .video-controls {
   z-index: 1;
-  width: 6rem;
-  height: 6rem;
+  width: 16%;
+  height: 16%;
   background-color: #f0f0f3;
   border-radius: 50%;
   box-shadow: 5px 5px 10px rgba(174, 174, 192, 0.2),
     inset -2px -2px 4px rgba(0, 0, 0, 0.1), inset 2px 2px 4px #fff;
 }
 .video-play-button {
-  width: 2rem;
-  height: 2rem;
+  width: 32%;
+  height: 32%;
   margin-left: 5%;
 }
 </style>
