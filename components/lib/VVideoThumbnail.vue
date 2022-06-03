@@ -43,12 +43,14 @@ export default {
 .video-thumbnail-container {
   position: relative;
   overflow: hidden;
+  padding: 0;
 }
+
 .video-thumbnail {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  vertical-align: middle;
 }
+
 .video-controls {
   z-index: 1;
   width: 16%;
@@ -58,6 +60,7 @@ export default {
   box-shadow: 5px 5px 10px rgba(174, 174, 192, 0.2),
     inset -2px -2px 4px rgba(0, 0, 0, 0.1), inset 2px 2px 4px #fff;
 }
+
 .video-play-button {
   width: 32%;
   height: 32%;
