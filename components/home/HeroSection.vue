@@ -20,24 +20,16 @@
               md-gap="1.5rem"
             >
               <v-button
-                label="Get started"
+                label="Start Building"
                 label-transform="uppercase"
                 :action="onGetStarted"
               />
-              <v-stack align="center" class="support-icons">
-                <a href="https://t.me/ArcanaNetwork" target="_blank">
-                  <v-image path="images/telegram.svg" :dimension="[36, 36]" />
-                </a>
-                <a href="https://discord.gg/w6ej4FtqYS" target="_blank">
-                  <v-image path="images/discord.svg" :dimension="[36, 36]" />
-                </a>
-                <a href="https://twitter.com/arcananetwork" target="_blank">
-                  <v-image
-                    path="images/twitter_social_icon_rounded_square_blue.png"
-                    :dimension="[36, 36]"
-                  />
-                </a>
-              </v-stack>
+              <v-button
+                variant="outline"
+                label="Go To Docs"
+                label-transform="uppercase"
+                :action="onGetStarted"
+              />
             </v-stack>
             <v-chip class="testnet-chip">
               <v-text size="1.25rem" line-height="1.4" color="secondary">
