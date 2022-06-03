@@ -1,9 +1,14 @@
 <template>
-  <section>
+  <section class="hero-section">
     <v-container>
-      <v-stack justify="space-between" md-direction="column" md-align="center">
-        <v-stack direction="column">
-          <v-heading :level="1" style="max-width: 38rem">
+      <v-stack
+        justify="space-between"
+        md-direction="column-reverse"
+        md-align="center"
+        class="position-relative"
+      >
+        <v-stack direction="column" class="hero-content-container">
+          <v-heading :level="1" class="hero-title">
             The Storage and Privacy Stack for Ethereum dApps
           </v-heading>
           <v-stack direction="column" gap="2rem">
@@ -11,7 +16,6 @@
               description="Decentralised storage, identity, access management and key
             management services to help developers build secure and
             privacy-preserving apps."
-              style="max-width: 38rem"
             />
             <v-stack
               md-direction="column"
@@ -33,12 +37,29 @@
             </v-stack>
           </v-stack>
         </v-stack>
-        <div class="video-thumbnail-container">
-          <v-video-thumbnail
-            src="images/Arcana-intro-video-thumbnail.png"
-            style="position: absolute"
-            @play="isIntroPlaying = true"
+        <div class="arcana-video-thumbnail-container">
+          <img
+            src="@/assets/images/intro-video-outer-circle.svg"
+            class="intro-video-outer-circle"
           />
+          <img
+            src="@/assets/images/intro-video-inner-circle.svg"
+            class="intro-video-inner-circle"
+          />
+          <img
+            src="@/assets/images/intro-video-glowing-orb.png"
+            class="intro-video-glowing-orb"
+          />
+          <img
+            src="@/assets/images/intro-video-dark-orb.png"
+            class="intro-video-dark-orb"
+          />
+          <div class="thumbnail-gradient-border-container">
+            <v-video-thumbnail
+              src="images/Arcana-intro-video-thumbnail.png"
+              @play="isIntroPlaying = true"
+            />
+          </div>
         </div>
       </v-stack>
     </v-container>
@@ -71,7 +92,7 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
-section {
+.hero-section {
   padding: 0 0 6rem;
 
   @media (--viewport-small) {
@@ -80,12 +101,76 @@ section {
   }
 }
 
-.video-thumbnail-container {
-  max-width: 800px;
-  width: 100%;
+.hero-content-container {
+  max-width: 38rem;
+}
+
+.hero-title {
+  margin-top: 0;
+}
+
+.arcana-video-thumbnail-container {
+  @media (--viewport-large) {
+    max-width: 60rem;
+    width: 72%;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+  }
+
+  @media (--viewport-medium) {
+    position: relative;
+    width: 80%;
+    max-width: 40rem;
+  }
+}
+
+.intro-video-outer-circle {
+  vertical-align: middle;
 
   @media (--viewport-large) {
-    margin-right: -12.5%;
+    width: 100%;
   }
+
+  @media (--viewport-medium) {
+    width: 100%;
+  }
+}
+
+.intro-video-inner-circle {
+  position: absolute;
+  vertical-align: middle;
+  width: 70%;
+  top: 15%;
+  left: 15%;
+}
+
+.intro-video-glowing-orb {
+  position: absolute;
+  vertical-align: middle;
+  width: 16%;
+  top: 14%;
+  right: 24%;
+  z-index: 1;
+}
+
+.intro-video-dark-orb {
+  position: absolute;
+  vertical-align: middle;
+  width: 10%;
+  bottom: 6%;
+  left: 16%;
+  z-index: 1;
+}
+
+.thumbnail-gradient-border-container {
+  position: absolute;
+  width: 56%;
+  top: 21%;
+  left: 21%;
+  background: linear-gradient(147.79deg, #ffd7a0 16.63%, #ee4783 72.62%);
+  border-radius: 50%;
+  padding: 1%;
 }
 </style>
