@@ -1,7 +1,7 @@
 <template>
   <v-overlay>
     <iframe
-      src="https://www.youtube.com/embed/itP6iLLskro?autoplay=1&vq=hd720"
+      src="https://www.youtube.com/embed/itP6iLLskro?autoplay=1"
       title="What is Arcana? Mission | Benefits | Use Cases"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
