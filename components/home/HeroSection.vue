@@ -22,13 +22,13 @@
               <v-button
                 label="Start Building"
                 label-transform="uppercase"
-                :action="onGetStarted"
+                :action="handleOpenDashboard"
               />
               <v-button
                 variant="outline"
                 label="Go To Docs"
                 label-transform="uppercase"
-                :action="onGetStarted"
+                :action="handleOpenDocs"
               />
             </v-stack>
             <v-chip class="testnet-chip">
@@ -57,8 +57,11 @@
 export default {
   name: 'HeroSection',
   methods: {
-    onGetStarted() {
+    handleOpenDashboard() {
       window.open('https://dashboard.arcana.network', '_blank')
+    },
+    handleOpenDocs() {
+      window.open('https://docs.arcana.network', '_blank')
     },
   },
 }
