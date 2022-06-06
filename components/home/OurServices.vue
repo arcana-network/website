@@ -1,88 +1,79 @@
 <template>
   <section>
     <v-container>
-      <v-stack direction="column" align="start">
-        <app-section-descriptor
-          title="Services"
-          heading="Core Offerings"
-          description="Users care about Privacy and Security, set your app apart with the most developer friendly data storage and privacy platform. Takes minutes to integrate."
-          style="max-width: 64rem"
-        />
-        <v-button
-          type="link"
-          label="View Stack"
-          label-transform="uppercase"
-          style="margin: 1.5rem 0"
-          :action="openTechPage"
-        />
-        <v-image
-          path="images/features-illustration.png"
-          class="features-illustration laptop-remove"
-          style="margin: 1rem auto"
-        />
-      </v-stack>
-      <v-stack justify="space-between" md-direction="column" md-align="center">
-        <v-stack direction="column" class="features-description-container">
-          <v-stack
-            sm-direction="column"
-            md-justify="center"
-            gap="3rem"
-            class="blurb-container"
-            wrap
-          >
-            <v-blurb
-              title="Decentralised Storage"
-              description="Any assets uploaded to Arcana is encrypted, split up and distributed among multiple storage nodes. Without a single-point of failure your assets are protected against geo-specific disasters and hacking attempts."
-              class="blurb"
-            >
-              <template #art>
-                <art-storage-icon animate-on-enter animate-on-hover />
-              </template>
-            </v-blurb>
-            <v-blurb
-              title="End to End Encryption"
-              description="Want to make sure nobody snoops on your users’ data? Implement end-to-end encryption simply and easily with Arcana’s E2E Encryption."
-              class="blurb"
-            >
-              <template #art>
-                <art-encryption-icon animate-on-enter animate-on-hover />
-              </template>
-            </v-blurb>
-          </v-stack>
-          <v-stack
-            sm-direction="column"
-            md-justify="center"
-            gap="3rem"
-            class="blurb-container"
-            wrap
-          >
-            <v-blurb
-              title="Social Auth with Identity and Access Management"
-              description="Remove friction and allow users to signup/login with social auth and generate keys. Decentralised Identity and Access Controls are verifiable in a trust-less way and adhere to the W3C DID spec. You can rest easy knowing that your app will only allow verified users to access assets stored on the system."
-              class="blurb"
-            >
-              <template #art>
-                <art-identity-icon animate-on-enter animate-on-hover />
-              </template>
-            </v-blurb>
-            <v-blurb
-              title="Non-custodial Key Management"
-              :line-breaks="1"
-              description="A big hurdle to cryptographic encryption has to do with public+private keys management. Our DKG and KMS simplifies it. The network handles keys that belong to the users and their data so you don’t have to."
-              class="blurb"
-            >
-              <template #art>
-                <art-keys-icon animate-on-enter animate-on-hover />
-              </template>
-            </v-blurb>
-          </v-stack>
+      <app-section-descriptor
+        title="Services"
+        heading="Core Offerings"
+        description="Users care about Privacy and Security, set your app apart with the most developer friendly data storage and privacy platform. Takes minutes to integrate."
+        style="max-width: 64rem"
+      />
+      <div class="overview-features">
+        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="1rem">
+          <div class="icon-container">
+            <v-image path="images/arcana-overview-auth.svg" alt="Arcana Auth" />
+          </div>
+          <div class="overview-feature">
+            <v-heading :level="2" class="overview-feature-title">
+              Arcana Auth
+            </v-heading>
+            <div class="overview-feature-description">
+              <v-text color="secondary" line-height="1.5" size="1.125rem">
+                Provide frictionless onboarding for web3 users using social auth
+                or passwordless logins. Arcana handles all aspects of key
+                management from key pair generation to secure non-custodial
+                handling through the arcana wallet so that your users don't have
+                to.
+              </v-text>
+            </div>
+          </div>
         </v-stack>
-        <v-image
-          path="images/features-illustration.png"
-          class="features-illustration tablet-remove"
-          style="align-self: start"
-        />
-      </v-stack>
+        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="1rem">
+          <div class="overview-feature">
+            <div>
+              <v-heading :level="2" class="overview-feature-title">
+                Auth Store
+              </v-heading>
+            </div>
+            <div class="overview-feature-description">
+              <v-text color="secondary" line-height="1.5" size="1.125rem">
+                Store user data securely on Arcana's decentralised storage
+                network. Every asset uploaded to the arcana network is split up
+                and stored across our nodes so that there is no single point of
+                failure & your assets are protected against geo-specific
+                disasters and hacks.
+              </v-text>
+            </div>
+          </div>
+          <div class="icon-container">
+            <v-image
+              path="images/arcana-overview-store.svg"
+              alt="Arcana Storage"
+            />
+          </div>
+        </v-stack>
+        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="1rem">
+          <div class="icon-container">
+            <v-image
+              path="images/arcana-overview-access.svg"
+              alt="Arcana Access"
+            />
+          </div>
+          <div class="overview-feature">
+            <div>
+              <v-heading :level="2" class="overview-feature-title">
+                Arcana Access
+              </v-heading>
+            </div>
+            <div class="overview-feature-description">
+              <v-text color="secondary" line-height="1.5" size="1.125rem">
+                Let your code or users decide who gets access to data. Arcana
+                Access uses DIDs for identification of data and to store,
+                on-chain, who is the owner of the data and who has access to it.
+              </v-text>
+            </div>
+          </div>
+        </v-stack>
+      </div>
     </v-container>
   </section>
 </template>
@@ -109,50 +100,83 @@ section {
   }
 }
 
-.features-illustration {
-  max-width: 30rem;
-  width: 100%;
+.overview-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3.125rem;
 
-  @media (--viewport-large) {
-    margin-right: -12.5%;
+  @media (--viewport-small) {
+    font-size: 2.1875rem;
   }
 }
 
-@media (--viewport-large) {
-  .features-description-container {
-    flex-grow: 1;
+.overview-description {
+  max-width: 52ch;
+  font-size: 1.25rem;
+
+  @media (--viewport-small) {
+    font-size: 1rem;
   }
 }
 
-@media (--viewport-small) {
-  .features-description-container {
-    width: 100%;
+.overview-feature {
+  max-width: 40rem;
+  text-align: left;
+}
+
+.overview-features > * {
+  margin-top: 6rem;
+}
+
+.overview-feature-title {
+  margin: 0;
+
+  @media (--viewport-small) {
+    font-size: 1.5rem;
   }
 }
 
-.blurb-container {
-  margin-top: 2rem;
+.overview-feature-description {
+  margin-top: 1.25rem;
+}
 
-  @media (max-width: 1439px) {
-    flex-direction: column;
+.icon-container {
+  position: relative;
+  overflow: visible;
+}
+
+.icon-container::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  right: -40%;
+  bottom: -40%;
+  z-index: -1;
+  background: radial-gradient(
+    45% 40% at 50% 50%,
+    rgba(239, 115, 112, 0.3) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: blur(5px);
+}
+
+.icon-container:nth-child(2)::before {
+  background: radial-gradient(
+    45% 40% at 50% 50%,
+    rgba(255, 231, 191, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.icon-container > * {
+  @media (--viewport-medium) {
+    width: 10rem;
+    margin-top: 1rem;
   }
-}
 
-.blurb-container > * + * {
-  margin-left: 2rem;
-
-  @media (max-width: 1439px) {
-    margin-left: 0;
-    margin-top: 2rem;
+  @media (--viewport-small) {
+    width: 6rem;
   }
-}
-
-.blurb {
-  max-width: 24rem;
-  min-width: 12rem;
-}
-
-.blurb img {
-  width: 20px;
 }
 </style>
