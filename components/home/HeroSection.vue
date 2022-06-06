@@ -59,7 +59,7 @@
           />
           <div class="thumbnail-gradient-border-container">
             <v-video-thumbnail
-              src="images/Arcana-intro-video-thumbnail.png"
+              src="images/arcana-intro-video-thumbnail.png"
               @play="isIntroPlaying = true"
             />
           </div>
