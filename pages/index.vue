@@ -2,7 +2,7 @@
   <main>
     <HomeHeroSection />
     <!-- <HomeIntroduction /> -->
-    <HomeFeatures />
+    <HomeOurServices />
     <HomeTestimonials />
     <AboutOurInvestors />
     <HomeRoadmap />

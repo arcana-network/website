@@ -3,8 +3,8 @@
     <v-container>
       <v-stack direction="column" align="start">
         <app-section-descriptor
-          title="Arcana’s Privacy Stack"
-          heading="Four Decentralized Services To Secure Your Apps. Four Less Reasons To Worry"
+          title="Services"
+          heading="Core Offerings"
           description="Users care about Privacy and Security, set your app apart with the most developer friendly data storage and privacy platform. Takes minutes to integrate."
           style="max-width: 64rem"
         />
