@@ -36,14 +36,15 @@
               }}</v-text>
             </NuxtLink>
           </template>
-          <v-button
-            v-if="cta"
-            :label="cta.label"
-            :action="cta.action"
-            label-transform="uppercase"
-            :show="show"
-            class="cta-button"
-          />
+          <a :href="cta.link" target="_blank">
+            <v-button
+              v-if="cta"
+              :label="cta.label"
+              label-transform="uppercase"
+              :show="show"
+              class="cta-button"
+            />
+          </a>
         </nav>
         <v-image
           :path="`icons/${icon}.svg`"

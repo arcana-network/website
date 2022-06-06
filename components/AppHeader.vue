@@ -15,7 +15,7 @@ export default {
     return {
       headerCta: {
         label: 'Start Building',
-        action: this.handleOpenDashboard,
+        link: 'https://dashboard.arcana.network',
       },
       menuItems: [
         {
@@ -33,11 +33,6 @@ export default {
         },
       ],
     }
-  },
-  methods: {
-    handleOpenDashboard() {
-      window.open('https://dashboard.arcana.network', '_blank')
-    },
   },
 }
 </script>
