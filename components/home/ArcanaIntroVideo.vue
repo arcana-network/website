@@ -29,7 +29,7 @@ export default {
 
 .youtube-embed {
   width: 64rem;
-  height: 36rem;
+  height: calc(64rem / 1.77);
 
   @media (--viewport-medium) {
     width: 96vw;
