@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="app-header">
     <v-header
       logo="images/arcana-logo-vertical.svg"
       :cta="headerCta"
@@ -36,3 +36,12 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100000;
+  background-color: #0f0f0f;
+}
+</style>

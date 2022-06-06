@@ -8,10 +8,6 @@
 </template>
 
 <style scoped>
-.app {
-  overflow-x: hidden;
-}
-
 .footer {
   margin-top: 6rem;
 }
