@@ -18,30 +18,32 @@ export default {
   layout: 'page',
   head: {
     link: [
+      // Use /_nuxt/img/* instead of /_nuxt/assets/images/*
+      // since netlify moves all assets inside /img folder
       {
         rel: 'preload',
         as: 'image',
-        href: '/_nuxt/assets/images/arcana-intro-video-thumbnail.png',
+        href: '/_nuxt/img/arcana-intro-video-thumbnail.png',
       },
       {
         rel: 'preload',
         as: 'image',
-        href: '/_nuxt/assets/images/intro-video-inner-circle.svg',
+        href: '/_nuxt/img/intro-video-inner-circle.svg',
       },
       {
         rel: 'preload',
         as: 'image',
-        href: '/_nuxt/assets/images/intro-video-outer-circle.svg',
+        href: '/_nuxt/img/intro-video-outer-circle.svg',
       },
       {
         rel: 'preload',
         as: 'image',
-        href: '/_nuxt/assets/images/intro-video-dark-orb.svg',
+        href: '/_nuxt/img/intro-video-dark-orb.svg',
       },
       {
         rel: 'preload',
         as: 'image',
-        href: '/_nuxt/assets/images/intro-video-glowing-orb.svg',
+        href: '/_nuxt/img/intro-video-glowing-orb.svg',
       },
     ],
   },
