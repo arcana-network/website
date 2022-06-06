@@ -16,6 +16,35 @@
 <script>
 export default {
   layout: 'page',
+  head: {
+    link: [
+      {
+        rel: 'preload',
+        as: 'image',
+        href: '/_nuxt/assets/images/arcana-intro-video-thumbnail.png',
+      },
+      {
+        rel: 'preload',
+        as: 'image',
+        href: '/_nuxt/assets/images/intro-video-inner-circle.svg',
+      },
+      {
+        rel: 'preload',
+        as: 'image',
+        href: '/_nuxt/assets/images/intro-video-outer-circle.svg',
+      },
+      {
+        rel: 'preload',
+        as: 'image',
+        href: '/_nuxt/assets/images/intro-video-dark-orb.svg',
+      },
+      {
+        rel: 'preload',
+        as: 'image',
+        href: '/_nuxt/assets/images/intro-video-glowing-orb.svg',
+      },
+    ],
+  },
 }
 </script>
 
