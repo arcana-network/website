@@ -126,7 +126,7 @@ button[data-variant='primary']:disabled {
 
 /* Outline Button Styles */
 button[data-variant='outline'] {
-  color: var(--color-blue);
+  color: var(--color-white);
   position: relative;
 }
 
