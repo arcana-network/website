@@ -8,7 +8,7 @@
         style="max-width: 64rem"
       />
       <div class="overview-features">
-        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="1rem">
+        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="3rem">
           <div class="icon-container">
             <v-image path="images/arcana-overview-auth.svg" alt="Arcana Auth" />
           </div>
@@ -31,7 +31,7 @@
             </div>
           </div>
         </v-stack>
-        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="1rem">
+        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="3rem">
           <div class="overview-feature">
             <div>
               <v-heading :level="2" class="overview-feature-title">
@@ -59,7 +59,7 @@
             />
           </div>
         </v-stack>
-        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="1rem">
+        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="3rem">
           <div class="icon-container">
             <v-image
               path="images/arcana-overview-access.svg"
@@ -123,11 +123,16 @@ section {
 
 .overview-features > * {
   margin-top: 6rem;
+
+  @media (--viewport-small) {
+    margin-top: 3rem;
+  }
 }
 
 .overview-feature-title {
   margin: 0;
   font-size: 2.25rem;
+  line-height: 1.5;
 
   @media (--viewport-small) {
     font-size: 1.25rem;
@@ -183,6 +188,7 @@ section {
 
   @media (--viewport-small) {
     width: 6rem;
+    margin-top: 0.5rem;
   }
 }
 </style>
