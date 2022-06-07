@@ -95,16 +95,6 @@ section {
   }
 }
 
-.overview-heading {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 3.125rem;
-
-  @media (--viewport-small) {
-    font-size: 2.1875rem;
-  }
-}
-
 .overview-description {
   max-width: 52ch;
   font-size: 1.25rem;
