@@ -81,11 +81,6 @@
 <script>
 export default {
   name: 'Features',
-  methods: {
-    openTechPage() {
-      window.open('/tech/', '_self')
-    },
-  },
 }
 </script>
 
