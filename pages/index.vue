@@ -1,16 +1,10 @@
 <template>
   <main>
     <HomeHeroSection />
-    <!-- <HomeIntroduction /> -->
     <HomeOurServices />
     <HomeTestimonials />
-    <AboutOurInvestors />
     <HomeRoadmap />
     <HomeNewsAndMedia />
-    <HomeOurPartners />
-    <HomeInteroperability />
-    <HomeCommunity />
-    <HomeNewsletter />
   </main>
 </template>
 
