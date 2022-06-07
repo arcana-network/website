@@ -17,7 +17,11 @@
               Arcana Auth
             </v-heading>
             <div class="overview-feature-description">
-              <v-text color="secondary" line-height="1.5" size="1.125rem">
+              <v-text
+                color="secondary"
+                line-height="1.5"
+                class="feature-description-text"
+              >
                 Provide frictionless onboarding for web3 users using social auth
                 or passwordless logins. Arcana handles all aspects of key
                 management from key pair generation to secure non-custodial
@@ -35,7 +39,11 @@
               </v-heading>
             </div>
             <div class="overview-feature-description">
-              <v-text color="secondary" line-height="1.5" size="1.125rem">
+              <v-text
+                color="secondary"
+                line-height="1.5"
+                class="feature-description-text"
+              >
                 Store user data securely on Arcana's decentralised storage
                 network. Every asset uploaded to the arcana network is split up
                 and stored across our nodes so that there is no single point of
@@ -65,7 +73,11 @@
               </v-heading>
             </div>
             <div class="overview-feature-description">
-              <v-text color="secondary" line-height="1.5" size="1.125rem">
+              <v-text
+                color="secondary"
+                line-height="1.5"
+                class="feature-description-text"
+              >
                 Let your code or users decide who gets access to data. Arcana
                 Access uses DIDs for identification of data and to store,
                 on-chain, who is the owner of the data and who has access to it.
@@ -115,14 +127,23 @@ section {
 
 .overview-feature-title {
   margin: 0;
+  font-size: 2.25rem;
 
   @media (--viewport-small) {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
 .overview-feature-description {
   margin-top: 1.25rem;
+}
+
+.feature-description-text {
+  font-size: 1.375rem;
+
+  @media (--viewport-small) {
+    font-size: 0.875rem;
+  }
 }
 
 .icon-container {
