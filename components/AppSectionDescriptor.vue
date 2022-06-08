@@ -56,9 +56,14 @@ export default {
 <style scoped>
 @import url('./lib/media-query-helper.css');
 
+.heading {
+  margin-bottom: 1.25rem;
+}
+
 .description {
   font-size: 1.375rem;
   line-height: 2rem;
+  margin-top: 0;
 
   @media (--viewport-medium) {
     font-size: 1.125rem;

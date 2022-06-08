@@ -1,7 +1,7 @@
 <template>
   <main>
     <HomeHeroSection />
-    <HomeFeatures />
+    <HomeOurServices />
     <HomeTestimonials />
     <HomeRoadmap />
     <HomeNewsAndMedia />
