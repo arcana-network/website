@@ -41,7 +41,7 @@ export default {
 .app-header {
   position: sticky;
   top: 0;
-  z-index: 100000;
+  z-index: 100;
   background-color: #0f0f0f;
 }
 </style>
