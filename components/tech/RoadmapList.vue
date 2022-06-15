@@ -13,11 +13,6 @@
             :options="years"
             class="roadmap-dropdown"
           />
-          <!-- <v-dropdown
-            v-model="selectedQuarter"
-            :options="quarters"
-            class="roadmap-dropdown"
-          /> -->
         </v-stack>
         <v-stack>
           <v-stack
@@ -35,19 +30,6 @@
               >
                 <v-text :weight="600">{{ year }}</v-text>
               </v-chip>
-              <!-- <ul v-if="selectedYear === year">
-                <li
-                  v-for="quarter in quarters"
-                  :key="quarter + year"
-                  class="quarter"
-                  :class="{
-                    'selected-quarter': selectedQuarter === quarter,
-                  }"
-                  @click.stop="() => (selectedQuarter = quarter)"
-                >
-                  <v-text>{{ quarter }}</v-text>
-                </li>
-              </ul> -->
             </div>
           </v-stack>
           <ul>
@@ -157,16 +139,8 @@ export default {
         ],
         2022: [
           {
-            quarter: 'Q1',
-            milestones: ['Beta Testnet'],
-          },
-          {
             quarter: 'Q2',
-            milestones: ['Alpha Mainnet'],
-          },
-          {
-            quarter: 'Q4',
-            milestones: ['TGE & Mainnet'],
+            milestones: ['Beta Testnet launch.'],
           },
         ],
       },
@@ -248,7 +222,6 @@ ul li {
   line-height: 2.5rem;
 }
 
-.selected-quarter,
 .selected-year {
   background: linear-gradient(
       87.28deg,
@@ -272,12 +245,11 @@ ul li {
       rgba(255, 255, 255, 0.8) 0,
       rgba(255, 255, 255, 0.216) 100%
     ),
-    linear-gradient(326.58deg, #ffe177 -3.92%, #ff975c 112.32%);
+    linear-gradient(326.58deg, #ffe177 -3.92%, #ff975c 112.32%) !important;
   box-shadow: inset 0 -7px 66px rgba(255, 111, 66, 0.37);
   border-radius: 1rem;
 }
 
-.selected-quarter > *,
 .selected-year > * {
   color: black;
   font-weight: 600;
