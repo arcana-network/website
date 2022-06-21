@@ -67,18 +67,10 @@
 export default {
   name: 'RoadmapList',
   data() {
-    const years = ['2019', '2020', '2021', '2022']
-    const quarters = ['Q1', 'Q2', 'Q3', 'Q4']
     const selectedYear = new Date().getFullYear().toString()
-    const currentMonth = new Date().getMonth()
-    const currentQuarterIndex = parseInt(currentMonth / 3)
-    const selectedQuarter = quarters[currentQuarterIndex]
 
     return {
-      years,
-      quarters,
       selectedYear,
-      selectedQuarter,
       roadmap: {
         2019: [
           {
@@ -142,9 +134,30 @@ export default {
             quarter: 'Q2',
             milestones: ['Beta Testnet launch.'],
           },
+          {
+            quarter: 'Q3',
+            milestones: ['Bug bounty security audits.'],
+          },
+          {
+            quarter: 'Q4',
+            milestones: ['Mainnet v1.0 - Security and privacy of files.'],
+          },
+        ],
+        2023: [
+          {
+            quarter: 'Q2',
+            milestones: [
+              'Mainnet v1.5 - Security and Privacy of arbitrary data.',
+            ],
+          },
         ],
       },
     }
+  },
+  computed: {
+    years() {
+      return Object.keys(this.roadmap)
+    },
   },
 }
 </script>
