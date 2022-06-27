@@ -88,9 +88,15 @@
             <a href="/careers">
               <v-text>Careers</v-text>
             </a>
-            <a href="/privacy"><v-text>Privacy</v-text></a>
-            <a href="/terms" style="visibility: hidden"
-              ><v-text>Terms of use</v-text></a
+            <a
+              href="https://github.com/arcana-network/license/blob/main/PRIVACY.md"
+              target="_blank"
+              ><v-text>Privacy</v-text></a
+            >
+            <a
+              href="https://github.com/arcana-network/license/blob/main/TERMS.md"
+              target="_blank"
+              ><v-text>Terms of Use</v-text></a
             >
           </v-stack>
         </v-stack>
