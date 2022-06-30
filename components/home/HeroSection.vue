@@ -9,13 +9,11 @@
       >
         <v-stack direction="column" class="hero-content-container">
           <v-heading :level="1" class="hero-title">
-            The Storage and Privacy Stack for Ethereum dApps
+            The Web3 Privacy Stack
           </v-heading>
           <v-stack direction="column" gap="2rem">
             <app-section-descriptor
-              description="Decentralised storage, identity, access management and key
-            management services to help developers build secure and
-            privacy-preserving apps."
+              description="Build secure & privacy preserving apps, easily."
             />
             <v-stack
               sm-direction="column"
@@ -121,10 +119,10 @@ export default {
 
   @media (--viewport-large) {
     max-width: 48rem;
-    width: 72%;
+    width: 80%;
     object-fit: contain;
     position: absolute;
-    left: 50%;
+    left: 60%;
     top: -20%;
   }
 
@@ -156,7 +154,7 @@ export default {
   vertical-align: middle;
 
   @media (--viewport-large) {
-    width: 100%;
+    width: 88%;
   }
 
   @media (--viewport-medium) {
@@ -167,7 +165,7 @@ export default {
 .intro-video-inner-circle {
   position: absolute;
   vertical-align: middle;
-  width: 70%;
+  width: 60%;
   top: 15%;
   left: 15%;
 }
@@ -175,26 +173,26 @@ export default {
 .intro-video-glowing-orb {
   position: absolute;
   vertical-align: middle;
-  width: 16%;
-  top: 14%;
-  right: 24%;
+  width: 12%;
+  top: 10%;
+  right: 18%;
   z-index: 1;
 }
 
 .intro-video-dark-orb {
   position: absolute;
   vertical-align: middle;
-  width: 8%;
+  width: 6%;
   bottom: 8%;
-  left: 15%;
+  left: 14%;
   z-index: 1;
 }
 
 .thumbnail-gradient-border-container {
   position: absolute;
-  width: 56%;
-  top: 21%;
-  left: 21%;
+  width: 48%;
+  top: 20%;
+  left: 20%;
   background: linear-gradient(147.79deg, #ffd7a0 16.63%, #ee4783 72.62%);
   border-radius: 50%;
   padding: 1%;
