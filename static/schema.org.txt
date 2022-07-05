@@ -1,0 +1,11 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "Arcana Network",
+  "alternateName": "XAR",
+  "url": "https://arcana.network/logo.png",
+  "logo": "https://arcana.network/",
+  "sameAs": "https://twitter.com/arcananetwork"
+}
+</script>
