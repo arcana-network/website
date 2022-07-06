@@ -1,72 +1,90 @@
 <template>
-  <section>
+  <section class="hero-section">
     <v-container>
-      <v-stack justify="space-between" md-direction="column" md-align="center">
-        <v-stack direction="column">
-          <v-heading :level="1" style="max-width: 38rem">
-            The Storage and Privacy Stack for Ethereum dApps
+      <v-stack
+        justify="space-between"
+        md-direction="column-reverse"
+        md-align="center"
+        class="position-relative"
+      >
+        <v-stack direction="column" class="hero-content-container">
+          <v-heading :level="1" class="hero-title">
+            The Web3 Privacy Stack
           </v-heading>
           <v-stack direction="column" gap="2rem">
             <app-section-descriptor
-              description="Decentralised storage, identity, access management and key
-            management services to help developers build secure and
-            privacy-preserving apps."
-              style="max-width: 38rem"
+              description="Build secure & privacy preserving apps, easily."
             />
             <v-stack
-              md-direction="column"
+              sm-direction="column"
               align="center"
               gap="1.5rem"
-              md-gap="1.5rem"
+              sm-gap="1.5rem"
+              sm-justify="space-around"
+              wrap
             >
               <v-button
-                label="Get started"
+                label="Start Building"
                 label-transform="uppercase"
-                :action="onGetStarted"
+                :action="handleOpenDashboard"
               />
-              <v-stack align="center" class="support-icons">
-                <a href="https://t.me/ArcanaNetwork" target="_blank">
-                  <v-image path="images/telegram.svg" :dimension="[36, 36]" />
-                </a>
-                <a href="https://discord.gg/w6ej4FtqYS" target="_blank">
-                  <v-image path="images/discord.svg" :dimension="[36, 36]" />
-                </a>
-                <a href="https://twitter.com/arcananetwork" target="_blank">
-                  <v-image
-                    path="images/twitter_social_icon_rounded_square_blue.png"
-                    :dimension="[36, 36]"
-                  />
-                </a>
-              </v-stack>
+              <v-button
+                variant="outline"
+                label="Go To Docs"
+                label-transform="uppercase"
+                class="secondary-button"
+                :action="handleOpenDocs"
+              />
             </v-stack>
-            <v-chip class="testnet-chip">
-              <v-text size="1.25rem" line-height="1.4" color="secondary">
-                Participate in Arcana's Alpha Testnet Launch!
-                <a
-                  class="testnet-chip-link"
-                  href="http://testnet.arcana.network"
-                  target="_blank"
-                >
-                  See details &rarr;
-                </a>
-              </v-text>
-            </v-chip>
           </v-stack>
         </v-stack>
-        <div class="section-orbs">
-          <art-node-grid />
+        <div class="arcana-video-thumbnail-container">
+          <img
+            src="@/assets/images/intro-video-outer-circle.svg"
+            class="intro-video-outer-circle"
+          />
+          <img
+            src="@/assets/images/intro-video-inner-circle.svg"
+            class="intro-video-inner-circle"
+          />
+          <img
+            src="@/assets/images/intro-video-glowing-orb.png"
+            class="intro-video-glowing-orb"
+          />
+          <img
+            src="@/assets/images/intro-video-dark-orb.png"
+            class="intro-video-dark-orb"
+          />
+          <div class="thumbnail-gradient-border-container">
+            <v-video-thumbnail
+              src="images/arcana-intro-video-thumbnail.png"
+              @play="isIntroPlaying = true"
+            />
+          </div>
         </div>
       </v-stack>
     </v-container>
+    <home-arcana-intro-video
+      v-if="isIntroPlaying"
+      @close="isIntroPlaying = false"
+    />
   </section>
 </template>
 
 <script>
 export default {
   name: 'HeroSection',
+  data() {
+    return {
+      isIntroPlaying: false,
+    }
+  },
   methods: {
-    onGetStarted() {
+    handleOpenDashboard() {
       window.open('https://dashboard.arcana.network', '_blank')
+    },
+    handleOpenDocs() {
+      window.open('https://docs.arcana.network', '_blank')
     },
   },
 }
@@ -75,7 +93,7 @@ export default {
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
 
-section {
+.hero-section {
   padding: 0 0 6rem;
 
   @media (--viewport-small) {
@@ -84,47 +102,99 @@ section {
   }
 }
 
-.section-orbs {
-  max-width: 800px;
-  width: 100%;
+.hero-content-container {
+  max-width: 38rem;
+}
+
+.hero-title {
+  margin-top: 0;
+}
+
+.secondary-button {
+  padding: 1.125rem calc(2rem + 16px);
+}
+
+.arcana-video-thumbnail-container {
+  overflow: visible;
 
   @media (--viewport-large) {
-    margin-right: -12.5%;
+    max-width: 48rem;
+    width: 80%;
+    object-fit: contain;
+    position: absolute;
+    left: 60%;
+    top: -20%;
   }
-}
-
-.support-icons a {
-  margin-left: 1.5rem;
 
   @media (--viewport-medium) {
-    margin-left: 0;
-    margin-top: 1.5rem;
+    position: relative;
+    width: 120%;
+    max-width: 36rem;
   }
 }
 
-.support-icons > a + a {
+.arcana-video-thumbnail-container::before {
+  content: '';
+  overflow: visible;
+  position: absolute;
+  top: -2%;
+  left: -2%;
+  right: -2%;
+  bottom: -2%;
+  z-index: -1;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(214, 69, 85, 0.3) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transform: skew(30deg);
+}
+
+.intro-video-outer-circle {
+  vertical-align: middle;
+
+  @media (--viewport-large) {
+    width: 88%;
+  }
+
   @media (--viewport-medium) {
-    margin-left: 1.5rem;
+    width: 100%;
   }
 }
 
-.testnet-chip {
-  max-width: unset;
-  padding: 1.5rem;
-
-  @media (--viewport-small) {
-    width: calc(100% - 3rem);
-  }
+.intro-video-inner-circle {
+  position: absolute;
+  vertical-align: middle;
+  width: 60%;
+  top: 15%;
+  left: 15%;
 }
 
-.testnet-chip-link {
-  color: var(--color-secondary);
-  text-decoration: none;
-  opacity: 0.7;
-  transition: opacity 0.2s ease-in;
+.intro-video-glowing-orb {
+  position: absolute;
+  vertical-align: middle;
+  width: 12%;
+  top: 10%;
+  right: 18%;
+  z-index: 1;
 }
 
-.testnet-chip-link:hover {
-  opacity: 1;
+.intro-video-dark-orb {
+  position: absolute;
+  vertical-align: middle;
+  width: 6%;
+  bottom: 8%;
+  left: 14%;
+  z-index: 1;
+}
+
+.thumbnail-gradient-border-container {
+  position: absolute;
+  width: 48%;
+  top: 20%;
+  left: 20%;
+  background: linear-gradient(147.79deg, #ffd7a0 16.63%, #ee4783 72.62%);
+  border-radius: 50%;
+  padding: 1%;
 }
 </style>

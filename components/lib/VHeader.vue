@@ -36,24 +36,16 @@
               }}</v-text>
             </NuxtLink>
           </template>
-          <a
-            v-if="cta && cta.label"
-            class="laptop-remove header-menu-item"
-            @click.stop="onCTAClick"
-          >
-            <v-text :weight="600" font="sans" color="primary">{{
-              cta.label
-            }}</v-text>
+          <a :href="cta.link" target="_blank">
+            <v-button
+              v-if="cta"
+              :label="cta.label"
+              label-transform="uppercase"
+              :show="show"
+              class="cta-button"
+            />
           </a>
         </nav>
-        <v-button
-          v-if="cta"
-          :label="cta.label"
-          :action="cta.action"
-          label-transform="uppercase"
-          class="mobile-remove tablet-remove"
-          :show="show"
-        />
         <v-image
           :path="`icons/${icon}.svg`"
           class="cursor-pointer laptop-remove menu-icon"
@@ -177,7 +169,7 @@ header {
     z-index: 10000;
     overflow: hidden;
   }
-  .header-menu > * {
+  .header-menu > *:not(.cta-button) {
     display: block;
     margin: 0 auto;
     padding: 2rem;

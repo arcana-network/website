@@ -13,11 +13,6 @@
             :options="years"
             class="roadmap-dropdown"
           />
-          <!-- <v-dropdown
-            v-model="selectedQuarter"
-            :options="quarters"
-            class="roadmap-dropdown"
-          /> -->
         </v-stack>
         <v-stack>
           <v-stack
@@ -35,19 +30,6 @@
               >
                 <v-text :weight="600">{{ year }}</v-text>
               </v-chip>
-              <!-- <ul v-if="selectedYear === year">
-                <li
-                  v-for="quarter in quarters"
-                  :key="quarter + year"
-                  class="quarter"
-                  :class="{
-                    'selected-quarter': selectedQuarter === quarter,
-                  }"
-                  @click.stop="() => (selectedQuarter = quarter)"
-                >
-                  <v-text>{{ quarter }}</v-text>
-                </li>
-              </ul> -->
             </div>
           </v-stack>
           <ul>
@@ -85,18 +67,10 @@
 export default {
   name: 'RoadmapList',
   data() {
-    const years = ['2019', '2020', '2021', '2022']
-    const quarters = ['Q1', 'Q2', 'Q3', 'Q4']
     const selectedYear = new Date().getFullYear().toString()
-    const currentMonth = new Date().getMonth()
-    const currentQuarterIndex = parseInt(currentMonth / 3)
-    const selectedQuarter = quarters[currentQuarterIndex]
 
     return {
-      years,
-      quarters,
       selectedYear,
-      selectedQuarter,
       roadmap: {
         2019: [
           {
@@ -157,20 +131,33 @@ export default {
         ],
         2022: [
           {
-            quarter: 'Q1',
-            milestones: ['Beta Testnet'],
+            quarter: 'Q2',
+            milestones: ['Beta Testnet launch.'],
           },
           {
-            quarter: 'Q2',
-            milestones: ['Alpha Mainnet'],
+            quarter: 'Q3',
+            milestones: ['Bug bounty security audits.'],
           },
           {
             quarter: 'Q4',
-            milestones: ['TGE & Mainnet'],
+            milestones: ['Mainnet v1.0 - Security and privacy of files.'],
+          },
+        ],
+        2023: [
+          {
+            quarter: 'Q2',
+            milestones: [
+              'Mainnet v1.5 - Security and Privacy of arbitrary data.',
+            ],
           },
         ],
       },
     }
+  },
+  computed: {
+    years() {
+      return Object.keys(this.roadmap)
+    },
   },
 }
 </script>
@@ -248,7 +235,6 @@ ul li {
   line-height: 2.5rem;
 }
 
-.selected-quarter,
 .selected-year {
   background: linear-gradient(
       87.28deg,
@@ -272,12 +258,11 @@ ul li {
       rgba(255, 255, 255, 0.8) 0,
       rgba(255, 255, 255, 0.216) 100%
     ),
-    linear-gradient(326.58deg, #ffe177 -3.92%, #ff975c 112.32%);
+    linear-gradient(326.58deg, #ffe177 -3.92%, #ff975c 112.32%) !important;
   box-shadow: inset 0 -7px 66px rgba(255, 111, 66, 0.37);
   border-radius: 1rem;
 }
 
-.selected-quarter > *,
 .selected-year > * {
   color: black;
   font-weight: 600;
