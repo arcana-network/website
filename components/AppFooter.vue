@@ -80,7 +80,7 @@
             >
               <v-text>Technical Paper</v-text>
             </a>
-            <a href="https://medium.com/arcana-network-blog" target="_blank">
+            <a href="https://arcana.network/blog">
               <v-text>Blog</v-text>
             </a>
           </v-stack>
