@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <AppBanner />
     <AppHeader />
     <Nuxt />
     <AppFooter class="footer" />
