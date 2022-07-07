@@ -15,12 +15,12 @@ export default {
     return {
       headerCta: {
         label: 'Start Building',
-        link: process.env.ARCANA_DASHBOARD,
+        link: process.env.ARCANA_DASHBOARD_URL,
       },
       menuItems: [
         {
           name: 'Docs',
-          link: process.env.ARCANA_DOCS,
+          link: process.env.ARCANA_DOCS_URL,
           external: true,
         },
         {

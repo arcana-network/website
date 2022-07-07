@@ -81,10 +81,10 @@ export default {
   },
   methods: {
     handleOpenDashboard() {
-      window.open(process.env.ARCANA_DASHBOARD, '_blank')
+      window.open(process.env.ARCANA_DASHBOARD_URL, '_blank')
     },
     handleOpenDocs() {
-      window.open(process.env.ARCANA_DOCS, '_blank')
+      window.open(process.env.ARCANA_DOCS_URL, '_blank')
     },
   },
 }
