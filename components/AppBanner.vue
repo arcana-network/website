@@ -1,10 +1,7 @@
 <template>
   <div class="banner">
     <v-text line-height="1.5" :weight="500" size="1rem">
-      <a href="https://testnet.arcana.network" target="_blank"
-        >Arcana Beta Testnet</a
-      >
-      coming soon! Launching in
+      Arcana Beta Testnet coming soon! Launching in
       {{ countdown.days }} {{ pluralise(countdown.days, 'day', 'days') }}
       {{ countdown.hours }} {{ pluralise(countdown.hours, 'hr', 'hrs') }}
       {{ countdown.minutes }} {{ pluralise(countdown.minutes, 'min', 'mins') }}.
@@ -58,17 +55,5 @@ export default {
   @media (--viewport-small) {
     padding: 1rem 2rem;
   }
-}
-
-a {
-  color: var(--color-white);
-  transition: opacity 0.4s ease-in;
-  opacity: 1;
-}
-
-a:hover,
-a:focus {
-  opacity: 0.8;
-  transition: opacity 0.4s ease-in;
 }
 </style>
