@@ -18,7 +18,7 @@
               size="6.4rem"
               gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
             >
-              1000’s
+              1000's
             </v-text>
             <br />
             <v-text
@@ -87,6 +87,7 @@ export default {
             groups: [groupTypes.NEWSLETTER],
           })
           this.message = 'Thank you for subscribing!'
+          this.newsletterEmail = ''
         } catch (e) {
           this.success = false
           if (/subscribed/.test(e)) {
