@@ -5,6 +5,7 @@
     <HomeTestimonials />
     <HomeRoadmap />
     <HomeNewsAndMedia />
+    <HomeNewsletter />
   </main>
 </template>
 
