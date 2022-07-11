@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <v-text line-height="1.5" :weight="500" size="1rem">
-      <a href="https://testnet.arcana.network" target="_blank">Arcana Beta Testnet</a> is now live! Read our announcement blog <a href="https://arcana.network/blog" target="_blank">here</a>.
+      <a href="https://testnet.arcana.network" target="_blank">Arcana Beta Testnet</a> is now live! Read our announcement blog <a href="https://arcana.network/blog/betatestnet/" target="_blank">here</a>.
     </v-text>
   </div>
 </template>
