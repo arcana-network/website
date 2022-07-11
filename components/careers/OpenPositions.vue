@@ -158,17 +158,6 @@ export default {
             link: 'https://angel.co/company/arcana-network/jobs/1705690-blockchain-lead-developer',
           },
           {
-            title: 'Cryptographer and Protocol Designer',
-            requirements: [
-              'Verifiable Delay Function (VDF) implementation',
-              'Distributed key generation (DKG) and management (DKMS)',
-              'Zero knowledge proofs',
-            ],
-            location: 'Bengaluru | Remote',
-            compensation: '$100k – $150k | 0.5% – 1.0%',
-            link: 'https://angel.co/company/arcana-network/jobs/1257558-cryptographer-and-protocol-designer',
-          },
-          {
             title: 'QA Engineer',
             requirements: [
               'Design and develop a QA framework. Automate parts of the framework wherever feasible.',
@@ -188,27 +177,6 @@ export default {
             location: 'Europe | India | USA | Remote',
             compensation: '$50k – $120k | No equity',
             link: 'https://angel.co/company/arcana-network/jobs/1829880-senior-golang-engineer',
-          },
-          {
-            title: 'Solidity/Blockchain Developer',
-            requirements: [
-              'Good experience in Solidity',
-              'Good experience in Web3JS, EthersJS',
-              'OpenZeppelin Contracts and other standard contracts and EIPs',
-            ],
-            location: 'Bengaluru | Remote',
-            compensation: '₹25L – ₹40L | No equity',
-            link: 'https://angel.co/company/arcana-network/jobs/1319203-solidity-blockchain-developer',
-          },
-          {
-            title: 'Sr. Protocol Developer (Golang)',
-            requirements: [
-              'Have 3+ years of development experience',
-              'Have 3+ years of Golang development experience in production',
-            ],
-            location: 'Bengaluru | Remote',
-            compensation: '$40k – $60k | No equity',
-            link: 'https://angel.co/company/arcana-network/jobs/1338647-sr-protocol-developer-golang',
           },
         ],
         Marketing: [
