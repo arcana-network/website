@@ -4,7 +4,7 @@
       <v-stack md-direction="column" justify="space-between" align="center">
         <v-stack direction="column" class="technology-hero-section">
           <app-section-descriptor title="Technology" />
-          <v-heading :level="1">
+          <v-heading :level="1" transform="capitalize">
             A comprehensive stack to help developers build secure and privacy
             preserving apps
           </v-heading>
