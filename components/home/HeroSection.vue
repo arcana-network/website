@@ -11,9 +11,10 @@
           <v-heading :level="1" class="hero-title">
             The Web3 Privacy Stack
           </v-heading>
-          <v-stack direction="column" gap="2rem">
+          <v-stack direction="column">
             <app-section-descriptor
               description="Build secure & privacy preserving apps, easily."
+              class="hero-description"
             />
             <v-stack
               sm-direction="column"
@@ -102,12 +103,17 @@ export default {
   }
 }
 
+.hero-description {
+  margin-block: 2rem;
+}
+
 .hero-content-container {
   max-width: 38rem;
 }
 
 .hero-title {
-  margin-top: 0;
+  margin-block: 0;
+  max-width: 12ch;
 }
 
 .secondary-button {
