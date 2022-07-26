@@ -12,7 +12,7 @@
               class="testimonial-illustration"
             />
             <v-stack direction="column">
-              <v-heading :level="4" class="testimonial-quote">
+              <v-heading :level="4" :weight="600" class="testimonial-quote">
                 “{{ slide.quote }}”
               </v-heading>
               <v-stack md-direction="column" align="baseline">
