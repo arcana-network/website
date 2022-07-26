@@ -141,6 +141,13 @@ header {
   text-underline-offset: 0.25rem;
 }
 
+.cta-button {
+  height: 3rem;
+  width: 14rem;
+  padding: 0;
+  font-size: 1rem;
+}
+
 @media (--viewport-large) {
   .header-menu > * + * {
     margin-left: 4vw;
