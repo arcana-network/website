@@ -16,10 +16,10 @@
                 “{{ slide.quote }}”
               </v-heading>
               <v-stack md-direction="column" align="baseline">
-                <v-text class="testimonial-quoted-by">
-                  {{ slide.quotedBy }},
+                <v-text :weight="600" class="testimonial-quoted-by">
+                  {{ slide.quotedBy }},&nbsp;
                 </v-text>
-                <v-text color="secondary" class="designation">
+                <v-text color="secondary" :weight="300" class="designation">
                   {{ slide.designation }}
                 </v-text>
               </v-stack>
@@ -112,7 +112,7 @@ section {
 }
 
 .testimonial-quoted-by {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   line-height: 2rem;
 
   @media (--viewport-medium) {
@@ -124,7 +124,6 @@ section {
 .designation {
   font-size: 1rem;
   line-height: 1.5rem;
-  margin-left: 1rem;
 
   @media (--viewport-medium) {
     font-size: 0.75rem;
