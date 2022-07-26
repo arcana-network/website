@@ -8,7 +8,13 @@
         style="max-width: 64rem"
       />
       <div class="overview-features">
-        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="3rem">
+        <v-stack
+          align="center"
+          sm-align="start"
+          gap="10rem"
+          sm-gap="3rem"
+          justify="space-evenly"
+        >
           <div class="icon-container">
             <v-image path="images/arcana-overview-auth.svg" alt="Arcana Auth" />
           </div>
@@ -31,7 +37,13 @@
             </div>
           </div>
         </v-stack>
-        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="3rem">
+        <v-stack
+          align="center"
+          sm-align="start"
+          gap="10rem"
+          sm-gap="3rem"
+          justify="space-evenly"
+        >
           <div class="overview-feature">
             <div>
               <v-heading :level="2" class="overview-feature-title">
@@ -59,7 +71,13 @@
             />
           </div>
         </v-stack>
-        <v-stack align="center" sm-align="start" gap="20vw" sm-gap="3rem">
+        <v-stack
+          align="center"
+          sm-align="start"
+          gap="10rem"
+          sm-gap="3rem"
+          justify="space-evenly"
+        >
           <div class="icon-container">
             <v-image
               path="images/arcana-overview-access.svg"
