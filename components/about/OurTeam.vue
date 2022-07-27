@@ -155,6 +155,16 @@ export default {
           },
         },
         {
+          name: 'Ashish Sharma',
+          designation: 'Senior DevOps',
+          image: 'Ashish',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/ashish-sharma-98583839/',
+            twitter: 'https://twitter.com/awsashish',
+            github: 'https://github.com/whyashish',
+          },
+        },
+        {
           name: 'Jobin',
           designation: 'Blockchain Developer Evangelist',
           image: 'Jobin',
@@ -201,6 +211,15 @@ export default {
           },
         },
         {
+          name: 'Karthik Durai',
+          designation: 'Frontend Developer',
+          image: 'Karthik',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/karthik-durai/',
+            github: 'https://github.com/KarthikSiddarth',
+          },
+        },
+        {
           name: 'Maharshi',
           designation: 'Software Engineer',
           image: 'Maharshi',
@@ -220,15 +239,6 @@ export default {
           },
         },
         {
-          name: 'Karthik Durai',
-          designation: 'Frontend Developer',
-          image: 'Karthik',
-          links: {
-            linkedin: 'https://www.linkedin.com/in/karthik-durai/',
-            github: 'https://github.com/KarthikSiddarth',
-          },
-        },
-        {
           name: 'Shaloo Shalini',
           designation: 'Information Architect',
           image: 'Shaloo',
@@ -236,6 +246,16 @@ export default {
             linkedin: 'https://www.linkedin.com/in/shalooshalini/',
             twitter: 'https://twitter.com/shalooshalini',
             github: 'https://github.com/shaloo',
+          },
+        },
+        {
+          name: 'Manish Jaiswal',
+          designation: 'Technical Writer',
+          image: 'Manish',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/manish-74ab6210a/',
+            twitter: 'https://twitter.com/ManishK41547537',
+            github: 'https://github.com/jaiswalwrites',
           },
         },
         {
@@ -275,26 +295,6 @@ export default {
             linkedin: 'https://www.linkedin.com/in/fagunbhavsar/',
             twitter: 'https://twitter.com/FagunB',
             github: 'https://github.com/fagunbhavsar',
-          },
-        },
-        {
-          name: 'Ashish Sharma',
-          designation: 'Senior DevOps',
-          image: 'Ashish',
-          links: {
-            linkedin: 'https://www.linkedin.com/in/ashish-sharma-98583839/',
-            twitter: 'https://twitter.com/awsashish',
-            github: 'https://github.com/whyashish',
-          },
-        },
-        {
-          name: 'Manish Jaiswal',
-          designation: 'Technical Writer',
-          image: 'Manish',
-          links: {
-            linkedin: 'https://www.linkedin.com/in/manish-74ab6210a/',
-            twitter: 'https://twitter.com/ManishK41547537',
-            github: 'https://github.com/jaiswalwrites',
           },
         },
         {
