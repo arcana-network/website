@@ -119,6 +119,7 @@ a {
     font-size: 0.875rem;
     width: 10rem;
     height: 2.5rem;
+    border-radius: 5px;
   }
 }
 
