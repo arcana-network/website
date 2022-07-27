@@ -4,8 +4,8 @@
       <v-stack md-direction="column" justify="space-between" align="center">
         <v-stack direction="column" class="technology-hero-section">
           <v-heading :level="1">
-            A comprehensive stack to help developers build secure and privacy
-            preserving apps
+            A Comprehensive Stack To Help Developers Build Secure and Privacy
+            Preserving Apps
           </v-heading>
           <app-section-descriptor
             description="Decentralised storage, identity, access management, and KMS to help developers build secure and privacy‑preserving apps."
