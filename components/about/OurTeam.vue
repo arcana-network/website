@@ -257,6 +257,65 @@ export default {
             github: 'https://github.com/GarryFCR',
           },
         },
+        {
+          name: 'Mario Alessandro Barbara',
+          designation: 'Applied Cryptographer',
+          image: 'Mario',
+          links: {
+            linkedin:
+              'https://www.linkedin.com/in/mario-alessandro-barbara-2a7572194/',
+            github: 'https://github.com/mabbamOG',
+          },
+        },
+        {
+          name: 'Fagun Bhavsar',
+          designation: 'Senior QA Engineer',
+          image: 'Fagun',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/fagunbhavsar/',
+            twitter: 'https://twitter.com/FagunB',
+            github: 'https://github.com/fagunbhavsar',
+          },
+        },
+        {
+          name: 'Ashish Sharma',
+          designation: 'Senior DevOps',
+          image: 'Ashish',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/ashish-sharma-98583839/',
+            twitter: 'https://twitter.com/awsashish',
+            github: 'https://github.com/whyashish',
+          },
+        },
+        {
+          name: 'Manish Jaiswal',
+          designation: 'Technical Writer',
+          image: 'Manish',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/manish-74ab6210a/',
+            twitter: 'https://twitter.com/ManishK41547537',
+            github: 'https://github.com/jaiswalwrites',
+          },
+        },
+        {
+          name: 'Ashwin Santhanam',
+          designation: 'Finance',
+          image: 'Ashwin',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/ashwin-santhanam/',
+            twitter: 'https://twitter.com/AshwinS84',
+          },
+        },
+        {
+          name: 'Etisha Garg',
+          designation: 'Developer Advocate',
+          image: 'Etisha',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/etisha-garg/',
+            twitter: 'https://twitter.com/GargEtisha',
+            github: 'https://github.com/EtishaGarg',
+          },
+        },
       ],
       isTeamExpanded: false,
     }
