@@ -17,10 +17,9 @@
               class="hero-description"
             />
             <v-stack
-              sm-direction="column"
               align="center"
               gap="1.5rem"
-              sm-gap="1.5rem"
+              sm-gap="1rem"
               sm-justify="space-around"
               wrap
             >
@@ -116,10 +115,6 @@ export default {
   max-width: 12ch;
 }
 
-.secondary-button {
-  padding: 1.125rem calc(2rem + 16px);
-}
-
 .arcana-video-thumbnail-container {
   overflow: visible;
 
@@ -128,8 +123,8 @@ export default {
     width: 80%;
     object-fit: contain;
     position: absolute;
-    left: 60%;
-    top: -20%;
+    left: 50%;
+    top: -30%;
   }
 
   @media (--viewport-medium) {
@@ -174,15 +169,26 @@ export default {
   width: 60%;
   top: 15%;
   left: 15%;
+
+  @media (--viewport-medium) {
+    transform: scale(1.25);
+    top: 20%;
+    left: 20%;
+  }
 }
 
 .intro-video-glowing-orb {
   position: absolute;
   vertical-align: middle;
   width: 12%;
-  top: 10%;
-  right: 18%;
+  top: 16%;
+  right: 32%;
   z-index: 1;
+
+  @media (--viewport-medium) {
+    top: 13%;
+    right: 26%;
+  }
 }
 
 .intro-video-dark-orb {
@@ -192,6 +198,10 @@ export default {
   bottom: 8%;
   left: 14%;
   z-index: 1;
+
+  @media (--viewport-medium) {
+    left: 16%;
+  }
 }
 
 .thumbnail-gradient-border-container {
@@ -202,5 +212,11 @@ export default {
   background: linear-gradient(147.79deg, #ffd7a0 16.63%, #ee4783 72.62%);
   border-radius: 50%;
   padding: 1%;
+
+  @media (--viewport-medium) {
+    transform: scale(1.25);
+    top: 25%;
+    left: 25%;
+  }
 }
 </style>
