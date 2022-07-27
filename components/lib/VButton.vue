@@ -95,12 +95,18 @@ export default {
 </script>
 
 <style lang="css" scoped>
+@import url('./media-query-helper.css');
+
 button,
 a {
   position: relative;
   font-size: 1.1rem;
   font-weight: 600;
-  padding: 1.125rem 2rem;
+  width: 14rem;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   text-align: center;
   border-radius: 10px;
@@ -108,6 +114,12 @@ a {
   white-space: nowrap;
   opacity: 1;
   transition: opacity 0.5s;
+
+  @media (--viewport-medium) {
+    font-size: 0.875rem;
+    width: 10rem;
+    height: 2.5rem;
+  }
 }
 
 button:disabled {
