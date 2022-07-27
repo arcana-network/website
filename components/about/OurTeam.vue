@@ -97,7 +97,7 @@ export default {
         },
         {
           name: 'Abhishek',
-          designation: 'Backend Developer',
+          designation: 'Senior Backend Developer',
           image: 'Abhishek',
           links: {
             linkedin: 'https://in.linkedin.com/in/makyl',
