@@ -157,6 +157,10 @@ button[data-variant='outline']::before {
   mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
+
+  @media (--viewport-medium) {
+    border-radius: 5px;
+  }
 }
 
 /* Link styles */
