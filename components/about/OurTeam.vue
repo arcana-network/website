@@ -73,7 +73,7 @@ export default {
           image: 'Ajay',
           links: {
             linkedin: 'https://www.linkedin.com/in/ajayshetty88/',
-            twitter: 'https://twitter.com/AjayShe59753410',
+            twitter: 'https://twitter.com/ajayshetty02',
           },
         },
         {
@@ -82,7 +82,7 @@ export default {
           image: 'Sharan',
           links: {
             linkedin: 'https://www.linkedin.com/in/sharangrandigae',
-            twitter: 'https://twitter.com/sharangrandigae',
+            twitter: 'https://twitter.com/sharan01x',
           },
         },
         {
@@ -195,8 +195,9 @@ export default {
           designation: 'Frontend Developer',
           image: 'Shrinath',
           links: {
-            linkedin: 'https://www.linkedin.com/in/shrinath-prabhu-459107b2/',
+            linkedin: 'https://www.linkedin.com/in/shrinath-prabhu/',
             github: 'https://github.com/shrinathprabhu',
+            twitter: 'https://twitter.com/shrinath_prabhu',
           },
         },
         {
