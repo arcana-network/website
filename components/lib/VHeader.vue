@@ -36,9 +36,13 @@
               }}</v-text>
             </NuxtLink>
           </template>
-          <a :href="cta.link" target="_blank">
+          <a
+            v-if="cta"
+            :href="cta.link"
+            class="cta-button-container"
+            target="_blank"
+          >
             <v-button
-              v-if="cta"
               :label="cta.label"
               label-transform="uppercase"
               :show="show"
@@ -136,6 +140,10 @@ header {
 
 .active-link > span {
   color: var(--color-blue);
+}
+
+.cta-button-container {
+  text-decoration: none;
 }
 
 .cta-button {
