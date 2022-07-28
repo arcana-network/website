@@ -104,7 +104,7 @@ a {
   font-weight: 600;
   width: 14rem;
   height: 3.75rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border: none;
