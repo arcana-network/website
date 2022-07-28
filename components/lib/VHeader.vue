@@ -134,11 +134,15 @@ header {
   transform: scale(0.98);
 }
 
-.active-link {
-  text-decoration: underline;
-  text-decoration-color: var(--color-white);
-  text-decoration-thickness: 0.125rem;
-  text-underline-offset: 0.25rem;
+.active-link > span {
+  color: var(--color-blue);
+}
+
+.cta-button {
+  height: 3rem;
+  width: 14rem;
+  padding: 0;
+  font-size: 1rem;
 }
 
 @media (--viewport-large) {
