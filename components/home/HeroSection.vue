@@ -16,13 +16,7 @@
               description="Build secure & privacy preserving apps, easily."
               class="hero-description"
             />
-            <v-stack
-              align="center"
-              gap="1.5rem"
-              sm-gap="1rem"
-              sm-justify="space-around"
-              wrap
-            >
+            <v-stack align="center" gap="1.5rem" sm-gap="1rem" wrap>
               <v-button
                 label="Start Building"
                 label-transform="uppercase"
