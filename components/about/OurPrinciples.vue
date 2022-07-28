@@ -43,22 +43,19 @@ section {
 .illustration-container::before {
   content: '';
   position: absolute;
-  inset: -30%;
+  inset: -20%;
   z-index: -1;
   background: radial-gradient(
     50% 40% at 50% 40%,
     rgba(248, 81, 142, 0.2) 0%,
     rgba(0, 0, 0, 0) 100%
   );
-  filter: blur(40px);
 }
 
 .principles-illustration {
-  position: relative;
   width: 100%;
   max-width: 28rem;
   align-self: center;
-  z-index: 1;
 
   @media (--viewport-medium) {
     max-width: 20rem;

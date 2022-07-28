@@ -21,7 +21,9 @@
         md-align="start"
         style="margin-top: 1rem"
       >
-        <v-image path="images/build-illustration.svg" class="illustration" />
+        <div class="illustration-container">
+          <v-image path="images/build-illustration.svg" class="illustration" />
+        </div>
         <v-stack direction="column" align="start" style="max-width: 34rem">
           <app-section-descriptor
             heading="Build"
@@ -46,10 +48,12 @@
             heading="Provide"
             description="If have resources such as computing power or storage, you could generate revenue using unused resources. We need storage providers, distributed key generators and network validators and if you're interested, sign up below. "
           />
-          <v-image
-            path="images/provide-illustration.png"
-            class="illustration laptop-remove"
-          />
+          <div class="illustration-container">
+            <v-image
+              path="images/provide-illustration.png"
+              class="illustration laptop-remove"
+            />
+          </div>
           <v-label
             value="how do you want to participate:"
             strong
@@ -115,10 +119,12 @@
             {{ message }}
           </v-text>
         </v-stack>
-        <v-image
-          path="images/provide-illustration.png"
-          class="illustration tablet-remove mobile-remove"
-        />
+        <div class="illustration-container">
+          <v-image
+            path="images/provide-illustration.png"
+            class="illustration tablet-remove mobile-remove"
+          />
+        </div>
       </v-stack>
     </v-container>
   </section>
@@ -215,5 +221,32 @@ section {
 
 .subscription-message.success {
   color: var(--color-white);
+}
+
+.illustration-container {
+  position: relative;
+}
+
+.illustration-container::before {
+  content: '';
+  position: absolute;
+  inset: -20% -10%;
+  z-index: -1;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(180, 247, 252, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: blur(40px);
+}
+
+.illustration-container:first-child::before {
+  inset: -40%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(248, 81, 142, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: none;
 }
 </style>

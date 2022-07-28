@@ -74,8 +74,6 @@ export default {
 .joinus-illustration {
   width: 90%;
   max-width: 60rem;
-  position: relative;
-  z-index: 1;
 
   @media (--viewport-medium) {
     width: 150%;
