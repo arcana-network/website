@@ -12,13 +12,6 @@
 <script>
 export default {
   name: 'VCarousel',
-  props: {
-    listener: {
-      type: Number,
-      default: 0,
-    },
-  },
-  emits: ['reset-listener'],
   data() {
     return {
       currentSlide: 0,
@@ -28,14 +21,6 @@ export default {
   computed: {
     totalSlides() {
       return this.$refs.carousel.children.length
-    },
-  },
-  watch: {
-    listener(currentValue) {
-      if (currentValue) {
-        this.changeSlide(currentValue)
-        this.$emit('reset-listener')
-      }
     },
   },
   mounted() {

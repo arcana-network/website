@@ -1,11 +1,7 @@
 <template>
   <section>
     <v-container>
-      <v-carousel
-        class="carousel-container"
-        :listener="slideChangeListener"
-        @reset-listener="resetSlideChangeListener"
-      >
+      <v-carousel ref="carousel" class="carousel-container">
         <template #slides>
           <div
             v-for="(slide, index) in slides"
@@ -40,11 +36,11 @@
           <v-stack class="icons" md-justify="center">
             <v-image
               path="icons/arrow-left.svg"
-              @click.stop="changeSlide(-1)"
+              @click.stop="$refs.carousel.changeSlide(-1)"
             />
             <v-image
               path="icons/arrow-right.svg"
-              @click.stop="changeSlide(1)"
+              @click.stop="$refs.carousel.changeSlide(1)"
             />
           </v-stack>
         </v-stack>
@@ -81,16 +77,7 @@ export default {
           companyLogo: 'images/testimonials/rage-fan.png',
         },
       ],
-      slideChangeListener: 0,
     }
-  },
-  methods: {
-    changeSlide(direction) {
-      this.slideChangeListener = direction
-    },
-    resetSlideChangeListener() {
-      this.slideChangeListener = 0
-    },
   },
 }
 </script>
