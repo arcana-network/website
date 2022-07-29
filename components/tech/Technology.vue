@@ -212,15 +212,6 @@ section {
   }
 }
 
-img {
-  width: 90%;
-  max-width: 32rem;
-
-  @media (--viewport-small) {
-    max-width: 12rem;
-  }
-}
-
 .illustration-container {
   position: relative;
 }
@@ -289,6 +280,12 @@ img {
 .hero-image {
   min-width: 28rem;
   margin-top: 3rem;
+  max-width: 32rem;
+
+  @media (--viewport-small) {
+    min-width: auto;
+    max-width: 12rem;
+  }
 }
 
 .tech-stack {
