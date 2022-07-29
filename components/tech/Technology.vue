@@ -214,7 +214,7 @@ section {
 
 img {
   width: 90%;
-  max-width: 16rem;
+  max-width: 32rem;
 
   @media (--viewport-small) {
     max-width: 12rem;
@@ -287,7 +287,7 @@ img {
 }
 
 .hero-image {
-  max-width: 30rem;
+  min-width: 28rem;
   margin-top: 3rem;
 }
 
