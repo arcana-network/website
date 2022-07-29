@@ -2,19 +2,23 @@
   <div class="slider">
     <transition-group :name="'slide-' + transitionName" tag="div">
       <div :key="currentSlide" ref="carousel" class="slide">
-        <slot />
+        <slot name="slides" />
       </div>
     </transition-group>
-    <v-stack class="icons" justify="center">
-      <v-image path="icons/arrow-left.svg" @click.stop="changeSlide(-1)" />
-      <v-image path="icons/arrow-right.svg" @click.stop="changeSlide(1)" />
-    </v-stack>
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
   name: 'VCarousel',
+  props: {
+    listener: {
+      type: Number,
+      default: 0,
+    },
+  },
+  emits: ['reset-listener'],
   data() {
     return {
       currentSlide: 0,
@@ -24,6 +28,14 @@ export default {
   computed: {
     totalSlides() {
       return this.$refs.carousel.children.length
+    },
+  },
+  watch: {
+    listener(currentValue) {
+      if (currentValue) {
+        this.changeSlide(currentValue)
+        this.$emit('reset-listener')
+      }
     },
   },
   mounted() {
@@ -96,22 +108,6 @@ export default {
   width: 100%;
   top: 0;
   position: absolute;
-}
-
-.icons {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-top: 1rem;
-}
-
-.icons > * {
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.icons > * + * {
-  margin-left: 2rem;
 }
 
 /* GO TO NEXT SLIDE */
