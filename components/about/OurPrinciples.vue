@@ -10,10 +10,12 @@
             description="It is our mission to make it easy for developers to ensure the security and privacy of user data."
           />
         </v-stack>
-        <v-image
-          class="principles-illustration"
-          path="images/about-us-illustration.png"
-        />
+        <div class="illustration-container">
+          <v-image
+            class="principles-illustration"
+            path="images/about-us-illustration.png"
+          />
+        </div>
       </v-stack>
     </v-container>
   </section>
@@ -32,6 +34,22 @@ section {
   @media (--viewport-small) {
     margin-top: 0 !important;
   }
+}
+
+.illustration-container {
+  position: relative;
+}
+
+.illustration-container::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  z-index: -1;
+  background: radial-gradient(
+    50% 40% at 50% 40%,
+    rgba(248, 81, 142, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .principles-illustration {
