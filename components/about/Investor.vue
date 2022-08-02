@@ -85,10 +85,10 @@ export default {
 @import url('../lib/media-query-helper.css');
 
 .investor-container {
-  text-align: start;
+  text-align: center;
 
-  @media (--viewport-large) {
-    text-align: center;
+  @media (--viewport-medium) {
+    text-align: start;
   }
 }
 

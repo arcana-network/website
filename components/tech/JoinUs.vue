@@ -47,14 +47,12 @@ export default {
 .joinus-illustration {
   width: 90%;
   max-width: 60rem;
-
-  @media (--viewport-large) {
-    margin-right: -20%;
-  }
+  margin-right: -20%;
 
   @media (--viewport-medium) {
     width: 150%;
     margin-top: -10%;
+    margin-right: 0;
   }
 }
 

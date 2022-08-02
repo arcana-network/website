@@ -102,18 +102,14 @@ section {
 .carousel-container {
   width: 100%;
   height: 100vh;
-  max-height: 32rem;
+  max-height: 20rem;
+
+  @media (--viewport-large) {
+    max-height: 30rem;
+  }
 
   @media (--viewport-medium) {
     max-height: 32rem;
-  }
-
-  @media (--viewport-large) {
-    max-height: 28rem;
-  }
-
-  @media (--viewport-x-large) {
-    max-height: 20rem;
   }
 }
 
@@ -173,18 +169,18 @@ section {
 }
 
 .icons {
-  position: absolute;
+  position: relative;
+  margin-top: 18rem;
   width: 100%;
-  bottom: 0;
 
   @media (--viewport-large) {
     position: relative;
-    margin-top: 24rem;
+    margin-top: 26rem;
   }
 
-  @media (--viewport-x-large) {
-    position: relative;
-    margin-top: 18rem;
+  @media (--viewport-medium) {
+    position: absolute;
+    bottom: 0;
   }
 }
 

@@ -153,10 +153,8 @@ header {
   font-size: 1rem;
 }
 
-@media (--viewport-large) {
-  .header-menu > * + * {
-    margin-left: 4vw;
-  }
+.header-menu > * + * {
+  margin-left: 4vw;
 }
 
 @media (--viewport-medium) {
