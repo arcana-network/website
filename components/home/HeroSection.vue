@@ -111,20 +111,19 @@ export default {
 
 .arcana-video-thumbnail-container {
   overflow: visible;
-
-  @media (--viewport-large) {
-    max-width: 48rem;
-    width: 80%;
-    object-fit: contain;
-    position: absolute;
-    left: 50%;
-    top: -30%;
-  }
+  max-width: 48rem;
+  width: 80%;
+  object-fit: contain;
+  position: absolute;
+  left: 50%;
+  top: -30%;
 
   @media (--viewport-medium) {
     position: relative;
     width: 120%;
     max-width: 36rem;
+    left: 0;
+    top: 0;
   }
 }
 
@@ -147,10 +146,7 @@ export default {
 
 .intro-video-outer-circle {
   vertical-align: middle;
-
-  @media (--viewport-large) {
-    width: 88%;
-  }
+  width: 88%;
 
   @media (--viewport-medium) {
     width: 100%;

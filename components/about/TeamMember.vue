@@ -162,12 +162,11 @@ export default {
 }
 
 .member-description-container {
-  @media (--viewport-large) {
-    margin: 1rem 0;
-  }
+  margin: 1rem 0;
 
   @media (--viewport-medium) {
     width: 100%;
+    margin: 0;
   }
 }
 </style>

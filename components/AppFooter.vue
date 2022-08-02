@@ -153,13 +153,12 @@ footer {
 }
 
 .footer-links-container {
-  @media (--viewport-large) {
-    max-width: 50%;
-  }
+  max-width: 50%;
 
   @media (--viewport-medium) {
     width: 100%;
     margin-top: 3rem;
+    max-width: unset;
   }
 }
 

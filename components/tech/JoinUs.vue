@@ -55,6 +55,7 @@ export default {
 
   @media (--viewport-medium) {
     margin-top: -10%;
+    margin-right: 0;
   }
 }
 

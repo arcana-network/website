@@ -1,31 +1,49 @@
 <template>
   <section>
     <v-container>
-      <v-carousel class="carousel-container">
-        <div
-          v-for="(slide, index) in slides"
-          :key="'testimonial-carousel-' + index"
-        >
-          <v-stack md-direction="column" align="center" md-align="start">
-            <v-image
-              :path="slide.companyLogo"
-              class="testimonial-illustration"
-            />
-            <v-stack direction="column">
-              <v-heading :level="4" :weight="600" class="testimonial-quote">
-                “{{ slide.quote }}”
-              </v-heading>
-              <v-stack md-direction="column" align="baseline">
-                <v-text :weight="600" class="testimonial-quoted-by">
-                  {{ slide.quotedBy }},&nbsp;
-                </v-text>
-                <v-text color="secondary" :weight="300" class="designation">
-                  {{ slide.designation }}
-                </v-text>
+      <v-carousel ref="carousel" class="carousel-container">
+        <template #slides>
+          <div
+            v-for="(slide, index) in slides"
+            :key="'testimonial-carousel-' + index"
+          >
+            <v-stack md-direction="column" align="center" md-align="start">
+              <v-image
+                :path="slide.companyLogo"
+                class="testimonial-illustration"
+              />
+              <v-stack direction="column">
+                <v-heading :level="4" :weight="600" class="testimonial-quote">
+                  “{{ slide.quote }}”
+                </v-heading>
+                <v-stack md-direction="column" align="baseline">
+                  <v-text :weight="600" class="testimonial-quoted-by">
+                    {{ slide.quotedBy }},&nbsp;
+                  </v-text>
+                  <v-text color="secondary" :weight="300" class="designation">
+                    {{ slide.designation }}
+                  </v-text>
+                </v-stack>
               </v-stack>
             </v-stack>
+          </div>
+        </template>
+        <v-stack md-direction="column" align="center" md-align="start">
+          <v-image
+            :path="slides[0].companyLogo"
+            class="testimonial-illustration transparent"
+          />
+          <v-stack class="icons" md-justify="center">
+            <v-image
+              path="icons/arrow-left.svg"
+              @click.stop="$refs.carousel.changeSlide(-1)"
+            />
+            <v-image
+              path="icons/arrow-right.svg"
+              @click.stop="$refs.carousel.changeSlide(1)"
+            />
           </v-stack>
-        </div>
+        </v-stack>
       </v-carousel>
     </v-container>
   </section>
@@ -71,9 +89,9 @@ section {
   background: #000 url('~assets/images/testimonial_bg.svg') no-repeat;
   background-size: cover;
   box-shadow: 0 1rem 2rem 0.5rem black, 0 -1rem 2rem 0.5rem black;
-  padding: 8rem 0;
+  padding: 6rem 0;
 
-  @media (--viewport-small) {
+  @media (--viewport-medium) {
     background: #000 url('~assets/images/testimonial_bg_mobile.svg') no-repeat;
     background-size: cover;
     padding: 2rem 0;
@@ -84,13 +102,13 @@ section {
 .carousel-container {
   width: 100%;
   height: 100vh;
-  max-height: 26rem;
+  max-height: 20rem;
 
-  @media (--viewport-medium) {
-    max-height: 48rem;
+  @media (--viewport-large) {
+    max-height: 30rem;
   }
 
-  @media (--viewport-small) {
+  @media (--viewport-medium) {
     max-height: 32rem;
   }
 }
@@ -137,12 +155,41 @@ section {
   max-width: 16rem;
 
   @media (--viewport-medium) {
-    margin: 6rem auto;
+    margin: 1rem auto;
   }
 
   @media (--viewport-small) {
     margin: 1rem auto;
     max-width: 12rem;
   }
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.icons {
+  position: relative;
+  margin-top: 18rem;
+  width: 100%;
+
+  @media (--viewport-large) {
+    position: relative;
+    margin-top: 26rem;
+  }
+
+  @media (--viewport-medium) {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.icons > * {
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.icons > * + * {
+  margin-left: 1rem;
 }
 </style>

@@ -1,6 +1,7 @@
 @custom-media --viewport-small (width < 768px);
 @custom-media --viewport-medium (width < 1024px);
-@custom-media --viewport-large (width >= 1024px);
+@custom-media --viewport-large (width < 1280px);
+@custom-media --viewport-x-large (width < 1536px);
 
 @media (--viewport-small) {
   .mobile-hide {
@@ -26,7 +27,7 @@
     visibility: visible;
   }
 }
-@media (--viewport-large) {
+@media (min-width: 1024px) {
   .laptop-hide {
     visibility: hidden;
   }

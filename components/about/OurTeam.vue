@@ -333,9 +333,10 @@ export default {
 
 .member-container {
   margin: 1rem 0;
+  text-align: center;
 
-  @media (--viewport-large) {
-    text-align: center;
+  @media (--viewport-medium) {
+    text-align: start;
   }
 }
 
