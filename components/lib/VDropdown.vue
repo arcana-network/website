@@ -91,16 +91,26 @@ export default {
   box-shadow: inset -2px -2px 4px rgba(57, 57, 57, 0.44),
     inset 5px 5px 10px rgba(11, 11, 11, 0.5);
   border-radius: 10px;
+
+  @media (--viewport-medium) {
+    border-radius: 5px;
+  }
 }
 .custom-select__trigger {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
+  padding: 0 1.25rem;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.25rem;
+  height: 3.75rem;
+
+  @media (--viewport-medium) {
+    font-size: 0.875rem;
+    height: 2.5rem;
+  }
 }
 .custom-options {
   position: absolute;
@@ -119,6 +129,10 @@ export default {
   overflow-x: hidden;
   overflow-y: auto;
   border-radius: 0 0 10px 10px;
+
+  @media (--viewport-medium) {
+    border-radius: 0 0 5px 5px;
+  }
 }
 .custom-select.open .custom-options {
   opacity: 1;
@@ -127,28 +141,46 @@ export default {
 }
 .custom-option {
   position: relative;
-  display: block;
-  padding: 1rem 1.25rem;
+  padding: 0 1.25rem;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.25rem;
   transition: all 0.2s;
   background: linear-gradient(143.36deg, #0f0f0f -4.7%, #000 115.05%);
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+
+  @media (--viewport-medium) {
+    font-size: 0.875rem;
+    height: 2.5rem;
+  }
 }
 .custom-option:hover {
   color: var(--color-white);
 }
 .arrow {
   position: relative;
-  height: 1rem;
-  width: 1rem;
   margin-left: 1rem;
   transition: all 0.3s;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (--viewport-medium) {
+    width: 0.675rem;
+    height: 0.675rem;
+  }
 }
 .arrow img {
   object-fit: cover;
   width: 1rem;
   margin-bottom: 0.2rem;
+
+  @media (--viewport-medium) {
+    width: 0.675rem;
+  }
 }
 .open .arrow {
   transform: rotate(-180deg);

@@ -45,7 +45,17 @@ input {
   font-family: var(--font-serif);
   font-size: 1.1rem;
   line-height: 1.25rem;
-  padding: 1rem 1.25rem;
+  padding: 0 1.25rem;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (--viewport-medium) {
+    font-size: 0.875rem;
+    height: 2.5rem;
+    border-radius: 5px;
+  }
 }
 
 input[type='number'] {
