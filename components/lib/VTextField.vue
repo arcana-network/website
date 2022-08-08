@@ -34,6 +34,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('./media-query-helper.css');
+
 input {
   border: none;
   background: linear-gradient(141.48deg, #1a1a1a -4.56%, #151515 135.63%);

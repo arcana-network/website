@@ -81,6 +81,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('./media-query-helper.css');
+
 .custom-select {
   position: relative;
   display: inline-flex;
