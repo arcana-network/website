@@ -254,7 +254,7 @@ export default {
           image: 'Manish',
           links: {
             linkedin: 'https://www.linkedin.com/in/manish-74ab6210a/',
-            twitter: 'https://twitter.com/ManishK41547537',
+            twitter: 'https://twitter.com/jaiswalwrites',
             github: 'https://github.com/jaiswalwrites',
           },
         },

@@ -7,11 +7,7 @@
             path="images/newsletter-illustration.svg"
             class="newsletter-illustration"
           />
-          <div style="text-align: center; z-index: 100" class="absolute-center">
-            <!-- <v-text
-              gradient="linear-gradient(121.85deg, #C4C4C4 29.11%, #FFFFFF 69.16%)"
-              style="height: 16rem"
-            > -->
+          <div style="text-align: center; z-index: 1" class="absolute-center">
             <v-text
               font="sans"
               :weight="700"
@@ -32,7 +28,6 @@
             >
               and counting
             </v-text>
-            <!-- </v-text> -->
           </div>
         </div>
         <v-stack direction="column">
@@ -129,12 +124,8 @@ section {
 }
 
 .email-input {
-  flex-grow: 1;
-  max-width: 20rem;
-
-  @media (--viewport-small) {
-    max-width: 10rem;
-  }
+  width: 100%;
+  max-width: 16rem;
 }
 
 .subscription-message {
