@@ -3,34 +3,39 @@
     <v-container class="technology-container">
       <v-stack md-direction="column" justify="space-between" align="center">
         <v-stack direction="column" class="technology-hero-section">
-          <app-section-descriptor title="Technology" />
           <v-heading :level="1">
-            A comprehensive stack to help developers build secure and privacy
-            preserving apps
+            A Comprehensive Stack To Help Developers Build Secure and Privacy
+            Preserving Apps
           </v-heading>
           <app-section-descriptor
             description="Decentralised storage, identity, access management, and KMS to help developers build secure and privacy‑preserving apps."
             class="technology-hero-description"
           />
         </v-stack>
-        <v-image path="images/tech-illustration.png" class="hero-image" />
+        <div class="illustration-container hero-image-container">
+          <v-image path="images/tech-illustration.png" class="hero-image" />
+        </div>
       </v-stack>
 
       <v-stack justify="space-between" align="center">
-        <v-image
-          path="images/decentralised-storage.svg"
-          class="tablet-remove mobile-remove"
-        />
+        <div class="illustration-container tech-illustration storage">
+          <v-image
+            path="images/decentralised-storage.svg"
+            class="tablet-remove mobile-remove"
+          />
+        </div>
         <v-stack direction="column" md-align="center" class="tech-stack">
           <app-section-descriptor
             heading="Decentralised Storage"
             description="Storage nodes store only a piece of an encrypted file, ensuring data security at rest. No snooping by anyone!"
             class="tech-stack-description"
           />
-          <v-image
-            path="images/decentralised-storage.svg"
-            class="laptop-remove"
-          />
+          <div class="illustration-container tech-illustration storage">
+            <v-image
+              path="images/decentralised-storage.svg"
+              class="laptop-remove"
+            />
+          </div>
           <v-stack
             wrap
             class="features-list"
@@ -63,7 +68,9 @@
             description="No one except intended recipients can access files."
             class="tech-stack-description"
           />
-          <v-image path="images/e2e-encryption.svg" class="laptop-remove" />
+          <div class="illustration-container tech-illustration encryption">
+            <v-image path="images/e2e-encryption.svg" class="laptop-remove" />
+          </div>
           <v-stack
             wrap
             class="features-list"
@@ -89,24 +96,30 @@
             </v-chip>
           </v-stack>
         </v-stack>
-        <v-image
-          path="images/e2e-encryption.svg"
-          class="tablet-remove mobile-remove"
-        />
+        <div class="illustration-container tech-illustration encryption">
+          <v-image
+            path="images/e2e-encryption.svg"
+            class="tablet-remove mobile-remove"
+          />
+        </div>
       </v-stack>
 
       <v-stack justify="space-between" align="center">
-        <v-image
-          path="images/key-management.svg"
-          class="tablet-remove mobile-remove"
-        />
+        <div class="illustration-container tech-illustration key-management">
+          <v-image
+            path="images/key-management.svg"
+            class="tablet-remove mobile-remove"
+          />
+        </div>
         <v-stack direction="column" md-align="center" class="tech-stack">
           <app-section-descriptor
             heading="Non-Custodial Key Management"
             description="Users need not store or manage keys."
             class="tech-stack-description"
           />
-          <v-image path="images/key-management.svg" class="laptop-remove" />
+          <div class="illustration-container tech-illustration key-management">
+            <v-image path="images/key-management.svg" class="laptop-remove" />
+          </div>
           <v-stack
             wrap
             class="features-list"
@@ -141,7 +154,12 @@
             description="Your users truly own and control sharing access to their data."
             class="tech-stack-description"
           />
-          <v-image path="images/decentralised-iam.svg" class="laptop-remove" />
+          <div class="illustration-container tech-illustration iam">
+            <v-image
+              path="images/decentralised-iam.svg"
+              class="laptop-remove"
+            />
+          </div>
           <v-stack
             wrap
             md-direction="column"
@@ -168,10 +186,12 @@
             </v-chip>
           </v-stack>
         </v-stack>
-        <v-image
-          path="images/decentralised-iam.svg"
-          class="tablet-remove mobile-remove"
-        />
+        <div class="illustration-container tech-illustration iam">
+          <v-image
+            path="images/decentralised-iam.svg"
+            class="tablet-remove mobile-remove"
+          />
+        </div>
       </v-stack>
     </v-container>
   </section>
@@ -192,13 +212,61 @@ section {
   }
 }
 
-img {
-  width: 90%;
-  max-width: 16rem;
+.illustration-container {
+  position: relative;
+}
 
-  @media (--viewport-small) {
-    max-width: 12rem;
-  }
+.hero-image-container::before {
+  content: '';
+  position: absolute;
+  inset: -20% -50% -50%;
+  z-index: -1;
+  background: radial-gradient(
+    50% 40% at 50% 55%,
+    rgba(248, 81, 142, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.tech-illustration::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  z-index: -1;
+}
+
+.tech-illustration.storage::before {
+  z-index: 1;
+  background: radial-gradient(
+    50% 50% at 50%,
+    rgba(33, 130, 118, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.tech-illustration.encryption::before {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 233, 206, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: blur(40px);
+}
+
+.tech-illustration.key-management::before {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(248, 81, 142, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.tech-illustration.iam::before {
+  background: radial-gradient(
+    50% 50% at 50%,
+    rgba(33, 130, 118, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .technology-hero-section {
@@ -210,8 +278,14 @@ img {
 }
 
 .hero-image {
-  max-width: 30rem;
+  min-width: 28rem;
   margin-top: 3rem;
+  max-width: 32rem;
+
+  @media (--viewport-small) {
+    min-width: auto;
+    max-width: 12rem;
+  }
 }
 
 .tech-stack {

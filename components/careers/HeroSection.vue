@@ -120,9 +120,10 @@ section {
   max-width: 38rem;
   width: 100%;
   margin-top: 4rem;
+  margin-right: -12.5%;
 
-  @media (--viewport-large) {
-    margin-right: -12.5%;
+  @media (--viewport-medium) {
+    margin-right: 0;
   }
 
   @media (--viewport-small) {

@@ -17,10 +17,12 @@ If you are interested in what we are building, checkout our existing openings, i
             :action="openCareers"
           />
         </v-stack>
-        <v-image
-          path="images/join-us-illustration.png"
-          class="joinus-illustration"
-        />
+        <div class="illustration-container">
+          <v-image
+            path="images/join-us-illustration.png"
+            class="joinus-illustration"
+          />
+        </div>
       </v-stack>
     </v-container>
   </section>
@@ -44,17 +46,38 @@ export default {
   max-width: 36rem;
 }
 
-.joinus-illustration {
-  width: 90%;
-  max-width: 60rem;
+.illustration-container {
+  position: relative;
 
   @media (--viewport-large) {
     margin-right: -20%;
   }
 
   @media (--viewport-medium) {
-    width: 150%;
     margin-top: -10%;
+    margin-right: 0;
+  }
+}
+
+.illustration-container::before {
+  position: absolute;
+  inset: 0%;
+  content: '';
+  background: radial-gradient(
+    50% 50% at 40% 45%,
+    rgba(180, 247, 252, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.joinus-illustration {
+  width: 90%;
+  max-width: 60rem;
+
+  @media (--viewport-medium) {
+    width: 150%;
   }
 }
 

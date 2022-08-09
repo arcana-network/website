@@ -11,18 +11,12 @@
           <v-heading :level="1" class="hero-title">
             The Web3 Privacy Stack
           </v-heading>
-          <v-stack direction="column" gap="2rem">
+          <v-stack direction="column">
             <app-section-descriptor
               description="Build secure & privacy preserving apps, easily."
+              class="hero-description"
             />
-            <v-stack
-              sm-direction="column"
-              align="center"
-              gap="1.5rem"
-              sm-gap="1.5rem"
-              sm-justify="space-around"
-              wrap
-            >
+            <v-stack align="center" gap="1.5rem" sm-gap="1rem" wrap>
               <v-button
                 label="Start Building"
                 label-transform="uppercase"
@@ -102,34 +96,34 @@ export default {
   }
 }
 
+.hero-description {
+  margin-block: 2rem;
+}
+
 .hero-content-container {
   max-width: 38rem;
 }
 
 .hero-title {
-  margin-top: 0;
-}
-
-.secondary-button {
-  padding: 1.125rem calc(2rem + 16px);
+  margin-block: 0;
+  max-width: 12ch;
 }
 
 .arcana-video-thumbnail-container {
   overflow: visible;
-
-  @media (--viewport-large) {
-    max-width: 48rem;
-    width: 80%;
-    object-fit: contain;
-    position: absolute;
-    left: 60%;
-    top: -20%;
-  }
+  max-width: 48rem;
+  width: 80%;
+  object-fit: contain;
+  position: absolute;
+  left: 50%;
+  top: -30%;
 
   @media (--viewport-medium) {
     position: relative;
     width: 120%;
     max-width: 36rem;
+    left: 0;
+    top: 0;
   }
 }
 
@@ -152,10 +146,7 @@ export default {
 
 .intro-video-outer-circle {
   vertical-align: middle;
-
-  @media (--viewport-large) {
-    width: 88%;
-  }
+  width: 88%;
 
   @media (--viewport-medium) {
     width: 100%;
@@ -168,15 +159,26 @@ export default {
   width: 60%;
   top: 15%;
   left: 15%;
+
+  @media (--viewport-medium) {
+    transform: scale(1.25);
+    top: 20%;
+    left: 20%;
+  }
 }
 
 .intro-video-glowing-orb {
   position: absolute;
   vertical-align: middle;
   width: 12%;
-  top: 10%;
-  right: 18%;
+  top: 16%;
+  right: 32%;
   z-index: 1;
+
+  @media (--viewport-medium) {
+    top: 13%;
+    right: 26%;
+  }
 }
 
 .intro-video-dark-orb {
@@ -186,6 +188,10 @@ export default {
   bottom: 8%;
   left: 14%;
   z-index: 1;
+
+  @media (--viewport-medium) {
+    left: 16%;
+  }
 }
 
 .thumbnail-gradient-border-container {
@@ -196,5 +202,11 @@ export default {
   background: linear-gradient(147.79deg, #ffd7a0 16.63%, #ee4783 72.62%);
   border-radius: 50%;
   padding: 1%;
+
+  @media (--viewport-medium) {
+    transform: scale(1.25);
+    top: 25%;
+    left: 25%;
+  }
 }
 </style>

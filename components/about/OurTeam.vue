@@ -2,10 +2,21 @@
   <section style="margin-bottom: 10rem">
     <v-container>
       <v-stack justify="space-between">
-        <app-section-descriptor title="Our team" heading="The Builders Behind Arcana" />
+        <app-section-descriptor
+          title="Our team"
+          heading="The Builders Behind Arcana"
+        />
       </v-stack>
-      <v-stack justify="space-between" md-direction="column" class="member-container" wrap>
-        <div v-for="member in executiveMembers" :key="member.name + member.designation">
+      <v-stack
+        justify="space-between"
+        md-direction="column"
+        class="member-container"
+        wrap
+      >
+        <div
+          v-for="member in executiveMembers"
+          :key="member.name + member.designation"
+        >
           <about-team-member :member="member" />
         </div>
       </v-stack>
@@ -21,7 +32,12 @@
         </div>
       </v-stack>
       <v-stack v-if="!isTeamExpanded" align="center" justify="center">
-        <v-button type="link" label="View more" label-transform="uppercase" :action="expandTeam" />
+        <v-button
+          type="link"
+          label="View more"
+          label-transform="uppercase"
+          :action="expandTeam"
+        />
       </v-stack>
     </v-container>
   </section>
@@ -57,7 +73,7 @@ export default {
           image: 'Ajay',
           links: {
             linkedin: 'https://www.linkedin.com/in/ajayshetty88/',
-            twitter: 'https://twitter.com/AjayShe59753410',
+            twitter: 'https://twitter.com/ajayshetty02',
           },
         },
         {
@@ -66,7 +82,7 @@ export default {
           image: 'Sharan',
           links: {
             linkedin: 'https://www.linkedin.com/in/sharangrandigae',
-            twitter: 'https://twitter.com/sharangrandigae',
+            twitter: 'https://twitter.com/sharan01x',
           },
         },
         {
@@ -81,7 +97,7 @@ export default {
         },
         {
           name: 'Abhishek',
-          designation: 'Backend Developer',
+          designation: 'Senior Backend Developer',
           image: 'Abhishek',
           links: {
             linkedin: 'https://in.linkedin.com/in/makyl',
@@ -139,6 +155,16 @@ export default {
           },
         },
         {
+          name: 'Ashish Sharma',
+          designation: 'Senior DevOps',
+          image: 'Ashish',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/ashish-sharma-98583839/',
+            twitter: 'https://twitter.com/awsashish',
+            github: 'https://github.com/whyashish',
+          },
+        },
+        {
           name: 'Jobin',
           designation: 'Blockchain Developer Evangelist',
           image: 'Jobin',
@@ -179,8 +205,18 @@ export default {
           designation: 'Frontend Developer',
           image: 'Shrinath',
           links: {
-            linkedin: 'https://www.linkedin.com/in/shrinath-prabhu-459107b2/',
+            linkedin: 'https://www.linkedin.com/in/shrinath-prabhu/',
             github: 'https://github.com/shrinathprabhu',
+            twitter: 'https://twitter.com/shrinath_prabhu',
+          },
+        },
+        {
+          name: 'Karthik Durai',
+          designation: 'Frontend Developer',
+          image: 'Karthik',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/karthik-durai/',
+            github: 'https://github.com/KarthikSiddarth',
           },
         },
         {
@@ -203,15 +239,6 @@ export default {
           },
         },
         {
-          name: 'Karthik Durai',
-          designation: 'Frontend Developer',
-          image: 'Karthik',
-          links: {
-            linkedin: 'https://www.linkedin.com/in/karthik-durai/',
-            github: 'https://github.com/KarthikSiddarth',
-          },
-        },
-        {
           name: 'Shaloo Shalini',
           designation: 'Information Architect',
           image: 'Shaloo',
@@ -222,20 +249,14 @@ export default {
           },
         },
         {
-          name: 'Jonny Dee',
-          designation: 'Marketing Manager',
-          image: 'Jonathan',
+          name: 'Manish Jaiswal',
+          designation: 'Technical Writer',
+          image: 'Manish',
           links: {
-            linkedin: 'https://www.linkedin.com/in/jonny-dee-16924289/',
+            linkedin: 'https://www.linkedin.com/in/manish-74ab6210a/',
+            twitter: 'https://twitter.com/jaiswalwrites',
+            github: 'https://github.com/jaiswalwrites',
           },
-        },
-        {
-          name: 'Nitish Kumar Tiwari',
-          designation: 'Senior Backend Engineer',
-          image: 'Nitish_Kumar',
-          links: {
-            github: 'https://github.com/nitisht'
-          }
         },
         {
           name: 'Ronak Kadhi',
@@ -243,8 +264,8 @@ export default {
           image: 'Ronak',
           links: {
             linkedin: 'https://linkedin.com/in/ronakkadhi',
-            twitter: 'https://twitter.com/ronakkadhi'
-          }
+            twitter: 'https://twitter.com/ronakkadhi',
+          },
         },
         {
           name: 'Garry F. C. Ranee',
@@ -253,9 +274,48 @@ export default {
           links: {
             linkedin: 'https://www.linkedin.com/in/garry-f-c-ranee',
             twitter: 'https://twitter.com/_Alpha23',
-            github: 'https://github.com/GarryFCR'
-          }
-        }
+            github: 'https://github.com/GarryFCR',
+          },
+        },
+        {
+          name: 'Mario Alessandro Barbara',
+          designation: 'Applied Cryptographer',
+          image: 'Mario',
+          links: {
+            linkedin:
+              'https://www.linkedin.com/in/mario-alessandro-barbara-2a7572194/',
+            github: 'https://github.com/mabbamOG',
+          },
+        },
+        {
+          name: 'Fagun Bhavsar',
+          designation: 'Senior QA Engineer',
+          image: 'Fagun',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/fagunbhavsar/',
+            twitter: 'https://twitter.com/FagunB',
+            github: 'https://github.com/fagunbhavsar',
+          },
+        },
+        {
+          name: 'Ashwin Santhanam',
+          designation: 'Finance',
+          image: 'Ashwin',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/ashwin-santhanam/',
+            twitter: 'https://twitter.com/AshwinS84',
+          },
+        },
+        {
+          name: 'Etisha Garg',
+          designation: 'Developer Advocate',
+          image: 'Etisha',
+          links: {
+            linkedin: 'https://www.linkedin.com/in/etisha-garg/',
+            twitter: 'https://twitter.com/GargEtisha',
+            github: 'https://github.com/EtishaGarg',
+          },
+        },
       ],
       isTeamExpanded: false,
     }
@@ -269,13 +329,14 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-@import url("../lib/media-query-helper.css");
+@import url('../lib/media-query-helper.css');
 
 .member-container {
   margin: 1rem 0;
+  text-align: center;
 
-  @media (--viewport-large) {
-    text-align: center;
+  @media (--viewport-medium) {
+    text-align: start;
   }
 }
 
@@ -289,11 +350,6 @@ export default {
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.4s, opacity 0.8s;
-
-  /* @media (--viewport-medium) {
-    max-height: 100%;
-    opacity: 1;
-  } */
 }
 
 .expanded {

@@ -36,9 +36,13 @@
               }}</v-text>
             </NuxtLink>
           </template>
-          <a :href="cta.link" target="_blank">
+          <a
+            v-if="cta"
+            :href="cta.link"
+            class="cta-button-container"
+            target="_blank"
+          >
             <v-button
-              v-if="cta"
               :label="cta.label"
               label-transform="uppercase"
               :show="show"
@@ -134,17 +138,23 @@ header {
   transform: scale(0.98);
 }
 
-.active-link {
-  text-decoration: underline;
-  text-decoration-color: var(--color-white);
-  text-decoration-thickness: 0.125rem;
-  text-underline-offset: 0.25rem;
+.active-link > span {
+  color: var(--color-blue);
 }
 
-@media (--viewport-large) {
-  .header-menu > * + * {
-    margin-left: 4vw;
-  }
+.cta-button-container {
+  text-decoration: none;
+}
+
+.cta-button {
+  height: 3rem;
+  width: 14rem;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.header-menu > * + * {
+  margin-left: 4vw;
 }
 
 @media (--viewport-medium) {

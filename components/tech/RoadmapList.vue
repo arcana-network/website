@@ -1,9 +1,11 @@
 <template>
   <section>
-    <v-image
-      path="images/roadmap-illustration.png"
-      class="roadmap-illustration"
-    />
+    <div class="illustration-container">
+      <v-image
+        path="images/roadmap-illustration.png"
+        class="roadmap-illustration"
+      />
+    </div>
     <v-container>
       <v-stack direction="column">
         <app-section-descriptor title="Roadmap" heading="Eyes on the Road" />
@@ -266,5 +268,22 @@ ul li {
 .selected-year > * {
   color: black;
   font-weight: 600;
+}
+
+.illustration-container {
+  position: relative;
+  z-index: -1;
+}
+
+.illustration-container::before {
+  content: '';
+  position: absolute;
+  inset: -50% 0% -100% -50%;
+  z-index: -1;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(248, 81, 142, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 </style>

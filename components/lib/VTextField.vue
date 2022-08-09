@@ -34,6 +34,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('./media-query-helper.css');
+
 input {
   border: none;
   background: linear-gradient(141.48deg, #1a1a1a -4.56%, #151515 135.63%);
@@ -45,7 +47,17 @@ input {
   font-family: var(--font-serif);
   font-size: 1.1rem;
   line-height: 1.25rem;
-  padding: 1rem 1.25rem;
+  padding: 0 1.25rem;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (--viewport-medium) {
+    font-size: 0.875rem;
+    height: 2.5rem;
+    border-radius: 5px;
+  }
 }
 
 input[type='number'] {
