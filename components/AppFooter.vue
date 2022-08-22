@@ -43,7 +43,7 @@
             </a>
             <a
               style="margin-left: 3rem"
-              href="https://discord.gg/w6ej4FtqYS"
+              href="https://discord.com/invite/XRscu42B8V"
               target="_blank"
             >
               <v-image
