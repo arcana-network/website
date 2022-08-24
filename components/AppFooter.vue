@@ -43,7 +43,7 @@
             </a>
             <a
               style="margin-left: 3rem"
-              href="https://discord.com/invite/XRscu42B8V"
+              :href="ARCANA_DISCORD_URL"
               target="_blank"
             >
               <v-image
@@ -106,8 +106,15 @@
 </template>
 
 <script>
+const ARCANA_DISCORD_URL = process.env.ARCANA_DISCORD_URL
+
 export default {
   name: 'AppFooter',
+  data() {
+    return {
+      ARCANA_DISCORD_URL,
+    }
+  },
 }
 </script>
 
