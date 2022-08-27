@@ -69,8 +69,8 @@ export default {
             'Digital Currency Group is a New York based venture capital firm that invests in Bitcoin and blockchain companies by leveraging its network, capital, and insights.',
         },
         {
-          image: 'images/investors/hyperedge.png',
-          name: 'Hyperedge Capital',
+          image: 'images/investors/symbolic-capital.png',
+          name: 'Symbolic Capital',
         },
         {
           image: 'images/investors/shl.png',
