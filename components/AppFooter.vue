@@ -18,7 +18,7 @@
       >
         <v-stack direction="column">
           <a href="mailto:hello@arcana.network">
-            <v-text font="sans" :weight="700" class="footer-mailing">
+            <v-text font="sans" :weight="600" class="footer-mailing">
               hello@arcana.network
             </v-text>
           </a>
@@ -65,6 +65,26 @@
               />
             </a>
           </v-stack>
+          <v-stack direction="column" class="book-demo-container">
+            <v-text font="sans" :weight="600" class="book-demo-title">
+              Schedule a Demo
+            </v-text>
+            <v-text
+              color="secondary"
+              :weight="400"
+              class="book-demo-description"
+            >
+              Know more about Arcana’s offerings and how we help you reduce your
+              development time.
+            </v-text>
+            <a :href="ARCANA_BOOK_DEMO_URL" target="_blank">
+              <v-button
+                label="Book a Demo"
+                label-transform="uppercase"
+                class="book-demo-btn"
+              />
+            </a>
+          </v-stack>
         </v-stack>
         <v-stack
           class="footer-links-container"
@@ -107,12 +127,14 @@
 
 <script>
 const ARCANA_DISCORD_URL = process.env.ARCANA_DISCORD_URL
+const ARCANA_BOOK_DEMO_URL = process.env.ARCANA_BOOK_DEMO_URL
 
 export default {
   name: 'AppFooter',
   data() {
     return {
       ARCANA_DISCORD_URL,
+      ARCANA_BOOK_DEMO_URL,
     }
   },
 }
@@ -193,8 +215,9 @@ a {
   }
 }
 
-.footer-mailing {
-  font-size: 1.75rem;
+.footer-mailing,
+.book-demo-title {
+  font-size: 1.5rem;
   line-height: 2.25rem;
 
   @media (--viewport-medium) {
@@ -211,5 +234,24 @@ a {
   .footer-logo-container > *:last-child {
     width: 150%;
   }
+}
+
+.book-demo-container {
+  margin-top: 4rem;
+}
+
+.book-demo-title {
+  margin-bottom: 0.625rem;
+}
+
+.book-demo-description {
+  max-width: 21rem;
+  line-height: 1.5;
+}
+
+.book-demo-btn {
+  width: 14rem;
+  height: 3.25rem;
+  margin-top: 2rem;
 }
 </style>
