@@ -24,10 +24,10 @@
               />
               <v-button
                 variant="outline"
-                label="Go To Docs"
+                label="Book a Demo"
                 label-transform="uppercase"
                 class="secondary-button"
-                :action="handleOpenDocs"
+                :action="handleBookDemo"
               />
             </v-stack>
           </v-stack>
@@ -77,8 +77,8 @@ export default {
     handleOpenDashboard() {
       window.open(process.env.ARCANA_DASHBOARD_URL, '_blank')
     },
-    handleOpenDocs() {
-      window.open(process.env.ARCANA_DOCS_URL, '_blank')
+    handleBookDemo() {
+      window.open(process.env.ARCANA_BOOK_DEMO, '_blank')
     },
   },
 }
