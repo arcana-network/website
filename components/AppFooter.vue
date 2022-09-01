@@ -18,7 +18,7 @@
       >
         <v-stack direction="column">
           <a href="mailto:hello@arcana.network">
-            <v-text font="sans" :weight="700" class="footer-mailing">
+            <v-text font="sans" :weight="600" class="footer-mailing">
               hello@arcana.network
             </v-text>
           </a>
@@ -64,6 +64,24 @@
                 alt="Arcana discourse channel"
               />
             </a>
+          </v-stack>
+          <v-stack direction="column" class="book-demo-container">
+            <v-text font="sans" :weight="600" class="book-demo-title">
+              Schedule a Demo
+            </v-text>
+            <v-text
+              color="secondary"
+              :weight="400"
+              class="book-demo-description"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </v-text>
+            <v-button
+              label="Book a Demo"
+              label-transform="uppercase"
+              :action="handleBookDemo"
+              class="book-demo-btn"
+            />
           </v-stack>
         </v-stack>
         <v-stack
@@ -114,6 +132,11 @@ export default {
     return {
       ARCANA_DISCORD_URL,
     }
+  },
+  methods: {
+    handleBookDemo() {
+      window.open(process.env.ARCANA_BOOK_DEMO, '_blank')
+    },
   },
 }
 </script>
@@ -193,8 +216,9 @@ a {
   }
 }
 
-.footer-mailing {
-  font-size: 1.75rem;
+.footer-mailing,
+.book-demo-title {
+  font-size: 1.5rem;
   line-height: 2.25rem;
 
   @media (--viewport-medium) {
@@ -211,5 +235,24 @@ a {
   .footer-logo-container > *:last-child {
     width: 150%;
   }
+}
+
+.book-demo-container {
+  margin-top: 4rem;
+}
+
+.book-demo-title {
+  margin-bottom: 0.625rem;
+}
+
+.book-demo-description {
+  max-width: 21rem;
+  line-height: 1.5;
+}
+
+.book-demo-btn {
+  width: 14rem;
+  height: 3.25rem;
+  margin-top: 2rem;
 }
 </style>
