@@ -74,7 +74,8 @@
               :weight="400"
               class="book-demo-description"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Know more about Arcana’s offerings and how we help you reduce your
+              development time.
             </v-text>
             <a :href="ARCANA_BOOK_DEMO_URL" target="_blank">
               <v-button
