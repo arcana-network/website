@@ -78,7 +78,7 @@ export default {
       window.open(process.env.ARCANA_DASHBOARD_URL, '_blank')
     },
     handleBookDemo() {
-      window.open(process.env.ARCANA_BOOK_DEMO, '_blank')
+      window.open(process.env.ARCANA_BOOK_DEMO_URL, '_blank')
     },
   },
 }

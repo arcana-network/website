@@ -135,7 +135,7 @@ export default {
   },
   methods: {
     handleBookDemo() {
-      window.open(process.env.ARCANA_BOOK_DEMO, '_blank')
+      window.open(process.env.ARCANA_BOOK_DEMO_URL, '_blank')
     },
   },
 }
