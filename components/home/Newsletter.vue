@@ -44,9 +44,8 @@
               class="email-input"
             />
             <v-button
-              label="Sign up"
+              label="Subscribe"
               label-transform="uppercase"
-              class="sign-up-btn"
               :action="subscribeNewsletter"
             />
           </v-input-group>
