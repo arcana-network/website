@@ -76,12 +76,13 @@
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </v-text>
-            <v-button
-              label="Book a Demo"
-              label-transform="uppercase"
-              :action="handleBookDemo"
-              class="book-demo-btn"
-            />
+            <a :href="ARCANA_BOOK_DEMO_URL" target="_blank">
+              <v-button
+                label="Book a Demo"
+                label-transform="uppercase"
+                class="book-demo-btn"
+              />
+            </a>
           </v-stack>
         </v-stack>
         <v-stack
@@ -125,18 +126,15 @@
 
 <script>
 const ARCANA_DISCORD_URL = process.env.ARCANA_DISCORD_URL
+const ARCANA_BOOK_DEMO_URL = process.env.ARCANA_BOOK_DEMO_URL
 
 export default {
   name: 'AppFooter',
   data() {
     return {
       ARCANA_DISCORD_URL,
+      ARCANA_BOOK_DEMO_URL,
     }
-  },
-  methods: {
-    handleBookDemo() {
-      window.open(process.env.ARCANA_BOOK_DEMO_URL, '_blank')
-    },
   },
 }
 </script>
