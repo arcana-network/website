@@ -17,18 +17,17 @@
               class="hero-description"
             />
             <v-stack align="center" gap="1.5rem" sm-gap="1rem" wrap>
-              <v-button
-                label="Start Building"
-                label-transform="uppercase"
-                :action="handleOpenDashboard"
-              />
-              <v-button
-                variant="outline"
-                label="Go To Docs"
-                label-transform="uppercase"
-                class="secondary-button"
-                :action="handleOpenDocs"
-              />
+              <a :href="ARCANA_DASHBOARD_URL" target="_blank">
+                <v-button label="Start Building" label-transform="uppercase" />
+              </a>
+              <a :href="ARCANA_BOOK_DEMO_URL" target="_blank">
+                <v-button
+                  variant="outline"
+                  label="Book a Demo"
+                  label-transform="uppercase"
+                  class="secondary-button"
+                />
+              </a>
             </v-stack>
           </v-stack>
         </v-stack>
@@ -66,20 +65,17 @@
 </template>
 
 <script>
+const ARCANA_BOOK_DEMO_URL = process.env.ARCANA_BOOK_DEMO_URL
+const ARCANA_DASHBOARD_URL = process.env.ARCANA_DASHBOARD_URL
+
 export default {
   name: 'HeroSection',
   data() {
     return {
       isIntroPlaying: false,
+      ARCANA_BOOK_DEMO_URL,
+      ARCANA_DASHBOARD_URL,
     }
-  },
-  methods: {
-    handleOpenDashboard() {
-      window.open(process.env.ARCANA_DASHBOARD_URL, '_blank')
-    },
-    handleOpenDocs() {
-      window.open(process.env.ARCANA_DOCS_URL, '_blank')
-    },
   },
 }
 </script>
