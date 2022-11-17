@@ -10,9 +10,28 @@
         </p>
       </div>
       <div class="center">
-        <div class="email_input_container font-serif">
-          <input placeholder="Your email address" class="email_input_field" />
-          <button class="email_input_button cursor-pointer">Notify Me</button>
+        <div v-if="loading" class="font-serif">Please Wait...</div>
+        <div v-else class="center">
+          <form v-if="!success" class="email_input_container font-serif">
+            <input
+              v-model="email"
+              type="email"
+              placeholder="Your email address"
+              class="email_input_field"
+            />
+            <button
+              class="email_input_button cursor-pointer"
+              @click.prevent="signup"
+            >
+              Notify Me
+            </button>
+          </form>
+          <div v-else class="email_success_message font-serif">
+            <p>AWESOME! YOU’RE ON THE LIST!</p>
+          </div>
+          <v-text class="subscription-error-message">
+            {{ message }}
+          </v-text>
         </div>
         <p class="email_input_caption color-secondary font-serif">
           Provide your email address to stay updated, get giveaways, NFT drops
@@ -25,12 +44,49 @@
 </template>
 
 <script>
+import { groupTypes, subscribe } from '~/services/mailchimp'
+
 export default {
   layout: 'default',
+  data() {
+    return {
+      email: '',
+      success: false,
+      message: '',
+      loading: false,
+    }
+  },
   head() {
     return {
       title: 'Mainnet - Arcana Network',
     }
+  },
+  methods: {
+    async signup() {
+      this.loading = true
+      if (this.email.trim()) {
+        try {
+          await subscribe({
+            email: this.email.trim(),
+            groups: [groupTypes.MAINNET],
+          })
+          this.success = true
+        } catch (e) {
+          this.success = false
+          if (/subscribed/.test(e)) {
+            this.message = 'Already Subscribed'
+          } else if (/0 - /.test(e)) {
+            this.message = 'Invalid email'
+          } else {
+            this.message = 'Something went wrong'
+          }
+        }
+      } else {
+        this.success = false
+        this.message = 'Enter your email address'
+      }
+      this.loading = false
+    },
   },
 }
 </script>
