@@ -136,4 +136,21 @@ export default {
 .email_input_caption {
   text-align: center;
 }
+
+.email_success_message {
+  min-width: 400px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  @media (--viewport-small) {
+    font-size: 12px;
+    min-width: 300px;
+  }
+}
+
+.subscription-error-message {
+  color: var(--color-orange);
+}
 </style>
