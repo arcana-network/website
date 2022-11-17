@@ -50,6 +50,16 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100vh;
+
+  @media (--viewport-small) {
+    background: linear-gradient(
+        344.06deg,
+        rgba(0, 0, 0, 0) -94.53%,
+        rgba(0, 0, 0, 0.62) 79.99%
+      ),
+      url('~assets/images/mainnet-bg-mobile.svg') no-repeat;
+    background-size: cover;
+  }
 }
 
 .content_container {
@@ -69,11 +79,17 @@ export default {
   margin: 0;
   font-size: 40px;
   text-align: center;
+  @media (--viewport-small) {
+    font-size: 32px;
+  }
 }
 
 .heading_caption {
   font-size: 24px;
   text-align: center;
+  @media (--viewport-small) {
+    font-size: 16px;
+  }
 }
 
 .email_input_container {
@@ -83,6 +99,11 @@ export default {
   justify-content: space-between;
   padding: 2px;
   border-radius: 5px;
+  font-size: 14px;
+  @media (--viewport-small) {
+    font-size: 12px;
+    min-width: 300px;
+  }
 }
 
 .email_input_field {
@@ -92,7 +113,6 @@ export default {
   outline: none;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  font-size: 14px;
 }
 
 .email_input_button {
@@ -102,6 +122,9 @@ export default {
   outline: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  @media (--viewport-small) {
+    padding: 6px 16px !important;
+  }
 }
 
 .email_input_button:hover {
@@ -111,7 +134,6 @@ export default {
 }
 
 .email_input_caption {
-  font-size: 14px;
   text-align: center;
 }
 </style>
