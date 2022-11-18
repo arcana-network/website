@@ -3,7 +3,6 @@
     <v-stack class="footer-social-link-container">
       <a href="https://twitter.com/arcananetwork" target="_blank">
         <v-image
-          style="height: 25px"
           path="images/twitter-white.svg"
           class="footer-social-link"
           alt="Arcana twitter page"
@@ -11,7 +10,6 @@
       </a>
       <a href="https://t.me/ArcanaNetwork" target="_blank">
         <v-image
-          style="height: 25px"
           path="images/telegram-white.svg"
           class="footer-social-link"
           alt="Arcana telegram channel"
@@ -19,7 +17,6 @@
       </a>
       <a :href="ARCANA_DISCORD_URL" target="_blank">
         <v-image
-          style="height: 25px"
           path="images/discord-white.svg"
           class="footer-social-link"
           alt="Arcana discord channel"
@@ -27,7 +24,6 @@
       </a>
       <a href="https://forum.arcana.network" target="_blank">
         <v-image
-          style="height: 25px"
           path="images/discourse-white.svg"
           class="footer-social-link"
           alt="Arcana discourse channel"
@@ -35,7 +31,6 @@
       </a>
       <a href="https://www.youtube.com/c/ArcanaNetwork" target="_blank">
         <v-image
-          style="height: 25px"
           path="images/youtube-white.svg"
           class="footer-social-link"
           alt="Arcana Youtube channel"
@@ -78,5 +73,6 @@ footer {
 
 .footer-social-link {
   width: 3rem;
+  height: 25px !important;
 }
 </style>
