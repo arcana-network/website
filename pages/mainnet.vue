@@ -68,7 +68,7 @@ export default {
         try {
           await subscribe({
             email: this.email.trim(),
-            groups: [groupTypes.MAINNET],
+            groups: [groupTypes.MAINNET, groupTypes.NEWSLETTER],
           })
           this.success = true
         } catch (e) {
