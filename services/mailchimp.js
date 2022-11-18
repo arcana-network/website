@@ -9,6 +9,7 @@ export const groupTypes = Object.freeze({
   DEVELOPER: 'Developer',
   NEWSLETTER: 'Newsletter',
   PROVIDER: 'Provider',
+  MAINNET: 'Mainnet',
 })
 
 export const providerTypes = Object.freeze({
@@ -36,6 +37,9 @@ export function subscribe({ email, groups, providerType, storage, location }) {
       }
       if (groups.includes(groupTypes.PROVIDER)) {
         data['group[381006][4]'] = 4
+      }
+      if (groups.includes(groupTypes.MAINNET)) {
+        data['group[381006][32]'] = 1
       }
     }
     const stringifiedData = queryString.stringify(data)
