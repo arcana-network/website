@@ -1,6 +1,6 @@
 <template>
   <main class="container color-primary">
-    <MainnetHeader />
+    <AppHeader />
     <div class="content_container">
       <div class="center">
         <h1 class="heading font-sans">Mainnet Launching Soon</h1>
