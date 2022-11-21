@@ -145,7 +145,7 @@ export default {
 .heading_caption {
   font-size: 24px;
   text-align: center;
-  max-width: 700px;
+  max-width: 800px;
   @media (--viewport-small) {
     font-size: 16px;
     min-width: 350px;
@@ -182,8 +182,7 @@ export default {
   padding: 8px 20px !important;
   border: none;
   outline: none;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 5px;
   @media (--viewport-small) {
     padding: 6px 16px !important;
   }
@@ -192,7 +191,6 @@ export default {
 .email_input_button:hover {
   transform: scale(1.1);
   transition: ease-in-out 500ms;
-  border-radius: 5px;
 }
 
 .email_input_caption {
@@ -201,6 +199,7 @@ export default {
   color: var(--color-white);
   font-size: 14px;
   margin: 0;
+  margin-top: -15px;
   @media (--viewport-small) {
     font-size: 12px;
     max-width: 300px;
