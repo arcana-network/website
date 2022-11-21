@@ -173,6 +173,8 @@ export default {
   outline: none;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  color: var(--color-white);
+  background-color: var(--color-black);
 }
 
 .email_input_button {
