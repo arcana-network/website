@@ -55,10 +55,10 @@
             />
           </a>
         </nav>
-        <nav class="laptop-remove">
+        <nav class="laptop-remove mobile-nav-header">
           <a
             :href="headerCta.link"
-            class="cta-button-container"
+            class="cta-button-container laptop-remove"
             target="_blank"
           >
             <v-button
@@ -205,6 +205,11 @@ header {
     width: 120px;
     font-size: 10px;
   }
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
 }
 
 @media (--viewport-medium) {
