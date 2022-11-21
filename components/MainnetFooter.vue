@@ -69,6 +69,9 @@ footer {
 
 .footer-social-link-container * + * {
   margin-left: 35px;
+  @media (--viewport-small) {
+    margin-left: 25px;
+  }
 }
 
 .footer-social-link {

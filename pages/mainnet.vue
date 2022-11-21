@@ -1,6 +1,6 @@
 <template>
   <main class="container color-primary">
-    <AppHeader />
+    <MainnetHeader />
     <div class="content_container">
       <div class="center">
         <h1 class="heading font-sans">Mainnet Launching Soon</h1>
@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="center">
-        <div v-if="loading" class="font-serif">Please Wait...</div>
+        <p v-if="loading" class="font-serif">Please Wait...</p>
         <div v-else class="center">
           <form v-if="!success" class="email_input_container font-serif">
             <input
@@ -27,11 +27,11 @@
             </button>
           </form>
           <div v-else class="email_success_message font-serif">
-            <p>AWESOME! YOU’RE ON THE LIST!</p>
+            <p>Awesome! You're on the List!</p>
           </div>
-          <v-text class="subscription-error-message">
+          <p class="subscription-error-message font-serif">
             {{ message }}
-          </v-text>
+          </p>
         </div>
         <p class="email_input_caption color-secondary font-serif">
           Provide your email address to stay updated, get giveaways, NFT drops
@@ -135,6 +135,8 @@ export default {
   margin: 0;
   font-size: 40px;
   text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
   @media (--viewport-small) {
     font-size: 32px;
   }
@@ -143,14 +145,16 @@ export default {
 .heading_caption {
   font-size: 24px;
   text-align: center;
+  max-width: 800px;
   @media (--viewport-small) {
     font-size: 16px;
+    min-width: 350px;
   }
 }
 
 .email_input_container {
   border: 1px solid var(--color-white);
-  min-width: 400px;
+  min-width: 450px;
   display: flex;
   justify-content: space-between;
   padding: 2px;
@@ -158,7 +162,7 @@ export default {
   font-size: 14px;
   @media (--viewport-small) {
     font-size: 12px;
-    min-width: 300px;
+    min-width: 350px;
   }
 }
 
@@ -169,6 +173,8 @@ export default {
   outline: none;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  color: var(--color-white);
+  background-color: var(--color-black);
 }
 
 .email_input_button {
@@ -176,8 +182,7 @@ export default {
   padding: 8px 20px !important;
   border: none;
   outline: none;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 5px;
   @media (--viewport-small) {
     padding: 6px 16px !important;
   }
@@ -186,11 +191,19 @@ export default {
 .email_input_button:hover {
   transform: scale(1.1);
   transition: ease-in-out 500ms;
-  border-radius: 5px;
 }
 
 .email_input_caption {
   text-align: center;
+  max-width: 425px;
+  color: var(--color-white);
+  font-size: 14px;
+  margin: 0;
+  margin-top: -15px;
+  @media (--viewport-small) {
+    font-size: 12px;
+    max-width: 300px;
+  }
 }
 
 .email_success_message {
@@ -200,6 +213,7 @@ export default {
   text-align: center;
   border-radius: 5px;
   font-size: 14px;
+  text-transform: uppercase;
   @media (--viewport-small) {
     font-size: 12px;
     min-width: 300px;
