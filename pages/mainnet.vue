@@ -154,7 +154,7 @@ export default {
 
 .email_input_container {
   border: 1px solid var(--color-white);
-  min-width: 400px;
+  min-width: 450px;
   display: flex;
   justify-content: space-between;
   padding: 2px;
@@ -162,7 +162,7 @@ export default {
   font-size: 14px;
   @media (--viewport-small) {
     font-size: 12px;
-    min-width: 300px;
+    min-width: 350px;
   }
 }
 
@@ -195,7 +195,7 @@ export default {
 
 .email_input_caption {
   text-align: center;
-  max-width: 400px;
+  max-width: 425px;
   color: var(--color-white);
   font-size: 14px;
   margin: 0;
