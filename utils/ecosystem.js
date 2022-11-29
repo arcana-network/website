@@ -264,5 +264,66 @@ export default {
     },
   ],
 
-  hackathons: [],
+  hackathons: [
+    {
+      name: 'Unfold 2022',
+      website: 'https://unfold.devfolio.co/',
+      image: 'images/ecosystem/hackathons/Unfold 2022.png',
+    },
+    {
+      name: 'Hack The Mountains 3.0',
+      website: 'https://www.hackthemountain.tech/',
+      image: 'images/ecosystem/hackathons/Hack The Mountains 3.0.png',
+    },
+    {
+      name: 'ETHernals',
+      website: 'https://ethernals.devfolio.co/',
+      image: 'images/ecosystem/hackathons/ETHernals.png',
+    },
+    {
+      name: 'Hack@Arch',
+      website: 'https://hackatarch.devfolio.co/',
+      image: 'images/ecosystem/hackathons/Hack@Arch.png',
+    },
+    {
+      name: 'Execute 2.0',
+      website: 'https://execute.devfolio.co/',
+      image: 'images/ecosystem/hackathons/Execute 2.0.png',
+    },
+    {
+      name: 'Hackbells',
+      website: 'https://hackbells.tech/',
+      image: 'images/ecosystem/hackathons/Hackbells.png',
+    },
+    {
+      name: 'Make4thon',
+      website: 'https://make4thon.mlsctiet.co.in/',
+      image: 'images/ecosystem/hackathons/Make4thon.png',
+    },
+    {
+      name: 'KJSCE',
+      website: 'https://hack.kjsce.com/',
+      image: 'images/ecosystem/hackathons/KJSCE.png',
+    },
+    {
+      name: 'Hackstack',
+      website: 'https://hackstack.aasf.in',
+      image: 'images/ecosystem/hackathons/Hackstack.png',
+    },
+    {
+      name: 'LOC',
+      website: 'https://djacm.co.in/LOC/',
+      image: 'images/ecosystem/hackathons/LOC.png',
+    },
+    {
+      name: 'Summerfest',
+      website: 'https://dscvitbhopal.github.io/summerfest/',
+      image: 'images/ecosystem/hackathons/Summerfest.png',
+    },
+    {
+      name: 'Hacking Heist',
+      website: 'https://hackingheist2.web.app/',
+      image: 'images/ecosystem/hackathons/Hacking Heist.png',
+    },
+  ],
 }

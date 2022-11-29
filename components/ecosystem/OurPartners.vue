@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="ecosystem-partners">
     <VContainer>
       <VStack direction="column">
         <AppSectionDescriptor title="Partners" />
@@ -74,11 +74,16 @@ export default {
   watch: {
     '$route.hash'() {
       this.setPartnerType(this.$route.hash)
+      this.isExpanded = false
     },
   },
   mounted() {
     if (this.$route.hash) {
       this.setPartnerType(this.$route.hash)
+      this.isExpanded = false
+      document
+        .getElementById('ecosystem-partners')
+        .scrollIntoView({ behavior: 'smooth' })
     }
   },
   methods: {

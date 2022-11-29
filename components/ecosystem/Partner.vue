@@ -41,7 +41,7 @@
           <VText font="sans" :weight="600">Announcement</VText>
         </a>
       </VStack>
-      <VText color="secondary" class="partner-description">{{
+      <VText v-if="description" color="secondary" class="partner-description">{{
         description
       }}</VText>
       <VStack class="partner-tags">
@@ -67,7 +67,7 @@ export default {
     },
     description: {
       type: String,
-      required: true,
+      default: '',
     },
     website: {
       type: String,
@@ -83,7 +83,7 @@ export default {
     },
     tags: {
       type: Array,
-      required: true,
+      default: () => [],
     },
   },
 }
@@ -101,6 +101,8 @@ export default {
 
 .partner-details {
   gap: 1rem;
+  width: 100%;
+  max-width: 20rem;
 }
 
 .partner-links,
