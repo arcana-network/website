@@ -98,6 +98,7 @@ h1 {
   font-size: 4rem;
   line-height: 4.875rem;
   font-weight: 700;
+  margin-block: 1.25rem;
 
   @media (--viewport-medium) {
     font-size: 2.25rem;

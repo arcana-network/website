@@ -89,8 +89,8 @@ export default {
   flex-direction: column;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  background: linear-gradient(141.48deg, #1a1a1a -4.56%, #151515 135.63%);
-  box-shadow: inset -2px -2px 4px rgba(57, 57, 57, 0.44),
+  background: linear-gradient(141.48deg, #161616 -4.56%, #151515 135.63%);
+  box-shadow: inset -2px -5px 10px rgba(57, 57, 57, 0.44),
     inset 5px 5px 10px rgba(11, 11, 11, 0.5);
   border-radius: 10px;
 
@@ -105,7 +105,7 @@ export default {
   justify-content: space-between;
   padding: 0 1.25rem;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.25rem;
   height: 3.75rem;
 
@@ -122,7 +122,9 @@ export default {
   right: 0;
   max-height: 200px;
   border-top: 0;
-  background: linear-gradient(143.36deg, #0f0f0f -4.7%, #000 115.05%);
+  background: linear-gradient(141.48deg, #161616 -4.56%, #151515 135.63%);
+  box-shadow: inset -2px -5px 10px rgba(57, 57, 57, 0.44),
+    inset 5px 5px 10px rgba(11, 11, 11, 0.5);
   transition: all 0.5s;
   opacity: 0;
   visibility: hidden;
@@ -148,7 +150,6 @@ export default {
   font-weight: 400;
   line-height: 1.25rem;
   transition: all 0.2s;
-  background: linear-gradient(143.36deg, #0f0f0f -4.7%, #000 115.05%);
   height: 3.75rem;
   display: flex;
   align-items: center;
@@ -158,6 +159,11 @@ export default {
     height: 2.5rem;
   }
 }
+
+.custom-option:not(:last-child) {
+  border-bottom: 1px solid #353535;
+}
+
 .custom-option:hover {
   color: var(--color-white);
 }

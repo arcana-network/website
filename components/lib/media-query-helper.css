@@ -17,25 +17,25 @@
 }
 @media (--viewport-medium) {
   .tablet-hide {
-    visibility: hidden;
+    visibility: hidden !important;
   }
   .tablet-remove {
-    display: none;
+    display: none !important;
   }
   .tablet-show {
-    display: initial;
-    visibility: visible;
+    display: initial !important;
+    visibility: visible !important;
   }
 }
 @media (min-width: 1024px) {
   .laptop-hide {
-    visibility: hidden;
+    visibility: hidden !important;
   }
   .laptop-remove {
-    display: none;
+    display: none !important;
   }
   .laptop-show {
-    display: initial;
-    visibility: visible;
+    display: initial !important;
+    visibility: visible !important;
   }
 }

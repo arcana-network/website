@@ -102,8 +102,8 @@ a {
   position: relative;
   font-size: 1.1rem;
   font-weight: 600;
-  width: 14rem;
-  height: 3.75rem;
+  width: 12rem;
+  height: 3rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
