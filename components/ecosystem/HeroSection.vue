@@ -2,14 +2,17 @@
   <section>
     <VContainer>
       <VStack justify="space-between" md-direction="column-reverse">
-        <VStack direction="column" style="max-width: 38rem">
+        <VStack direction="column" class="hero-description">
           <VHeading :level="1">Our Ecosystem</VHeading>
           <AppSectionDescriptor
             description="Join Arcana's Vibrant ecosystem of Customers, Partners, and Developers."
           />
         </VStack>
         <div class="illustration-container">
-          <VImage class="ecosystem-illustration" path="images/ecosystem.png" />
+          <VImage
+            class="ecosystem-illustration laptop-remove"
+            path="images/ecosystem-illustration-mobile.png"
+          />
         </div>
       </VStack>
     </VContainer>
@@ -29,39 +32,40 @@ section {
   @media (--viewport-small) {
     margin-top: 0 !important;
   }
+
+  @media (--viewport-gt-medium) {
+    margin-top: 0 !important;
+    min-height: 70vh;
+    background: url('~assets/images/ecosystem-illustration.png') no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+}
+
+.hero-description {
+  max-width: 38rem;
+  margin-block: 6rem;
+
+  @media (--viewport-medium) {
+    margin-block: 2rem;
+  }
 }
 
 .illustration-container {
-  position: relative;
-  text-align: right;
-  margin-top: -4rem;
-  overflow: visible;
-
   @media (--viewport-medium) {
+    margin-inline: -20%;
+    position: relative;
     text-align: center;
     margin-top: 0;
   }
 }
-
-/* .illustration-container::before {
-  content: '';
-  position: absolute;
-  inset: -20%;
-  z-index: -1;
-  background: radial-gradient(
-    50% 40% at 50% 40%,
-    rgba(248, 81, 142, 0.2) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-} */
 
 .ecosystem-illustration {
   width: min(100%, 32rem);
   align-self: center;
 
   @media (--viewport-medium) {
-    width: min(100%, 20rem);
-    margin: 2rem auto;
+    width: min(100%, 30rem);
   }
 }
 </style>

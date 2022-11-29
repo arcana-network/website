@@ -90,6 +90,8 @@ export default {
 </script>
 
 <style scoped lang="postcss">
+@import url('../lib/media-query-helper.css');
+
 .partner-card {
   gap: 1.5rem;
 
@@ -153,6 +155,12 @@ export default {
 
   @media (--viewport-medium) {
     align-self: center;
+  }
+}
+
+.partner-image > * {
+  @media (--viewport-medium) {
+    max-width: 6rem;
   }
 }
 </style>

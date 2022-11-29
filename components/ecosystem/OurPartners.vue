@@ -1,7 +1,7 @@
 <template>
-  <section id="ecosystem-partners">
+  <section id="ecosystem-partners-section">
     <VContainer>
-      <VStack direction="column">
+      <VStack :id="$route.hash.replace('#', '')" direction="column">
         <AppSectionDescriptor title="Partners" />
         <VSelectBox
           class="partner-select-box"
@@ -82,7 +82,7 @@ export default {
       this.setPartnerType(this.$route.hash)
       this.isExpanded = false
       document
-        .getElementById('ecosystem-partners')
+        .getElementById('ecosystem-partners-section')
         .scrollIntoView({ behavior: 'smooth' })
     }
   },

@@ -1,6 +1,7 @@
 <template>
   <main>
     <EcosystemHeroSection />
+    <EcosystemPartnershipCounter />
     <EcosystemOurPartners />
     <EcosystemJoinCommunity />
   </main>
