@@ -155,6 +155,7 @@ export default {
 
   @media (--viewport-medium) {
     align-self: center;
+    font-size: 1.25rem;
   }
 }
 

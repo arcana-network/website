@@ -4,6 +4,7 @@
     <HomeOurServices />
     <HomeTestimonials />
     <HomeRoadmap />
+    <HomePartners />
     <HomeNewsAndMedia />
     <HomeNewsletter />
   </main>
