@@ -135,16 +135,6 @@ export default {
           },
         },
         {
-          name: 'Ajith',
-          designation: 'Lead Frontend Developer',
-          image: 'Ajith',
-          links: {
-            linkedin: 'https://www.linkedin.com/in/ajithranka/',
-            twitter: 'https://twitter.com/ajithranka',
-            github: 'https://github.com/ajithranka',
-          },
-        },
-        {
           name: 'Lakshmikanth',
           designation: 'DevOps',
           image: 'Lakshmikanth',
