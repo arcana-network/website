@@ -35,7 +35,8 @@ section {
 
   @media (--viewport-gt-medium) {
     margin-top: 0 !important;
-    min-height: 60vh;
+    height: 64vh;
+    max-height: 44rem;
     background: url('~assets/images/ecosystem-illustration.png') no-repeat;
     background-size: contain;
     background-position: right;
