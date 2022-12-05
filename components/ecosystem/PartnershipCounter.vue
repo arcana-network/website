@@ -7,15 +7,15 @@
       class="counter-container"
     >
       <div class="counter">
-        <VText font="sans" :weight="600" class="counter-count">00+</VText>
+        <VText font="sans" :weight="600" class="counter-count">40+</VText>
         <VText color="secondary" class="counter-name">Partnerships</VText>
       </div>
       <div class="counter">
-        <VText font="sans" :weight="600" class="counter-count">00+</VText>
-        <VText color="secondary" class="counter-name">Hackathons Built</VText>
+        <VText font="sans" :weight="600" class="counter-count">10+</VText>
+        <VText color="secondary" class="counter-name">Hackathons</VText>
       </div>
       <div class="counter">
-        <VText font="sans" :weight="600" class="counter-count">000+</VText>
+        <VText font="sans" :weight="600" class="counter-count">1000+</VText>
         <VText color="secondary" class="counter-name">SDK Downloads</VText>
       </div>
     </VStack>

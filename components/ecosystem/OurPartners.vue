@@ -1,5 +1,8 @@
 <template>
-  <section id="ecosystem-partners-section">
+  <section
+    id="ecosystem-partners-section"
+    :style="{ 'scroll-margin': sectionMargin }"
+  >
     <VContainer>
       <VStack :id="$route.hash.replace('#', '')" direction="column">
         <AppSectionDescriptor title="Partners" />
@@ -49,6 +52,7 @@ export default {
       selectedPartnerType: 'Customers',
       ecosystemPartners,
       isExpanded: false,
+      sectionMargin: '4rem',
     }
   },
   computed: {
@@ -81,6 +85,9 @@ export default {
     if (this.$route.hash) {
       this.setPartnerType(this.$route.hash)
       this.isExpanded = false
+      this.sectionMargin = `${
+        document.querySelector('.app-header').getBoundingClientRect().height
+      }px`
       document
         .getElementById('ecosystem-partners-section')
         .scrollIntoView({ behavior: 'smooth' })
@@ -118,6 +125,10 @@ export default {
 
 <style lang="postcss" scoped>
 @import url('../lib/media-query-helper.css');
+
+#ecosystem-partners-section {
+  scroll-margin: 150px;
+}
 
 .partners-container {
   display: grid;

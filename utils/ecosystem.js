@@ -153,14 +153,6 @@ export default {
       image: 'images/ecosystem/customers/OnChain Academy.png',
     },
     {
-      name: 'Dynamic.xyz',
-      website: 'https://Dynamic.xyz',
-      tags: ['Infra'],
-      description:
-        'Dynamic is an infrastucture provider for building great multi chain wallet login flow.',
-      image: 'images/ecosystem/customers/Dynamic.xyz.png',
-    },
-    {
       name: 'Krida Fans',
       website: 'https://krida.fans',
       tags: ['Gaming'],
