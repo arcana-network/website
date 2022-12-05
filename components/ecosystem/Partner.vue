@@ -13,6 +13,7 @@
       align="start"
       md-align="center"
       class="partner-details"
+      :class="{ 'align-self-center': !description }"
     >
       <VText font="sans" :weight="600" class="partner-name">{{ name }}</VText>
       <VStack class="partner-links">
