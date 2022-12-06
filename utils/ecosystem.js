@@ -92,7 +92,7 @@ export default {
       announcement:
         'https://arcana.network/blog/backed-fund-partnership-announcement/',
       description:
-        'Backed.fund is a platform that helps you to ivest in alternative assets via fractionalisation',
+        'Backed.fund is a platform that helps you to invest in alternative assets via fractionalisation',
       image: 'images/ecosystem/customers/backed.png',
     },
     {
@@ -134,7 +134,7 @@ export default {
       announcement:
         'https://arcana.network/blog/welcome-mainnet-launch-partner-simplr/',
       description:
-        'Simplr is a nocode infrastructure for all things NFT. They currently have nocode tools to mint crosschain NFTs.',
+        'Simplr is a nocode infrastructure for all things NFT. They currently have no-code tools to mint crosschain NFTs.',
       image: 'images/ecosystem/customers/simplr-collection.png',
     },
     {
@@ -181,7 +181,7 @@ export default {
       website: 'https://Artfi.world',
       tags: ['NFT'],
       description:
-        'Artifi lets you invest in art using the transperancy of blockchain and enabled by NFT',
+        'Artfi lets you invest in art using the transparency of blockchain and enabled by NFT',
       image: 'images/ecosystem/customers/artfi-world.png',
     },
     {
@@ -189,7 +189,7 @@ export default {
       website: 'https://Dapps.co',
       tags: ['Web3'],
       description:
-        'Opensource, censorship resistance, neautral decentralised appstore for dApps.',
+        'Opensource, censorship resistance, neutral decentralised appstore for dApps.',
       image: 'images/ecosystem/customers/dapps.png',
     },
     {
@@ -215,6 +215,14 @@ export default {
       description: 'Ticketing platform for events using NFTs tickets.',
       image: 'images/ecosystem/customers/ticketh.png',
     },
+    {
+      name: 'FootieSZN',
+      website: 'https://szn.games/',
+      tags: ['Gaming'],
+      description:
+        'FootieSZN is a fantasy football game in which participants assemble a team of football players and score points based on actual performance or perceived contribution in the game.',
+      image: 'images/ecosystem/customers/footie-szn.png',
+    },
   ],
 
   partners: [
@@ -223,7 +231,7 @@ export default {
       website: 'https://unilend.finance/',
       tags: ['DeFi'],
       description:
-        'Unilend helps you lend and borrow crypto assets. It has features like flash loans, permissionless listing and NFT tokenisation',
+        'Unilend helps you lend and borrow crypto assets. It has features like flash loans, permissionless listing and NFT tokenisation.',
       image: 'images/ecosystem/partners/unilend-finance.png',
     },
     {
@@ -243,7 +251,7 @@ export default {
       announcement:
         'https://arcana.network/blog/arcana-network-onboards-a-private-data-management-framework-for-web3-ruby-protocol/',
       description:
-        'Ruby protocol is building a private data management framework for web3 while implementing privacy layer that interacts with multiple chains',
+        'Ruby protocol is building a private data management framework for web3 while implementing privacy layer that interacts with multiple chains.',
       image: 'images/ecosystem/partners/ruby-xyz.png',
     },
     {
@@ -251,7 +259,7 @@ export default {
       website: 'https://Unifarm.co',
       tags: ['DeFi'],
       description:
-        'UniFarm enables you to farm tokens in one place with minimum APY gurantee',
+        'UniFarm enables you to farm tokens in one place with minimum APY guarantee.',
       image: 'images/ecosystem/partners/unifarm.png',
     },
   ],
