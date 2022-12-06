@@ -125,7 +125,7 @@ export default {
   background: radial-gradient(
     134.5% 939.99% at -23.59% -12.9%,
     #262626 0%,
-    #1a1a1a 31.41%,
+    #3a3a3a60 31.41%,
     rgba(32, 32, 32, 0.76) 100%
   );
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
@@ -135,7 +135,7 @@ export default {
 
 .partner-tag {
   padding: 10px 13px;
-  background: linear-gradient(141.48deg, #161616 -4.56%, #151515 135.63%);
+  background: linear-gradient(141.48deg, #171717 -4.56%, #151515 135.63%);
   box-shadow: inset -2px -2px 4px rgba(57, 57, 57, 0.44),
     inset 5px 5px 10px rgba(11, 11, 11, 0.5);
   border-radius: 10px;
