@@ -25,7 +25,7 @@
             :image="partner.image"
           />
         </div>
-        <VStack justify="center">
+        <VStack v-if="partnersLength > 8" justify="center">
           <VButton
             type="link"
             :label="expandButtonLabel"
@@ -70,6 +70,12 @@ export default {
         )
       }
       return ecosystemPartners[this.selectedPartnerType.toLowerCase()]
+    },
+    partnersLength() {
+      if (this.selectedPartnerType === 'Ecosystem Partners') {
+        return ecosystemPartners.partners.length
+      }
+      return ecosystemPartners[this.selectedPartnerType.toLowerCase()].length
     },
     expandButtonLabel() {
       return this.isExpanded ? 'VIEW LESS' : 'VIEW MORE'
