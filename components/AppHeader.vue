@@ -19,17 +19,21 @@ export default {
       },
       menuItems: [
         {
-          name: 'Docs',
-          link: process.env.ARCANA_DOCS_URL,
-          external: true,
-        },
-        {
           name: 'Technology',
           link: '/tech/',
         },
         {
           name: 'About',
           link: '/about/',
+        },
+        {
+          name: 'Ecosystem',
+          link: '/ecosystem/',
+        },
+        {
+          name: 'Docs',
+          link: process.env.ARCANA_DOCS_URL,
+          external: true,
         },
       ],
     }
@@ -42,6 +46,6 @@ export default {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #0f0f0f;
+  background-color: #121212;
 }
 </style>

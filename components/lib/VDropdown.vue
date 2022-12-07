@@ -7,7 +7,7 @@
     @click.stop="toggle"
   >
     <div class="custom-select__trigger font-serif color-primary cursor-pointer">
-      <span v-if="value">{{ value }}</span>
+      <span v-if="value" class="dropdown-value">{{ value }}</span>
       <span v-else class="placeholder">{{ placeholder }}</span>
       <div class="arrow" @click.stop="toggle">
         <v-image path="icons/arrow-down.svg" @click.stop="toggle" />
@@ -80,7 +80,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 @import url('./media-query-helper.css');
 
 .custom-select {
@@ -89,8 +89,8 @@ export default {
   flex-direction: column;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  background: linear-gradient(141.48deg, #1a1a1a -4.56%, #151515 135.63%);
-  box-shadow: inset -2px -2px 4px rgba(57, 57, 57, 0.44),
+  background: linear-gradient(141.48deg, #161616 -4.56%, #151515 135.63%);
+  box-shadow: inset -2px -5px 10px rgba(57, 57, 57, 0.44),
     inset 5px 5px 10px rgba(11, 11, 11, 0.5);
   border-radius: 10px;
 
@@ -98,6 +98,7 @@ export default {
     border-radius: 5px;
   }
 }
+
 .custom-select__trigger {
   position: relative;
   display: flex;
@@ -105,24 +106,32 @@ export default {
   justify-content: space-between;
   padding: 0 1.25rem;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.25rem;
   height: 3.75rem;
+  border-radius: 10px;
 
   @media (--viewport-medium) {
     font-size: 0.875rem;
     height: 2.5rem;
   }
 }
+
+.open .custom-select__trigger {
+  outline: 1px solid #13a3fd;
+}
+
 .custom-options {
   position: absolute;
   display: block;
-  top: 100%;
+  top: calc(100% + 2px);
   left: 0;
   right: 0;
   max-height: 200px;
   border-top: 0;
-  background: linear-gradient(143.36deg, #0f0f0f -4.7%, #000 115.05%);
+  background: linear-gradient(141.48deg, #161616 -4.56%, #151515 135.63%);
+  box-shadow: inset -2px -5px 10px rgba(57, 57, 57, 0.44),
+    inset 5px 5px 10px rgba(11, 11, 11, 0.5);
   transition: all 0.5s;
   opacity: 0;
   visibility: hidden;
@@ -148,7 +157,6 @@ export default {
   font-weight: 400;
   line-height: 1.25rem;
   transition: all 0.2s;
-  background: linear-gradient(143.36deg, #0f0f0f -4.7%, #000 115.05%);
   height: 3.75rem;
   display: flex;
   align-items: center;
@@ -158,6 +166,11 @@ export default {
     height: 2.5rem;
   }
 }
+
+.custom-option:not(:last-child) {
+  border-bottom: 1px solid #353535;
+}
+
 .custom-option:hover {
   color: var(--color-white);
 }
@@ -186,5 +199,9 @@ export default {
 }
 .open .arrow {
   transform: rotate(-180deg);
+}
+
+.dropdown-value {
+  color: var(--color-blue);
 }
 </style>
