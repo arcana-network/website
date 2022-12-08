@@ -39,12 +39,7 @@
 }
 
 body {
-  background: var(--dark-theme-bg)
-    radial-gradient(
-      967.28% 288.75% at -2.92% 117.8%,
-      #060606 0%,
-      rgba(18, 18, 18, 0.7) 100%
-    );
+  background: #121212;
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -96,4 +91,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.align-self-center {
+  align-self: center;
 }

@@ -125,7 +125,7 @@ header {
 
 .header-menu-item {
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.75rem;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -148,19 +148,13 @@ header {
 
 .cta-button {
   height: 3rem;
-  width: 14rem;
+  width: 12rem;
   padding: 0;
   font-size: 1rem;
 }
 
 .header-menu > * + * {
-  margin-left: 4vw;
-}
-
-@media (--viewport-medium) {
-  .header-menu > * + * {
-    margin-left: 2vw;
-  }
+  margin-left: 1vw;
 }
 
 @media (--viewport-medium) {

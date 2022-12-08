@@ -12,6 +12,29 @@ export default {
 
   env: process.env,
 
+  router: {
+    scrollBehavior(to) {
+      if (to.hash) {
+        if (to.name === 'ecosystem') {
+          const ecosystemSectionPosition = document
+            .querySelector('#ecosystem-partners-section')
+            .getBoundingClientRect()
+
+          return {
+            top: ecosystemSectionPosition.top,
+            behavior: 'smooth',
+          }
+        }
+        return {
+          selector: to.hash,
+          behavior: 'smooth',
+        }
+      } else {
+        return { x: 0, y: 0, behavior: 'smooth' }
+      }
+    },
+  },
+
   head: {
     title: 'Arcana Network',
     htmlAttrs: {
